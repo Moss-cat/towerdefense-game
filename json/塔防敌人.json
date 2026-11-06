@@ -1,0 +1,3202 @@
+[
+  {
+    "name": "一口没咽下的果冻",
+    "name_hook": "「一口没咽下的果冻」｜刚进场，只带一点不对劲：死亡时分裂为若干小个体",
+    "series": "史莱姆",
+    "variant": "幼体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "分裂",
+    "stats": {
+      "hp": 102,
+      "speed": 1.61,
+      "armor": 13,
+      "magic_resist": 1,
+      "shield": 0,
+      "bounty": 10,
+      "leak_damage": 1,
+      "size": "小型"
+    },
+    "abilities": [
+      {
+        "name": "分裂",
+        "description": "死亡时分裂为若干小个体"
+      },
+      {
+        "name": "无",
+        "description": "基础个体，无额外能力"
+      }
+    ],
+    "weakness": "法术",
+    "recommended_wave": "1~4",
+    "description": "「一口没咽下的果冻」｜刚进场，只带一点不对劲：死亡时分裂为若干小个体。归属史莱姆系/杂兵/地面，建议针对法术配置防线。"
+  },
+  {
+    "name": "摔成两半还都在笑",
+    "name_hook": "「摔成两半还都在笑」｜成群之后开始拖慢整条线：死亡时分裂为若干小个体",
+    "series": "史莱姆",
+    "variant": "成体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "分裂",
+    "stats": {
+      "hp": 163,
+      "speed": 1.71,
+      "armor": 19,
+      "magic_resist": 9,
+      "shield": 0,
+      "bounty": 13,
+      "leak_damage": 2,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "分裂",
+        "description": "死亡时分裂为若干小个体"
+      },
+      {
+        "name": "轻微强化",
+        "description": "属性小幅提升"
+      }
+    ],
+    "weakness": "控制",
+    "recommended_wave": "3~7",
+    "description": "「摔成两半还都在笑」｜成群之后开始拖慢整条线：死亡时分裂为若干小个体。归属史莱姆系/杂兵/地面，建议针对控制配置防线。"
+  },
+  {
+    "name": "分家不分账",
+    "name_hook": "「分家不分账」｜开始专门针对某一套防线：死亡时分裂为若干小个体",
+    "series": "史莱姆",
+    "variant": "精英",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "分裂",
+    "stats": {
+      "hp": 265,
+      "speed": 1.8,
+      "armor": 26,
+      "magic_resist": 19,
+      "shield": 0,
+      "bounty": 17,
+      "leak_damage": 3,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "分裂",
+        "description": "死亡时分裂为若干小个体"
+      },
+      {
+        "name": "词缀·坚毅",
+        "description": "受到控制时间缩短"
+      }
+    ],
+    "weakness": "真实伤害",
+    "recommended_wave": "5~10",
+    "description": "「分家不分账」｜开始专门针对某一套防线：死亡时分裂为若干小个体。归属史莱姆系/精英/地面，建议针对真实伤害配置防线。"
+  },
+  {
+    "name": "越擦越多的那块",
+    "name_hook": "「越擦越多的那块」｜越过常规，逼玩家临时改配置：死亡时分裂为若干小个体",
+    "series": "史莱姆",
+    "variant": "变异体",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "分裂",
+    "stats": {
+      "hp": 428,
+      "speed": 1.9,
+      "armor": 32,
+      "magic_resist": 20,
+      "shield": 0,
+      "bounty": 25,
+      "leak_damage": 4,
+      "size": "大型"
+    },
+    "abilities": [
+      {
+        "name": "分裂",
+        "description": "死亡时分裂为若干小个体"
+      },
+      {
+        "name": "词缀·狂暴",
+        "description": "血量低于半数时加速"
+      }
+    ],
+    "weakness": "破甲",
+    "recommended_wave": "7~13",
+    "description": "「越擦越多的那块」｜越过常规，逼玩家临时改配置：死亡时分裂为若干小个体。归属史莱姆系/精英/地面，建议针对破甲配置防线。"
+  },
+  {
+    "name": "整条路都是它",
+    "name_hook": "「整条路都是它」｜登场即改这一波的规则：死亡时分裂为若干小个体",
+    "series": "史莱姆",
+    "variant": "王者",
+    "rank": "首领",
+    "movement": "地面",
+    "trait": "分裂",
+    "stats": {
+      "hp": 714,
+      "speed": 2.0,
+      "armor": 39,
+      "magic_resist": 23,
+      "shield": 0,
+      "bounty": 38,
+      "leak_damage": 7,
+      "size": "巨型"
+    },
+    "abilities": [
+      {
+        "name": "分裂",
+        "description": "死亡时分裂为若干小个体"
+      },
+      {
+        "name": "词缀·统御",
+        "description": "登场时降低全场炮塔 10% 攻速"
+      }
+    ],
+    "weakness": "爆发",
+    "recommended_wave": "9~16",
+    "description": "「整条路都是它」｜登场即改这一波的规则：死亡时分裂为若干小个体。归属史莱姆系/首领/地面，建议针对爆发配置防线。"
+  },
+  {
+    "name": "鞋带没系就跑了",
+    "name_hook": "「鞋带没系就跑了」｜刚进场，只带一点不对劲：移动速度极高，血量偏低",
+    "series": "哥布林",
+    "variant": "幼体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "快速",
+    "stats": {
+      "hp": 75,
+      "speed": 1.59,
+      "armor": 9,
+      "magic_resist": 5,
+      "shield": 0,
+      "bounty": 9,
+      "leak_damage": 1,
+      "size": "小型"
+    },
+    "abilities": [
+      {
+        "name": "快速",
+        "description": "移动速度极高，血量偏低"
+      },
+      {
+        "name": "无",
+        "description": "基础个体，无额外能力"
+      }
+    ],
+    "weakness": "控制",
+    "recommended_wave": "1~4",
+    "description": "「鞋带没系就跑了」｜刚进场，只带一点不对劲：移动速度极高，血量偏低。归属哥布林系/杂兵/地面，建议针对控制配置防线。"
+  },
+  {
+    "name": "比哨声响得早",
+    "name_hook": "「比哨声响得早」｜成群之后开始拖慢整条线：移动速度极高，血量偏低",
+    "series": "哥布林",
+    "variant": "成体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "快速",
+    "stats": {
+      "hp": 120,
+      "speed": 1.69,
+      "armor": 13,
+      "magic_resist": 10,
+      "shield": 0,
+      "bounty": 11,
+      "leak_damage": 2,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "快速",
+        "description": "移动速度极高，血量偏低"
+      },
+      {
+        "name": "轻微强化",
+        "description": "属性小幅提升"
+      }
+    ],
+    "weakness": "真实伤害",
+    "recommended_wave": "3~7",
+    "description": "「比哨声响得早」｜成群之后开始拖慢整条线：移动速度极高，血量偏低。归属哥布林系/杂兵/地面，建议针对真实伤害配置防线。"
+  },
+  {
+    "name": "只把风留在身后",
+    "name_hook": "「只把风留在身后」｜开始专门针对某一套防线：移动速度极高，血量偏低",
+    "series": "哥布林",
+    "variant": "精英",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "快速",
+    "stats": {
+      "hp": 195,
+      "speed": 1.78,
+      "armor": 18,
+      "magic_resist": 14,
+      "shield": 0,
+      "bounty": 14,
+      "leak_damage": 3,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "快速",
+        "description": "移动速度极高，血量偏低"
+      },
+      {
+        "name": "词缀·坚毅",
+        "description": "受到控制时间缩短"
+      }
+    ],
+    "weakness": "破甲",
+    "recommended_wave": "5~10",
+    "description": "「只把风留在身后」｜开始专门针对某一套防线：移动速度极高，血量偏低。归属哥布林系/精英/地面，建议针对破甲配置防线。"
+  },
+  {
+    "name": "快到没被登记",
+    "name_hook": "「快到没被登记」｜越过常规，逼玩家临时改配置：移动速度极高，血量偏低",
+    "series": "哥布林",
+    "variant": "变异体",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "快速",
+    "stats": {
+      "hp": 315,
+      "speed": 1.88,
+      "armor": 22,
+      "magic_resist": 12,
+      "shield": 0,
+      "bounty": 20,
+      "leak_damage": 4,
+      "size": "大型"
+    },
+    "abilities": [
+      {
+        "name": "快速",
+        "description": "移动速度极高，血量偏低"
+      },
+      {
+        "name": "词缀·狂暴",
+        "description": "血量低于半数时加速"
+      }
+    ],
+    "weakness": "爆发",
+    "recommended_wave": "7~13",
+    "description": "「快到没被登记」｜越过常规，逼玩家临时改配置：移动速度极高，血量偏低。归属哥布林系/精英/地面，建议针对爆发配置防线。"
+  },
+  {
+    "name": "你看见的是上一秒",
+    "name_hook": "「你看见的是上一秒」｜登场即改这一波的规则：移动速度极高，血量偏低",
+    "series": "哥布林",
+    "variant": "王者",
+    "rank": "首领",
+    "movement": "地面",
+    "trait": "快速",
+    "stats": {
+      "hp": 525,
+      "speed": 1.97,
+      "armor": 27,
+      "magic_resist": 23,
+      "shield": 0,
+      "bounty": 29,
+      "leak_damage": 7,
+      "size": "巨型"
+    },
+    "abilities": [
+      {
+        "name": "快速",
+        "description": "移动速度极高，血量偏低"
+      },
+      {
+        "name": "词缀·统御",
+        "description": "登场时降低全场炮塔 10% 攻速"
+      }
+    ],
+    "weakness": "法术",
+    "recommended_wave": "9~16",
+    "description": "「你看见的是上一秒」｜登场即改这一波的规则：移动速度极高，血量偏低。归属哥布林系/首领/地面，建议针对法术配置防线。"
+  },
+  {
+    "name": "罐头里有人敲门",
+    "name_hook": "「罐头里有人敲门」｜刚进场，只带一点不对劲：高额物理护甲，惧怕法术",
+    "series": "铁甲卫",
+    "variant": "幼体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "重甲",
+    "stats": {
+      "hp": 114,
+      "speed": 1.86,
+      "armor": 13,
+      "magic_resist": 3,
+      "shield": 0,
+      "bounty": 11,
+      "leak_damage": 1,
+      "size": "小型"
+    },
+    "abilities": [
+      {
+        "name": "重甲",
+        "description": "高额物理护甲，惧怕法术"
+      },
+      {
+        "name": "无",
+        "description": "基础个体，无额外能力"
+      }
+    ],
+    "weakness": "真实伤害",
+    "recommended_wave": "2~5",
+    "description": "「罐头里有人敲门」｜刚进场，只带一点不对劲：高额物理护甲，惧怕法术。归属铁甲卫系/杂兵/地面，建议针对真实伤害配置防线。"
+  },
+  {
+    "name": "铆钉比话多",
+    "name_hook": "「铆钉比话多」｜成群之后开始拖慢整条线：高额物理护甲，惧怕法术",
+    "series": "铁甲卫",
+    "variant": "成体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "重甲",
+    "stats": {
+      "hp": 182,
+      "speed": 1.97,
+      "armor": 19,
+      "magic_resist": 4,
+      "shield": 0,
+      "bounty": 14,
+      "leak_damage": 2,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "重甲",
+        "description": "高额物理护甲，惧怕法术"
+      },
+      {
+        "name": "轻微强化",
+        "description": "属性小幅提升"
+      }
+    ],
+    "weakness": "破甲",
+    "recommended_wave": "4~8",
+    "description": "「铆钉比话多」｜成群之后开始拖慢整条线：高额物理护甲，惧怕法术。归属铁甲卫系/杂兵/地面，建议针对破甲配置防线。"
+  },
+  {
+    "name": "把钥匙吞了",
+    "name_hook": "「把钥匙吞了」｜开始专门针对某一套防线：高额物理护甲，惧怕法术",
+    "series": "铁甲卫",
+    "variant": "精英",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "重甲",
+    "stats": {
+      "hp": 296,
+      "speed": 2.08,
+      "armor": 26,
+      "magic_resist": 15,
+      "shield": 0,
+      "bounty": 19,
+      "leak_damage": 3,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "重甲",
+        "description": "高额物理护甲，惧怕法术"
+      },
+      {
+        "name": "词缀·坚毅",
+        "description": "受到控制时间缩短"
+      }
+    ],
+    "weakness": "爆发",
+    "recommended_wave": "6~11",
+    "description": "「把钥匙吞了」｜开始专门针对某一套防线：高额物理护甲，惧怕法术。归属铁甲卫系/精英/地面，建议针对爆发配置防线。"
+  },
+  {
+    "name": "锈成了第二层皮",
+    "name_hook": "「锈成了第二层皮」｜越过常规，逼玩家临时改配置：高额物理护甲，惧怕法术",
+    "series": "铁甲卫",
+    "variant": "变异体",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "重甲",
+    "stats": {
+      "hp": 478,
+      "speed": 2.19,
+      "armor": 32,
+      "magic_resist": 14,
+      "shield": 0,
+      "bounty": 27,
+      "leak_damage": 4,
+      "size": "大型"
+    },
+    "abilities": [
+      {
+        "name": "重甲",
+        "description": "高额物理护甲，惧怕法术"
+      },
+      {
+        "name": "词缀·狂暴",
+        "description": "血量低于半数时加速"
+      }
+    ],
+    "weakness": "法术",
+    "recommended_wave": "8~14",
+    "description": "「锈成了第二层皮」｜越过常规，逼玩家临时改配置：高额物理护甲，惧怕法术。归属铁甲卫系/精英/地面，建议针对法术配置防线。"
+  },
+  {
+    "name": "整面墙走过来",
+    "name_hook": "「整面墙走过来」｜登场即改这一波的规则：高额物理护甲，惧怕法术",
+    "series": "铁甲卫",
+    "variant": "王者",
+    "rank": "首领",
+    "movement": "地面",
+    "trait": "重甲",
+    "stats": {
+      "hp": 798,
+      "speed": 2.31,
+      "armor": 39,
+      "magic_resist": 28,
+      "shield": 0,
+      "bounty": 41,
+      "leak_damage": 7,
+      "size": "巨型"
+    },
+    "abilities": [
+      {
+        "name": "重甲",
+        "description": "高额物理护甲，惧怕法术"
+      },
+      {
+        "name": "词缀·统御",
+        "description": "登场时降低全场炮塔 10% 攻速"
+      }
+    ],
+    "weakness": "控制",
+    "recommended_wave": "10~17",
+    "description": "「整面墙走过来」｜登场即改这一波的规则：高额物理护甲，惧怕法术。归属铁甲卫系/首领/地面，建议针对控制配置防线。"
+  },
+  {
+    "name": "屋檐掉下一块夜",
+    "name_hook": "「屋檐掉下一块夜」｜刚进场，只带一点不对劲：无视地面阻挡，仅能被对空单位命中",
+    "series": "蝠群",
+    "variant": "幼体",
+    "rank": "杂兵",
+    "movement": "飞行",
+    "trait": "飞行",
+    "stats": {
+      "hp": 123,
+      "speed": 1.16,
+      "armor": 16,
+      "magic_resist": 9,
+      "shield": 0,
+      "bounty": 11,
+      "leak_damage": 1,
+      "size": "小型"
+    },
+    "abilities": [
+      {
+        "name": "飞行",
+        "description": "无视地面阻挡，仅能被对空单位命中"
+      },
+      {
+        "name": "无",
+        "description": "基础个体，无额外能力"
+      }
+    ],
+    "weakness": "破甲",
+    "recommended_wave": "2~5",
+    "description": "「屋檐掉下一块夜」｜刚进场，只带一点不对劲：无视地面阻挡，仅能被对空单位命中。归属蝠群系/杂兵/飞行，建议针对破甲配置防线。"
+  },
+  {
+    "name": "不踩地的那群",
+    "name_hook": "「不踩地的那群」｜成群之后开始拖慢整条线：无视地面阻挡，仅能被对空单位命中",
+    "series": "蝠群",
+    "variant": "成体",
+    "rank": "杂兵",
+    "movement": "飞行",
+    "trait": "飞行",
+    "stats": {
+      "hp": 196,
+      "speed": 1.23,
+      "armor": 24,
+      "magic_resist": 8,
+      "shield": 0,
+      "bounty": 14,
+      "leak_damage": 2,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "飞行",
+        "description": "无视地面阻挡，仅能被对空单位命中"
+      },
+      {
+        "name": "轻微强化",
+        "description": "属性小幅提升"
+      }
+    ],
+    "weakness": "爆发",
+    "recommended_wave": "4~8",
+    "description": "「不踩地的那群」｜成群之后开始拖慢整条线：无视地面阻挡，仅能被对空单位命中。归属蝠群系/杂兵/飞行，建议针对爆发配置防线。"
+  },
+  {
+    "name": "影子先到一步",
+    "name_hook": "「影子先到一步」｜开始专门针对某一套防线：无视地面阻挡，仅能被对空单位命中",
+    "series": "蝠群",
+    "variant": "精英",
+    "rank": "精英",
+    "movement": "飞行",
+    "trait": "飞行",
+    "stats": {
+      "hp": 319,
+      "speed": 1.3,
+      "armor": 32,
+      "magic_resist": 20,
+      "shield": 0,
+      "bounty": 20,
+      "leak_damage": 3,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "飞行",
+        "description": "无视地面阻挡，仅能被对空单位命中"
+      },
+      {
+        "name": "词缀·坚毅",
+        "description": "受到控制时间缩短"
+      }
+    ],
+    "weakness": "法术",
+    "recommended_wave": "6~11",
+    "description": "「影子先到一步」｜开始专门针对某一套防线：无视地面阻挡，仅能被对空单位命中。归属蝠群系/精英/飞行，建议针对法术配置防线。"
+  },
+  {
+    "name": "把天花板当路",
+    "name_hook": "「把天花板当路」｜越过常规，逼玩家临时改配置：无视地面阻挡，仅能被对空单位命中",
+    "series": "蝠群",
+    "variant": "变异体",
+    "rank": "精英",
+    "movement": "飞行",
+    "trait": "飞行",
+    "stats": {
+      "hp": 516,
+      "speed": 1.37,
+      "armor": 40,
+      "magic_resist": 16,
+      "shield": 0,
+      "bounty": 29,
+      "leak_damage": 4,
+      "size": "大型"
+    },
+    "abilities": [
+      {
+        "name": "飞行",
+        "description": "无视地面阻挡，仅能被对空单位命中"
+      },
+      {
+        "name": "词缀·狂暴",
+        "description": "血量低于半数时加速"
+      }
+    ],
+    "weakness": "控制",
+    "recommended_wave": "8~14",
+    "description": "「把天花板当路」｜越过常规，逼玩家临时改配置：无视地面阻挡，仅能被对空单位命中。归属蝠群系/精英/飞行，建议针对控制配置防线。"
+  },
+  {
+    "name": "头顶没有空档",
+    "name_hook": "「头顶没有空档」｜登场即改这一波的规则：无视地面阻挡，仅能被对空单位命中",
+    "series": "蝠群",
+    "variant": "王者",
+    "rank": "首领",
+    "movement": "飞行",
+    "trait": "飞行",
+    "stats": {
+      "hp": 861,
+      "speed": 1.44,
+      "armor": 48,
+      "magic_resist": 27,
+      "shield": 0,
+      "bounty": 44,
+      "leak_damage": 7,
+      "size": "巨型"
+    },
+    "abilities": [
+      {
+        "name": "飞行",
+        "description": "无视地面阻挡，仅能被对空单位命中"
+      },
+      {
+        "name": "词缀·统御",
+        "description": "登场时降低全场炮塔 10% 攻速"
+      }
+    ],
+    "weakness": "真实伤害",
+    "recommended_wave": "10~17",
+    "description": "「头顶没有空档」｜登场即改这一波的规则：无视地面阻挡，仅能被对空单位命中。归属蝠群系/首领/飞行，建议针对真实伤害配置防线。"
+  },
+  {
+    "name": "衣架比人先动",
+    "name_hook": "「衣架比人先动」｜刚进场，只带一点不对劲：周期性进入潜行，需侦测类效果显形",
+    "series": "影盗",
+    "variant": "幼体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "隐身",
+    "stats": {
+      "hp": 62,
+      "speed": 1.23,
+      "armor": 5,
+      "magic_resist": 12,
+      "shield": 0,
+      "bounty": 8,
+      "leak_damage": 1,
+      "size": "小型"
+    },
+    "abilities": [
+      {
+        "name": "隐身",
+        "description": "周期性进入潜行，需侦测类效果显形"
+      },
+      {
+        "name": "无",
+        "description": "基础个体，无额外能力"
+      }
+    ],
+    "weakness": "爆发",
+    "recommended_wave": "3~6",
+    "description": "「衣架比人先动」｜刚进场，只带一点不对劲：周期性进入潜行，需侦测类效果显形。归属影盗系/杂兵/地面，建议针对爆发配置防线。"
+  },
+  {
+    "name": "点名时少一个",
+    "name_hook": "「点名时少一个」｜成群之后开始拖慢整条线：周期性进入潜行，需侦测类效果显形",
+    "series": "影盗",
+    "variant": "成体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "隐身",
+    "stats": {
+      "hp": 99,
+      "speed": 1.3,
+      "armor": 7,
+      "magic_resist": 10,
+      "shield": 0,
+      "bounty": 10,
+      "leak_damage": 2,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "隐身",
+        "description": "周期性进入潜行，需侦测类效果显形"
+      },
+      {
+        "name": "轻微强化",
+        "description": "属性小幅提升"
+      }
+    ],
+    "weakness": "法术",
+    "recommended_wave": "5~9",
+    "description": "「点名时少一个」｜成群之后开始拖慢整条线：周期性进入潜行，需侦测类效果显形。归属影盗系/杂兵/地面，建议针对法术配置防线。"
+  },
+  {
+    "name": "不在照片里",
+    "name_hook": "「不在照片里」｜开始专门针对某一套防线：周期性进入潜行，需侦测类效果显形",
+    "series": "影盗",
+    "variant": "精英",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "隐身",
+    "stats": {
+      "hp": 161,
+      "speed": 1.38,
+      "armor": 10,
+      "magic_resist": 9,
+      "shield": 0,
+      "bounty": 13,
+      "leak_damage": 3,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "隐身",
+        "description": "周期性进入潜行，需侦测类效果显形"
+      },
+      {
+        "name": "词缀·坚毅",
+        "description": "受到控制时间缩短"
+      }
+    ],
+    "weakness": "控制",
+    "recommended_wave": "7~12",
+    "description": "「不在照片里」｜开始专门针对某一套防线：周期性进入潜行，需侦测类效果显形。归属影盗系/精英/地面，建议针对控制配置防线。"
+  },
+  {
+    "name": "连脚印都请假了",
+    "name_hook": "「连脚印都请假了」｜越过常规，逼玩家临时改配置：周期性进入潜行，需侦测类效果显形",
+    "series": "影盗",
+    "variant": "变异体",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "隐身",
+    "stats": {
+      "hp": 260,
+      "speed": 1.45,
+      "armor": 12,
+      "magic_resist": 17,
+      "shield": 0,
+      "bounty": 17,
+      "leak_damage": 4,
+      "size": "大型"
+    },
+    "abilities": [
+      {
+        "name": "隐身",
+        "description": "周期性进入潜行，需侦测类效果显形"
+      },
+      {
+        "name": "词缀·狂暴",
+        "description": "血量低于半数时加速"
+      }
+    ],
+    "weakness": "真实伤害",
+    "recommended_wave": "9~15",
+    "description": "「连脚印都请假了」｜越过常规，逼玩家临时改配置：周期性进入潜行，需侦测类效果显形。归属影盗系/精英/地面，建议针对真实伤害配置防线。"
+  },
+  {
+    "name": "灯亮了才算丢东西",
+    "name_hook": "「灯亮了才算丢东西」｜登场即改这一波的规则：周期性进入潜行，需侦测类效果显形",
+    "series": "影盗",
+    "variant": "王者",
+    "rank": "首领",
+    "movement": "地面",
+    "trait": "隐身",
+    "stats": {
+      "hp": 434,
+      "speed": 1.53,
+      "armor": 15,
+      "magic_resist": 28,
+      "shield": 0,
+      "bounty": 25,
+      "leak_damage": 7,
+      "size": "巨型"
+    },
+    "abilities": [
+      {
+        "name": "隐身",
+        "description": "周期性进入潜行，需侦测类效果显形"
+      },
+      {
+        "name": "词缀·统御",
+        "description": "登场时降低全场炮塔 10% 攻速"
+      }
+    ],
+    "weakness": "破甲",
+    "recommended_wave": "11~18",
+    "description": "「灯亮了才算丢东西」｜登场即改这一波的规则：周期性进入潜行，需侦测类效果显形。归属影盗系/首领/地面，建议针对破甲配置防线。"
+  },
+  {
+    "name": "揣着一颗没说的心",
+    "name_hook": "「揣着一颗没说的心」｜刚进场，只带一点不对劲：接触防线时爆炸，造成范围漏怪伤害",
+    "series": "自爆虫",
+    "variant": "幼体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "自爆",
+    "stats": {
+      "hp": 124,
+      "speed": 1.0,
+      "armor": 11,
+      "magic_resist": 9,
+      "shield": 0,
+      "bounty": 11,
+      "leak_damage": 1,
+      "size": "小型"
+    },
+    "abilities": [
+      {
+        "name": "自爆",
+        "description": "接触防线时爆炸，造成范围漏怪伤害"
+      },
+      {
+        "name": "无",
+        "description": "基础个体，无额外能力"
+      }
+    ],
+    "weakness": "法术",
+    "recommended_wave": "3~6",
+    "description": "「揣着一颗没说的心」｜刚进场，只带一点不对劲：接触防线时爆炸，造成范围漏怪伤害。归属自爆虫系/杂兵/地面，建议针对法术配置防线。"
+  },
+  {
+    "name": "引线比腿短",
+    "name_hook": "「引线比腿短」｜成群之后开始拖慢整条线：接触防线时爆炸，造成范围漏怪伤害",
+    "series": "自爆虫",
+    "variant": "成体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "自爆",
+    "stats": {
+      "hp": 198,
+      "speed": 1.06,
+      "armor": 16,
+      "magic_resist": 9,
+      "shield": 0,
+      "bounty": 14,
+      "leak_damage": 2,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "自爆",
+        "description": "接触防线时爆炸，造成范围漏怪伤害"
+      },
+      {
+        "name": "轻微强化",
+        "description": "属性小幅提升"
+      }
+    ],
+    "weakness": "控制",
+    "recommended_wave": "5~9",
+    "description": "「引线比腿短」｜成群之后开始拖慢整条线：接触防线时爆炸，造成范围漏怪伤害。归属自爆虫系/杂兵/地面，建议针对控制配置防线。"
+  },
+  {
+    "name": "到门口才拆封",
+    "name_hook": "「到门口才拆封」｜开始专门针对某一套防线：接触防线时爆炸，造成范围漏怪伤害",
+    "series": "自爆虫",
+    "variant": "精英",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "自爆",
+    "stats": {
+      "hp": 322,
+      "speed": 1.12,
+      "armor": 22,
+      "magic_resist": 11,
+      "shield": 0,
+      "bounty": 20,
+      "leak_damage": 3,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "自爆",
+        "description": "接触防线时爆炸，造成范围漏怪伤害"
+      },
+      {
+        "name": "词缀·坚毅",
+        "description": "受到控制时间缩短"
+      }
+    ],
+    "weakness": "真实伤害",
+    "recommended_wave": "7~12",
+    "description": "「到门口才拆封」｜开始专门针对某一套防线：接触防线时爆炸，造成范围漏怪伤害。归属自爆虫系/精英/地面，建议针对真实伤害配置防线。"
+  },
+  {
+    "name": "响之前先安静",
+    "name_hook": "「响之前先安静」｜越过常规，逼玩家临时改配置：接触防线时爆炸，造成范围漏怪伤害",
+    "series": "自爆虫",
+    "variant": "变异体",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "自爆",
+    "stats": {
+      "hp": 520,
+      "speed": 1.18,
+      "armor": 27,
+      "magic_resist": 21,
+      "shield": 0,
+      "bounty": 29,
+      "leak_damage": 4,
+      "size": "大型"
+    },
+    "abilities": [
+      {
+        "name": "自爆",
+        "description": "接触防线时爆炸，造成范围漏怪伤害"
+      },
+      {
+        "name": "词缀·狂暴",
+        "description": "血量低于半数时加速"
+      }
+    ],
+    "weakness": "破甲",
+    "recommended_wave": "9~15",
+    "description": "「响之前先安静」｜越过常规，逼玩家临时改配置：接触防线时爆炸，造成范围漏怪伤害。归属自爆虫系/精英/地面，建议针对破甲配置防线。"
+  },
+  {
+    "name": "把终点也带走",
+    "name_hook": "「把终点也带走」｜登场即改这一波的规则：接触防线时爆炸，造成范围漏怪伤害",
+    "series": "自爆虫",
+    "variant": "王者",
+    "rank": "首领",
+    "movement": "地面",
+    "trait": "自爆",
+    "stats": {
+      "hp": 868,
+      "speed": 1.24,
+      "armor": 33,
+      "magic_resist": 19,
+      "shield": 0,
+      "bounty": 45,
+      "leak_damage": 7,
+      "size": "巨型"
+    },
+    "abilities": [
+      {
+        "name": "自爆",
+        "description": "接触防线时爆炸，造成范围漏怪伤害"
+      },
+      {
+        "name": "词缀·统御",
+        "description": "登场时降低全场炮塔 10% 攻速"
+      }
+    ],
+    "weakness": "爆发",
+    "recommended_wave": "11~18",
+    "description": "「把终点也带走」｜登场即改这一波的规则：接触防线时爆炸，造成范围漏怪伤害。归属自爆虫系/首领/地面，建议针对爆发配置防线。"
+  },
+  {
+    "name": "药锅比人先到",
+    "name_hook": "「药锅比人先到」｜刚进场，只带一点不对劲：持续治疗周围同伴",
+    "series": "巫医",
+    "variant": "幼体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "治疗",
+    "stats": {
+      "hp": 148,
+      "speed": 1.72,
+      "armor": 8,
+      "magic_resist": 6,
+      "shield": 0,
+      "bounty": 12,
+      "leak_damage": 1,
+      "size": "小型"
+    },
+    "abilities": [
+      {
+        "name": "治疗",
+        "description": "持续治疗周围同伴"
+      },
+      {
+        "name": "无",
+        "description": "基础个体，无额外能力"
+      }
+    ],
+    "weakness": "控制",
+    "recommended_wave": "4~7",
+    "description": "「药锅比人先到」｜刚进场，只带一点不对劲：持续治疗周围同伴。归属巫医系/杂兵/地面，建议针对控制配置防线。"
+  },
+  {
+    "name": "给别人缝自己",
+    "name_hook": "「给别人缝自己」｜成群之后开始拖慢整条线：持续治疗周围同伴",
+    "series": "巫医",
+    "variant": "成体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "治疗",
+    "stats": {
+      "hp": 236,
+      "speed": 1.82,
+      "armor": 12,
+      "magic_resist": 12,
+      "shield": 0,
+      "bounty": 16,
+      "leak_damage": 2,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "治疗",
+        "description": "持续治疗周围同伴"
+      },
+      {
+        "name": "轻微强化",
+        "description": "属性小幅提升"
+      }
+    ],
+    "weakness": "真实伤害",
+    "recommended_wave": "6~10",
+    "description": "「给别人缝自己」｜成群之后开始拖慢整条线：持续治疗周围同伴。归属巫医系/杂兵/地面，建议针对真实伤害配置防线。"
+  },
+  {
+    "name": "队伍里多了口气",
+    "name_hook": "「队伍里多了口气」｜开始专门针对某一套防线：持续治疗周围同伴",
+    "series": "巫医",
+    "variant": "精英",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "治疗",
+    "stats": {
+      "hp": 384,
+      "speed": 1.93,
+      "armor": 16,
+      "magic_resist": 20,
+      "shield": 0,
+      "bounty": 23,
+      "leak_damage": 3,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "治疗",
+        "description": "持续治疗周围同伴"
+      },
+      {
+        "name": "词缀·坚毅",
+        "description": "受到控制时间缩短"
+      }
+    ],
+    "weakness": "破甲",
+    "recommended_wave": "8~13",
+    "description": "「队伍里多了口气」｜开始专门针对某一套防线：持续治疗周围同伴。归属巫医系/精英/地面，建议针对破甲配置防线。"
+  },
+  {
+    "name": "把疼分给所有人",
+    "name_hook": "「把疼分给所有人」｜越过常规，逼玩家临时改配置：持续治疗周围同伴",
+    "series": "巫医",
+    "variant": "变异体",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "治疗",
+    "stats": {
+      "hp": 621,
+      "speed": 2.03,
+      "armor": 20,
+      "magic_resist": 21,
+      "shield": 0,
+      "bounty": 33,
+      "leak_damage": 4,
+      "size": "大型"
+    },
+    "abilities": [
+      {
+        "name": "治疗",
+        "description": "持续治疗周围同伴"
+      },
+      {
+        "name": "词缀·狂暴",
+        "description": "血量低于半数时加速"
+      }
+    ],
+    "weakness": "爆发",
+    "recommended_wave": "10~16",
+    "description": "「把疼分给所有人」｜越过常规，逼玩家临时改配置：持续治疗周围同伴。归属巫医系/精英/地面，建议针对爆发配置防线。"
+  },
+  {
+    "name": "谁都还没轮到死",
+    "name_hook": "「谁都还没轮到死」｜登场即改这一波的规则：持续治疗周围同伴",
+    "series": "巫医",
+    "variant": "王者",
+    "rank": "首领",
+    "movement": "地面",
+    "trait": "治疗",
+    "stats": {
+      "hp": 1036,
+      "speed": 2.13,
+      "armor": 24,
+      "magic_resist": 16,
+      "shield": 0,
+      "bounty": 52,
+      "leak_damage": 7,
+      "size": "巨型"
+    },
+    "abilities": [
+      {
+        "name": "治疗",
+        "description": "持续治疗周围同伴"
+      },
+      {
+        "name": "词缀·统御",
+        "description": "登场时降低全场炮塔 10% 攻速"
+      }
+    ],
+    "weakness": "法术",
+    "recommended_wave": "12~19",
+    "description": "「谁都还没轮到死」｜登场即改这一波的规则：持续治疗周围同伴。归属巫医系/首领/地面，建议针对法术配置防线。"
+  },
+  {
+    "name": "檐角多了一块",
+    "name_hook": "「檐角多了一块」｜刚进场，只带一点不对劲：高额法术抗性，物理攻击更有效",
+    "series": "石像鬼",
+    "variant": "幼体",
+    "rank": "杂兵",
+    "movement": "飞行",
+    "trait": "魔抗",
+    "stats": {
+      "hp": 116,
+      "speed": 1.13,
+      "armor": 6,
+      "magic_resist": 12,
+      "shield": 0,
+      "bounty": 11,
+      "leak_damage": 1,
+      "size": "小型"
+    },
+    "abilities": [
+      {
+        "name": "魔抗",
+        "description": "高额法术抗性，物理攻击更有效"
+      },
+      {
+        "name": "无",
+        "description": "基础个体，无额外能力"
+      }
+    ],
+    "weakness": "真实伤害",
+    "recommended_wave": "4~7",
+    "description": "「檐角多了一块」｜刚进场，只带一点不对劲：高额法术抗性，物理攻击更有效。归属石像鬼系/杂兵/飞行，建议针对真实伤害配置防线。"
+  },
+  {
+    "name": "咒语滑下去了",
+    "name_hook": "「咒语滑下去了」｜成群之后开始拖慢整条线：高额法术抗性，物理攻击更有效",
+    "series": "石像鬼",
+    "variant": "成体",
+    "rank": "杂兵",
+    "movement": "飞行",
+    "trait": "魔抗",
+    "stats": {
+      "hp": 185,
+      "speed": 1.2,
+      "armor": 9,
+      "magic_resist": 7,
+      "shield": 0,
+      "bounty": 14,
+      "leak_damage": 2,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "魔抗",
+        "description": "高额法术抗性，物理攻击更有效"
+      },
+      {
+        "name": "轻微强化",
+        "description": "属性小幅提升"
+      }
+    ],
+    "weakness": "破甲",
+    "recommended_wave": "6~10",
+    "description": "「咒语滑下去了」｜成群之后开始拖慢整条线：高额法术抗性，物理攻击更有效。归属石像鬼系/杂兵/飞行，建议针对破甲配置防线。"
+  },
+  {
+    "name": "不听也不解释",
+    "name_hook": "「不听也不解释」｜开始专门针对某一套防线：高额法术抗性，物理攻击更有效",
+    "series": "石像鬼",
+    "variant": "精英",
+    "rank": "精英",
+    "movement": "飞行",
+    "trait": "魔抗",
+    "stats": {
+      "hp": 301,
+      "speed": 1.27,
+      "armor": 12,
+      "magic_resist": 15,
+      "shield": 0,
+      "bounty": 19,
+      "leak_damage": 3,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "魔抗",
+        "description": "高额法术抗性，物理攻击更有效"
+      },
+      {
+        "name": "词缀·坚毅",
+        "description": "受到控制时间缩短"
+      }
+    ],
+    "weakness": "爆发",
+    "recommended_wave": "8~13",
+    "description": "「不听也不解释」｜开始专门针对某一套防线：高额法术抗性，物理攻击更有效。归属石像鬼系/精英/飞行，建议针对爆发配置防线。"
+  },
+  {
+    "name": "连雷都懒得落",
+    "name_hook": "「连雷都懒得落」｜越过常规，逼玩家临时改配置：高额法术抗性，物理攻击更有效",
+    "series": "石像鬼",
+    "variant": "变异体",
+    "rank": "精英",
+    "movement": "飞行",
+    "trait": "魔抗",
+    "stats": {
+      "hp": 487,
+      "speed": 1.33,
+      "armor": 15,
+      "magic_resist": 14,
+      "shield": 0,
+      "bounty": 27,
+      "leak_damage": 4,
+      "size": "大型"
+    },
+    "abilities": [
+      {
+        "name": "魔抗",
+        "description": "高额法术抗性，物理攻击更有效"
+      },
+      {
+        "name": "词缀·狂暴",
+        "description": "血量低于半数时加速"
+      }
+    ],
+    "weakness": "法术",
+    "recommended_wave": "10~16",
+    "description": "「连雷都懒得落」｜越过常规，逼玩家临时改配置：高额法术抗性，物理攻击更有效。归属石像鬼系/精英/飞行，建议针对法术配置防线。"
+  },
+  {
+    "name": "整座教堂起飞",
+    "name_hook": "「整座教堂起飞」｜登场即改这一波的规则：高额法术抗性，物理攻击更有效",
+    "series": "石像鬼",
+    "variant": "王者",
+    "rank": "首领",
+    "movement": "飞行",
+    "trait": "魔抗",
+    "stats": {
+      "hp": 812,
+      "speed": 1.4,
+      "armor": 18,
+      "magic_resist": 27,
+      "shield": 0,
+      "bounty": 42,
+      "leak_damage": 7,
+      "size": "巨型"
+    },
+    "abilities": [
+      {
+        "name": "魔抗",
+        "description": "高额法术抗性，物理攻击更有效"
+      },
+      {
+        "name": "词缀·统御",
+        "description": "登场时降低全场炮塔 10% 攻速"
+      }
+    ],
+    "weakness": "控制",
+    "recommended_wave": "12~19",
+    "description": "「整座教堂起飞」｜登场即改这一波的规则：高额法术抗性，物理攻击更有效。归属石像鬼系/首领/飞行，建议针对控制配置防线。"
+  },
+  {
+    "name": "骨头还没排好队",
+    "name_hook": "「骨头还没排好队」｜刚进场，只带一点不对劲：被击倒后有概率重新站起",
+    "series": "骷髅兵",
+    "variant": "幼体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "亡灵",
+    "stats": {
+      "hp": 50,
+      "speed": 2.13,
+      "armor": 17,
+      "magic_resist": 1,
+      "shield": 0,
+      "bounty": 8,
+      "leak_damage": 1,
+      "size": "小型"
+    },
+    "abilities": [
+      {
+        "name": "亡灵",
+        "description": "被击倒后有概率重新站起"
+      },
+      {
+        "name": "无",
+        "description": "基础个体，无额外能力"
+      }
+    ],
+    "weakness": "破甲",
+    "recommended_wave": "5~8",
+    "description": "「骨头还没排好队」｜刚进场，只带一点不对劲：被击倒后有概率重新站起。归属骷髅兵系/杂兵/地面，建议针对破甲配置防线。"
+  },
+  {
+    "name": "倒下时听见咔哒",
+    "name_hook": "「倒下时听见咔哒」｜成群之后开始拖慢整条线：被击倒后有概率重新站起",
+    "series": "骷髅兵",
+    "variant": "成体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "亡灵",
+    "stats": {
+      "hp": 80,
+      "speed": 2.26,
+      "armor": 25,
+      "magic_resist": 14,
+      "shield": 0,
+      "bounty": 9,
+      "leak_damage": 2,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "亡灵",
+        "description": "被击倒后有概率重新站起"
+      },
+      {
+        "name": "轻微强化",
+        "description": "属性小幅提升"
+      }
+    ],
+    "weakness": "爆发",
+    "recommended_wave": "7~11",
+    "description": "「倒下时听见咔哒」｜成群之后开始拖慢整条线：被击倒后有概率重新站起。归属骷髅兵系/杂兵/地面，建议针对爆发配置防线。"
+  },
+  {
+    "name": "又站起来一次",
+    "name_hook": "「又站起来一次」｜开始专门针对某一套防线：被击倒后有概率重新站起",
+    "series": "骷髅兵",
+    "variant": "精英",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "亡灵",
+    "stats": {
+      "hp": 130,
+      "speed": 2.39,
+      "armor": 34,
+      "magic_resist": 9,
+      "shield": 0,
+      "bounty": 11,
+      "leak_damage": 3,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "亡灵",
+        "description": "被击倒后有概率重新站起"
+      },
+      {
+        "name": "词缀·坚毅",
+        "description": "受到控制时间缩短"
+      }
+    ],
+    "weakness": "法术",
+    "recommended_wave": "9~14",
+    "description": "「又站起来一次」｜开始专门针对某一套防线：被击倒后有概率重新站起。归属骷髅兵系/精英/地面，建议针对法术配置防线。"
+  },
+  {
+    "name": "把死当转身",
+    "name_hook": "「把死当转身」｜越过常规，逼玩家临时改配置：被击倒后有概率重新站起",
+    "series": "骷髅兵",
+    "variant": "变异体",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "亡灵",
+    "stats": {
+      "hp": 210,
+      "speed": 2.51,
+      "armor": 42,
+      "magic_resist": 20,
+      "shield": 0,
+      "bounty": 15,
+      "leak_damage": 4,
+      "size": "大型"
+    },
+    "abilities": [
+      {
+        "name": "亡灵",
+        "description": "被击倒后有概率重新站起"
+      },
+      {
+        "name": "词缀·狂暴",
+        "description": "血量低于半数时加速"
+      }
+    ],
+    "weakness": "控制",
+    "recommended_wave": "11~17",
+    "description": "「把死当转身」｜越过常规，逼玩家临时改配置：被击倒后有概率重新站起。归属骷髅兵系/精英/地面，建议针对控制配置防线。"
+  },
+  {
+    "name": "清点数永远多一",
+    "name_hook": "「清点数永远多一」｜登场即改这一波的规则：被击倒后有概率重新站起",
+    "series": "骷髅兵",
+    "variant": "王者",
+    "rank": "首领",
+    "movement": "地面",
+    "trait": "亡灵",
+    "stats": {
+      "hp": 350,
+      "speed": 2.64,
+      "armor": 51,
+      "magic_resist": 22,
+      "shield": 0,
+      "bounty": 21,
+      "leak_damage": 7,
+      "size": "巨型"
+    },
+    "abilities": [
+      {
+        "name": "亡灵",
+        "description": "被击倒后有概率重新站起"
+      },
+      {
+        "name": "词缀·统御",
+        "description": "登场时降低全场炮塔 10% 攻速"
+      }
+    ],
+    "weakness": "真实伤害",
+    "recommended_wave": "13~20",
+    "description": "「清点数永远多一」｜登场即改这一波的规则：被击倒后有概率重新站起。归属骷髅兵系/首领/地面，建议针对真实伤害配置防线。"
+  },
+  {
+    "name": "八条腿都上过油",
+    "name_hook": "「八条腿都上过油」｜刚进场，只带一点不对劲：免疫毒与精神类效果",
+    "series": "机械蛛",
+    "variant": "幼体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "机械",
+    "stats": {
+      "hp": 114,
+      "speed": 1.65,
+      "armor": 15,
+      "magic_resist": 6,
+      "shield": 0,
+      "bounty": 11,
+      "leak_damage": 1,
+      "size": "小型"
+    },
+    "abilities": [
+      {
+        "name": "机械",
+        "description": "免疫毒与精神类效果"
+      },
+      {
+        "name": "无",
+        "description": "基础个体，无额外能力"
+      }
+    ],
+    "weakness": "爆发",
+    "recommended_wave": "5~8",
+    "description": "「八条腿都上过油」｜刚进场，只带一点不对劲：免疫毒与精神类效果。归属机械蛛系/杂兵/地面，建议针对爆发配置防线。"
+  },
+  {
+    "name": "不吃这一套",
+    "name_hook": "「不吃这一套」｜成群之后开始拖慢整条线：免疫毒与精神类效果",
+    "series": "机械蛛",
+    "variant": "成体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "机械",
+    "stats": {
+      "hp": 182,
+      "speed": 1.75,
+      "armor": 22,
+      "magic_resist": 16,
+      "shield": 0,
+      "bounty": 14,
+      "leak_damage": 2,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "机械",
+        "description": "免疫毒与精神类效果"
+      },
+      {
+        "name": "轻微强化",
+        "description": "属性小幅提升"
+      }
+    ],
+    "weakness": "法术",
+    "recommended_wave": "7~11",
+    "description": "「不吃这一套」｜成群之后开始拖慢整条线：免疫毒与精神类效果。归属机械蛛系/杂兵/地面，建议针对法术配置防线。"
+  },
+  {
+    "name": "胃里没有位置",
+    "name_hook": "「胃里没有位置」｜开始专门针对某一套防线：免疫毒与精神类效果",
+    "series": "机械蛛",
+    "variant": "精英",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "机械",
+    "stats": {
+      "hp": 296,
+      "speed": 1.85,
+      "armor": 30,
+      "magic_resist": 17,
+      "shield": 0,
+      "bounty": 19,
+      "leak_damage": 3,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "机械",
+        "description": "免疫毒与精神类效果"
+      },
+      {
+        "name": "词缀·坚毅",
+        "description": "受到控制时间缩短"
+      }
+    ],
+    "weakness": "控制",
+    "recommended_wave": "9~14",
+    "description": "「胃里没有位置」｜开始专门针对某一套防线：免疫毒与精神类效果。归属机械蛛系/精英/地面，建议针对控制配置防线。"
+  },
+  {
+    "name": "毒对它只是天气",
+    "name_hook": "「毒对它只是天气」｜越过常规，逼玩家临时改配置：免疫毒与精神类效果",
+    "series": "机械蛛",
+    "variant": "变异体",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "机械",
+    "stats": {
+      "hp": 478,
+      "speed": 1.95,
+      "armor": 37,
+      "magic_resist": 16,
+      "shield": 0,
+      "bounty": 27,
+      "leak_damage": 4,
+      "size": "大型"
+    },
+    "abilities": [
+      {
+        "name": "机械",
+        "description": "免疫毒与精神类效果"
+      },
+      {
+        "name": "词缀·狂暴",
+        "description": "血量低于半数时加速"
+      }
+    ],
+    "weakness": "真实伤害",
+    "recommended_wave": "11~17",
+    "description": "「毒对它只是天气」｜越过常规，逼玩家临时改配置：免疫毒与精神类效果。归属机械蛛系/精英/地面，建议针对真实伤害配置防线。"
+  },
+  {
+    "name": "整张网自己拧紧",
+    "name_hook": "「整张网自己拧紧」｜登场即改这一波的规则：免疫毒与精神类效果",
+    "series": "机械蛛",
+    "variant": "王者",
+    "rank": "首领",
+    "movement": "地面",
+    "trait": "机械",
+    "stats": {
+      "hp": 798,
+      "speed": 2.05,
+      "armor": 45,
+      "magic_resist": 22,
+      "shield": 0,
+      "bounty": 41,
+      "leak_damage": 7,
+      "size": "巨型"
+    },
+    "abilities": [
+      {
+        "name": "机械",
+        "description": "免疫毒与精神类效果"
+      },
+      {
+        "name": "词缀·统御",
+        "description": "登场时降低全场炮塔 10% 攻速"
+      }
+    ],
+    "weakness": "破甲",
+    "recommended_wave": "13~20",
+    "description": "「整张网自己拧紧」｜登场即改这一波的规则：免疫毒与精神类效果。归属机械蛛系/首领/地面，建议针对破甲配置防线。"
+  },
+  {
+    "name": "哈气先跑出三步",
+    "name_hook": "「哈气先跑出三步」｜刚进场，只带一点不对劲：为周围敌人提供加速光环",
+    "series": "冰霜狼",
+    "variant": "幼体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "光环",
+    "stats": {
+      "hp": 129,
+      "speed": 1.02,
+      "armor": 4,
+      "magic_resist": 11,
+      "shield": 0,
+      "bounty": 11,
+      "leak_damage": 1,
+      "size": "小型"
+    },
+    "abilities": [
+      {
+        "name": "光环",
+        "description": "为周围敌人提供加速光环"
+      },
+      {
+        "name": "无",
+        "description": "基础个体，无额外能力"
+      }
+    ],
+    "weakness": "法术",
+    "recommended_wave": "6~9",
+    "description": "「哈气先跑出三步」｜刚进场，只带一点不对劲：为周围敌人提供加速光环。归属冰霜狼系/杂兵/地面，建议针对法术配置防线。"
+  },
+  {
+    "name": "跟着它就不冷了",
+    "name_hook": "「跟着它就不冷了」｜成群之后开始拖慢整条线：为周围敌人提供加速光环",
+    "series": "冰霜狼",
+    "variant": "成体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "光环",
+    "stats": {
+      "hp": 206,
+      "speed": 1.08,
+      "armor": 6,
+      "magic_resist": 4,
+      "shield": 0,
+      "bounty": 15,
+      "leak_damage": 2,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "光环",
+        "description": "为周围敌人提供加速光环"
+      },
+      {
+        "name": "轻微强化",
+        "description": "属性小幅提升"
+      }
+    ],
+    "weakness": "控制",
+    "recommended_wave": "8~12",
+    "description": "「跟着它就不冷了」｜成群之后开始拖慢整条线：为周围敌人提供加速光环。归属冰霜狼系/杂兵/地面，建议针对控制配置防线。"
+  },
+  {
+    "name": "把慢的都带上",
+    "name_hook": "「把慢的都带上」｜开始专门针对某一套防线：为周围敌人提供加速光环",
+    "series": "冰霜狼",
+    "variant": "精英",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "光环",
+    "stats": {
+      "hp": 335,
+      "speed": 1.14,
+      "armor": 8,
+      "magic_resist": 19,
+      "shield": 0,
+      "bounty": 21,
+      "leak_damage": 3,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "光环",
+        "description": "为周围敌人提供加速光环"
+      },
+      {
+        "name": "词缀·坚毅",
+        "description": "受到控制时间缩短"
+      }
+    ],
+    "weakness": "真实伤害",
+    "recommended_wave": "10~15",
+    "description": "「把慢的都带上」｜开始专门针对某一套防线：为周围敌人提供加速光环。归属冰霜狼系/精英/地面，建议针对真实伤害配置防线。"
+  },
+  {
+    "name": "雪地上没有落后者",
+    "name_hook": "「雪地上没有落后者」｜越过常规，逼玩家临时改配置：为周围敌人提供加速光环",
+    "series": "冰霜狼",
+    "variant": "变异体",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "光环",
+    "stats": {
+      "hp": 541,
+      "speed": 1.2,
+      "armor": 10,
+      "magic_resist": 12,
+      "shield": 0,
+      "bounty": 30,
+      "leak_damage": 4,
+      "size": "大型"
+    },
+    "abilities": [
+      {
+        "name": "光环",
+        "description": "为周围敌人提供加速光环"
+      },
+      {
+        "name": "词缀·狂暴",
+        "description": "血量低于半数时加速"
+      }
+    ],
+    "weakness": "破甲",
+    "recommended_wave": "12~18",
+    "description": "「雪地上没有落后者」｜越过常规，逼玩家临时改配置：为周围敌人提供加速光环。归属冰霜狼系/精英/地面，建议针对破甲配置防线。"
+  },
+  {
+    "name": "整群一起提前到",
+    "name_hook": "「整群一起提前到」｜登场即改这一波的规则：为周围敌人提供加速光环",
+    "series": "冰霜狼",
+    "variant": "王者",
+    "rank": "首领",
+    "movement": "地面",
+    "trait": "光环",
+    "stats": {
+      "hp": 903,
+      "speed": 1.26,
+      "armor": 12,
+      "magic_resist": 18,
+      "shield": 0,
+      "bounty": 46,
+      "leak_damage": 7,
+      "size": "巨型"
+    },
+    "abilities": [
+      {
+        "name": "光环",
+        "description": "为周围敌人提供加速光环"
+      },
+      {
+        "name": "词缀·统御",
+        "description": "登场时降低全场炮塔 10% 攻速"
+      }
+    ],
+    "weakness": "爆发",
+    "recommended_wave": "14~21",
+    "description": "「整群一起提前到」｜登场即改这一波的规则：为周围敌人提供加速光环。归属冰霜狼系/首领/地面，建议针对爆发配置防线。"
+  },
+  {
+    "name": "脚底烫了个印",
+    "name_hook": "「脚底烫了个印」｜刚进场，只带一点不对劲：经过路径留下灼烧区域，压制炮塔",
+    "series": "熔岩兽",
+    "variant": "幼体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "灼烧",
+    "stats": {
+      "hp": 109,
+      "speed": 2.36,
+      "armor": 10,
+      "magic_resist": 3,
+      "shield": 0,
+      "bounty": 10,
+      "leak_damage": 1,
+      "size": "小型"
+    },
+    "abilities": [
+      {
+        "name": "灼烧",
+        "description": "经过路径留下灼烧区域，压制炮塔"
+      },
+      {
+        "name": "无",
+        "description": "基础个体，无额外能力"
+      }
+    ],
+    "weakness": "控制",
+    "recommended_wave": "6~9",
+    "description": "「脚底烫了个印」｜刚进场，只带一点不对劲：经过路径留下灼烧区域，压制炮塔。归属熔岩兽系/杂兵/地面，建议针对控制配置防线。"
+  },
+  {
+    "name": "走过的路还热着",
+    "name_hook": "「走过的路还热着」｜成群之后开始拖慢整条线：经过路径留下灼烧区域，压制炮塔",
+    "series": "熔岩兽",
+    "variant": "成体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "灼烧",
+    "stats": {
+      "hp": 174,
+      "speed": 2.5,
+      "armor": 15,
+      "magic_resist": 12,
+      "shield": 0,
+      "bounty": 13,
+      "leak_damage": 2,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "灼烧",
+        "description": "经过路径留下灼烧区域，压制炮塔"
+      },
+      {
+        "name": "轻微强化",
+        "description": "属性小幅提升"
+      }
+    ],
+    "weakness": "真实伤害",
+    "recommended_wave": "8~12",
+    "description": "「走过的路还热着」｜成群之后开始拖慢整条线：经过路径留下灼烧区域，压制炮塔。归属熔岩兽系/杂兵/地面，建议针对真实伤害配置防线。"
+  },
+  {
+    "name": "把炮管烤软",
+    "name_hook": "「把炮管烤软」｜开始专门针对某一套防线：经过路径留下灼烧区域，压制炮塔",
+    "series": "熔岩兽",
+    "variant": "精英",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "灼烧",
+    "stats": {
+      "hp": 283,
+      "speed": 2.64,
+      "armor": 20,
+      "magic_resist": 12,
+      "shield": 0,
+      "bounty": 18,
+      "leak_damage": 3,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "灼烧",
+        "description": "经过路径留下灼烧区域，压制炮塔"
+      },
+      {
+        "name": "词缀·坚毅",
+        "description": "受到控制时间缩短"
+      }
+    ],
+    "weakness": "破甲",
+    "recommended_wave": "10~15",
+    "description": "「把炮管烤软」｜开始专门针对某一套防线：经过路径留下灼烧区域，压制炮塔。归属熔岩兽系/精英/地面，建议针对破甲配置防线。"
+  },
+  {
+    "name": "身后跟着一小片火山",
+    "name_hook": "「身后跟着一小片火山」｜越过常规，逼玩家临时改配置：经过路径留下灼烧区域，压制炮塔",
+    "series": "熔岩兽",
+    "variant": "变异体",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "灼烧",
+    "stats": {
+      "hp": 457,
+      "speed": 2.78,
+      "armor": 25,
+      "magic_resist": 24,
+      "shield": 0,
+      "bounty": 26,
+      "leak_damage": 4,
+      "size": "大型"
+    },
+    "abilities": [
+      {
+        "name": "灼烧",
+        "description": "经过路径留下灼烧区域，压制炮塔"
+      },
+      {
+        "name": "词缀·狂暴",
+        "description": "血量低于半数时加速"
+      }
+    ],
+    "weakness": "爆发",
+    "recommended_wave": "12~18",
+    "description": "「身后跟着一小片火山」｜越过常规，逼玩家临时改配置：经过路径留下灼烧区域，压制炮塔。归属熔岩兽系/精英/地面，建议针对爆发配置防线。"
+  },
+  {
+    "name": "防线自己让开",
+    "name_hook": "「防线自己让开」｜登场即改这一波的规则：经过路径留下灼烧区域，压制炮塔",
+    "series": "熔岩兽",
+    "variant": "王者",
+    "rank": "首领",
+    "movement": "地面",
+    "trait": "灼烧",
+    "stats": {
+      "hp": 763,
+      "speed": 2.93,
+      "armor": 30,
+      "magic_resist": 27,
+      "shield": 0,
+      "bounty": 40,
+      "leak_damage": 7,
+      "size": "巨型"
+    },
+    "abilities": [
+      {
+        "name": "灼烧",
+        "description": "经过路径留下灼烧区域，压制炮塔"
+      },
+      {
+        "name": "词缀·统御",
+        "description": "登场时降低全场炮塔 10% 攻速"
+      }
+    ],
+    "weakness": "法术",
+    "recommended_wave": "14~21",
+    "description": "「防线自己让开」｜登场即改这一波的规则：经过路径留下灼烧区域，压制炮塔。归属熔岩兽系/首领/地面，建议针对法术配置防线。"
+  },
+  {
+    "name": "打了个喷嚏",
+    "name_hook": "「打了个喷嚏」｜刚进场，只带一点不对劲：行进途中不断释放孢子小怪",
+    "series": "孢子怪",
+    "variant": "幼体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "召唤",
+    "stats": {
+      "hp": 121,
+      "speed": 0.8,
+      "armor": 6,
+      "magic_resist": 11,
+      "shield": 0,
+      "bounty": 11,
+      "leak_damage": 1,
+      "size": "小型"
+    },
+    "abilities": [
+      {
+        "name": "召唤",
+        "description": "行进途中不断释放孢子小怪"
+      },
+      {
+        "name": "无",
+        "description": "基础个体，无额外能力"
+      }
+    ],
+    "weakness": "真实伤害",
+    "recommended_wave": "7~10",
+    "description": "「打了个喷嚏」｜刚进场，只带一点不对劲：行进途中不断释放孢子小怪。归属孢子怪系/杂兵/地面，建议针对真实伤害配置防线。"
+  },
+  {
+    "name": "空气里多出几个",
+    "name_hook": "「空气里多出几个」｜成群之后开始拖慢整条线：行进途中不断释放孢子小怪",
+    "series": "孢子怪",
+    "variant": "成体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "召唤",
+    "stats": {
+      "hp": 193,
+      "speed": 0.85,
+      "armor": 9,
+      "magic_resist": 4,
+      "shield": 0,
+      "bounty": 14,
+      "leak_damage": 2,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "召唤",
+        "description": "行进途中不断释放孢子小怪"
+      },
+      {
+        "name": "轻微强化",
+        "description": "属性小幅提升"
+      }
+    ],
+    "weakness": "破甲",
+    "recommended_wave": "9~13",
+    "description": "「空气里多出几个」｜成群之后开始拖慢整条线：行进途中不断释放孢子小怪。归属孢子怪系/杂兵/地面，建议针对破甲配置防线。"
+  },
+  {
+    "name": "一路都在分家",
+    "name_hook": "「一路都在分家」｜开始专门针对某一套防线：行进途中不断释放孢子小怪",
+    "series": "孢子怪",
+    "variant": "精英",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "召唤",
+    "stats": {
+      "hp": 314,
+      "speed": 0.9,
+      "armor": 12,
+      "magic_resist": 19,
+      "shield": 0,
+      "bounty": 20,
+      "leak_damage": 3,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "召唤",
+        "description": "行进途中不断释放孢子小怪"
+      },
+      {
+        "name": "词缀·坚毅",
+        "description": "受到控制时间缩短"
+      }
+    ],
+    "weakness": "爆发",
+    "recommended_wave": "11~16",
+    "description": "「一路都在分家」｜开始专门针对某一套防线：行进途中不断释放孢子小怪。归属孢子怪系/精英/地面，建议针对爆发配置防线。"
+  },
+  {
+    "name": "不生也不算少",
+    "name_hook": "「不生也不算少」｜越过常规，逼玩家临时改配置：行进途中不断释放孢子小怪",
+    "series": "孢子怪",
+    "variant": "变异体",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "召唤",
+    "stats": {
+      "hp": 508,
+      "speed": 0.94,
+      "armor": 15,
+      "magic_resist": 21,
+      "shield": 0,
+      "bounty": 28,
+      "leak_damage": 4,
+      "size": "大型"
+    },
+    "abilities": [
+      {
+        "name": "召唤",
+        "description": "行进途中不断释放孢子小怪"
+      },
+      {
+        "name": "词缀·狂暴",
+        "description": "血量低于半数时加速"
+      }
+    ],
+    "weakness": "法术",
+    "recommended_wave": "13~19",
+    "description": "「不生也不算少」｜越过常规，逼玩家临时改配置：行进途中不断释放孢子小怪。归属孢子怪系/精英/地面，建议针对法术配置防线。"
+  },
+  {
+    "name": "走完全程留下一队",
+    "name_hook": "「走完全程留下一队」｜登场即改这一波的规则：行进途中不断释放孢子小怪",
+    "series": "孢子怪",
+    "variant": "王者",
+    "rank": "首领",
+    "movement": "地面",
+    "trait": "召唤",
+    "stats": {
+      "hp": 847,
+      "speed": 0.99,
+      "armor": 18,
+      "magic_resist": 28,
+      "shield": 0,
+      "bounty": 44,
+      "leak_damage": 7,
+      "size": "巨型"
+    },
+    "abilities": [
+      {
+        "name": "召唤",
+        "description": "行进途中不断释放孢子小怪"
+      },
+      {
+        "name": "词缀·统御",
+        "description": "登场时降低全场炮塔 10% 攻速"
+      }
+    ],
+    "weakness": "控制",
+    "recommended_wave": "15~22",
+    "description": "「走完全程留下一队」｜登场即改这一波的规则：行进途中不断释放孢子小怪。归属孢子怪系/首领/地面，建议针对控制配置防线。"
+  },
+  {
+    "name": "打中的是上一帧",
+    "name_hook": "「打中的是上一帧」｜刚进场，只带一点不对劲：拥有概率闪避弹道攻击",
+    "series": "幻术师",
+    "variant": "幼体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "闪避",
+    "stats": {
+      "hp": 61,
+      "speed": 2.17,
+      "armor": 10,
+      "magic_resist": 10,
+      "shield": 0,
+      "bounty": 8,
+      "leak_damage": 1,
+      "size": "小型"
+    },
+    "abilities": [
+      {
+        "name": "闪避",
+        "description": "拥有概率闪避弹道攻击"
+      },
+      {
+        "name": "无",
+        "description": "基础个体，无额外能力"
+      }
+    ],
+    "weakness": "破甲",
+    "recommended_wave": "7~10",
+    "description": "「打中的是上一帧」｜刚进场，只带一点不对劲：拥有概率闪避弹道攻击。归属幻术师系/杂兵/地面，建议针对破甲配置防线。"
+  },
+  {
+    "name": "站在别处点头",
+    "name_hook": "「站在别处点头」｜成群之后开始拖慢整条线：拥有概率闪避弹道攻击",
+    "series": "幻术师",
+    "variant": "成体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "闪避",
+    "stats": {
+      "hp": 97,
+      "speed": 2.3,
+      "armor": 15,
+      "magic_resist": 13,
+      "shield": 0,
+      "bounty": 10,
+      "leak_damage": 2,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "闪避",
+        "description": "拥有概率闪避弹道攻击"
+      },
+      {
+        "name": "轻微强化",
+        "description": "属性小幅提升"
+      }
+    ],
+    "weakness": "爆发",
+    "recommended_wave": "9~13",
+    "description": "「站在别处点头」｜成群之后开始拖慢整条线：拥有概率闪避弹道攻击。归属幻术师系/杂兵/地面，建议针对爆发配置防线。"
+  },
+  {
+    "name": "弹道拐了个弯",
+    "name_hook": "「弹道拐了个弯」｜开始专门针对某一套防线：拥有概率闪避弹道攻击",
+    "series": "幻术师",
+    "variant": "精英",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "闪避",
+    "stats": {
+      "hp": 158,
+      "speed": 2.43,
+      "armor": 20,
+      "magic_resist": 12,
+      "shield": 0,
+      "bounty": 13,
+      "leak_damage": 3,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "闪避",
+        "description": "拥有概率闪避弹道攻击"
+      },
+      {
+        "name": "词缀·坚毅",
+        "description": "受到控制时间缩短"
+      }
+    ],
+    "weakness": "法术",
+    "recommended_wave": "11~16",
+    "description": "「弹道拐了个弯」｜开始专门针对某一套防线：拥有概率闪避弹道攻击。归属幻术师系/精英/地面，建议针对法术配置防线。"
+  },
+  {
+    "name": "十发里只认三发",
+    "name_hook": "「十发里只认三发」｜越过常规，逼玩家临时改配置：拥有概率闪避弹道攻击",
+    "series": "幻术师",
+    "variant": "变异体",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "闪避",
+    "stats": {
+      "hp": 256,
+      "speed": 2.56,
+      "armor": 25,
+      "magic_resist": 20,
+      "shield": 0,
+      "bounty": 17,
+      "leak_damage": 4,
+      "size": "大型"
+    },
+    "abilities": [
+      {
+        "name": "闪避",
+        "description": "拥有概率闪避弹道攻击"
+      },
+      {
+        "name": "词缀·狂暴",
+        "description": "血量低于半数时加速"
+      }
+    ],
+    "weakness": "控制",
+    "recommended_wave": "13~19",
+    "description": "「十发里只认三发」｜越过常规，逼玩家临时改配置：拥有概率闪避弹道攻击。归属幻术师系/精英/地面，建议针对控制配置防线。"
+  },
+  {
+    "name": "你瞄的一直不是它",
+    "name_hook": "「你瞄的一直不是它」｜登场即改这一波的规则：拥有概率闪避弹道攻击",
+    "series": "幻术师",
+    "variant": "王者",
+    "rank": "首领",
+    "movement": "地面",
+    "trait": "闪避",
+    "stats": {
+      "hp": 427,
+      "speed": 2.69,
+      "armor": 30,
+      "magic_resist": 22,
+      "shield": 0,
+      "bounty": 25,
+      "leak_damage": 7,
+      "size": "巨型"
+    },
+    "abilities": [
+      {
+        "name": "闪避",
+        "description": "拥有概率闪避弹道攻击"
+      },
+      {
+        "name": "词缀·统御",
+        "description": "登场时降低全场炮塔 10% 攻速"
+      }
+    ],
+    "weakness": "真实伤害",
+    "recommended_wave": "15~22",
+    "description": "「你瞄的一直不是它」｜登场即改这一波的规则：拥有概率闪避弹道攻击。归属幻术师系/首领/地面，建议针对真实伤害配置防线。"
+  },
+  {
+    "name": "伤口合得比嘴慢",
+    "name_hook": "「伤口合得比嘴慢」｜刚进场，只带一点不对劲：脱离战斗后快速回复生命",
+    "series": "巨魔",
+    "variant": "幼体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "再生",
+    "stats": {
+      "hp": 66,
+      "speed": 1.46,
+      "armor": 2,
+      "magic_resist": 12,
+      "shield": 0,
+      "bounty": 8,
+      "leak_damage": 1,
+      "size": "小型"
+    },
+    "abilities": [
+      {
+        "name": "再生",
+        "description": "脱离战斗后快速回复生命"
+      },
+      {
+        "name": "无",
+        "description": "基础个体，无额外能力"
+      }
+    ],
+    "weakness": "爆发",
+    "recommended_wave": "8~11",
+    "description": "「伤口合得比嘴慢」｜刚进场，只带一点不对劲：脱离战斗后快速回复生命。归属巨魔系/杂兵/地面，建议针对爆发配置防线。"
+  },
+  {
+    "name": "歇一会儿又长了",
+    "name_hook": "「歇一会儿又长了」｜成群之后开始拖慢整条线：脱离战斗后快速回复生命",
+    "series": "巨魔",
+    "variant": "成体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "再生",
+    "stats": {
+      "hp": 105,
+      "speed": 1.55,
+      "armor": 3,
+      "magic_resist": 6,
+      "shield": 0,
+      "bounty": 10,
+      "leak_damage": 2,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "再生",
+        "description": "脱离战斗后快速回复生命"
+      },
+      {
+        "name": "轻微强化",
+        "description": "属性小幅提升"
+      }
+    ],
+    "weakness": "法术",
+    "recommended_wave": "10~14",
+    "description": "「歇一会儿又长了」｜成群之后开始拖慢整条线：脱离战斗后快速回复生命。归属巨魔系/杂兵/地面，建议针对法术配置防线。"
+  },
+  {
+    "name": "把疼存起来",
+    "name_hook": "「把疼存起来」｜开始专门针对某一套防线：脱离战斗后快速回复生命",
+    "series": "巨魔",
+    "variant": "精英",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "再生",
+    "stats": {
+      "hp": 171,
+      "speed": 1.64,
+      "armor": 4,
+      "magic_resist": 17,
+      "shield": 0,
+      "bounty": 13,
+      "leak_damage": 3,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "再生",
+        "description": "脱离战斗后快速回复生命"
+      },
+      {
+        "name": "词缀·坚毅",
+        "description": "受到控制时间缩短"
+      }
+    ],
+    "weakness": "控制",
+    "recommended_wave": "12~17",
+    "description": "「把疼存起来」｜开始专门针对某一套防线：脱离战斗后快速回复生命。归属巨魔系/精英/地面，建议针对控制配置防线。"
+  },
+  {
+    "name": "离场即回满",
+    "name_hook": "「离场即回满」｜越过常规，逼玩家临时改配置：脱离战斗后快速回复生命",
+    "series": "巨魔",
+    "variant": "变异体",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "再生",
+    "stats": {
+      "hp": 277,
+      "speed": 1.72,
+      "armor": 5,
+      "magic_resist": 14,
+      "shield": 0,
+      "bounty": 18,
+      "leak_damage": 4,
+      "size": "大型"
+    },
+    "abilities": [
+      {
+        "name": "再生",
+        "description": "脱离战斗后快速回复生命"
+      },
+      {
+        "name": "词缀·狂暴",
+        "description": "血量低于半数时加速"
+      }
+    ],
+    "weakness": "真实伤害",
+    "recommended_wave": "14~20",
+    "description": "「离场即回满」｜越过常规，逼玩家临时改配置：脱离战斗后快速回复生命。归属巨魔系/精英/地面，建议针对真实伤害配置防线。"
+  },
+  {
+    "name": "打不死的那页账",
+    "name_hook": "「打不死的那页账」｜登场即改这一波的规则：脱离战斗后快速回复生命",
+    "series": "巨魔",
+    "variant": "王者",
+    "rank": "首领",
+    "movement": "地面",
+    "trait": "再生",
+    "stats": {
+      "hp": 462,
+      "speed": 1.81,
+      "armor": 6,
+      "magic_resist": 25,
+      "shield": 0,
+      "bounty": 26,
+      "leak_damage": 7,
+      "size": "巨型"
+    },
+    "abilities": [
+      {
+        "name": "再生",
+        "description": "脱离战斗后快速回复生命"
+      },
+      {
+        "name": "词缀·统御",
+        "description": "登场时降低全场炮塔 10% 攻速"
+      }
+    ],
+    "weakness": "破甲",
+    "recommended_wave": "16~23",
+    "description": "「打不死的那页账」｜登场即改这一波的规则：脱离战斗后快速回复生命。归属巨魔系/首领/地面，建议针对破甲配置防线。"
+  },
+  {
+    "name": "门没敢拦",
+    "name_hook": "「门没敢拦」｜刚进场，只带一点不对劲：可穿过地形与阻挡单位",
+    "series": "幽魂",
+    "variant": "幼体",
+    "rank": "杂兵",
+    "movement": "穿行",
+    "trait": "穿行",
+    "stats": {
+      "hp": 156,
+      "speed": 0.91,
+      "armor": 13,
+      "magic_resist": 3,
+      "shield": 0,
+      "bounty": 13,
+      "leak_damage": 1,
+      "size": "小型"
+    },
+    "abilities": [
+      {
+        "name": "穿行",
+        "description": "可穿过地形与阻挡单位"
+      },
+      {
+        "name": "无",
+        "description": "基础个体，无额外能力"
+      }
+    ],
+    "weakness": "法术",
+    "recommended_wave": "8~11",
+    "description": "「门没敢拦」｜刚进场，只带一点不对劲：可穿过地形与阻挡单位。归属幽魂系/杂兵/穿行，建议针对法术配置防线。"
+  },
+  {
+    "name": "墙只是个建议",
+    "name_hook": "「墙只是个建议」｜成群之后开始拖慢整条线：可穿过地形与阻挡单位",
+    "series": "幽魂",
+    "variant": "成体",
+    "rank": "杂兵",
+    "movement": "穿行",
+    "trait": "穿行",
+    "stats": {
+      "hp": 249,
+      "speed": 0.96,
+      "armor": 19,
+      "magic_resist": 15,
+      "shield": 0,
+      "bounty": 17,
+      "leak_damage": 2,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "穿行",
+        "description": "可穿过地形与阻挡单位"
+      },
+      {
+        "name": "轻微强化",
+        "description": "属性小幅提升"
+      }
+    ],
+    "weakness": "控制",
+    "recommended_wave": "10~14",
+    "description": "「墙只是个建议」｜成群之后开始拖慢整条线：可穿过地形与阻挡单位。归属幽魂系/杂兵/穿行，建议针对控制配置防线。"
+  },
+  {
+    "name": "从锁眼里过去",
+    "name_hook": "「从锁眼里过去」｜开始专门针对某一套防线：可穿过地形与阻挡单位",
+    "series": "幽魂",
+    "variant": "精英",
+    "rank": "精英",
+    "movement": "穿行",
+    "trait": "穿行",
+    "stats": {
+      "hp": 405,
+      "speed": 1.02,
+      "armor": 26,
+      "magic_resist": 13,
+      "shield": 0,
+      "bounty": 24,
+      "leak_damage": 3,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "穿行",
+        "description": "可穿过地形与阻挡单位"
+      },
+      {
+        "name": "词缀·坚毅",
+        "description": "受到控制时间缩短"
+      }
+    ],
+    "weakness": "真实伤害",
+    "recommended_wave": "12~17",
+    "description": "「从锁眼里过去」｜开始专门针对某一套防线：可穿过地形与阻挡单位。归属幽魂系/精英/穿行，建议针对真实伤害配置防线。"
+  },
+  {
+    "name": "不欠任何一条路",
+    "name_hook": "「不欠任何一条路」｜越过常规，逼玩家临时改配置：可穿过地形与阻挡单位",
+    "series": "幽魂",
+    "variant": "变异体",
+    "rank": "精英",
+    "movement": "穿行",
+    "trait": "穿行",
+    "stats": {
+      "hp": 655,
+      "speed": 1.07,
+      "armor": 32,
+      "magic_resist": 15,
+      "shield": 0,
+      "bounty": 35,
+      "leak_damage": 4,
+      "size": "大型"
+    },
+    "abilities": [
+      {
+        "name": "穿行",
+        "description": "可穿过地形与阻挡单位"
+      },
+      {
+        "name": "词缀·狂暴",
+        "description": "血量低于半数时加速"
+      }
+    ],
+    "weakness": "破甲",
+    "recommended_wave": "14~20",
+    "description": "「不欠任何一条路」｜越过常规，逼玩家临时改配置：可穿过地形与阻挡单位。归属幽魂系/精英/穿行，建议针对破甲配置防线。"
+  },
+  {
+    "name": "地图对它无效",
+    "name_hook": "「地图对它无效」｜登场即改这一波的规则：可穿过地形与阻挡单位",
+    "series": "幽魂",
+    "variant": "王者",
+    "rank": "首领",
+    "movement": "穿行",
+    "trait": "穿行",
+    "stats": {
+      "hp": 1092,
+      "speed": 1.13,
+      "armor": 39,
+      "magic_resist": 16,
+      "shield": 0,
+      "bounty": 55,
+      "leak_damage": 7,
+      "size": "巨型"
+    },
+    "abilities": [
+      {
+        "name": "穿行",
+        "description": "可穿过地形与阻挡单位"
+      },
+      {
+        "name": "词缀·统御",
+        "description": "登场时降低全场炮塔 10% 攻速"
+      }
+    ],
+    "weakness": "爆发",
+    "recommended_wave": "16~23",
+    "description": "「地图对它无效」｜登场即改这一波的规则：可穿过地形与阻挡单位。归属幽魂系/首领/穿行，建议针对爆发配置防线。"
+  },
+  {
+    "name": "壳里多了一层天",
+    "name_hook": "「壳里多了一层天」｜刚进场，只带一点不对劲：开局携带可再生的能量护盾",
+    "series": "水晶甲虫",
+    "variant": "幼体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "护盾",
+    "stats": {
+      "hp": 117,
+      "speed": 1.33,
+      "armor": 0,
+      "magic_resist": 6,
+      "shield": 17,
+      "bounty": 11,
+      "leak_damage": 1,
+      "size": "小型"
+    },
+    "abilities": [
+      {
+        "name": "护盾",
+        "description": "开局携带可再生的能量护盾"
+      },
+      {
+        "name": "无",
+        "description": "基础个体，无额外能力"
+      }
+    ],
+    "weakness": "控制",
+    "recommended_wave": "9~12",
+    "description": "「壳里多了一层天」｜刚进场，只带一点不对劲：开局携带可再生的能量护盾。归属水晶甲虫系/杂兵/地面，建议针对控制配置防线。"
+  },
+  {
+    "name": "先碎的不是它",
+    "name_hook": "「先碎的不是它」｜成群之后开始拖慢整条线：开局携带可再生的能量护盾",
+    "series": "水晶甲虫",
+    "variant": "成体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "护盾",
+    "stats": {
+      "hp": 187,
+      "speed": 1.41,
+      "armor": 0,
+      "magic_resist": 8,
+      "shield": 28,
+      "bounty": 14,
+      "leak_damage": 2,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "护盾",
+        "description": "开局携带可再生的能量护盾"
+      },
+      {
+        "name": "轻微强化",
+        "description": "属性小幅提升"
+      }
+    ],
+    "weakness": "真实伤害",
+    "recommended_wave": "11~15",
+    "description": "「先碎的不是它」｜成群之后开始拖慢整条线：开局携带可再生的能量护盾。归属水晶甲虫系/杂兵/地面，建议针对真实伤害配置防线。"
+  },
+  {
+    "name": "亮完又亮",
+    "name_hook": "「亮完又亮」｜开始专门针对某一套防线：开局携带可再生的能量护盾",
+    "series": "水晶甲虫",
+    "variant": "精英",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "护盾",
+    "stats": {
+      "hp": 304,
+      "speed": 1.49,
+      "armor": 0,
+      "magic_resist": 19,
+      "shield": 45,
+      "bounty": 19,
+      "leak_damage": 3,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "护盾",
+        "description": "开局携带可再生的能量护盾"
+      },
+      {
+        "name": "词缀·坚毅",
+        "description": "受到控制时间缩短"
+      }
+    ],
+    "weakness": "破甲",
+    "recommended_wave": "13~18",
+    "description": "「亮完又亮」｜开始专门针对某一套防线：开局携带可再生的能量护盾。归属水晶甲虫系/精英/地面，建议针对破甲配置防线。"
+  },
+  {
+    "name": "把打过来的收着",
+    "name_hook": "「把打过来的收着」｜越过常规，逼玩家临时改配置：开局携带可再生的能量护盾",
+    "series": "水晶甲虫",
+    "variant": "变异体",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "护盾",
+    "stats": {
+      "hp": 491,
+      "speed": 1.57,
+      "armor": 0,
+      "magic_resist": 13,
+      "shield": 73,
+      "bounty": 28,
+      "leak_damage": 4,
+      "size": "大型"
+    },
+    "abilities": [
+      {
+        "name": "护盾",
+        "description": "开局携带可再生的能量护盾"
+      },
+      {
+        "name": "词缀·狂暴",
+        "description": "血量低于半数时加速"
+      }
+    ],
+    "weakness": "爆发",
+    "recommended_wave": "15~21",
+    "description": "「把打过来的收着」｜越过常规，逼玩家临时改配置：开局携带可再生的能量护盾。归属水晶甲虫系/精英/地面，建议针对爆发配置防线。"
+  },
+  {
+    "name": "整块矿自己走路",
+    "name_hook": "「整块矿自己走路」｜登场即改这一波的规则：开局携带可再生的能量护盾",
+    "series": "水晶甲虫",
+    "variant": "王者",
+    "rank": "首领",
+    "movement": "地面",
+    "trait": "护盾",
+    "stats": {
+      "hp": 819,
+      "speed": 1.65,
+      "armor": 0,
+      "magic_resist": 24,
+      "shield": 122,
+      "bounty": 42,
+      "leak_damage": 7,
+      "size": "巨型"
+    },
+    "abilities": [
+      {
+        "name": "护盾",
+        "description": "开局携带可再生的能量护盾"
+      },
+      {
+        "name": "词缀·统御",
+        "description": "登场时降低全场炮塔 10% 攻速"
+      }
+    ],
+    "weakness": "法术",
+    "recommended_wave": "17~24",
+    "description": "「整块矿自己走路」｜登场即改这一波的规则：开局携带可再生的能量护盾。归属水晶甲虫系/首领/地面，建议针对法术配置防线。"
+  },
+  {
+    "name": "潮气先摸到炮管",
+    "name_hook": "「潮气先摸到炮管」｜刚进场，只带一点不对劲：远程降低附近炮塔攻速",
+    "series": "深海触手",
+    "variant": "幼体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "干扰",
+    "stats": {
+      "hp": 109,
+      "speed": 1.49,
+      "armor": 4,
+      "magic_resist": 3,
+      "shield": 0,
+      "bounty": 10,
+      "leak_damage": 1,
+      "size": "小型"
+    },
+    "abilities": [
+      {
+        "name": "干扰",
+        "description": "远程降低附近炮塔攻速"
+      },
+      {
+        "name": "无",
+        "description": "基础个体，无额外能力"
+      }
+    ],
+    "weakness": "真实伤害",
+    "recommended_wave": "9~12",
+    "description": "「潮气先摸到炮管」｜刚进场，只带一点不对劲：远程降低附近炮塔攻速。归属深海触手系/杂兵/地面，建议针对真实伤害配置防线。"
+  },
+  {
+    "name": "扳机慢了半拍",
+    "name_hook": "「扳机慢了半拍」｜成群之后开始拖慢整条线：远程降低附近炮塔攻速",
+    "series": "深海触手",
+    "variant": "成体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "干扰",
+    "stats": {
+      "hp": 174,
+      "speed": 1.58,
+      "armor": 6,
+      "magic_resist": 15,
+      "shield": 0,
+      "bounty": 13,
+      "leak_damage": 2,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "干扰",
+        "description": "远程降低附近炮塔攻速"
+      },
+      {
+        "name": "轻微强化",
+        "description": "属性小幅提升"
+      }
+    ],
+    "weakness": "破甲",
+    "recommended_wave": "11~15",
+    "description": "「扳机慢了半拍」｜成群之后开始拖慢整条线：远程降低附近炮塔攻速。归属深海触手系/杂兵/地面，建议针对破甲配置防线。"
+  },
+  {
+    "name": "把节奏泡软",
+    "name_hook": "「把节奏泡软」｜开始专门针对某一套防线：远程降低附近炮塔攻速",
+    "series": "深海触手",
+    "variant": "精英",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "干扰",
+    "stats": {
+      "hp": 283,
+      "speed": 1.67,
+      "armor": 8,
+      "magic_resist": 16,
+      "shield": 0,
+      "bounty": 18,
+      "leak_damage": 3,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "干扰",
+        "description": "远程降低附近炮塔攻速"
+      },
+      {
+        "name": "词缀·坚毅",
+        "description": "受到控制时间缩短"
+      }
+    ],
+    "weakness": "爆发",
+    "recommended_wave": "13~18",
+    "description": "「把节奏泡软」｜开始专门针对某一套防线：远程降低附近炮塔攻速。归属深海触手系/精英/地面，建议针对爆发配置防线。"
+  },
+  {
+    "name": "整排塔一起打盹",
+    "name_hook": "「整排塔一起打盹」｜越过常规，逼玩家临时改配置：远程降低附近炮塔攻速",
+    "series": "深海触手",
+    "variant": "变异体",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "干扰",
+    "stats": {
+      "hp": 457,
+      "speed": 1.76,
+      "armor": 10,
+      "magic_resist": 19,
+      "shield": 0,
+      "bounty": 26,
+      "leak_damage": 4,
+      "size": "大型"
+    },
+    "abilities": [
+      {
+        "name": "干扰",
+        "description": "远程降低附近炮塔攻速"
+      },
+      {
+        "name": "词缀·狂暴",
+        "description": "血量低于半数时加速"
+      }
+    ],
+    "weakness": "法术",
+    "recommended_wave": "15~21",
+    "description": "「整排塔一起打盹」｜越过常规，逼玩家临时改配置：远程降低附近炮塔攻速。归属深海触手系/精英/地面，建议针对法术配置防线。"
+  },
+  {
+    "name": "海伸进来一只手",
+    "name_hook": "「海伸进来一只手」｜登场即改这一波的规则：远程降低附近炮塔攻速",
+    "series": "深海触手",
+    "variant": "王者",
+    "rank": "首领",
+    "movement": "地面",
+    "trait": "干扰",
+    "stats": {
+      "hp": 763,
+      "speed": 1.85,
+      "armor": 12,
+      "magic_resist": 26,
+      "shield": 0,
+      "bounty": 40,
+      "leak_damage": 7,
+      "size": "巨型"
+    },
+    "abilities": [
+      {
+        "name": "干扰",
+        "description": "远程降低附近炮塔攻速"
+      },
+      {
+        "name": "词缀·统御",
+        "description": "登场时降低全场炮塔 10% 攻速"
+      }
+    ],
+    "weakness": "控制",
+    "recommended_wave": "17~24",
+    "description": "「海伸进来一只手」｜登场即改这一波的规则：远程降低附近炮塔攻速。归属深海触手系/首领/地面，建议针对控制配置防线。"
+  },
+  {
+    "name": "今天抽到哪张",
+    "name_hook": "「今天抽到哪张」｜刚进场，只带一点不对劲：每波随机获得一种强化词缀",
+    "series": "混沌使者",
+    "variant": "幼体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "随机增益",
+    "stats": {
+      "hp": 56,
+      "speed": 2.15,
+      "armor": 3,
+      "magic_resist": 6,
+      "shield": 0,
+      "bounty": 8,
+      "leak_damage": 1,
+      "size": "小型"
+    },
+    "abilities": [
+      {
+        "name": "随机增益",
+        "description": "每波随机获得一种强化词缀"
+      },
+      {
+        "name": "无",
+        "description": "基础个体，无额外能力"
+      }
+    ],
+    "weakness": "破甲",
+    "recommended_wave": "10~13",
+    "description": "「今天抽到哪张」｜刚进场，只带一点不对劲：每波随机获得一种强化词缀。归属混沌使者系/杂兵/地面，建议针对破甲配置防线。"
+  },
+  {
+    "name": "词缀还没写完",
+    "name_hook": "「词缀还没写完」｜成群之后开始拖慢整条线：每波随机获得一种强化词缀",
+    "series": "混沌使者",
+    "variant": "成体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "随机增益",
+    "stats": {
+      "hp": 89,
+      "speed": 2.28,
+      "armor": 4,
+      "magic_resist": 12,
+      "shield": 0,
+      "bounty": 10,
+      "leak_damage": 2,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "随机增益",
+        "description": "每波随机获得一种强化词缀"
+      },
+      {
+        "name": "轻微强化",
+        "description": "属性小幅提升"
+      }
+    ],
+    "weakness": "爆发",
+    "recommended_wave": "12~16",
+    "description": "「词缀还没写完」｜成群之后开始拖慢整条线：每波随机获得一种强化词缀。归属混沌使者系/杂兵/地面，建议针对爆发配置防线。"
+  },
+  {
+    "name": "每波换一副牌",
+    "name_hook": "「每波换一副牌」｜开始专门针对某一套防线：每波随机获得一种强化词缀",
+    "series": "混沌使者",
+    "variant": "精英",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "随机增益",
+    "stats": {
+      "hp": 145,
+      "speed": 2.41,
+      "armor": 6,
+      "magic_resist": 15,
+      "shield": 0,
+      "bounty": 12,
+      "leak_damage": 3,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "随机增益",
+        "description": "每波随机获得一种强化词缀"
+      },
+      {
+        "name": "词缀·坚毅",
+        "description": "受到控制时间缩短"
+      }
+    ],
+    "weakness": "法术",
+    "recommended_wave": "14~19",
+    "description": "「每波换一副牌」｜开始专门针对某一套防线：每波随机获得一种强化词缀。归属混沌使者系/精英/地面，建议针对法术配置防线。"
+  },
+  {
+    "name": "规则临时改了",
+    "name_hook": "「规则临时改了」｜越过常规，逼玩家临时改配置：每波随机获得一种强化词缀",
+    "series": "混沌使者",
+    "variant": "变异体",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "随机增益",
+    "stats": {
+      "hp": 235,
+      "speed": 2.54,
+      "armor": 7,
+      "magic_resist": 23,
+      "shield": 0,
+      "bounty": 16,
+      "leak_damage": 4,
+      "size": "大型"
+    },
+    "abilities": [
+      {
+        "name": "随机增益",
+        "description": "每波随机获得一种强化词缀"
+      },
+      {
+        "name": "词缀·狂暴",
+        "description": "血量低于半数时加速"
+      }
+    ],
+    "weakness": "控制",
+    "recommended_wave": "16~22",
+    "description": "「规则临时改了」｜越过常规，逼玩家临时改配置：每波随机获得一种强化词缀。归属混沌使者系/精英/地面，建议针对控制配置防线。"
+  },
+  {
+    "name": "连它自己也不知道",
+    "name_hook": "「连它自己也不知道」｜登场即改这一波的规则：每波随机获得一种强化词缀",
+    "series": "混沌使者",
+    "variant": "王者",
+    "rank": "首领",
+    "movement": "地面",
+    "trait": "随机增益",
+    "stats": {
+      "hp": 392,
+      "speed": 2.67,
+      "armor": 9,
+      "magic_resist": 16,
+      "shield": 0,
+      "bounty": 23,
+      "leak_damage": 7,
+      "size": "巨型"
+    },
+    "abilities": [
+      {
+        "name": "随机增益",
+        "description": "每波随机获得一种强化词缀"
+      },
+      {
+        "name": "词缀·统御",
+        "description": "登场时降低全场炮塔 10% 攻速"
+      }
+    ],
+    "weakness": "真实伤害",
+    "recommended_wave": "18~25",
+    "description": "「连它自己也不知道」｜登场即改这一波的规则：每波随机获得一种强化词缀。归属混沌使者系/首领/地面，建议针对真实伤害配置防线。"
+  },
+  {
+    "name": "地平线多了一道",
+    "name_hook": "「地平线多了一道」｜刚进场，只带一点不对劲：超高血量，登场时削弱全场炮塔",
+    "series": "终焉巨像",
+    "variant": "幼体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "首领",
+    "stats": {
+      "hp": 55,
+      "speed": 2.32,
+      "armor": 8,
+      "magic_resist": 6,
+      "shield": 0,
+      "bounty": 8,
+      "leak_damage": 1,
+      "size": "小型"
+    },
+    "abilities": [
+      {
+        "name": "首领",
+        "description": "超高血量，登场时削弱全场炮塔"
+      },
+      {
+        "name": "无",
+        "description": "基础个体，无额外能力"
+      }
+    ],
+    "weakness": "爆发",
+    "recommended_wave": "10~13",
+    "description": "「地平线多了一道」｜刚进场，只带一点不对劲：超高血量，登场时削弱全场炮塔。归属终焉巨像系/杂兵/地面，建议针对爆发配置防线。"
+  },
+  {
+    "name": "影子先盖住防线",
+    "name_hook": "「影子先盖住防线」｜成群之后开始拖慢整条线：超高血量，登场时削弱全场炮塔",
+    "series": "终焉巨像",
+    "variant": "成体",
+    "rank": "杂兵",
+    "movement": "地面",
+    "trait": "首领",
+    "stats": {
+      "hp": 88,
+      "speed": 2.46,
+      "armor": 12,
+      "magic_resist": 5,
+      "shield": 0,
+      "bounty": 9,
+      "leak_damage": 2,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "首领",
+        "description": "超高血量，登场时削弱全场炮塔"
+      },
+      {
+        "name": "轻微强化",
+        "description": "属性小幅提升"
+      }
+    ],
+    "weakness": "法术",
+    "recommended_wave": "12~16",
+    "description": "「影子先盖住防线」｜成群之后开始拖慢整条线：超高血量，登场时削弱全场炮塔。归属终焉巨像系/杂兵/地面，建议针对法术配置防线。"
+  },
+  {
+    "name": "塔都低了半头",
+    "name_hook": "「塔都低了半头」｜开始专门针对某一套防线：超高血量，登场时削弱全场炮塔",
+    "series": "终焉巨像",
+    "variant": "精英",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "首领",
+    "stats": {
+      "hp": 143,
+      "speed": 2.6,
+      "armor": 16,
+      "magic_resist": 13,
+      "shield": 0,
+      "bounty": 12,
+      "leak_damage": 3,
+      "size": "中型"
+    },
+    "abilities": [
+      {
+        "name": "首领",
+        "description": "超高血量，登场时削弱全场炮塔"
+      },
+      {
+        "name": "词缀·坚毅",
+        "description": "受到控制时间缩短"
+      }
+    ],
+    "weakness": "控制",
+    "recommended_wave": "14~19",
+    "description": "「塔都低了半头」｜开始专门针对某一套防线：超高血量，登场时削弱全场炮塔。归属终焉巨像系/精英/地面，建议针对控制配置防线。"
+  },
+  {
+    "name": "登场即改价目表",
+    "name_hook": "「登场即改价目表」｜越过常规，逼玩家临时改配置：超高血量，登场时削弱全场炮塔",
+    "series": "终焉巨像",
+    "variant": "变异体",
+    "rank": "精英",
+    "movement": "地面",
+    "trait": "首领",
+    "stats": {
+      "hp": 231,
+      "speed": 2.74,
+      "armor": 20,
+      "magic_resist": 18,
+      "shield": 0,
+      "bounty": 16,
+      "leak_damage": 4,
+      "size": "大型"
+    },
+    "abilities": [
+      {
+        "name": "首领",
+        "description": "超高血量，登场时削弱全场炮塔"
+      },
+      {
+        "name": "词缀·狂暴",
+        "description": "血量低于半数时加速"
+      }
+    ],
+    "weakness": "真实伤害",
+    "recommended_wave": "16~22",
+    "description": "「登场即改价目表」｜越过常规，逼玩家临时改配置：超高血量，登场时削弱全场炮塔。归属终焉巨像系/精英/地面，建议针对真实伤害配置防线。"
+  },
+  {
+    "name": "这一波从它算起",
+    "name_hook": "「这一波从它算起」｜登场即改这一波的规则：超高血量，登场时削弱全场炮塔",
+    "series": "终焉巨像",
+    "variant": "王者",
+    "rank": "首领",
+    "movement": "地面",
+    "trait": "首领",
+    "stats": {
+      "hp": 385,
+      "speed": 2.88,
+      "armor": 24,
+      "magic_resist": 25,
+      "shield": 0,
+      "bounty": 23,
+      "leak_damage": 7,
+      "size": "巨型"
+    },
+    "abilities": [
+      {
+        "name": "首领",
+        "description": "超高血量，登场时削弱全场炮塔"
+      },
+      {
+        "name": "词缀·统御",
+        "description": "登场时降低全场炮塔 10% 攻速"
+      }
+    ],
+    "weakness": "破甲",
+    "recommended_wave": "18~25",
+    "description": "「这一波从它算起」｜登场即改这一波的规则：超高血量，登场时削弱全场炮塔。归属终焉巨像系/首领/地面，建议针对破甲配置防线。"
+  }
+]

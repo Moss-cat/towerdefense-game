@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>🏭 塔防工厂</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- 共享 / 跨屏幕组件                                              -->
+<!-- ============================================================ -->
+
+<!-- 成就提示 Toast 容器 -->
+<div id="achToastContainer" class="hidden" aria-live="polite">
+  <!-- 成就达成提示动态插入 -->
+</div>
+
+<!-- 成就列表模态框（成就页内打开） -->
+<div id="achievementModal" class="hidden" role="dialog" aria-modal="true">
+  <div class="modal-backdrop" data-close-modal></div>
+  <div class="modal-content ach-modal">
+    <header class="modal-header">
+      <h2>🏆 成就列表</h2>
+      <button class="btn-icon" data-close-modal aria-label="关闭">✕</button>
+    </header>
+    <div id="achievementList" class="achievement-list"></div>
+  </div>
+</div>
+
+<!-- 战斗结算 / 关卡开始 Modal（main.js showModal 用） -->
+<div id="overlay" class="hidden" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <h2 id="modalTitle">🏭 塔防工厂</h2>
+    <div id="modalSubtitle" class="modal-sub"></div>
+    <div id="modalDesc" class="modal-desc"></div>
+    <div class="modal-stats">
+      <span id="uiClearedCount">0</span> 已通关 ·
+      解锁关卡 <span id="uiUnlockedLevel">1</span> ·
+      总击杀 <span id="uiTotalKills">0</span> ·
+      最高分 <span id="uiBestScore">0</span>
+    </div>
+    <div class="modal-buttons">
+      <button id="btnNewGame" class="btn gold">▶ 进入游戏</button>
+      <button id="btnContinue" class="btn hidden">📂 继续</button>
+      <button id="btnLevelSelect" class="btn hidden">🗺 选关</button>
+      <button id="btnAchievements" class="btn hidden">🏆 成就</button>
+      <button id="btnReset" class="btn danger hidden">⚠ 重置存档</button>
+    </div>
+    <div id="startHint" class="start-hint"></div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- MENU 屏幕 —— 主菜单：商店 + 芯片 + 选关                        -->
+<!-- ============================================================ -->
+<section id="menuScreen" class="screen">
+
+  <!-- 顶部栏：标题 + 标签页 + 货币 -->
+  <header class="menu-topbar">
+    <div class="brand">
+      <h1 class="game-title">🏭 塔防工厂</h1>
+    </div>
+
+    <nav class="menu-tabs" role="tablist">
+      <button class="tab-btn active" data-tab="shop" role="tab" aria-selected="true">商店 🔫</button>
+      <button class="tab-btn" data-tab="chip" role="tab" aria-selected="false">芯片 ⚙</button>
+      <button class="tab-btn" data-tab="level" role="tab" aria-selected="false">选关 🗺</button>
+      <button class="tab-btn" data-tab="achievement" role="tab" aria-selected="false">成就 🏆</button>
+      <button class="tabBtn" onclick="Shop.openCodex();">📖 图鉴</button>
+      <button class="tabBtn" onclick="Blacksmith.open();">🔨 铁匠铺</button>
+    </nav>
+
+    <div class="currency-display">
+      <div class="cur-item" title="金币"><span class="cur-icon">🪙</span><span class="cur-value" id="statGold">0</span></div>
+      <div class="cur-item" title="已拥有塔总数"><span class="cur-icon">📦</span><span class="cur-value" id="statTotalOwned">0</span></div>
+      <div class="cur-item" title="已解锁芯片数"><span class="cur-icon">⚙️</span><span class="cur-value" id="statChips">0</span></div>
+      <div class="cur-item" title="最高通关关卡"><span class="cur-icon">🏁</span><span class="cur-value" id="statHighestLevel">0</span></div>
+    </div>
+  </header>
+
+  <!-- 主体三栏布局 -->
+  <div class="menu-body">
+
+    <!-- 左栏：塔防商店 -->
+    <aside class="menu-panel left-panel" id="shopContainer">
+      <div class="panel-header">
+        <h2>🔫 塔防商店</h2>
+        <div class="shop-filters">
+          <select id="shopFilterElement" title="按元素筛选"><option value="all">全部元素</option></select>
+          <select id="shopFilterTier" title="按品质筛选"><option value="all">全部品质</option></select>
+        </div>
+      </div>
+      <div id="towerShopGrid" class="tower-shop-grid"></div>
+    </aside>
+
+    <!-- 中栏：详情 / 芯片库存 / 出战配置 -->
+    <main class="menu-panel center-panel">
+
+      <section class="detail-section" id="towerDetailSection">
+        <div class="panel-header"><h2>📋 塔详情</h2></div>
+        <div id="towerDetail" class="tower-detail">
+          <p class="empty-hint">点击左侧商店卡片查看详情</p>
+        </div>
+        <button id="buySelectedTowerBtn" class="btn-buy-big hidden">💸 买此塔</button>
+      </section>
+
+      <section class="chip-section" id="chipInventorySection">
+        <div class="panel-header"><h2>⚙ 芯片库存</h2></div>
+        <div id="chipInventoryGrid" class="chip-inventory-grid"></div>
+      </section>
+
+      <section class="loadout-section" id="loadoutSection">
+        <div class="panel-header"><h2>🎯 出战配置</h2><span class="loadout-hint">拖拽已拥有的塔到槽位</span></div>
+        <div id="ownedTowerPool" class="owned-tower-pool"></div>
+        <div id="loadoutSlots" class="loadout-slots">
+          <div class="loadout-slot" data-slot="0"></div>
+          <div class="loadout-slot" data-slot="1"></div>
+          <div class="loadout-slot" data-slot="2"></div>
+          <div class="loadout-slot" data-slot="3"></div>
+          <div class="loadout-slot" data-slot="4"></div>
+        </div>
+      </section>
+
+      <!-- 统计面板 -->
+      <section class="stats-section">
+        <div class="panel-header"><h2>📊 存档统计</h2></div>
+        <div class="stats-grid">
+          <div class="stat-row">总击杀 <span id="uiTotalKills">0</span></div>
+          <div class="stat-row">最高连击 <span id="uiBestCombo">0</span></div>
+          <div class="stat-row">已解锁塔 <span id="uiTowerUnlocked">0</span></div>
+          <div class="stat-row">已解锁敌人 <span id="uiEnemyUnlocked">0</span></div>
+          <div class="stat-row">芯片总数 <span id="uiChipCount">0</span></div>
+          <div class="stat-row">已解锁成就 <span id="uiAchCount">0</span></div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 右栏：关卡选择 -->
+    <aside class="menu-panel right-panel" id="levelPanel">
+      <div class="panel-header">
+        <h2>🗺 选择关卡</h2>
+        <div class="level-pagination">
+          <button id="prevLevelPageBtn" class="btn-page">◀ 上一页</button>
+          <span id="levelPageLabel" class="page-label">第 1 / 20 页</span>
+          <button id="nextLevelPageBtn" class="btn-page">下一页 ▶</button>
+          <button id="btnStartLevelSelect" class="btn-page btn-goto-unlocked">▶ 跳到解锁</button>
+        </div>
+      </div>
+      <div id="levelGrid" class="level-grid"></div>
+    </aside>
+
+    <!-- 图鉴 & 铁匠铺 内容区（默认隐藏，由 JS 动态填充） -->
+    <div id="codexSection" class="hidden"></div>
+    <div id="blacksmithSection" class="hidden"></div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- BATTLE 屏幕 —— 战斗画面（canvas + HUD + 左侧加载栏）         -->
+<!-- ============================================================ -->
+<section id="battleScreen" class="screen hidden">
+
+  <!-- 顶部 HUD（main.js updateUI 会实时更新这些 ID） -->
+  <header class="battle-topbar">
+    <div class="battle-info">关卡 <span id="uiLevel">—</span></div>
+    <div class="battle-info" id="uiLevelName">—</div>
+    <div class="battle-info">波次 <span id="uiWave">0</span>/<span id="uiMaxWave">0</span></div>
+    <div class="battle-info">生命 <span id="uiLives">15</span></div>
+    <div class="battle-info">金币 <span id="uiGold">0</span></div>
+    <div class="battle-info">分数 <span id="uiScore">0</span></div>
+    <div class="battle-info">击杀 <span id="uiKills">0</span></div>
+
+    <div class="battle-controls">
+      <button id="btnStartWave" class="btn gold">▶ 开始下一波</button>
+      <button id="btnSpeed" class="btn">速度×1</button>
+      <button id="btnSell" class="btn">出售模式</button>
+      <button id="btnRestartLevel" class="btn">🔄 重玩</button>
+      <button id="btnLevels" class="btn">🗺 选关</button>
+      <button id="returnHomeBtn" class="btn-return" title="返回主菜单">🏠 返回主页</button>
+    </div>
+  </header>
+
+  <!-- 左侧：出战配置快捷栏 -->
+  <aside class="battle-loadout">
+    <h3 class="loadout-title">🎯 出战</h3>
+    <div id="battleLoadoutSlots" class="battle-loadout-slots">
+      <div class="battle-slot" data-battle-slot="0"></div>
+      <div class="battle-slot" data-battle-slot="1"></div>
+      <div class="battle-slot" data-battle-slot="2"></div>
+      <div class="battle-slot" data-battle-slot="3"></div>
+      <div class="battle-slot" data-battle-slot="4"></div>
+    </div>
+    <p class="loadout-tip">点击槽位里的塔，再点击画布放置</p>
+  </aside>
+
+  <!-- 主战斗画布（main.js 引用 id="gameCanvas"） -->
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- 右下角小地图（main.js 引用 id="minimap"） -->
+  <div class="battle-minimap-wrap">
+    <canvas id="minimap" width="200" height="130"></canvas>
+  </div>
+
+  <!-- 塔芯片面板（main.js canvas click 打开，点击已放置塔时弹出 — BATTLE 内显示） -->
+  <div id="chipPanel" class="panel">
+    <h3>⚙ 塔芯片配置</h3>
+    <div id="chipPanelBody"></div>
+    <div class="chip-panel-actions">
+      <button id="chipBtnUpgrade" class="btn">⬆ 升级</button>
+      <button id="chipBtnSell" class="btn danger">💰 出售</button>
+      <button id="chipBtnInv" class="btn">📦 芯片库存</button>
+      <button id="chipBtnClose" class="btn">✕ 关闭</button>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ============================================================ -->
+<!-- 脚本加载顺序：数据 → 音频 → 存档 → 核心 → 游戏 → 商店 → 芯片嵌套 → 主入口 -->
+<!-- ============================================================ -->
+
+<!-- 1) 数据文件 -->
+<script src="js/data_towers.js"></script>
+<script src="js/data_enemies.js"></script>
+<script src="js/data_levels.js"></script>
+<script src="js/data_achievements.js"></script>
+<script src="js/data_chips.js"></script>
+
+<!-- 1.5) 从 json/ 加载完整结构化数据（覆盖程序化生成的数据） -->
+<script src="js/data_from_json.js"></script>
+
+<!-- 1.6) 系统芯片注入 + 铁匠铺模块 -->
+<script src="js/data_chips_extra.js"></script>
+<script src="js/blacksmith.js"></script>
+
+<!-- 2) 音频管理 -->
+<script src="js/audio.js"></script>
+
+<!-- 3) 存档管理 -->
+<script src="js/save.js"></script>
+
+<!-- 4) 核心引擎 -->
+<script src="js/core.js"></script>
+
+<!-- 5) 游戏主逻辑 + 技能引擎 -->
+<script src="js/game.js"></script>
+<script src="js/skill_engine.js"></script>
+
+<!-- 6) 商店 & 经济 -->
+<script src="js/shop.js"></script>
+
+<!-- 7) 芯片嵌套系统 -->
+<script src="js/chip_nesting.js"></script>
+
+<!-- 7.5) 中文名字注入（来自 json/ 目录） -->
+<script src="js/inject_names.js"></script>
+
+<!-- 8) 主入口 / UI 绑定 -->
+<script src="js/main.js"></script>
+
+</body>
+</html>

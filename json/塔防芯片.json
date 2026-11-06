@@ -1,0 +1,3182 @@
+[
+  {
+    "name": "钥匙插进锁缝",
+    "name_hook": "「钥匙插进锁缝」｜装一枚，只松动一个数值：攻击时生效，护甲穿透提升 9.9点",
+    "series": "穿甲协议",
+    "level": 1,
+    "level_label": "Ⅰ",
+    "slot": "攻击",
+    "rarity": "普通",
+    "energy_cost": 1,
+    "effect": {
+      "stat": "armor_pen",
+      "stat_cn": "护甲穿透",
+      "mode": "数值",
+      "value": 9.9,
+      "unit": "点",
+      "trigger": "攻击时"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与同系芯片同时装配时额外 +1.5点",
+    "description": "「钥匙插进锁缝」｜装一枚，只松动一个数值：攻击时生效，护甲穿透提升 9.9点。归属攻击类/穿甲协议系，等级 Ⅰ，最多叠加 4 枚。"
+  },
+  {
+    "name": "不问厚薄",
+    "name_hook": "「不问厚薄」｜铺开之后开始影响一整排塔：攻击时生效，护甲穿透提升 15.3点",
+    "series": "穿甲协议",
+    "level": 2,
+    "level_label": "Ⅱ",
+    "slot": "攻击",
+    "rarity": "稀有",
+    "energy_cost": 2,
+    "effect": {
+      "stat": "armor_pen",
+      "stat_cn": "护甲穿透",
+      "mode": "数值",
+      "value": 15.3,
+      "unit": "点",
+      "trigger": "攻击时"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与同系芯片同时装配时额外 +2.3点",
+    "description": "「不问厚薄」｜铺开之后开始影响一整排塔：攻击时生效，护甲穿透提升 15.3点。归属攻击类/穿甲协议系，等级 Ⅱ，最多叠加 4 枚。"
+  },
+  {
+    "name": "把甲读成一页纸",
+    "name_hook": "「把甲读成一页纸」｜拧紧到某个触发条件上：攻击时生效，护甲穿透提升 20.7点",
+    "series": "穿甲协议",
+    "level": 3,
+    "level_label": "Ⅲ",
+    "slot": "攻击",
+    "rarity": "史诗",
+    "energy_cost": 3,
+    "effect": {
+      "stat": "armor_pen",
+      "stat_cn": "护甲穿透",
+      "mode": "数值",
+      "value": 20.7,
+      "unit": "点",
+      "trigger": "攻击时"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与同系芯片同时装配时额外 +3.1点",
+    "description": "「把甲读成一页纸」｜拧紧到某个触发条件上：攻击时生效，护甲穿透提升 20.7点。归属攻击类/穿甲协议系，等级 Ⅲ，最多叠加 3 枚。"
+  },
+  {
+    "name": "铁也留门",
+    "name_hook": "「铁也留门」｜越过额定值，收益和代价一起放大：攻击时生效，护甲穿透提升 26.2点",
+    "series": "穿甲协议",
+    "level": 4,
+    "level_label": "Ⅳ",
+    "slot": "攻击",
+    "rarity": "传奇",
+    "energy_cost": 4,
+    "effect": {
+      "stat": "armor_pen",
+      "stat_cn": "护甲穿透",
+      "mode": "数值",
+      "value": 26.2,
+      "unit": "点",
+      "trigger": "攻击时"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与同系芯片同时装配时额外 +3.9点",
+    "description": "「铁也留门」｜越过额定值，收益和代价一起放大：攻击时生效，护甲穿透提升 26.2点。归属攻击类/穿甲协议系，等级 Ⅳ，最多叠加 3 枚。"
+  },
+  {
+    "name": "厚度失去意义",
+    "name_hook": "「厚度失去意义」｜不再算加成，直接改写成一条定律：攻击时生效，护甲穿透提升 31.6点",
+    "series": "穿甲协议",
+    "level": 5,
+    "level_label": "Ⅴ",
+    "slot": "攻击",
+    "rarity": "神话",
+    "energy_cost": 5,
+    "effect": {
+      "stat": "armor_pen",
+      "stat_cn": "护甲穿透",
+      "mode": "数值",
+      "value": 31.6,
+      "unit": "点",
+      "trigger": "攻击时"
+    },
+    "stack_limit": 2,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与同系芯片同时装配时额外 +4.7点",
+    "description": "「厚度失去意义」｜不再算加成，直接改写成一条定律：攻击时生效，护甲穿透提升 31.6点。归属攻击类/穿甲协议系，等级 Ⅴ，最多叠加 2 枚。"
+  },
+  {
+    "name": "多敲了一下",
+    "name_hook": "「多敲了一下」｜装一枚，只松动一个数值：攻击时生效，攻击速度提升 6.8%",
+    "series": "狂暴核心",
+    "level": 1,
+    "level_label": "Ⅰ",
+    "slot": "攻击",
+    "rarity": "普通",
+    "energy_cost": 1,
+    "effect": {
+      "stat": "attack_speed",
+      "stat_cn": "攻击速度",
+      "mode": "百分比",
+      "value": 6.8,
+      "unit": "%",
+      "trigger": "攻击时"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与高等级炮塔同时装配时额外 +1.0%",
+    "description": "「多敲了一下」｜装一枚，只松动一个数值：攻击时生效，攻击速度提升 6.8%。归属攻击类/狂暴核心系，等级 Ⅰ，最多叠加 4 枚。"
+  },
+  {
+    "name": "拍子跟不上手",
+    "name_hook": "「拍子跟不上手」｜铺开之后开始影响一整排塔：攻击时生效，攻击速度提升 10.5%",
+    "series": "狂暴核心",
+    "level": 2,
+    "level_label": "Ⅱ",
+    "slot": "攻击",
+    "rarity": "稀有",
+    "energy_cost": 2,
+    "effect": {
+      "stat": "attack_speed",
+      "stat_cn": "攻击速度",
+      "mode": "百分比",
+      "value": 10.5,
+      "unit": "%",
+      "trigger": "攻击时"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与高等级炮塔同时装配时额外 +1.6%",
+    "description": "「拍子跟不上手」｜铺开之后开始影响一整排塔：攻击时生效，攻击速度提升 10.5%。归属攻击类/狂暴核心系，等级 Ⅱ，最多叠加 4 枚。"
+  },
+  {
+    "name": "秒针被掰弯",
+    "name_hook": "「秒针被掰弯」｜拧紧到某个触发条件上：攻击时生效，攻击速度提升 14.2%",
+    "series": "狂暴核心",
+    "level": 3,
+    "level_label": "Ⅲ",
+    "slot": "攻击",
+    "rarity": "史诗",
+    "energy_cost": 3,
+    "effect": {
+      "stat": "attack_speed",
+      "stat_cn": "攻击速度",
+      "mode": "百分比",
+      "value": 14.2,
+      "unit": "%",
+      "trigger": "攻击时"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与高等级炮塔同时装配时额外 +2.1%",
+    "description": "「秒针被掰弯」｜拧紧到某个触发条件上：攻击时生效，攻击速度提升 14.2%。归属攻击类/狂暴核心系，等级 Ⅲ，最多叠加 3 枚。"
+  },
+  {
+    "name": "一息里塞了七发",
+    "name_hook": "「一息里塞了七发」｜越过额定值，收益和代价一起放大：攻击时生效，攻击速度提升 17.9%",
+    "series": "狂暴核心",
+    "level": 4,
+    "level_label": "Ⅳ",
+    "slot": "攻击",
+    "rarity": "传奇",
+    "energy_cost": 4,
+    "effect": {
+      "stat": "attack_speed",
+      "stat_cn": "攻击速度",
+      "mode": "百分比",
+      "value": 17.9,
+      "unit": "%",
+      "trigger": "攻击时"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与高等级炮塔同时装配时额外 +2.7%",
+    "description": "「一息里塞了七发」｜越过额定值，收益和代价一起放大：攻击时生效，攻击速度提升 17.9%。归属攻击类/狂暴核心系，等级 Ⅳ，最多叠加 3 枚。"
+  },
+  {
+    "name": "时间开始欠账",
+    "name_hook": "「时间开始欠账」｜不再算加成，直接改写成一条定律：攻击时生效，攻击速度提升 21.7%",
+    "series": "狂暴核心",
+    "level": 5,
+    "level_label": "Ⅴ",
+    "slot": "攻击",
+    "rarity": "神话",
+    "energy_cost": 5,
+    "effect": {
+      "stat": "attack_speed",
+      "stat_cn": "攻击速度",
+      "mode": "百分比",
+      "value": 21.7,
+      "unit": "%",
+      "trigger": "攻击时"
+    },
+    "stack_limit": 2,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与高等级炮塔同时装配时额外 +3.3%",
+    "description": "「时间开始欠账」｜不再算加成，直接改写成一条定律：攻击时生效，攻击速度提升 21.7%。归属攻击类/狂暴核心系，等级 Ⅴ，最多叠加 2 枚。"
+  },
+  {
+    "name": "准星擦了擦",
+    "name_hook": "「准星擦了擦」｜装一枚，只松动一个数值：攻击时生效，暴击率提升 7.5%",
+    "series": "精密校准",
+    "level": 1,
+    "level_label": "Ⅰ",
+    "slot": "攻击",
+    "rarity": "普通",
+    "energy_cost": 1,
+    "effect": {
+      "stat": "crit_rate",
+      "stat_cn": "暴击率",
+      "mode": "百分比",
+      "value": 7.5,
+      "unit": "%",
+      "trigger": "攻击时"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与对应元素塔同时装配时额外 +1.1%",
+    "description": "「准星擦了擦」｜装一枚，只松动一个数值：攻击时生效，暴击率提升 7.5%。归属攻击类/精密校准系，等级 Ⅰ，最多叠加 4 枚。"
+  },
+  {
+    "name": "同一个点两次",
+    "name_hook": "「同一个点两次」｜铺开之后开始影响一整排塔：攻击时生效，暴击率提升 11.6%",
+    "series": "精密校准",
+    "level": 2,
+    "level_label": "Ⅱ",
+    "slot": "攻击",
+    "rarity": "稀有",
+    "energy_cost": 2,
+    "effect": {
+      "stat": "crit_rate",
+      "stat_cn": "暴击率",
+      "mode": "百分比",
+      "value": 11.6,
+      "unit": "%",
+      "trigger": "攻击时"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与对应元素塔同时装配时额外 +1.7%",
+    "description": "「同一个点两次」｜铺开之后开始影响一整排塔：攻击时生效，暴击率提升 11.6%。归属攻击类/精密校准系，等级 Ⅱ，最多叠加 4 枚。"
+  },
+  {
+    "name": "偏差被收走",
+    "name_hook": "「偏差被收走」｜拧紧到某个触发条件上：攻击时生效，暴击率提升 15.8%",
+    "series": "精密校准",
+    "level": 3,
+    "level_label": "Ⅲ",
+    "slot": "攻击",
+    "rarity": "史诗",
+    "energy_cost": 3,
+    "effect": {
+      "stat": "crit_rate",
+      "stat_cn": "暴击率",
+      "mode": "百分比",
+      "value": 15.8,
+      "unit": "%",
+      "trigger": "攻击时"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与对应元素塔同时装配时额外 +2.4%",
+    "description": "「偏差被收走」｜拧紧到某个触发条件上：攻击时生效，暴击率提升 15.8%。归属攻击类/精密校准系，等级 Ⅲ，最多叠加 3 枚。"
+  },
+  {
+    "name": "每次都刚好",
+    "name_hook": "「每次都刚好」｜越过额定值，收益和代价一起放大：攻击时生效，暴击率提升 19.9%",
+    "series": "精密校准",
+    "level": 4,
+    "level_label": "Ⅳ",
+    "slot": "攻击",
+    "rarity": "传奇",
+    "energy_cost": 4,
+    "effect": {
+      "stat": "crit_rate",
+      "stat_cn": "暴击率",
+      "mode": "百分比",
+      "value": 19.9,
+      "unit": "%",
+      "trigger": "攻击时"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与对应元素塔同时装配时额外 +3.0%",
+    "description": "「每次都刚好」｜越过额定值，收益和代价一起放大：攻击时生效，暴击率提升 19.9%。归属攻击类/精密校准系，等级 Ⅳ，最多叠加 3 枚。"
+  },
+  {
+    "name": "运气改成常数",
+    "name_hook": "「运气改成常数」｜不再算加成，直接改写成一条定律：攻击时生效，暴击率提升 24.0%",
+    "series": "精密校准",
+    "level": 5,
+    "level_label": "Ⅴ",
+    "slot": "攻击",
+    "rarity": "神话",
+    "energy_cost": 5,
+    "effect": {
+      "stat": "crit_rate",
+      "stat_cn": "暴击率",
+      "mode": "百分比",
+      "value": 24.0,
+      "unit": "%",
+      "trigger": "攻击时"
+    },
+    "stack_limit": 2,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与对应元素塔同时装配时额外 +3.6%",
+    "description": "「运气改成常数」｜不再算加成，直接改写成一条定律：攻击时生效，暴击率提升 24.0%。归属攻击类/精密校准系，等级 Ⅴ，最多叠加 2 枚。"
+  },
+  {
+    "name": "多给了一格电",
+    "name_hook": "「多给了一格电」｜装一枚，只松动一个数值：攻击时生效，伤害提升 10.9%",
+    "series": "超载线圈",
+    "level": 1,
+    "level_label": "Ⅰ",
+    "slot": "攻击",
+    "rarity": "普通",
+    "energy_cost": 1,
+    "effect": {
+      "stat": "damage",
+      "stat_cn": "伤害",
+      "mode": "百分比",
+      "value": 10.9,
+      "unit": "%",
+      "trigger": "攻击时"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与控制类炮塔同时装配时额外 +1.6%",
+    "description": "「多给了一格电」｜装一枚，只松动一个数值：攻击时生效，伤害提升 10.9%。归属攻击类/超载线圈系，等级 Ⅰ，最多叠加 4 枚。"
+  },
+  {
+    "name": "表针出了格",
+    "name_hook": "「表针出了格」｜铺开之后开始影响一整排塔：攻击时生效，伤害提升 16.9%",
+    "series": "超载线圈",
+    "level": 2,
+    "level_label": "Ⅱ",
+    "slot": "攻击",
+    "rarity": "稀有",
+    "energy_cost": 2,
+    "effect": {
+      "stat": "damage",
+      "stat_cn": "伤害",
+      "mode": "百分比",
+      "value": 16.9,
+      "unit": "%",
+      "trigger": "攻击时"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与控制类炮塔同时装配时额外 +2.5%",
+    "description": "「表针出了格」｜铺开之后开始影响一整排塔：攻击时生效，伤害提升 16.9%。归属攻击类/超载线圈系，等级 Ⅱ，最多叠加 4 枚。"
+  },
+  {
+    "name": "额定值作废",
+    "name_hook": "「额定值作废」｜拧紧到某个触发条件上：攻击时生效，伤害提升 22.9%",
+    "series": "超载线圈",
+    "level": 3,
+    "level_label": "Ⅲ",
+    "slot": "攻击",
+    "rarity": "史诗",
+    "energy_cost": 3,
+    "effect": {
+      "stat": "damage",
+      "stat_cn": "伤害",
+      "mode": "百分比",
+      "value": 22.9,
+      "unit": "%",
+      "trigger": "攻击时"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与控制类炮塔同时装配时额外 +3.4%",
+    "description": "「额定值作废」｜拧紧到某个触发条件上：攻击时生效，伤害提升 22.9%。归属攻击类/超载线圈系，等级 Ⅲ，最多叠加 3 枚。"
+  },
+  {
+    "name": "线皮开始发烫",
+    "name_hook": "「线皮开始发烫」｜越过额定值，收益和代价一起放大：攻击时生效，伤害提升 29.0%",
+    "series": "超载线圈",
+    "level": 4,
+    "level_label": "Ⅳ",
+    "slot": "攻击",
+    "rarity": "传奇",
+    "energy_cost": 4,
+    "effect": {
+      "stat": "damage",
+      "stat_cn": "伤害",
+      "mode": "百分比",
+      "value": 29.0,
+      "unit": "%",
+      "trigger": "攻击时"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与控制类炮塔同时装配时额外 +4.3%",
+    "description": "「线皮开始发烫」｜越过额定值，收益和代价一起放大：攻击时生效，伤害提升 29.0%。归属攻击类/超载线圈系，等级 Ⅳ，最多叠加 3 枚。"
+  },
+  {
+    "name": "功率自己说了算",
+    "name_hook": "「功率自己说了算」｜不再算加成，直接改写成一条定律：攻击时生效，伤害提升 35.0%",
+    "series": "超载线圈",
+    "level": 5,
+    "level_label": "Ⅴ",
+    "slot": "攻击",
+    "rarity": "神话",
+    "energy_cost": 5,
+    "effect": {
+      "stat": "damage",
+      "stat_cn": "伤害",
+      "mode": "百分比",
+      "value": 35.0,
+      "unit": "%",
+      "trigger": "攻击时"
+    },
+    "stack_limit": 2,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与控制类炮塔同时装配时额外 +5.2%",
+    "description": "「功率自己说了算」｜不再算加成，直接改写成一条定律：攻击时生效，伤害提升 35.0%。归属攻击类/超载线圈系，等级 Ⅴ，最多叠加 2 枚。"
+  },
+  {
+    "name": "第二发记得第一发",
+    "name_hook": "「第二发记得第一发」｜装一枚，只松动一个数值：连续命中生效，连击加成提升 4.0%",
+    "series": "连击模块",
+    "level": 1,
+    "level_label": "Ⅰ",
+    "slot": "攻击",
+    "rarity": "普通",
+    "energy_cost": 1,
+    "effect": {
+      "stat": "combo_bonus",
+      "stat_cn": "连击加成",
+      "mode": "百分比",
+      "value": 4.0,
+      "unit": "%",
+      "trigger": "连续命中"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与经济型布局同时装配时额外 +0.6%",
+    "description": "「第二发记得第一发」｜装一枚，只松动一个数值：连续命中生效，连击加成提升 4.0%。归属攻击类/连击模块系，等级 Ⅰ，最多叠加 4 枚。"
+  },
+  {
+    "name": "账接着往上记",
+    "name_hook": "「账接着往上记」｜铺开之后开始影响一整排塔：连续命中生效，连击加成提升 6.3%",
+    "series": "连击模块",
+    "level": 2,
+    "level_label": "Ⅱ",
+    "slot": "攻击",
+    "rarity": "稀有",
+    "energy_cost": 2,
+    "effect": {
+      "stat": "combo_bonus",
+      "stat_cn": "连击加成",
+      "mode": "百分比",
+      "value": 6.3,
+      "unit": "%",
+      "trigger": "连续命中"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与经济型布局同时装配时额外 +0.9%",
+    "description": "「账接着往上记」｜铺开之后开始影响一整排塔：连续命中生效，连击加成提升 6.3%。归属攻击类/连击模块系，等级 Ⅱ，最多叠加 4 枚。"
+  },
+  {
+    "name": "不换目标就加价",
+    "name_hook": "「不换目标就加价」｜拧紧到某个触发条件上：连续命中生效，连击加成提升 8.5%",
+    "series": "连击模块",
+    "level": 3,
+    "level_label": "Ⅲ",
+    "slot": "攻击",
+    "rarity": "史诗",
+    "energy_cost": 3,
+    "effect": {
+      "stat": "combo_bonus",
+      "stat_cn": "连击加成",
+      "mode": "百分比",
+      "value": 8.5,
+      "unit": "%",
+      "trigger": "连续命中"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与经济型布局同时装配时额外 +1.3%",
+    "description": "「不换目标就加价」｜拧紧到某个触发条件上：连续命中生效，连击加成提升 8.5%。归属攻击类/连击模块系，等级 Ⅲ，最多叠加 3 枚。"
+  },
+  {
+    "name": "越熟越重",
+    "name_hook": "「越熟越重」｜越过额定值，收益和代价一起放大：连续命中生效，连击加成提升 10.7%",
+    "series": "连击模块",
+    "level": 4,
+    "level_label": "Ⅳ",
+    "slot": "攻击",
+    "rarity": "传奇",
+    "energy_cost": 4,
+    "effect": {
+      "stat": "combo_bonus",
+      "stat_cn": "连击加成",
+      "mode": "百分比",
+      "value": 10.7,
+      "unit": "%",
+      "trigger": "连续命中"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与经济型布局同时装配时额外 +1.6%",
+    "description": "「越熟越重」｜越过额定值，收益和代价一起放大：连续命中生效，连击加成提升 10.7%。归属攻击类/连击模块系，等级 Ⅳ，最多叠加 3 枚。"
+  },
+  {
+    "name": "整串都算一发",
+    "name_hook": "「整串都算一发」｜不再算加成，直接改写成一条定律：连续命中生效，连击加成提升 13.0%",
+    "series": "连击模块",
+    "level": 5,
+    "level_label": "Ⅴ",
+    "slot": "攻击",
+    "rarity": "神话",
+    "energy_cost": 5,
+    "effect": {
+      "stat": "combo_bonus",
+      "stat_cn": "连击加成",
+      "mode": "百分比",
+      "value": 13.0,
+      "unit": "%",
+      "trigger": "连续命中"
+    },
+    "stack_limit": 2,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与经济型布局同时装配时额外 +1.9%",
+    "description": "「整串都算一发」｜不再算加成，直接改写成一条定律：连续命中生效，连击加成提升 13.0%。归属攻击类/连击模块系，等级 Ⅴ，最多叠加 2 枚。"
+  },
+  {
+    "name": "红线往右挪了点",
+    "name_hook": "「红线往右挪了点」｜装一枚，只松动一个数值：目标低血量生效，斩杀线提升 7.5%",
+    "series": "斩杀指令",
+    "level": 1,
+    "level_label": "Ⅰ",
+    "slot": "攻击",
+    "rarity": "普通",
+    "energy_cost": 1,
+    "effect": {
+      "stat": "execute_threshold",
+      "stat_cn": "斩杀线",
+      "mode": "百分比",
+      "value": 7.5,
+      "unit": "%",
+      "trigger": "目标低血量"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与侦测类塔同时装配时额外 +1.1%",
+    "description": "「红线往右挪了点」｜装一枚，只松动一个数值：目标低血量生效，斩杀线提升 7.5%。归属攻击类/斩杀指令系，等级 Ⅰ，最多叠加 4 枚。"
+  },
+  {
+    "name": "剩下的不必打完",
+    "name_hook": "「剩下的不必打完」｜铺开之后开始影响一整排塔：目标低血量生效，斩杀线提升 11.7%",
+    "series": "斩杀指令",
+    "level": 2,
+    "level_label": "Ⅱ",
+    "slot": "攻击",
+    "rarity": "稀有",
+    "energy_cost": 2,
+    "effect": {
+      "stat": "execute_threshold",
+      "stat_cn": "斩杀线",
+      "mode": "百分比",
+      "value": 11.7,
+      "unit": "%",
+      "trigger": "目标低血量"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与侦测类塔同时装配时额外 +1.8%",
+    "description": "「剩下的不必打完」｜铺开之后开始影响一整排塔：目标低血量生效，斩杀线提升 11.7%。归属攻击类/斩杀指令系，等级 Ⅱ，最多叠加 4 枚。"
+  },
+  {
+    "name": "提前替它签字",
+    "name_hook": "「提前替它签字」｜拧紧到某个触发条件上：目标低血量生效，斩杀线提升 15.8%",
+    "series": "斩杀指令",
+    "level": 3,
+    "level_label": "Ⅲ",
+    "slot": "攻击",
+    "rarity": "史诗",
+    "energy_cost": 3,
+    "effect": {
+      "stat": "execute_threshold",
+      "stat_cn": "斩杀线",
+      "mode": "百分比",
+      "value": 15.8,
+      "unit": "%",
+      "trigger": "目标低血量"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与侦测类塔同时装配时额外 +2.4%",
+    "description": "「提前替它签字」｜拧紧到某个触发条件上：目标低血量生效，斩杀线提升 15.8%。归属攻击类/斩杀指令系，等级 Ⅲ，最多叠加 3 枚。"
+  },
+  {
+    "name": "半条命也够判",
+    "name_hook": "「半条命也够判」｜越过额定值，收益和代价一起放大：目标低血量生效，斩杀线提升 20.0%",
+    "series": "斩杀指令",
+    "level": 4,
+    "level_label": "Ⅳ",
+    "slot": "攻击",
+    "rarity": "传奇",
+    "energy_cost": 4,
+    "effect": {
+      "stat": "execute_threshold",
+      "stat_cn": "斩杀线",
+      "mode": "百分比",
+      "value": 20.0,
+      "unit": "%",
+      "trigger": "目标低血量"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与侦测类塔同时装配时额外 +3.0%",
+    "description": "「半条命也够判」｜越过额定值，收益和代价一起放大：目标低血量生效，斩杀线提升 20.0%。归属攻击类/斩杀指令系，等级 Ⅳ，最多叠加 3 枚。"
+  },
+  {
+    "name": "看到就算结束",
+    "name_hook": "「看到就算结束」｜不再算加成，直接改写成一条定律：目标低血量生效，斩杀线提升 24.1%",
+    "series": "斩杀指令",
+    "level": 5,
+    "level_label": "Ⅴ",
+    "slot": "攻击",
+    "rarity": "神话",
+    "energy_cost": 5,
+    "effect": {
+      "stat": "execute_threshold",
+      "stat_cn": "斩杀线",
+      "mode": "百分比",
+      "value": 24.1,
+      "unit": "%",
+      "trigger": "目标低血量"
+    },
+    "stack_limit": 2,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与侦测类塔同时装配时额外 +3.6%",
+    "description": "「看到就算结束」｜不再算加成，直接改写成一条定律：目标低血量生效，斩杀线提升 24.1%。归属攻击类/斩杀指令系，等级 Ⅴ，最多叠加 2 枚。"
+  },
+  {
+    "name": "先敲那层亮",
+    "name_hook": "「先敲那层亮」｜装一枚，只松动一个数值：命中护盾生效，对护盾伤害提升 7.4%",
+    "series": "破盾解码",
+    "level": 1,
+    "level_label": "Ⅰ",
+    "slot": "攻击",
+    "rarity": "普通",
+    "energy_cost": 1,
+    "effect": {
+      "stat": "shield_damage",
+      "stat_cn": "对护盾伤害",
+      "mode": "百分比",
+      "value": 7.4,
+      "unit": "%",
+      "trigger": "命中护盾"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与同系芯片同时装配时额外 +1.1%",
+    "description": "「先敲那层亮」｜装一枚，只松动一个数值：命中护盾生效，对护盾伤害提升 7.4%。归属攻击类/破盾解码系，等级 Ⅰ，最多叠加 4 枚。"
+  },
+  {
+    "name": "玻璃比门先碎",
+    "name_hook": "「玻璃比门先碎」｜铺开之后开始影响一整排塔：命中护盾生效，对护盾伤害提升 11.4%",
+    "series": "破盾解码",
+    "level": 2,
+    "level_label": "Ⅱ",
+    "slot": "攻击",
+    "rarity": "稀有",
+    "energy_cost": 2,
+    "effect": {
+      "stat": "shield_damage",
+      "stat_cn": "对护盾伤害",
+      "mode": "百分比",
+      "value": 11.4,
+      "unit": "%",
+      "trigger": "命中护盾"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与同系芯片同时装配时额外 +1.7%",
+    "description": "「玻璃比门先碎」｜铺开之后开始影响一整排塔：命中护盾生效，对护盾伤害提升 11.4%。归属攻击类/破盾解码系，等级 Ⅱ，最多叠加 4 枚。"
+  },
+  {
+    "name": "把护盾当草稿",
+    "name_hook": "「把护盾当草稿」｜拧紧到某个触发条件上：命中护盾生效，对护盾伤害提升 15.5%",
+    "series": "破盾解码",
+    "level": 3,
+    "level_label": "Ⅲ",
+    "slot": "攻击",
+    "rarity": "史诗",
+    "energy_cost": 3,
+    "effect": {
+      "stat": "shield_damage",
+      "stat_cn": "对护盾伤害",
+      "mode": "百分比",
+      "value": 15.5,
+      "unit": "%",
+      "trigger": "命中护盾"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与同系芯片同时装配时额外 +2.3%",
+    "description": "「把护盾当草稿」｜拧紧到某个触发条件上：命中护盾生效，对护盾伤害提升 15.5%。归属攻击类/破盾解码系，等级 Ⅲ，最多叠加 3 枚。"
+  },
+  {
+    "name": "亮一下就没了",
+    "name_hook": "「亮一下就没了」｜越过额定值，收益和代价一起放大：命中护盾生效，对护盾伤害提升 19.6%",
+    "series": "破盾解码",
+    "level": 4,
+    "level_label": "Ⅳ",
+    "slot": "攻击",
+    "rarity": "传奇",
+    "energy_cost": 4,
+    "effect": {
+      "stat": "shield_damage",
+      "stat_cn": "对护盾伤害",
+      "mode": "百分比",
+      "value": 19.6,
+      "unit": "%",
+      "trigger": "命中护盾"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与同系芯片同时装配时额外 +2.9%",
+    "description": "「亮一下就没了」｜越过额定值，收益和代价一起放大：命中护盾生效，对护盾伤害提升 19.6%。归属攻击类/破盾解码系，等级 Ⅳ，最多叠加 3 枚。"
+  },
+  {
+    "name": "没有『先』这个字",
+    "name_hook": "「没有『先』这个字」｜不再算加成，直接改写成一条定律：命中护盾生效，对护盾伤害提升 23.6%",
+    "series": "破盾解码",
+    "level": 5,
+    "level_label": "Ⅴ",
+    "slot": "攻击",
+    "rarity": "神话",
+    "energy_cost": 5,
+    "effect": {
+      "stat": "shield_damage",
+      "stat_cn": "对护盾伤害",
+      "mode": "百分比",
+      "value": 23.6,
+      "unit": "%",
+      "trigger": "命中护盾"
+    },
+    "stack_limit": 2,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与同系芯片同时装配时额外 +3.5%",
+    "description": "「没有『先』这个字」｜不再算加成，直接改写成一条定律：命中护盾生效，对护盾伤害提升 23.6%。归属攻击类/破盾解码系，等级 Ⅴ，最多叠加 2 枚。"
+  },
+  {
+    "name": "顺手多瞄一个",
+    "name_hook": "「顺手多瞄一个」｜装一枚，只松动一个数值：攻击时生效，额外目标数提升 3.8点",
+    "series": "散射矩阵",
+    "level": 1,
+    "level_label": "Ⅰ",
+    "slot": "攻击",
+    "rarity": "普通",
+    "energy_cost": 1,
+    "effect": {
+      "stat": "extra_target",
+      "stat_cn": "额外目标数",
+      "mode": "数值",
+      "value": 3.8,
+      "unit": "点",
+      "trigger": "攻击时"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与高等级炮塔同时装配时额外 +0.6点",
+    "description": "「顺手多瞄一个」｜装一枚，只松动一个数值：攻击时生效，额外目标数提升 3.8点。归属攻击类/散射矩阵系，等级 Ⅰ，最多叠加 4 枚。"
+  },
+  {
+    "name": "一发分两处落",
+    "name_hook": "「一发分两处落」｜铺开之后开始影响一整排塔：攻击时生效，额外目标数提升 5.8点",
+    "series": "散射矩阵",
+    "level": 2,
+    "level_label": "Ⅱ",
+    "slot": "攻击",
+    "rarity": "稀有",
+    "energy_cost": 2,
+    "effect": {
+      "stat": "extra_target",
+      "stat_cn": "额外目标数",
+      "mode": "数值",
+      "value": 5.8,
+      "unit": "点",
+      "trigger": "攻击时"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与高等级炮塔同时装配时额外 +0.9点",
+    "description": "「一发分两处落」｜铺开之后开始影响一整排塔：攻击时生效，额外目标数提升 5.8点。归属攻击类/散射矩阵系，等级 Ⅱ，最多叠加 4 枚。"
+  },
+  {
+    "name": "名单自己加行",
+    "name_hook": "「名单自己加行」｜拧紧到某个触发条件上：攻击时生效，额外目标数提升 7.9点",
+    "series": "散射矩阵",
+    "level": 3,
+    "level_label": "Ⅲ",
+    "slot": "攻击",
+    "rarity": "史诗",
+    "energy_cost": 3,
+    "effect": {
+      "stat": "extra_target",
+      "stat_cn": "额外目标数",
+      "mode": "数值",
+      "value": 7.9,
+      "unit": "点",
+      "trigger": "攻击时"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与高等级炮塔同时装配时额外 +1.2点",
+    "description": "「名单自己加行」｜拧紧到某个触发条件上：攻击时生效，额外目标数提升 7.9点。归属攻击类/散射矩阵系，等级 Ⅲ，最多叠加 3 枚。"
+  },
+  {
+    "name": "谁站近谁算",
+    "name_hook": "「谁站近谁算」｜越过额定值，收益和代价一起放大：攻击时生效，额外目标数提升 9.9点",
+    "series": "散射矩阵",
+    "level": 4,
+    "level_label": "Ⅳ",
+    "slot": "攻击",
+    "rarity": "传奇",
+    "energy_cost": 4,
+    "effect": {
+      "stat": "extra_target",
+      "stat_cn": "额外目标数",
+      "mode": "数值",
+      "value": 9.9,
+      "unit": "点",
+      "trigger": "攻击时"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与高等级炮塔同时装配时额外 +1.5点",
+    "description": "「谁站近谁算」｜越过额定值，收益和代价一起放大：攻击时生效，额外目标数提升 9.9点。归属攻击类/散射矩阵系，等级 Ⅳ，最多叠加 3 枚。"
+  },
+  {
+    "name": "全场都算目标",
+    "name_hook": "「全场都算目标」｜不再算加成，直接改写成一条定律：攻击时生效，额外目标数提升 12.0点",
+    "series": "散射矩阵",
+    "level": 5,
+    "level_label": "Ⅴ",
+    "slot": "攻击",
+    "rarity": "神话",
+    "energy_cost": 5,
+    "effect": {
+      "stat": "extra_target",
+      "stat_cn": "额外目标数",
+      "mode": "数值",
+      "value": 12.0,
+      "unit": "点",
+      "trigger": "攻击时"
+    },
+    "stack_limit": 2,
+    "compatible_classes": [
+      "单体速射",
+      "范围灼烧",
+      "连锁闪电",
+      "穿透射线"
+    ],
+    "synergy": "与高等级炮塔同时装配时额外 +1.8点",
+    "description": "「全场都算目标」｜不再算加成，直接改写成一条定律：攻击时生效，额外目标数提升 12.0点。归属攻击类/散射矩阵系，等级 Ⅴ，最多叠加 2 枚。"
+  },
+  {
+    "name": "开场先披一件",
+    "name_hook": "「开场先披一件」｜装一枚，只松动一个数值：战斗开始生效，初始护盾提升 2.3点",
+    "series": "护盾发生器",
+    "level": 1,
+    "level_label": "Ⅰ",
+    "slot": "防御",
+    "rarity": "普通",
+    "energy_cost": 1,
+    "effect": {
+      "stat": "shield",
+      "stat_cn": "初始护盾",
+      "mode": "数值",
+      "value": 2.3,
+      "unit": "点",
+      "trigger": "战斗开始"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "近战反伤",
+      "机械哨兵",
+      "高伤慢速"
+    ],
+    "synergy": "与对应元素塔同时装配时额外 +0.3点",
+    "description": "「开场先披一件」｜装一枚，只松动一个数值：战斗开始生效，初始护盾提升 2.3点。归属防御类/护盾发生器系，等级 Ⅰ，最多叠加 4 枚。"
+  },
+  {
+    "name": "还没挨就有底",
+    "name_hook": "「还没挨就有底」｜铺开之后开始影响一整排塔：战斗开始生效，初始护盾提升 3.5点",
+    "series": "护盾发生器",
+    "level": 2,
+    "level_label": "Ⅱ",
+    "slot": "防御",
+    "rarity": "稀有",
+    "energy_cost": 2,
+    "effect": {
+      "stat": "shield",
+      "stat_cn": "初始护盾",
+      "mode": "数值",
+      "value": 3.5,
+      "unit": "点",
+      "trigger": "战斗开始"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "近战反伤",
+      "机械哨兵",
+      "高伤慢速"
+    ],
+    "synergy": "与对应元素塔同时装配时额外 +0.5点",
+    "description": "「还没挨就有底」｜铺开之后开始影响一整排塔：战斗开始生效，初始护盾提升 3.5点。归属防御类/护盾发生器系，等级 Ⅱ，最多叠加 4 枚。"
+  },
+  {
+    "name": "第一下不算数",
+    "name_hook": "「第一下不算数」｜拧紧到某个触发条件上：战斗开始生效，初始护盾提升 4.7点",
+    "series": "护盾发生器",
+    "level": 3,
+    "level_label": "Ⅲ",
+    "slot": "防御",
+    "rarity": "史诗",
+    "energy_cost": 3,
+    "effect": {
+      "stat": "shield",
+      "stat_cn": "初始护盾",
+      "mode": "数值",
+      "value": 4.7,
+      "unit": "点",
+      "trigger": "战斗开始"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "近战反伤",
+      "机械哨兵",
+      "高伤慢速"
+    ],
+    "synergy": "与对应元素塔同时装配时额外 +0.7点",
+    "description": "「第一下不算数」｜拧紧到某个触发条件上：战斗开始生效，初始护盾提升 4.7点。归属防御类/护盾发生器系，等级 Ⅲ，最多叠加 3 枚。"
+  },
+  {
+    "name": "亮着就不慌",
+    "name_hook": "「亮着就不慌」｜越过额定值，收益和代价一起放大：战斗开始生效，初始护盾提升 6.0点",
+    "series": "护盾发生器",
+    "level": 4,
+    "level_label": "Ⅳ",
+    "slot": "防御",
+    "rarity": "传奇",
+    "energy_cost": 4,
+    "effect": {
+      "stat": "shield",
+      "stat_cn": "初始护盾",
+      "mode": "数值",
+      "value": 6.0,
+      "unit": "点",
+      "trigger": "战斗开始"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "近战反伤",
+      "机械哨兵",
+      "高伤慢速"
+    ],
+    "synergy": "与对应元素塔同时装配时额外 +0.9点",
+    "description": "「亮着就不慌」｜越过额定值，收益和代价一起放大：战斗开始生效，初始护盾提升 6.0点。归属防御类/护盾发生器系，等级 Ⅳ，最多叠加 3 枚。"
+  },
+  {
+    "name": "血条后面还有一页",
+    "name_hook": "「血条后面还有一页」｜不再算加成，直接改写成一条定律：战斗开始生效，初始护盾提升 7.2点",
+    "series": "护盾发生器",
+    "level": 5,
+    "level_label": "Ⅴ",
+    "slot": "防御",
+    "rarity": "神话",
+    "energy_cost": 5,
+    "effect": {
+      "stat": "shield",
+      "stat_cn": "初始护盾",
+      "mode": "数值",
+      "value": 7.2,
+      "unit": "点",
+      "trigger": "战斗开始"
+    },
+    "stack_limit": 2,
+    "compatible_classes": [
+      "近战反伤",
+      "机械哨兵",
+      "高伤慢速"
+    ],
+    "synergy": "与对应元素塔同时装配时额外 +1.1点",
+    "description": "「血条后面还有一页」｜不再算加成，直接改写成一条定律：战斗开始生效，初始护盾提升 7.2点。归属防御类/护盾发生器系，等级 Ⅴ，最多叠加 2 枚。"
+  },
+  {
+    "name": "缝得比裂得快",
+    "name_hook": "「缝得比裂得快」｜装一枚，只松动一个数值：每秒生效，每秒回复提升 5.6点",
+    "series": "修复纳米",
+    "level": 1,
+    "level_label": "Ⅰ",
+    "slot": "防御",
+    "rarity": "普通",
+    "energy_cost": 1,
+    "effect": {
+      "stat": "regen",
+      "stat_cn": "每秒回复",
+      "mode": "数值",
+      "value": 5.6,
+      "unit": "点",
+      "trigger": "每秒"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "近战反伤",
+      "机械哨兵",
+      "高伤慢速"
+    ],
+    "synergy": "与控制类炮塔同时装配时额外 +0.8点",
+    "description": "「缝得比裂得快」｜装一枚，只松动一个数值：每秒生效，每秒回复提升 5.6点。归属防御类/修复纳米系，等级 Ⅰ，最多叠加 4 枚。"
+  },
+  {
+    "name": "每秒补一笔",
+    "name_hook": "「每秒补一笔」｜铺开之后开始影响一整排塔：每秒生效，每秒回复提升 8.6点",
+    "series": "修复纳米",
+    "level": 2,
+    "level_label": "Ⅱ",
+    "slot": "防御",
+    "rarity": "稀有",
+    "energy_cost": 2,
+    "effect": {
+      "stat": "regen",
+      "stat_cn": "每秒回复",
+      "mode": "数值",
+      "value": 8.6,
+      "unit": "点",
+      "trigger": "每秒"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "近战反伤",
+      "机械哨兵",
+      "高伤慢速"
+    ],
+    "synergy": "与控制类炮塔同时装配时额外 +1.3点",
+    "description": "「每秒补一笔」｜铺开之后开始影响一整排塔：每秒生效，每秒回复提升 8.6点。归属防御类/修复纳米系，等级 Ⅱ，最多叠加 4 枚。"
+  },
+  {
+    "name": "伤口自己合上",
+    "name_hook": "「伤口自己合上」｜拧紧到某个触发条件上：每秒生效，每秒回复提升 11.7点",
+    "series": "修复纳米",
+    "level": 3,
+    "level_label": "Ⅲ",
+    "slot": "防御",
+    "rarity": "史诗",
+    "energy_cost": 3,
+    "effect": {
+      "stat": "regen",
+      "stat_cn": "每秒回复",
+      "mode": "数值",
+      "value": 11.7,
+      "unit": "点",
+      "trigger": "每秒"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "近战反伤",
+      "机械哨兵",
+      "高伤慢速"
+    ],
+    "synergy": "与控制类炮塔同时装配时额外 +1.8点",
+    "description": "「伤口自己合上」｜拧紧到某个触发条件上：每秒生效，每秒回复提升 11.7点。归属防御类/修复纳米系，等级 Ⅲ，最多叠加 3 枚。"
+  },
+  {
+    "name": "离场即翻新",
+    "name_hook": "「离场即翻新」｜越过额定值，收益和代价一起放大：每秒生效，每秒回复提升 14.8点",
+    "series": "修复纳米",
+    "level": 4,
+    "level_label": "Ⅳ",
+    "slot": "防御",
+    "rarity": "传奇",
+    "energy_cost": 4,
+    "effect": {
+      "stat": "regen",
+      "stat_cn": "每秒回复",
+      "mode": "数值",
+      "value": 14.8,
+      "unit": "点",
+      "trigger": "每秒"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "近战反伤",
+      "机械哨兵",
+      "高伤慢速"
+    ],
+    "synergy": "与控制类炮塔同时装配时额外 +2.2点",
+    "description": "「离场即翻新」｜越过额定值，收益和代价一起放大：每秒生效，每秒回复提升 14.8点。归属防御类/修复纳米系，等级 Ⅳ，最多叠加 3 枚。"
+  },
+  {
+    "name": "损耗这个词删了",
+    "name_hook": "「损耗这个词删了」｜不再算加成，直接改写成一条定律：每秒生效，每秒回复提升 17.8点",
+    "series": "修复纳米",
+    "level": 5,
+    "level_label": "Ⅴ",
+    "slot": "防御",
+    "rarity": "神话",
+    "energy_cost": 5,
+    "effect": {
+      "stat": "regen",
+      "stat_cn": "每秒回复",
+      "mode": "数值",
+      "value": 17.8,
+      "unit": "点",
+      "trigger": "每秒"
+    },
+    "stack_limit": 2,
+    "compatible_classes": [
+      "近战反伤",
+      "机械哨兵",
+      "高伤慢速"
+    ],
+    "synergy": "与控制类炮塔同时装配时额外 +2.7点",
+    "description": "「损耗这个词删了」｜不再算加成，直接改写成一条定律：每秒生效，每秒回复提升 17.8点。归属防御类/修复纳米系，等级 Ⅴ，最多叠加 2 枚。"
+  },
+  {
+    "name": "碰一下还一下",
+    "name_hook": "「碰一下还一下」｜装一枚，只松动一个数值：受击时生效，反伤比例提升 5.1%",
+    "series": "反伤棱晶",
+    "level": 1,
+    "level_label": "Ⅰ",
+    "slot": "防御",
+    "rarity": "普通",
+    "energy_cost": 1,
+    "effect": {
+      "stat": "reflect",
+      "stat_cn": "反伤比例",
+      "mode": "百分比",
+      "value": 5.1,
+      "unit": "%",
+      "trigger": "受击时"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "近战反伤",
+      "机械哨兵",
+      "高伤慢速"
+    ],
+    "synergy": "与经济型布局同时装配时额外 +0.8%",
+    "description": "「碰一下还一下」｜装一枚，只松动一个数值：受击时生效，反伤比例提升 5.1%。归属防御类/反伤棱晶系，等级 Ⅰ，最多叠加 4 枚。"
+  },
+  {
+    "name": "疼会寄回去",
+    "name_hook": "「疼会寄回去」｜铺开之后开始影响一整排塔：受击时生效，反伤比例提升 7.9%",
+    "series": "反伤棱晶",
+    "level": 2,
+    "level_label": "Ⅱ",
+    "slot": "防御",
+    "rarity": "稀有",
+    "energy_cost": 2,
+    "effect": {
+      "stat": "reflect",
+      "stat_cn": "反伤比例",
+      "mode": "百分比",
+      "value": 7.9,
+      "unit": "%",
+      "trigger": "受击时"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "近战反伤",
+      "机械哨兵",
+      "高伤慢速"
+    ],
+    "synergy": "与经济型布局同时装配时额外 +1.2%",
+    "description": "「疼会寄回去」｜铺开之后开始影响一整排塔：受击时生效，反伤比例提升 7.9%。归属防御类/反伤棱晶系，等级 Ⅱ，最多叠加 4 枚。"
+  },
+  {
+    "name": "打它的手也肿",
+    "name_hook": "「打它的手也肿」｜拧紧到某个触发条件上：受击时生效，反伤比例提升 10.7%",
+    "series": "反伤棱晶",
+    "level": 3,
+    "level_label": "Ⅲ",
+    "slot": "防御",
+    "rarity": "史诗",
+    "energy_cost": 3,
+    "effect": {
+      "stat": "reflect",
+      "stat_cn": "反伤比例",
+      "mode": "百分比",
+      "value": 10.7,
+      "unit": "%",
+      "trigger": "受击时"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "近战反伤",
+      "机械哨兵",
+      "高伤慢速"
+    ],
+    "synergy": "与经济型布局同时装配时额外 +1.6%",
+    "description": "「打它的手也肿」｜拧紧到某个触发条件上：受击时生效，反伤比例提升 10.7%。归属防御类/反伤棱晶系，等级 Ⅲ，最多叠加 3 枚。"
+  },
+  {
+    "name": "来多少回多少",
+    "name_hook": "「来多少回多少」｜越过额定值，收益和代价一起放大：受击时生效，反伤比例提升 13.5%",
+    "series": "反伤棱晶",
+    "level": 4,
+    "level_label": "Ⅳ",
+    "slot": "防御",
+    "rarity": "传奇",
+    "energy_cost": 4,
+    "effect": {
+      "stat": "reflect",
+      "stat_cn": "反伤比例",
+      "mode": "百分比",
+      "value": 13.5,
+      "unit": "%",
+      "trigger": "受击时"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "近战反伤",
+      "机械哨兵",
+      "高伤慢速"
+    ],
+    "synergy": "与经济型布局同时装配时额外 +2.0%",
+    "description": "「来多少回多少」｜越过额定值，收益和代价一起放大：受击时生效，反伤比例提升 13.5%。归属防御类/反伤棱晶系，等级 Ⅳ，最多叠加 3 枚。"
+  },
+  {
+    "name": "进攻改叫自付",
+    "name_hook": "「进攻改叫自付」｜不再算加成，直接改写成一条定律：受击时生效，反伤比例提升 16.3%",
+    "series": "反伤棱晶",
+    "level": 5,
+    "level_label": "Ⅴ",
+    "slot": "防御",
+    "rarity": "神话",
+    "energy_cost": 5,
+    "effect": {
+      "stat": "reflect",
+      "stat_cn": "反伤比例",
+      "mode": "百分比",
+      "value": 16.3,
+      "unit": "%",
+      "trigger": "受击时"
+    },
+    "stack_limit": 2,
+    "compatible_classes": [
+      "近战反伤",
+      "机械哨兵",
+      "高伤慢速"
+    ],
+    "synergy": "与经济型布局同时装配时额外 +2.4%",
+    "description": "「进攻改叫自付」｜不再算加成，直接改写成一条定律：受击时生效，反伤比例提升 16.3%。归属防御类/反伤棱晶系，等级 Ⅴ，最多叠加 2 枚。"
+  },
+  {
+    "name": "脚跟钉住了",
+    "name_hook": "「脚跟钉住了」｜装一枚，只松动一个数值：被控制时生效，控制抗性提升 6.0%",
+    "series": "稳态锚点",
+    "level": 1,
+    "level_label": "Ⅰ",
+    "slot": "防御",
+    "rarity": "普通",
+    "energy_cost": 1,
+    "effect": {
+      "stat": "control_resist",
+      "stat_cn": "控制抗性",
+      "mode": "百分比",
+      "value": 6.0,
+      "unit": "%",
+      "trigger": "被控制时"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "近战反伤",
+      "机械哨兵",
+      "高伤慢速"
+    ],
+    "synergy": "与侦测类塔同时装配时额外 +0.9%",
+    "description": "「脚跟钉住了」｜装一枚，只松动一个数值：被控制时生效，控制抗性提升 6.0%。归属防御类/稳态锚点系，等级 Ⅰ，最多叠加 4 枚。"
+  },
+  {
+    "name": "冻不上半秒",
+    "name_hook": "「冻不上半秒」｜铺开之后开始影响一整排塔：被控制时生效，控制抗性提升 9.3%",
+    "series": "稳态锚点",
+    "level": 2,
+    "level_label": "Ⅱ",
+    "slot": "防御",
+    "rarity": "稀有",
+    "energy_cost": 2,
+    "effect": {
+      "stat": "control_resist",
+      "stat_cn": "控制抗性",
+      "mode": "百分比",
+      "value": 9.3,
+      "unit": "%",
+      "trigger": "被控制时"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "近战反伤",
+      "机械哨兵",
+      "高伤慢速"
+    ],
+    "synergy": "与侦测类塔同时装配时额外 +1.4%",
+    "description": "「冻不上半秒」｜铺开之后开始影响一整排塔：被控制时生效，控制抗性提升 9.3%。归属防御类/稳态锚点系，等级 Ⅱ，最多叠加 4 枚。"
+  },
+  {
+    "name": "拽不动的那格",
+    "name_hook": "「拽不动的那格」｜拧紧到某个触发条件上：被控制时生效，控制抗性提升 12.5%",
+    "series": "稳态锚点",
+    "level": 3,
+    "level_label": "Ⅲ",
+    "slot": "防御",
+    "rarity": "史诗",
+    "energy_cost": 3,
+    "effect": {
+      "stat": "control_resist",
+      "stat_cn": "控制抗性",
+      "mode": "百分比",
+      "value": 12.5,
+      "unit": "%",
+      "trigger": "被控制时"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "近战反伤",
+      "机械哨兵",
+      "高伤慢速"
+    ],
+    "synergy": "与侦测类塔同时装配时额外 +1.9%",
+    "description": "「拽不动的那格」｜拧紧到某个触发条件上：被控制时生效，控制抗性提升 12.5%。归属防御类/稳态锚点系，等级 Ⅲ，最多叠加 3 枚。"
+  },
+  {
+    "name": "控制单被退回",
+    "name_hook": "「控制单被退回」｜越过额定值，收益和代价一起放大：被控制时生效，控制抗性提升 15.8%",
+    "series": "稳态锚点",
+    "level": 4,
+    "level_label": "Ⅳ",
+    "slot": "防御",
+    "rarity": "传奇",
+    "energy_cost": 4,
+    "effect": {
+      "stat": "control_resist",
+      "stat_cn": "控制抗性",
+      "mode": "百分比",
+      "value": 15.8,
+      "unit": "%",
+      "trigger": "被控制时"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "近战反伤",
+      "机械哨兵",
+      "高伤慢速"
+    ],
+    "synergy": "与侦测类塔同时装配时额外 +2.4%",
+    "description": "「控制单被退回」｜越过额定值，收益和代价一起放大：被控制时生效，控制抗性提升 15.8%。归属防御类/稳态锚点系，等级 Ⅳ，最多叠加 3 枚。"
+  },
+  {
+    "name": "它只按自己的拍子",
+    "name_hook": "「它只按自己的拍子」｜不再算加成，直接改写成一条定律：被控制时生效，控制抗性提升 19.1%",
+    "series": "稳态锚点",
+    "level": 5,
+    "level_label": "Ⅴ",
+    "slot": "防御",
+    "rarity": "神话",
+    "energy_cost": 5,
+    "effect": {
+      "stat": "control_resist",
+      "stat_cn": "控制抗性",
+      "mode": "百分比",
+      "value": 19.1,
+      "unit": "%",
+      "trigger": "被控制时"
+    },
+    "stack_limit": 2,
+    "compatible_classes": [
+      "近战反伤",
+      "机械哨兵",
+      "高伤慢速"
+    ],
+    "synergy": "与侦测类塔同时装配时额外 +2.9%",
+    "description": "「它只按自己的拍子」｜不再算加成，直接改写成一条定律：被控制时生效，控制抗性提升 19.1%。归属防御类/稳态锚点系，等级 Ⅴ，最多叠加 2 枚。"
+  },
+  {
+    "name": "火苗多舔一口",
+    "name_hook": "「火苗多舔一口」｜装一枚，只松动一个数值：火系命中生效，火系加成提升 8.5%",
+    "series": "灼热增幅",
+    "level": 1,
+    "level_label": "Ⅰ",
+    "slot": "元素",
+    "rarity": "普通",
+    "energy_cost": 1,
+    "effect": {
+      "stat": "fire_bonus",
+      "stat_cn": "火系加成",
+      "mode": "百分比",
+      "value": 8.5,
+      "unit": "%",
+      "trigger": "火系命中"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "范围灼烧",
+      "减速控制",
+      "连锁闪电",
+      "破甲毒雾"
+    ],
+    "synergy": "与同系芯片同时装配时额外 +1.3%",
+    "description": "「火苗多舔一口」｜装一枚，只松动一个数值：火系命中生效，火系加成提升 8.5%。归属元素类/灼热增幅系，等级 Ⅰ，最多叠加 4 枚。"
+  },
+  {
+    "name": "余烬不肯灭",
+    "name_hook": "「余烬不肯灭」｜铺开之后开始影响一整排塔：火系命中生效，火系加成提升 13.2%",
+    "series": "灼热增幅",
+    "level": 2,
+    "level_label": "Ⅱ",
+    "slot": "元素",
+    "rarity": "稀有",
+    "energy_cost": 2,
+    "effect": {
+      "stat": "fire_bonus",
+      "stat_cn": "火系加成",
+      "mode": "百分比",
+      "value": 13.2,
+      "unit": "%",
+      "trigger": "火系命中"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "范围灼烧",
+      "减速控制",
+      "连锁闪电",
+      "破甲毒雾"
+    ],
+    "synergy": "与同系芯片同时装配时额外 +2.0%",
+    "description": "「余烬不肯灭」｜铺开之后开始影响一整排塔：火系命中生效，火系加成提升 13.2%。归属元素类/灼热增幅系，等级 Ⅱ，最多叠加 4 枚。"
+  },
+  {
+    "name": "烧过的地方再烧",
+    "name_hook": "「烧过的地方再烧」｜拧紧到某个触发条件上：火系命中生效，火系加成提升 17.9%",
+    "series": "灼热增幅",
+    "level": 3,
+    "level_label": "Ⅲ",
+    "slot": "元素",
+    "rarity": "史诗",
+    "energy_cost": 3,
+    "effect": {
+      "stat": "fire_bonus",
+      "stat_cn": "火系加成",
+      "mode": "百分比",
+      "value": 17.9,
+      "unit": "%",
+      "trigger": "火系命中"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "范围灼烧",
+      "减速控制",
+      "连锁闪电",
+      "破甲毒雾"
+    ],
+    "synergy": "与同系芯片同时装配时额外 +2.7%",
+    "description": "「烧过的地方再烧」｜拧紧到某个触发条件上：火系命中生效，火系加成提升 17.9%。归属元素类/灼热增幅系，等级 Ⅲ，最多叠加 3 枚。"
+  },
+  {
+    "name": "风也帮着吹",
+    "name_hook": "「风也帮着吹」｜越过额定值，收益和代价一起放大：火系命中生效，火系加成提升 22.6%",
+    "series": "灼热增幅",
+    "level": 4,
+    "level_label": "Ⅳ",
+    "slot": "元素",
+    "rarity": "传奇",
+    "energy_cost": 4,
+    "effect": {
+      "stat": "fire_bonus",
+      "stat_cn": "火系加成",
+      "mode": "百分比",
+      "value": 22.6,
+      "unit": "%",
+      "trigger": "火系命中"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "范围灼烧",
+      "减速控制",
+      "连锁闪电",
+      "破甲毒雾"
+    ],
+    "synergy": "与同系芯片同时装配时额外 +3.4%",
+    "description": "「风也帮着吹」｜越过额定值，收益和代价一起放大：火系命中生效，火系加成提升 22.6%。归属元素类/灼热增幅系，等级 Ⅳ，最多叠加 3 枚。"
+  },
+  {
+    "name": "灰也算燃料",
+    "name_hook": "「灰也算燃料」｜不再算加成，直接改写成一条定律：火系命中生效，火系加成提升 27.3%",
+    "series": "灼热增幅",
+    "level": 5,
+    "level_label": "Ⅴ",
+    "slot": "元素",
+    "rarity": "神话",
+    "energy_cost": 5,
+    "effect": {
+      "stat": "fire_bonus",
+      "stat_cn": "火系加成",
+      "mode": "百分比",
+      "value": 27.3,
+      "unit": "%",
+      "trigger": "火系命中"
+    },
+    "stack_limit": 2,
+    "compatible_classes": [
+      "范围灼烧",
+      "减速控制",
+      "连锁闪电",
+      "破甲毒雾"
+    ],
+    "synergy": "与同系芯片同时装配时额外 +4.1%",
+    "description": "「灰也算燃料」｜不再算加成，直接改写成一条定律：火系命中生效，火系加成提升 27.3%。归属元素类/灼热增幅系，等级 Ⅴ，最多叠加 2 枚。"
+  },
+  {
+    "name": "霜往深处走了一寸",
+    "name_hook": "「霜往深处走了一寸」｜装一枚，只松动一个数值：冰系命中生效，冰系加成提升 6.5%",
+    "series": "极寒导体",
+    "level": 1,
+    "level_label": "Ⅰ",
+    "slot": "元素",
+    "rarity": "普通",
+    "energy_cost": 1,
+    "effect": {
+      "stat": "ice_bonus",
+      "stat_cn": "冰系加成",
+      "mode": "百分比",
+      "value": 6.5,
+      "unit": "%",
+      "trigger": "冰系命中"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "范围灼烧",
+      "减速控制",
+      "连锁闪电",
+      "破甲毒雾"
+    ],
+    "synergy": "与高等级炮塔同时装配时额外 +1.0%",
+    "description": "「霜往深处走了一寸」｜装一枚，只松动一个数值：冰系命中生效，冰系加成提升 6.5%。归属元素类/极寒导体系，等级 Ⅰ，最多叠加 4 枚。"
+  },
+  {
+    "name": "哈气结成扣",
+    "name_hook": "「哈气结成扣」｜铺开之后开始影响一整排塔：冰系命中生效，冰系加成提升 10.0%",
+    "series": "极寒导体",
+    "level": 2,
+    "level_label": "Ⅱ",
+    "slot": "元素",
+    "rarity": "稀有",
+    "energy_cost": 2,
+    "effect": {
+      "stat": "ice_bonus",
+      "stat_cn": "冰系加成",
+      "mode": "百分比",
+      "value": 10.0,
+      "unit": "%",
+      "trigger": "冰系命中"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "范围灼烧",
+      "减速控制",
+      "连锁闪电",
+      "破甲毒雾"
+    ],
+    "synergy": "与高等级炮塔同时装配时额外 +1.5%",
+    "description": "「哈气结成扣」｜铺开之后开始影响一整排塔：冰系命中生效，冰系加成提升 10.0%。归属元素类/极寒导体系，等级 Ⅱ，最多叠加 4 枚。"
+  },
+  {
+    "name": "慢下来的不止脚",
+    "name_hook": "「慢下来的不止脚」｜拧紧到某个触发条件上：冰系命中生效，冰系加成提升 13.6%",
+    "series": "极寒导体",
+    "level": 3,
+    "level_label": "Ⅲ",
+    "slot": "元素",
+    "rarity": "史诗",
+    "energy_cost": 3,
+    "effect": {
+      "stat": "ice_bonus",
+      "stat_cn": "冰系加成",
+      "mode": "百分比",
+      "value": 13.6,
+      "unit": "%",
+      "trigger": "冰系命中"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "范围灼烧",
+      "减速控制",
+      "连锁闪电",
+      "破甲毒雾"
+    ],
+    "synergy": "与高等级炮塔同时装配时额外 +2.0%",
+    "description": "「慢下来的不止脚」｜拧紧到某个触发条件上：冰系命中生效，冰系加成提升 13.6%。归属元素类/极寒导体系，等级 Ⅲ，最多叠加 3 枚。"
+  },
+  {
+    "name": "河面替你留人",
+    "name_hook": "「河面替你留人」｜越过额定值，收益和代价一起放大：冰系命中生效，冰系加成提升 17.1%",
+    "series": "极寒导体",
+    "level": 4,
+    "level_label": "Ⅳ",
+    "slot": "元素",
+    "rarity": "传奇",
+    "energy_cost": 4,
+    "effect": {
+      "stat": "ice_bonus",
+      "stat_cn": "冰系加成",
+      "mode": "百分比",
+      "value": 17.1,
+      "unit": "%",
+      "trigger": "冰系命中"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "范围灼烧",
+      "减速控制",
+      "连锁闪电",
+      "破甲毒雾"
+    ],
+    "synergy": "与高等级炮塔同时装配时额外 +2.6%",
+    "description": "「河面替你留人」｜越过额定值，收益和代价一起放大：冰系命中生效，冰系加成提升 17.1%。归属元素类/极寒导体系，等级 Ⅳ，最多叠加 3 枚。"
+  },
+  {
+    "name": "静止成为常态",
+    "name_hook": "「静止成为常态」｜不再算加成，直接改写成一条定律：冰系命中生效，冰系加成提升 20.7%",
+    "series": "极寒导体",
+    "level": 5,
+    "level_label": "Ⅴ",
+    "slot": "元素",
+    "rarity": "神话",
+    "energy_cost": 5,
+    "effect": {
+      "stat": "ice_bonus",
+      "stat_cn": "冰系加成",
+      "mode": "百分比",
+      "value": 20.7,
+      "unit": "%",
+      "trigger": "冰系命中"
+    },
+    "stack_limit": 2,
+    "compatible_classes": [
+      "范围灼烧",
+      "减速控制",
+      "连锁闪电",
+      "破甲毒雾"
+    ],
+    "synergy": "与高等级炮塔同时装配时额外 +3.1%",
+    "description": "「静止成为常态」｜不再算加成，直接改写成一条定律：冰系命中生效，冰系加成提升 20.7%。归属元素类/极寒导体系，等级 Ⅴ，最多叠加 2 枚。"
+  },
+  {
+    "name": "多跳了一户",
+    "name_hook": "「多跳了一户」｜装一枚，只松动一个数值：雷系命中生效，闪电弹射数提升 7.2点",
+    "series": "雷暴电容",
+    "level": 1,
+    "level_label": "Ⅰ",
+    "slot": "元素",
+    "rarity": "普通",
+    "energy_cost": 1,
+    "effect": {
+      "stat": "lightning_chain",
+      "stat_cn": "闪电弹射数",
+      "mode": "数值",
+      "value": 7.2,
+      "unit": "点",
+      "trigger": "雷系命中"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "范围灼烧",
+      "减速控制",
+      "连锁闪电",
+      "破甲毒雾"
+    ],
+    "synergy": "与对应元素塔同时装配时额外 +1.1点",
+    "description": "「多跳了一户」｜装一枚，只松动一个数值：雷系命中生效，闪电弹射数提升 7.2点。归属元素类/雷暴电容系，等级 Ⅰ，最多叠加 4 枚。"
+  },
+  {
+    "name": "邻居也签了字",
+    "name_hook": "「邻居也签了字」｜铺开之后开始影响一整排塔：雷系命中生效，闪电弹射数提升 11.2点",
+    "series": "雷暴电容",
+    "level": 2,
+    "level_label": "Ⅱ",
+    "slot": "元素",
+    "rarity": "稀有",
+    "energy_cost": 2,
+    "effect": {
+      "stat": "lightning_chain",
+      "stat_cn": "闪电弹射数",
+      "mode": "数值",
+      "value": 11.2,
+      "unit": "点",
+      "trigger": "雷系命中"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "范围灼烧",
+      "减速控制",
+      "连锁闪电",
+      "破甲毒雾"
+    ],
+    "synergy": "与对应元素塔同时装配时额外 +1.7点",
+    "description": "「邻居也签了字」｜铺开之后开始影响一整排塔：雷系命中生效，闪电弹射数提升 11.2点。归属元素类/雷暴电容系，等级 Ⅱ，最多叠加 4 枚。"
+  },
+  {
+    "name": "一串名字连起来",
+    "name_hook": "「一串名字连起来」｜拧紧到某个触发条件上：雷系命中生效，闪电弹射数提升 15.1点",
+    "series": "雷暴电容",
+    "level": 3,
+    "level_label": "Ⅲ",
+    "slot": "元素",
+    "rarity": "史诗",
+    "energy_cost": 3,
+    "effect": {
+      "stat": "lightning_chain",
+      "stat_cn": "闪电弹射数",
+      "mode": "数值",
+      "value": 15.1,
+      "unit": "点",
+      "trigger": "雷系命中"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "范围灼烧",
+      "减速控制",
+      "连锁闪电",
+      "破甲毒雾"
+    ],
+    "synergy": "与对应元素塔同时装配时额外 +2.3点",
+    "description": "「一串名字连起来」｜拧紧到某个触发条件上：雷系命中生效，闪电弹射数提升 15.1点。归属元素类/雷暴电容系，等级 Ⅲ，最多叠加 3 枚。"
+  },
+  {
+    "name": "整排一起亮",
+    "name_hook": "「整排一起亮」｜越过额定值，收益和代价一起放大：雷系命中生效，闪电弹射数提升 19.1点",
+    "series": "雷暴电容",
+    "level": 4,
+    "level_label": "Ⅳ",
+    "slot": "元素",
+    "rarity": "传奇",
+    "energy_cost": 4,
+    "effect": {
+      "stat": "lightning_chain",
+      "stat_cn": "闪电弹射数",
+      "mode": "数值",
+      "value": 19.1,
+      "unit": "点",
+      "trigger": "雷系命中"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "范围灼烧",
+      "减速控制",
+      "连锁闪电",
+      "破甲毒雾"
+    ],
+    "synergy": "与对应元素塔同时装配时额外 +2.9点",
+    "description": "「整排一起亮」｜越过额定值，收益和代价一起放大：雷系命中生效，闪电弹射数提升 19.1点。归属元素类/雷暴电容系，等级 Ⅳ，最多叠加 3 枚。"
+  },
+  {
+    "name": "没有旁听席",
+    "name_hook": "「没有旁听席」｜不再算加成，直接改写成一条定律：雷系命中生效，闪电弹射数提升 23.1点",
+    "series": "雷暴电容",
+    "level": 5,
+    "level_label": "Ⅴ",
+    "slot": "元素",
+    "rarity": "神话",
+    "energy_cost": 5,
+    "effect": {
+      "stat": "lightning_chain",
+      "stat_cn": "闪电弹射数",
+      "mode": "数值",
+      "value": 23.1,
+      "unit": "点",
+      "trigger": "雷系命中"
+    },
+    "stack_limit": 2,
+    "compatible_classes": [
+      "范围灼烧",
+      "减速控制",
+      "连锁闪电",
+      "破甲毒雾"
+    ],
+    "synergy": "与对应元素塔同时装配时额外 +3.5点",
+    "description": "「没有旁听席」｜不再算加成，直接改写成一条定律：雷系命中生效，闪电弹射数提升 23.1点。归属元素类/雷暴电容系，等级 Ⅴ，最多叠加 2 枚。"
+  },
+  {
+    "name": "锈迹又深一点",
+    "name_hook": "「锈迹又深一点」｜装一枚，只松动一个数值：毒系命中生效，毒系加成提升 11.0%",
+    "series": "腐蚀催化",
+    "level": 1,
+    "level_label": "Ⅰ",
+    "slot": "元素",
+    "rarity": "普通",
+    "energy_cost": 1,
+    "effect": {
+      "stat": "poison_bonus",
+      "stat_cn": "毒系加成",
+      "mode": "百分比",
+      "value": 11.0,
+      "unit": "%",
+      "trigger": "毒系命中"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "范围灼烧",
+      "减速控制",
+      "连锁闪电",
+      "破甲毒雾"
+    ],
+    "synergy": "与控制类炮塔同时装配时额外 +1.6%",
+    "description": "「锈迹又深一点」｜装一枚，只松动一个数值：毒系命中生效，毒系加成提升 11.0%。归属元素类/腐蚀催化系，等级 Ⅰ，最多叠加 4 枚。"
+  },
+  {
+    "name": "时间站在毒这边",
+    "name_hook": "「时间站在毒这边」｜铺开之后开始影响一整排塔：毒系命中生效，毒系加成提升 17.0%",
+    "series": "腐蚀催化",
+    "level": 2,
+    "level_label": "Ⅱ",
+    "slot": "元素",
+    "rarity": "稀有",
+    "energy_cost": 2,
+    "effect": {
+      "stat": "poison_bonus",
+      "stat_cn": "毒系加成",
+      "mode": "百分比",
+      "value": 17.0,
+      "unit": "%",
+      "trigger": "毒系命中"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "范围灼烧",
+      "减速控制",
+      "连锁闪电",
+      "破甲毒雾"
+    ],
+    "synergy": "与控制类炮塔同时装配时额外 +2.5%",
+    "description": "「时间站在毒这边」｜铺开之后开始影响一整排塔：毒系命中生效，毒系加成提升 17.0%。归属元素类/腐蚀催化系，等级 Ⅱ，最多叠加 4 枚。"
+  },
+  {
+    "name": "伤口不肯收口",
+    "name_hook": "「伤口不肯收口」｜拧紧到某个触发条件上：毒系命中生效，毒系加成提升 23.0%",
+    "series": "腐蚀催化",
+    "level": 3,
+    "level_label": "Ⅲ",
+    "slot": "元素",
+    "rarity": "史诗",
+    "energy_cost": 3,
+    "effect": {
+      "stat": "poison_bonus",
+      "stat_cn": "毒系加成",
+      "mode": "百分比",
+      "value": 23.0,
+      "unit": "%",
+      "trigger": "毒系命中"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "范围灼烧",
+      "减速控制",
+      "连锁闪电",
+      "破甲毒雾"
+    ],
+    "synergy": "与控制类炮塔同时装配时额外 +3.4%",
+    "description": "「伤口不肯收口」｜拧紧到某个触发条件上：毒系命中生效，毒系加成提升 23.0%。归属元素类/腐蚀催化系，等级 Ⅲ，最多叠加 3 枚。"
+  },
+  {
+    "name": "越晚越贵",
+    "name_hook": "「越晚越贵」｜越过额定值，收益和代价一起放大：毒系命中生效，毒系加成提升 29.0%",
+    "series": "腐蚀催化",
+    "level": 4,
+    "level_label": "Ⅳ",
+    "slot": "元素",
+    "rarity": "传奇",
+    "energy_cost": 4,
+    "effect": {
+      "stat": "poison_bonus",
+      "stat_cn": "毒系加成",
+      "mode": "百分比",
+      "value": 29.0,
+      "unit": "%",
+      "trigger": "毒系命中"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "范围灼烧",
+      "减速控制",
+      "连锁闪电",
+      "破甲毒雾"
+    ],
+    "synergy": "与控制类炮塔同时装配时额外 +4.3%",
+    "description": "「越晚越贵」｜越过额定值，收益和代价一起放大：毒系命中生效，毒系加成提升 29.0%。归属元素类/腐蚀催化系，等级 Ⅳ，最多叠加 3 枚。"
+  },
+  {
+    "name": "拖到最后自己倒",
+    "name_hook": "「拖到最后自己倒」｜不再算加成，直接改写成一条定律：毒系命中生效，毒系加成提升 35.1%",
+    "series": "腐蚀催化",
+    "level": 5,
+    "level_label": "Ⅴ",
+    "slot": "元素",
+    "rarity": "神话",
+    "energy_cost": 5,
+    "effect": {
+      "stat": "poison_bonus",
+      "stat_cn": "毒系加成",
+      "mode": "百分比",
+      "value": 35.1,
+      "unit": "%",
+      "trigger": "毒系命中"
+    },
+    "stack_limit": 2,
+    "compatible_classes": [
+      "范围灼烧",
+      "减速控制",
+      "连锁闪电",
+      "破甲毒雾"
+    ],
+    "synergy": "与控制类炮塔同时装配时额外 +5.3%",
+    "description": "「拖到最后自己倒」｜不再算加成，直接改写成一条定律：毒系命中生效，毒系加成提升 35.1%。归属元素类/腐蚀催化系，等级 Ⅴ，最多叠加 2 枚。"
+  },
+  {
+    "name": "往回请了半步",
+    "name_hook": "「往回请了半步」｜装一枚，只松动一个数值：周期触发生效，牵引距离提升 10.9点",
+    "series": "引力陷阱",
+    "level": 1,
+    "level_label": "Ⅰ",
+    "slot": "控制",
+    "rarity": "普通",
+    "energy_cost": 1,
+    "effect": {
+      "stat": "pull_distance",
+      "stat_cn": "牵引距离",
+      "mode": "数值",
+      "value": 10.9,
+      "unit": "点",
+      "trigger": "周期触发"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "减速控制",
+      "击退水炮",
+      "吞噬拉扯"
+    ],
+    "synergy": "与经济型布局同时装配时额外 +1.6点",
+    "description": "「往回请了半步」｜装一枚，只松动一个数值：周期触发生效，牵引距离提升 10.9点。归属控制类/引力陷阱系，等级 Ⅰ，最多叠加 4 枚。"
+  },
+  {
+    "name": "路被折了一角",
+    "name_hook": "「路被折了一角」｜铺开之后开始影响一整排塔：周期触发生效，牵引距离提升 16.9点",
+    "series": "引力陷阱",
+    "level": 2,
+    "level_label": "Ⅱ",
+    "slot": "控制",
+    "rarity": "稀有",
+    "energy_cost": 2,
+    "effect": {
+      "stat": "pull_distance",
+      "stat_cn": "牵引距离",
+      "mode": "数值",
+      "value": 16.9,
+      "unit": "点",
+      "trigger": "周期触发"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "减速控制",
+      "击退水炮",
+      "吞噬拉扯"
+    ],
+    "synergy": "与经济型布局同时装配时额外 +2.5点",
+    "description": "「路被折了一角」｜铺开之后开始影响一整排塔：周期触发生效，牵引距离提升 16.9点。归属控制类/引力陷阱系，等级 Ⅱ，最多叠加 4 枚。"
+  },
+  {
+    "name": "门口又出现了",
+    "name_hook": "「门口又出现了」｜拧紧到某个触发条件上：周期触发生效，牵引距离提升 22.9点",
+    "series": "引力陷阱",
+    "level": 3,
+    "level_label": "Ⅲ",
+    "slot": "控制",
+    "rarity": "史诗",
+    "energy_cost": 3,
+    "effect": {
+      "stat": "pull_distance",
+      "stat_cn": "牵引距离",
+      "mode": "数值",
+      "value": 22.9,
+      "unit": "点",
+      "trigger": "周期触发"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "减速控制",
+      "击退水炮",
+      "吞噬拉扯"
+    ],
+    "synergy": "与经济型布局同时装配时额外 +3.4点",
+    "description": "「门口又出现了」｜拧紧到某个触发条件上：周期触发生效，牵引距离提升 22.9点。归属控制类/引力陷阱系，等级 Ⅲ，最多叠加 3 枚。"
+  },
+  {
+    "name": "白走的那段",
+    "name_hook": "「白走的那段」｜越过额定值，收益和代价一起放大：周期触发生效，牵引距离提升 29.0点",
+    "series": "引力陷阱",
+    "level": 4,
+    "level_label": "Ⅳ",
+    "slot": "控制",
+    "rarity": "传奇",
+    "energy_cost": 4,
+    "effect": {
+      "stat": "pull_distance",
+      "stat_cn": "牵引距离",
+      "mode": "数值",
+      "value": 29.0,
+      "unit": "点",
+      "trigger": "周期触发"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "减速控制",
+      "击退水炮",
+      "吞噬拉扯"
+    ],
+    "synergy": "与经济型布局同时装配时额外 +4.3点",
+    "description": "「白走的那段」｜越过额定值，收益和代价一起放大：周期触发生效，牵引距离提升 29.0点。归属控制类/引力陷阱系，等级 Ⅳ，最多叠加 3 枚。"
+  },
+  {
+    "name": "终点始终在身后",
+    "name_hook": "「终点始终在身后」｜不再算加成，直接改写成一条定律：周期触发生效，牵引距离提升 35.0点",
+    "series": "引力陷阱",
+    "level": 5,
+    "level_label": "Ⅴ",
+    "slot": "控制",
+    "rarity": "神话",
+    "energy_cost": 5,
+    "effect": {
+      "stat": "pull_distance",
+      "stat_cn": "牵引距离",
+      "mode": "数值",
+      "value": 35.0,
+      "unit": "点",
+      "trigger": "周期触发"
+    },
+    "stack_limit": 2,
+    "compatible_classes": [
+      "减速控制",
+      "击退水炮",
+      "吞噬拉扯"
+    ],
+    "synergy": "与经济型布局同时装配时额外 +5.2点",
+    "description": "「终点始终在身后」｜不再算加成，直接改写成一条定律：周期触发生效，牵引距离提升 35.0点。归属控制类/引力陷阱系，等级 Ⅴ，最多叠加 2 枚。"
+  },
+  {
+    "name": "鞋底黏了一下",
+    "name_hook": "「鞋底黏了一下」｜装一枚，只松动一个数值：光环常驻生效，减速幅度提升 11.2%",
+    "series": "时滞场域",
+    "level": 1,
+    "level_label": "Ⅰ",
+    "slot": "控制",
+    "rarity": "普通",
+    "energy_cost": 1,
+    "effect": {
+      "stat": "slow_rate",
+      "stat_cn": "减速幅度",
+      "mode": "百分比",
+      "value": 11.2,
+      "unit": "%",
+      "trigger": "光环常驻"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "减速控制",
+      "击退水炮",
+      "吞噬拉扯"
+    ],
+    "synergy": "与侦测类塔同时装配时额外 +1.7%",
+    "description": "「鞋底黏了一下」｜装一枚，只松动一个数值：光环常驻生效，减速幅度提升 11.2%。归属控制类/时滞场域系，等级 Ⅰ，最多叠加 4 枚。"
+  },
+  {
+    "name": "拍子被泡软",
+    "name_hook": "「拍子被泡软」｜铺开之后开始影响一整排塔：光环常驻生效，减速幅度提升 17.4%",
+    "series": "时滞场域",
+    "level": 2,
+    "level_label": "Ⅱ",
+    "slot": "控制",
+    "rarity": "稀有",
+    "energy_cost": 2,
+    "effect": {
+      "stat": "slow_rate",
+      "stat_cn": "减速幅度",
+      "mode": "百分比",
+      "value": 17.4,
+      "unit": "%",
+      "trigger": "光环常驻"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "减速控制",
+      "击退水炮",
+      "吞噬拉扯"
+    ],
+    "synergy": "与侦测类塔同时装配时额外 +2.6%",
+    "description": "「拍子被泡软」｜铺开之后开始影响一整排塔：光环常驻生效，减速幅度提升 17.4%。归属控制类/时滞场域系，等级 Ⅱ，最多叠加 4 枚。"
+  },
+  {
+    "name": "快这个词变轻",
+    "name_hook": "「快这个词变轻」｜拧紧到某个触发条件上：光环常驻生效，减速幅度提升 23.6%",
+    "series": "时滞场域",
+    "level": 3,
+    "level_label": "Ⅲ",
+    "slot": "控制",
+    "rarity": "史诗",
+    "energy_cost": 3,
+    "effect": {
+      "stat": "slow_rate",
+      "stat_cn": "减速幅度",
+      "mode": "百分比",
+      "value": 23.6,
+      "unit": "%",
+      "trigger": "光环常驻"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "减速控制",
+      "击退水炮",
+      "吞噬拉扯"
+    ],
+    "synergy": "与侦测类塔同时装配时额外 +3.5%",
+    "description": "「快这个词变轻」｜拧紧到某个触发条件上：光环常驻生效，减速幅度提升 23.6%。归属控制类/时滞场域系，等级 Ⅲ，最多叠加 3 枚。"
+  },
+  {
+    "name": "整片地都在挽留",
+    "name_hook": "「整片地都在挽留」｜越过额定值，收益和代价一起放大：光环常驻生效，减速幅度提升 29.8%",
+    "series": "时滞场域",
+    "level": 4,
+    "level_label": "Ⅳ",
+    "slot": "控制",
+    "rarity": "传奇",
+    "energy_cost": 4,
+    "effect": {
+      "stat": "slow_rate",
+      "stat_cn": "减速幅度",
+      "mode": "百分比",
+      "value": 29.8,
+      "unit": "%",
+      "trigger": "光环常驻"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "减速控制",
+      "击退水炮",
+      "吞噬拉扯"
+    ],
+    "synergy": "与侦测类塔同时装配时额外 +4.5%",
+    "description": "「整片地都在挽留」｜越过额定值，收益和代价一起放大：光环常驻生效，减速幅度提升 29.8%。归属控制类/时滞场域系，等级 Ⅳ，最多叠加 3 枚。"
+  },
+  {
+    "name": "谁也别想赶时间",
+    "name_hook": "「谁也别想赶时间」｜不再算加成，直接改写成一条定律：光环常驻生效，减速幅度提升 35.9%",
+    "series": "时滞场域",
+    "level": 5,
+    "level_label": "Ⅴ",
+    "slot": "控制",
+    "rarity": "神话",
+    "energy_cost": 5,
+    "effect": {
+      "stat": "slow_rate",
+      "stat_cn": "减速幅度",
+      "mode": "百分比",
+      "value": 35.9,
+      "unit": "%",
+      "trigger": "光环常驻"
+    },
+    "stack_limit": 2,
+    "compatible_classes": [
+      "减速控制",
+      "击退水炮",
+      "吞噬拉扯"
+    ],
+    "synergy": "与侦测类塔同时装配时额外 +5.4%",
+    "description": "「谁也别想赶时间」｜不再算加成，直接改写成一条定律：光环常驻生效，减速幅度提升 35.9%。归属控制类/时滞场域系，等级 Ⅴ，最多叠加 2 枚。"
+  },
+  {
+    "name": "愣了半拍",
+    "name_hook": "「愣了半拍」｜装一枚，只松动一个数值：周期触发生效，眩晕时长提升 9.3点",
+    "series": "定身脉冲",
+    "level": 1,
+    "level_label": "Ⅰ",
+    "slot": "控制",
+    "rarity": "普通",
+    "energy_cost": 1,
+    "effect": {
+      "stat": "stun_duration",
+      "stat_cn": "眩晕时长",
+      "mode": "数值",
+      "value": 9.3,
+      "unit": "点",
+      "trigger": "周期触发"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "减速控制",
+      "击退水炮",
+      "吞噬拉扯"
+    ],
+    "synergy": "与同系芯片同时装配时额外 +1.4点",
+    "description": "「愣了半拍」｜装一枚，只松动一个数值：周期触发生效，眩晕时长提升 9.3点。归属控制类/定身脉冲系，等级 Ⅰ，最多叠加 4 枚。"
+  },
+  {
+    "name": "话说到一半停住",
+    "name_hook": "「话说到一半停住」｜铺开之后开始影响一整排塔：周期触发生效，眩晕时长提升 14.5点",
+    "series": "定身脉冲",
+    "level": 2,
+    "level_label": "Ⅱ",
+    "slot": "控制",
+    "rarity": "稀有",
+    "energy_cost": 2,
+    "effect": {
+      "stat": "stun_duration",
+      "stat_cn": "眩晕时长",
+      "mode": "数值",
+      "value": 14.5,
+      "unit": "点",
+      "trigger": "周期触发"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "减速控制",
+      "击退水炮",
+      "吞噬拉扯"
+    ],
+    "synergy": "与同系芯片同时装配时额外 +2.2点",
+    "description": "「话说到一半停住」｜铺开之后开始影响一整排塔：周期触发生效，眩晕时长提升 14.5点。归属控制类/定身脉冲系，等级 Ⅱ，最多叠加 4 枚。"
+  },
+  {
+    "name": "连影子都没跟上",
+    "name_hook": "「连影子都没跟上」｜拧紧到某个触发条件上：周期触发生效，眩晕时长提升 19.6点",
+    "series": "定身脉冲",
+    "level": 3,
+    "level_label": "Ⅲ",
+    "slot": "控制",
+    "rarity": "史诗",
+    "energy_cost": 3,
+    "effect": {
+      "stat": "stun_duration",
+      "stat_cn": "眩晕时长",
+      "mode": "数值",
+      "value": 19.6,
+      "unit": "点",
+      "trigger": "周期触发"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "减速控制",
+      "击退水炮",
+      "吞噬拉扯"
+    ],
+    "synergy": "与同系芯片同时装配时额外 +2.9点",
+    "description": "「连影子都没跟上」｜拧紧到某个触发条件上：周期触发生效，眩晕时长提升 19.6点。归属控制类/定身脉冲系，等级 Ⅲ，最多叠加 3 枚。"
+  },
+  {
+    "name": "这一秒被没收",
+    "name_hook": "「这一秒被没收」｜越过额定值，收益和代价一起放大：周期触发生效，眩晕时长提升 24.7点",
+    "series": "定身脉冲",
+    "level": 4,
+    "level_label": "Ⅳ",
+    "slot": "控制",
+    "rarity": "传奇",
+    "energy_cost": 4,
+    "effect": {
+      "stat": "stun_duration",
+      "stat_cn": "眩晕时长",
+      "mode": "数值",
+      "value": 24.7,
+      "unit": "点",
+      "trigger": "周期触发"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "减速控制",
+      "击退水炮",
+      "吞噬拉扯"
+    ],
+    "synergy": "与同系芯片同时装配时额外 +3.7点",
+    "description": "「这一秒被没收」｜越过额定值，收益和代价一起放大：周期触发生效，眩晕时长提升 24.7点。归属控制类/定身脉冲系，等级 Ⅳ，最多叠加 3 枚。"
+  },
+  {
+    "name": "钟表替它请假",
+    "name_hook": "「钟表替它请假」｜不再算加成，直接改写成一条定律：周期触发生效，眩晕时长提升 29.8点",
+    "series": "定身脉冲",
+    "level": 5,
+    "level_label": "Ⅴ",
+    "slot": "控制",
+    "rarity": "神话",
+    "energy_cost": 5,
+    "effect": {
+      "stat": "stun_duration",
+      "stat_cn": "眩晕时长",
+      "mode": "数值",
+      "value": 29.8,
+      "unit": "点",
+      "trigger": "周期触发"
+    },
+    "stack_limit": 2,
+    "compatible_classes": [
+      "减速控制",
+      "击退水炮",
+      "吞噬拉扯"
+    ],
+    "synergy": "与同系芯片同时装配时额外 +4.5点",
+    "description": "「钟表替它请假」｜不再算加成，直接改写成一条定律：周期触发生效，眩晕时长提升 29.8点。归属控制类/定身脉冲系，等级 Ⅴ，最多叠加 2 枚。"
+  },
+  {
+    "name": "口袋自己张开",
+    "name_hook": "「口袋自己张开」｜装一枚，只松动一个数值：击杀时生效，金币收益提升 10.2%",
+    "series": "战利品磁引",
+    "level": 1,
+    "level_label": "Ⅰ",
+    "slot": "经济",
+    "rarity": "普通",
+    "energy_cost": 1,
+    "effect": {
+      "stat": "bounty_bonus",
+      "stat_cn": "金币收益",
+      "mode": "百分比",
+      "value": 10.2,
+      "unit": "%",
+      "trigger": "击杀时"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "单体速射",
+      "机械哨兵",
+      "多目标无人机"
+    ],
+    "synergy": "与高等级炮塔同时装配时额外 +1.5%",
+    "description": "「口袋自己张开」｜装一枚，只松动一个数值：击杀时生效，金币收益提升 10.2%。归属经济类/战利品磁引系，等级 Ⅰ，最多叠加 4 枚。"
+  },
+  {
+    "name": "掉的多捡了一枚",
+    "name_hook": "「掉的多捡了一枚」｜铺开之后开始影响一整排塔：击杀时生效，金币收益提升 15.8%",
+    "series": "战利品磁引",
+    "level": 2,
+    "level_label": "Ⅱ",
+    "slot": "经济",
+    "rarity": "稀有",
+    "energy_cost": 2,
+    "effect": {
+      "stat": "bounty_bonus",
+      "stat_cn": "金币收益",
+      "mode": "百分比",
+      "value": 15.8,
+      "unit": "%",
+      "trigger": "击杀时"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "单体速射",
+      "机械哨兵",
+      "多目标无人机"
+    ],
+    "synergy": "与高等级炮塔同时装配时额外 +2.4%",
+    "description": "「掉的多捡了一枚」｜铺开之后开始影响一整排塔：击杀时生效，金币收益提升 15.8%。归属经济类/战利品磁引系，等级 Ⅱ，最多叠加 4 枚。"
+  },
+  {
+    "name": "每一只都算两遍",
+    "name_hook": "「每一只都算两遍」｜拧紧到某个触发条件上：击杀时生效，金币收益提升 21.4%",
+    "series": "战利品磁引",
+    "level": 3,
+    "level_label": "Ⅲ",
+    "slot": "经济",
+    "rarity": "史诗",
+    "energy_cost": 3,
+    "effect": {
+      "stat": "bounty_bonus",
+      "stat_cn": "金币收益",
+      "mode": "百分比",
+      "value": 21.4,
+      "unit": "%",
+      "trigger": "击杀时"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "单体速射",
+      "机械哨兵",
+      "多目标无人机"
+    ],
+    "synergy": "与高等级炮塔同时装配时额外 +3.2%",
+    "description": "「每一只都算两遍」｜拧紧到某个触发条件上：击杀时生效，金币收益提升 21.4%。归属经济类/战利品磁引系，等级 Ⅲ，最多叠加 3 枚。"
+  },
+  {
+    "name": "金币认得回家的路",
+    "name_hook": "「金币认得回家的路」｜越过额定值，收益和代价一起放大：击杀时生效，金币收益提升 27.0%",
+    "series": "战利品磁引",
+    "level": 4,
+    "level_label": "Ⅳ",
+    "slot": "经济",
+    "rarity": "传奇",
+    "energy_cost": 4,
+    "effect": {
+      "stat": "bounty_bonus",
+      "stat_cn": "金币收益",
+      "mode": "百分比",
+      "value": 27.0,
+      "unit": "%",
+      "trigger": "击杀时"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "单体速射",
+      "机械哨兵",
+      "多目标无人机"
+    ],
+    "synergy": "与高等级炮塔同时装配时额外 +4.0%",
+    "description": "「金币认得回家的路」｜越过额定值，收益和代价一起放大：击杀时生效，金币收益提升 27.0%。归属经济类/战利品磁引系，等级 Ⅳ，最多叠加 3 枚。"
+  },
+  {
+    "name": "清场比开打值钱",
+    "name_hook": "「清场比开打值钱」｜不再算加成，直接改写成一条定律：击杀时生效，金币收益提升 32.6%",
+    "series": "战利品磁引",
+    "level": 5,
+    "level_label": "Ⅴ",
+    "slot": "经济",
+    "rarity": "神话",
+    "energy_cost": 5,
+    "effect": {
+      "stat": "bounty_bonus",
+      "stat_cn": "金币收益",
+      "mode": "百分比",
+      "value": 32.6,
+      "unit": "%",
+      "trigger": "击杀时"
+    },
+    "stack_limit": 2,
+    "compatible_classes": [
+      "单体速射",
+      "机械哨兵",
+      "多目标无人机"
+    ],
+    "synergy": "与高等级炮塔同时装配时额外 +4.9%",
+    "description": "「清场比开打值钱」｜不再算加成，直接改写成一条定律：击杀时生效，金币收益提升 32.6%。归属经济类/战利品磁引系，等级 Ⅴ，最多叠加 2 枚。"
+  },
+  {
+    "name": "少收了一枚",
+    "name_hook": "「少收了一枚」｜装一枚，只松动一个数值：建造时生效，建造费用降低 7.2%",
+    "series": "造价压缩",
+    "level": 1,
+    "level_label": "Ⅰ",
+    "slot": "经济",
+    "rarity": "普通",
+    "energy_cost": 1,
+    "effect": {
+      "stat": "build_cost",
+      "stat_cn": "建造费用",
+      "mode": "百分比",
+      "value": 7.2,
+      "unit": "%",
+      "trigger": "建造时"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "单体速射",
+      "机械哨兵",
+      "多目标无人机"
+    ],
+    "synergy": "与对应元素塔同时装配时额外 +1.1%",
+    "description": "「少收了一枚」｜装一枚，只松动一个数值：建造时生效，建造费用降低 7.2%。归属经济类/造价压缩系，等级 Ⅰ，最多叠加 4 枚。"
+  },
+  {
+    "name": "报价划掉一行",
+    "name_hook": "「报价划掉一行」｜铺开之后开始影响一整排塔：建造时生效，建造费用降低 11.2%",
+    "series": "造价压缩",
+    "level": 2,
+    "level_label": "Ⅱ",
+    "slot": "经济",
+    "rarity": "稀有",
+    "energy_cost": 2,
+    "effect": {
+      "stat": "build_cost",
+      "stat_cn": "建造费用",
+      "mode": "百分比",
+      "value": 11.2,
+      "unit": "%",
+      "trigger": "建造时"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "单体速射",
+      "机械哨兵",
+      "多目标无人机"
+    ],
+    "synergy": "与对应元素塔同时装配时额外 +1.7%",
+    "description": "「报价划掉一行」｜铺开之后开始影响一整排塔：建造时生效，建造费用降低 11.2%。归属经济类/造价压缩系，等级 Ⅱ，最多叠加 4 枚。"
+  },
+  {
+    "name": "预算松了口气",
+    "name_hook": "「预算松了口气」｜拧紧到某个触发条件上：建造时生效，建造费用降低 15.2%",
+    "series": "造价压缩",
+    "level": 3,
+    "level_label": "Ⅲ",
+    "slot": "经济",
+    "rarity": "史诗",
+    "energy_cost": 3,
+    "effect": {
+      "stat": "build_cost",
+      "stat_cn": "建造费用",
+      "mode": "百分比",
+      "value": 15.2,
+      "unit": "%",
+      "trigger": "建造时"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "单体速射",
+      "机械哨兵",
+      "多目标无人机"
+    ],
+    "synergy": "与对应元素塔同时装配时额外 +2.3%",
+    "description": "「预算松了口气」｜拧紧到某个触发条件上：建造时生效，建造费用降低 15.2%。归属经济类/造价压缩系，等级 Ⅲ，最多叠加 3 枚。"
+  },
+  {
+    "name": "同样的钱多一座",
+    "name_hook": "「同样的钱多一座」｜越过额定值，收益和代价一起放大：建造时生效，建造费用降低 19.2%",
+    "series": "造价压缩",
+    "level": 4,
+    "level_label": "Ⅳ",
+    "slot": "经济",
+    "rarity": "传奇",
+    "energy_cost": 4,
+    "effect": {
+      "stat": "build_cost",
+      "stat_cn": "建造费用",
+      "mode": "百分比",
+      "value": 19.2,
+      "unit": "%",
+      "trigger": "建造时"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "单体速射",
+      "机械哨兵",
+      "多目标无人机"
+    ],
+    "synergy": "与对应元素塔同时装配时额外 +2.9%",
+    "description": "「同样的钱多一座」｜越过额定值，收益和代价一起放大：建造时生效，建造费用降低 19.2%。归属经济类/造价压缩系，等级 Ⅳ，最多叠加 3 枚。"
+  },
+  {
+    "name": "便宜到不像话",
+    "name_hook": "「便宜到不像话」｜不再算加成，直接改写成一条定律：建造时生效，建造费用降低 23.1%",
+    "series": "造价压缩",
+    "level": 5,
+    "level_label": "Ⅴ",
+    "slot": "经济",
+    "rarity": "神话",
+    "energy_cost": 5,
+    "effect": {
+      "stat": "build_cost",
+      "stat_cn": "建造费用",
+      "mode": "百分比",
+      "value": 23.1,
+      "unit": "%",
+      "trigger": "建造时"
+    },
+    "stack_limit": 2,
+    "compatible_classes": [
+      "单体速射",
+      "机械哨兵",
+      "多目标无人机"
+    ],
+    "synergy": "与对应元素塔同时装配时额外 +3.5%",
+    "description": "「便宜到不像话」｜不再算加成，直接改写成一条定律：建造时生效，建造费用降低 23.1%。归属经济类/造价压缩系，等级 Ⅴ，最多叠加 2 枚。"
+  },
+  {
+    "name": "波尾多一声",
+    "name_hook": "「波尾多一声」｜装一枚，只松动一个数值：每波结束生效，波次收入提升 11.7点",
+    "series": "利息回响",
+    "level": 1,
+    "level_label": "Ⅰ",
+    "slot": "经济",
+    "rarity": "普通",
+    "energy_cost": 1,
+    "effect": {
+      "stat": "wave_income",
+      "stat_cn": "波次收入",
+      "mode": "数值",
+      "value": 11.7,
+      "unit": "点",
+      "trigger": "每波结束"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "单体速射",
+      "机械哨兵",
+      "多目标无人机"
+    ],
+    "synergy": "与控制类炮塔同时装配时额外 +1.8点",
+    "description": "「波尾多一声」｜装一枚，只松动一个数值：每波结束生效，波次收入提升 11.7点。归属经济类/利息回响系，等级 Ⅰ，最多叠加 4 枚。"
+  },
+  {
+    "name": "空手也进账",
+    "name_hook": "「空手也进账」｜铺开之后开始影响一整排塔：每波结束生效，波次收入提升 18.2点",
+    "series": "利息回响",
+    "level": 2,
+    "level_label": "Ⅱ",
+    "slot": "经济",
+    "rarity": "稀有",
+    "energy_cost": 2,
+    "effect": {
+      "stat": "wave_income",
+      "stat_cn": "波次收入",
+      "mode": "数值",
+      "value": 18.2,
+      "unit": "点",
+      "trigger": "每波结束"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "单体速射",
+      "机械哨兵",
+      "多目标无人机"
+    ],
+    "synergy": "与控制类炮塔同时装配时额外 +2.7点",
+    "description": "「空手也进账」｜铺开之后开始影响一整排塔：每波结束生效，波次收入提升 18.2点。归属经济类/利息回响系，等级 Ⅱ，最多叠加 4 枚。"
+  },
+  {
+    "name": "等一等也有钱",
+    "name_hook": "「等一等也有钱」｜拧紧到某个触发条件上：每波结束生效，波次收入提升 24.7点",
+    "series": "利息回响",
+    "level": 3,
+    "level_label": "Ⅲ",
+    "slot": "经济",
+    "rarity": "史诗",
+    "energy_cost": 3,
+    "effect": {
+      "stat": "wave_income",
+      "stat_cn": "波次收入",
+      "mode": "数值",
+      "value": 24.7,
+      "unit": "点",
+      "trigger": "每波结束"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "单体速射",
+      "机械哨兵",
+      "多目标无人机"
+    ],
+    "synergy": "与控制类炮塔同时装配时额外 +3.7点",
+    "description": "「等一等也有钱」｜拧紧到某个触发条件上：每波结束生效，波次收入提升 24.7点。归属经济类/利息回响系，等级 Ⅲ，最多叠加 3 枚。"
+  },
+  {
+    "name": "没打的那波也算",
+    "name_hook": "「没打的那波也算」｜越过额定值，收益和代价一起放大：每波结束生效，波次收入提升 31.1点",
+    "series": "利息回响",
+    "level": 4,
+    "level_label": "Ⅳ",
+    "slot": "经济",
+    "rarity": "传奇",
+    "energy_cost": 4,
+    "effect": {
+      "stat": "wave_income",
+      "stat_cn": "波次收入",
+      "mode": "数值",
+      "value": 31.1,
+      "unit": "点",
+      "trigger": "每波结束"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "单体速射",
+      "机械哨兵",
+      "多目标无人机"
+    ],
+    "synergy": "与控制类炮塔同时装配时额外 +4.7点",
+    "description": "「没打的那波也算」｜越过额定值，收益和代价一起放大：每波结束生效，波次收入提升 31.1点。归属经济类/利息回响系，等级 Ⅳ，最多叠加 3 枚。"
+  },
+  {
+    "name": "时间开始付息",
+    "name_hook": "「时间开始付息」｜不再算加成，直接改写成一条定律：每波结束生效，波次收入提升 37.6点",
+    "series": "利息回响",
+    "level": 5,
+    "level_label": "Ⅴ",
+    "slot": "经济",
+    "rarity": "神话",
+    "energy_cost": 5,
+    "effect": {
+      "stat": "wave_income",
+      "stat_cn": "波次收入",
+      "mode": "数值",
+      "value": 37.6,
+      "unit": "点",
+      "trigger": "每波结束"
+    },
+    "stack_limit": 2,
+    "compatible_classes": [
+      "单体速射",
+      "机械哨兵",
+      "多目标无人机"
+    ],
+    "synergy": "与控制类炮塔同时装配时额外 +5.6点",
+    "description": "「时间开始付息」｜不再算加成，直接改写成一条定律：每波结束生效，波次收入提升 37.6点。归属经济类/利息回响系，等级 Ⅴ，最多叠加 2 枚。"
+  },
+  {
+    "name": "暗处多了个名字",
+    "name_hook": "「暗处多了个名字」｜装一枚，只松动一个数值：光环常驻生效，侦测范围提升 10.3点",
+    "series": "侦测雷达",
+    "level": 1,
+    "level_label": "Ⅰ",
+    "slot": "功能",
+    "rarity": "普通",
+    "energy_cost": 1,
+    "effect": {
+      "stat": "detect_range",
+      "stat_cn": "侦测范围",
+      "mode": "数值",
+      "value": 10.3,
+      "unit": "点",
+      "trigger": "光环常驻"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "隐身狙击",
+      "防空导弹",
+      "概率暴击"
+    ],
+    "synergy": "与经济型布局同时装配时额外 +1.5点",
+    "description": "「暗处多了个名字」｜装一枚，只松动一个数值：光环常驻生效，侦测范围提升 10.3点。归属功能类/侦测雷达系，等级 Ⅰ，最多叠加 4 枚。"
+  },
+  {
+    "name": "隐身要提前报备",
+    "name_hook": "「隐身要提前报备」｜铺开之后开始影响一整排塔：光环常驻生效，侦测范围提升 16.0点",
+    "series": "侦测雷达",
+    "level": 2,
+    "level_label": "Ⅱ",
+    "slot": "功能",
+    "rarity": "稀有",
+    "energy_cost": 2,
+    "effect": {
+      "stat": "detect_range",
+      "stat_cn": "侦测范围",
+      "mode": "数值",
+      "value": 16.0,
+      "unit": "点",
+      "trigger": "光环常驻"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "隐身狙击",
+      "防空导弹",
+      "概率暴击"
+    ],
+    "synergy": "与经济型布局同时装配时额外 +2.4点",
+    "description": "「隐身要提前报备」｜铺开之后开始影响一整排塔：光环常驻生效，侦测范围提升 16.0点。归属功能类/侦测雷达系，等级 Ⅱ，最多叠加 4 枚。"
+  },
+  {
+    "name": "屏风后面也亮",
+    "name_hook": "「屏风后面也亮」｜拧紧到某个触发条件上：光环常驻生效，侦测范围提升 21.6点",
+    "series": "侦测雷达",
+    "level": 3,
+    "level_label": "Ⅲ",
+    "slot": "功能",
+    "rarity": "史诗",
+    "energy_cost": 3,
+    "effect": {
+      "stat": "detect_range",
+      "stat_cn": "侦测范围",
+      "mode": "数值",
+      "value": 21.6,
+      "unit": "点",
+      "trigger": "光环常驻"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "隐身狙击",
+      "防空导弹",
+      "概率暴击"
+    ],
+    "synergy": "与经济型布局同时装配时额外 +3.2点",
+    "description": "「屏风后面也亮」｜拧紧到某个触发条件上：光环常驻生效，侦测范围提升 21.6点。归属功能类/侦测雷达系，等级 Ⅲ，最多叠加 3 枚。"
+  },
+  {
+    "name": "看不见的都编号",
+    "name_hook": "「看不见的都编号」｜越过额定值，收益和代价一起放大：光环常驻生效，侦测范围提升 27.3点",
+    "series": "侦测雷达",
+    "level": 4,
+    "level_label": "Ⅳ",
+    "slot": "功能",
+    "rarity": "传奇",
+    "energy_cost": 4,
+    "effect": {
+      "stat": "detect_range",
+      "stat_cn": "侦测范围",
+      "mode": "数值",
+      "value": 27.3,
+      "unit": "点",
+      "trigger": "光环常驻"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "隐身狙击",
+      "防空导弹",
+      "概率暴击"
+    ],
+    "synergy": "与经济型布局同时装配时额外 +4.1点",
+    "description": "「看不见的都编号」｜越过额定值，收益和代价一起放大：光环常驻生效，侦测范围提升 27.3点。归属功能类/侦测雷达系，等级 Ⅳ，最多叠加 3 枚。"
+  },
+  {
+    "name": "全场没有『没找到』",
+    "name_hook": "「全场没有『没找到』」｜不再算加成，直接改写成一条定律：光环常驻生效，侦测范围提升 33.0点",
+    "series": "侦测雷达",
+    "level": 5,
+    "level_label": "Ⅴ",
+    "slot": "功能",
+    "rarity": "神话",
+    "energy_cost": 5,
+    "effect": {
+      "stat": "detect_range",
+      "stat_cn": "侦测范围",
+      "mode": "数值",
+      "value": 33.0,
+      "unit": "点",
+      "trigger": "光环常驻"
+    },
+    "stack_limit": 2,
+    "compatible_classes": [
+      "隐身狙击",
+      "防空导弹",
+      "概率暴击"
+    ],
+    "synergy": "与经济型布局同时装配时额外 +5.0点",
+    "description": "「全场没有『没找到』」｜不再算加成，直接改写成一条定律：光环常驻生效，侦测范围提升 33.0点。归属功能类/侦测雷达系，等级 Ⅴ，最多叠加 2 枚。"
+  },
+  {
+    "name": "换弹少喘一口",
+    "name_hook": "「换弹少喘一口」｜装一枚，只松动一个数值：换弹时生效，装填速度提升 7.7%",
+    "series": "重载缓存",
+    "level": 1,
+    "level_label": "Ⅰ",
+    "slot": "功能",
+    "rarity": "普通",
+    "energy_cost": 1,
+    "effect": {
+      "stat": "reload_speed",
+      "stat_cn": "装填速度",
+      "mode": "百分比",
+      "value": 7.7,
+      "unit": "%",
+      "trigger": "换弹时"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "隐身狙击",
+      "防空导弹",
+      "概率暴击"
+    ],
+    "synergy": "与侦测类塔同时装配时额外 +1.2%",
+    "description": "「换弹少喘一口」｜装一枚，只松动一个数值：换弹时生效，装填速度提升 7.7%。归属功能类/重载缓存系，等级 Ⅰ，最多叠加 4 枚。"
+  },
+  {
+    "name": "空档被剪短",
+    "name_hook": "「空档被剪短」｜铺开之后开始影响一整排塔：换弹时生效，装填速度提升 12.0%",
+    "series": "重载缓存",
+    "level": 2,
+    "level_label": "Ⅱ",
+    "slot": "功能",
+    "rarity": "稀有",
+    "energy_cost": 2,
+    "effect": {
+      "stat": "reload_speed",
+      "stat_cn": "装填速度",
+      "mode": "百分比",
+      "value": 12.0,
+      "unit": "%",
+      "trigger": "换弹时"
+    },
+    "stack_limit": 4,
+    "compatible_classes": [
+      "隐身狙击",
+      "防空导弹",
+      "概率暴击"
+    ],
+    "synergy": "与侦测类塔同时装配时额外 +1.8%",
+    "description": "「空档被剪短」｜铺开之后开始影响一整排塔：换弹时生效，装填速度提升 12.0%。归属功能类/重载缓存系，等级 Ⅱ，最多叠加 4 枚。"
+  },
+  {
+    "name": "下一发不等上一发",
+    "name_hook": "「下一发不等上一发」｜拧紧到某个触发条件上：换弹时生效，装填速度提升 16.3%",
+    "series": "重载缓存",
+    "level": 3,
+    "level_label": "Ⅲ",
+    "slot": "功能",
+    "rarity": "史诗",
+    "energy_cost": 3,
+    "effect": {
+      "stat": "reload_speed",
+      "stat_cn": "装填速度",
+      "mode": "百分比",
+      "value": 16.3,
+      "unit": "%",
+      "trigger": "换弹时"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "隐身狙击",
+      "防空导弹",
+      "概率暴击"
+    ],
+    "synergy": "与侦测类塔同时装配时额外 +2.4%",
+    "description": "「下一发不等上一发」｜拧紧到某个触发条件上：换弹时生效，装填速度提升 16.3%。归属功能类/重载缓存系，等级 Ⅲ，最多叠加 3 枚。"
+  },
+  {
+    "name": "装填改成连笔",
+    "name_hook": "「装填改成连笔」｜越过额定值，收益和代价一起放大：换弹时生效，装填速度提升 20.5%",
+    "series": "重载缓存",
+    "level": 4,
+    "level_label": "Ⅳ",
+    "slot": "功能",
+    "rarity": "传奇",
+    "energy_cost": 4,
+    "effect": {
+      "stat": "reload_speed",
+      "stat_cn": "装填速度",
+      "mode": "百分比",
+      "value": 20.5,
+      "unit": "%",
+      "trigger": "换弹时"
+    },
+    "stack_limit": 3,
+    "compatible_classes": [
+      "隐身狙击",
+      "防空导弹",
+      "概率暴击"
+    ],
+    "synergy": "与侦测类塔同时装配时额外 +3.1%",
+    "description": "「装填改成连笔」｜越过额定值，收益和代价一起放大：换弹时生效，装填速度提升 20.5%。归属功能类/重载缓存系，等级 Ⅳ，最多叠加 3 枚。"
+  },
+  {
+    "name": "停火这两个字删了",
+    "name_hook": "「停火这两个字删了」｜不再算加成，直接改写成一条定律：换弹时生效，装填速度提升 24.8%",
+    "series": "重载缓存",
+    "level": 5,
+    "level_label": "Ⅴ",
+    "slot": "功能",
+    "rarity": "神话",
+    "energy_cost": 5,
+    "effect": {
+      "stat": "reload_speed",
+      "stat_cn": "装填速度",
+      "mode": "百分比",
+      "value": 24.8,
+      "unit": "%",
+      "trigger": "换弹时"
+    },
+    "stack_limit": 2,
+    "compatible_classes": [
+      "隐身狙击",
+      "防空导弹",
+      "概率暴击"
+    ],
+    "synergy": "与侦测类塔同时装配时额外 +3.7%",
+    "description": "「停火这两个字删了」｜不再算加成，直接改写成一条定律：换弹时生效，装填速度提升 24.8%。归属功能类/重载缓存系，等级 Ⅴ，最多叠加 2 枚。"
+  }
+]

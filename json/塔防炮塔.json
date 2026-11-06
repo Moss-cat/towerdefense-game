@@ -1,0 +1,3202 @@
+[
+  {
+    "name": "一秒里数到七的人",
+    "name_hook": "「一秒里数到七的人」｜刚上场，只改动一发一格的规矩：射速极快，连续命中同一目标时逐发提升伤害",
+    "series": "脉冲",
+    "model": "哨戒型",
+    "class": "单体速射",
+    "element": "动能",
+    "mechanic": "连击叠加",
+    "rarity": "普通",
+    "tier": 1,
+    "cost": 139,
+    "upgrade_cost": 104,
+    "max_level": 5,
+    "stats": {
+      "damage": 10,
+      "range": 3.3,
+      "fire_rate": 1.21,
+      "splash_radius": 2.2,
+      "projectile_speed": 22,
+      "crit_rate": 0.08
+    },
+    "targeting": "最前",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "连击叠加·Ⅰ",
+      "description": "射速极快，连续命中同一目标时逐发提升伤害",
+      "cooldown": 12.8
+    },
+    "description": "「一秒里数到七的人」｜刚上场，只改动一发一格的规矩：射速极快，连续命中同一目标时逐发提升伤害。归属脉冲系/单体速射/动能，基础构型，造价低廉，适合前期铺场，核心机制：连击叠加。"
+  },
+  {
+    "name": "不肯停的缝纫机",
+    "name_hook": "「不肯停的缝纫机」｜铺开之后开始影响一整片：射速极快，连续命中同一目标时逐发提升伤害",
+    "series": "脉冲",
+    "model": "齐射型",
+    "class": "单体速射",
+    "element": "动能",
+    "mechanic": "连击叠加",
+    "rarity": "稀有",
+    "tier": 2,
+    "cost": 187,
+    "upgrade_cost": 140,
+    "max_level": 5,
+    "stats": {
+      "damage": 13,
+      "range": 3.6,
+      "fire_rate": 1.36,
+      "splash_radius": 0.8,
+      "projectile_speed": 10,
+      "crit_rate": 0.12
+    },
+    "targeting": "血量最高",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "连击叠加·Ⅱ",
+      "description": "射速极快，连续命中同一目标时逐发提升伤害",
+      "cooldown": 9.4
+    },
+    "description": "「不肯停的缝纫机」｜铺开之后开始影响一整片：射速极快，连续命中同一目标时逐发提升伤害。归属脉冲系/单体速射/动能，增加弹道数量，覆盖更宽的进攻路线，核心机制：连击叠加。"
+  },
+  {
+    "name": "把回声钉在靶上",
+    "name_hook": "「把回声钉在靶上」｜收束到一个点上较劲：射速极快，连续命中同一目标时逐发提升伤害",
+    "series": "脉冲",
+    "model": "聚焦型",
+    "class": "单体速射",
+    "element": "动能",
+    "mechanic": "连击叠加",
+    "rarity": "史诗",
+    "tier": 3,
+    "cost": 250,
+    "upgrade_cost": 187,
+    "max_level": 5,
+    "stats": {
+      "damage": 18,
+      "range": 3.8,
+      "fire_rate": 1.5,
+      "splash_radius": 3.2,
+      "projectile_speed": 15,
+      "crit_rate": 0.14
+    },
+    "targeting": "最近",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "连击叠加·Ⅲ",
+      "description": "射速极快，连续命中同一目标时逐发提升伤害",
+      "cooldown": 7.3
+    },
+    "description": "「把回声钉在靶上」｜收束到一个点上较劲：射速极快，连续命中同一目标时逐发提升伤害。归属脉冲系/单体速射/动能，收束火力，提升射程与单点爆发，核心机制：连击叠加。"
+  },
+  {
+    "name": "心跳借给扳机",
+    "name_hook": "「心跳借给扳机」｜越过额定功率，连代价一起放大：射速极快，连续命中同一目标时逐发提升伤害",
+    "series": "脉冲",
+    "model": "过载型",
+    "class": "单体速射",
+    "element": "动能",
+    "mechanic": "连击叠加",
+    "rarity": "传奇",
+    "tier": 4,
+    "cost": 340,
+    "upgrade_cost": 255,
+    "max_level": 5,
+    "stats": {
+      "damage": 24,
+      "range": 4.1,
+      "fire_rate": 1.65,
+      "splash_radius": 3.1,
+      "projectile_speed": 10,
+      "crit_rate": 0.18
+    },
+    "targeting": "最快",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "连击叠加·Ⅳ",
+      "description": "射速极快，连续命中同一目标时逐发提升伤害",
+      "cooldown": 6.5
+    },
+    "description": "「心跳借给扳机」｜越过额定功率，连代价一起放大：射速极快，连续命中同一目标时逐发提升伤害。归属脉冲系/单体速射/动能，突破功率上限，攻速与特效强度显著提升，核心机制：连击叠加。"
+  },
+  {
+    "name": "第七发不算数",
+    "name_hook": "「第七发不算数」｜机制定型，反过来改写这一路的打法：射速极快，连续命中同一目标时逐发提升伤害",
+    "series": "脉冲",
+    "model": "终焉型",
+    "class": "单体速射",
+    "element": "动能",
+    "mechanic": "连击叠加",
+    "rarity": "神话",
+    "tier": 5,
+    "cost": 458,
+    "upgrade_cost": 344,
+    "max_level": 5,
+    "stats": {
+      "damage": 33,
+      "range": 4.4,
+      "fire_rate": 1.79,
+      "splash_radius": 2.3,
+      "projectile_speed": 12,
+      "crit_rate": 0.23
+    },
+    "targeting": "最密集群",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "连击叠加·Ⅴ",
+      "description": "射速极快，连续命中同一目标时逐发提升伤害",
+      "cooldown": 4.9
+    },
+    "description": "「第七发不算数」｜机制定型，反过来改写这一路的打法：射速极快，连续命中同一目标时逐发提升伤害。归属脉冲系/单体速射/动能，终极构型，解锁专属机制，数值全面跃升，核心机制：连击叠加。"
+  },
+  {
+    "name": "薄冰记得脚印",
+    "name_hook": "「薄冰记得脚印」｜刚上场，只改动一发一格的规矩：命中附带寒霜，叠满后短暂冻结目标",
+    "series": "霜蚀",
+    "model": "哨戒型",
+    "class": "减速控制",
+    "element": "冰",
+    "mechanic": "冻结",
+    "rarity": "普通",
+    "tier": 1,
+    "cost": 85,
+    "upgrade_cost": 63,
+    "max_level": 5,
+    "stats": {
+      "damage": 24,
+      "range": 5.4,
+      "fire_rate": 1.2,
+      "splash_radius": 2.3,
+      "projectile_speed": 21,
+      "crit_rate": 0.07
+    },
+    "targeting": "最前",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "冻结·Ⅰ",
+      "description": "命中附带寒霜，叠满后短暂冻结目标",
+      "cooldown": 12.1
+    },
+    "description": "「薄冰记得脚印」｜刚上场，只改动一发一格的规矩：命中附带寒霜，叠满后短暂冻结目标。归属霜蚀系/减速控制/冰，基础构型，造价低廉，适合前期铺场，核心机制：冻结。"
+  },
+  {
+    "name": "冬天多配了一副手套",
+    "name_hook": "「冬天多配了一副手套」｜铺开之后开始影响一整片：命中附带寒霜，叠满后短暂冻结目标",
+    "series": "霜蚀",
+    "model": "齐射型",
+    "class": "减速控制",
+    "element": "冰",
+    "mechanic": "冻结",
+    "rarity": "稀有",
+    "tier": 2,
+    "cost": 114,
+    "upgrade_cost": 86,
+    "max_level": 5,
+    "stats": {
+      "damage": 32,
+      "range": 5.8,
+      "fire_rate": 1.34,
+      "splash_radius": 2.0,
+      "projectile_speed": 15,
+      "crit_rate": 0.11
+    },
+    "targeting": "血量最高",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "冻结·Ⅱ",
+      "description": "命中附带寒霜，叠满后短暂冻结目标",
+      "cooldown": 9.8
+    },
+    "description": "「冬天多配了一副手套」｜铺开之后开始影响一整片：命中附带寒霜，叠满后短暂冻结目标。归属霜蚀系/减速控制/冰，增加弹道数量，覆盖更宽的进攻路线，核心机制：冻结。"
+  },
+  {
+    "name": "把哈气冻成钉子",
+    "name_hook": "「把哈气冻成钉子」｜收束到一个点上较劲：命中附带寒霜，叠满后短暂冻结目标",
+    "series": "霜蚀",
+    "model": "聚焦型",
+    "class": "减速控制",
+    "element": "冰",
+    "mechanic": "冻结",
+    "rarity": "史诗",
+    "tier": 3,
+    "cost": 153,
+    "upgrade_cost": 114,
+    "max_level": 5,
+    "stats": {
+      "damage": 43,
+      "range": 6.3,
+      "fire_rate": 1.49,
+      "splash_radius": 2.4,
+      "projectile_speed": 15,
+      "crit_rate": 0.15
+    },
+    "targeting": "最近",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "冻结·Ⅲ",
+      "description": "命中附带寒霜，叠满后短暂冻结目标",
+      "cooldown": 9.0
+    },
+    "description": "「把哈气冻成钉子」｜收束到一个点上较劲：命中附带寒霜，叠满后短暂冻结目标。归属霜蚀系/减速控制/冰，收束火力，提升射程与单点爆发，核心机制：冻结。"
+  },
+  {
+    "name": "河面合上眼的那一秒",
+    "name_hook": "「河面合上眼的那一秒」｜越过额定功率，连代价一起放大：命中附带寒霜，叠满后短暂冻结目标",
+    "series": "霜蚀",
+    "model": "过载型",
+    "class": "减速控制",
+    "element": "冰",
+    "mechanic": "冻结",
+    "rarity": "传奇",
+    "tier": 4,
+    "cost": 208,
+    "upgrade_cost": 156,
+    "max_level": 5,
+    "stats": {
+      "damage": 58,
+      "range": 6.7,
+      "fire_rate": 1.63,
+      "splash_radius": 1.6,
+      "projectile_speed": 17,
+      "crit_rate": 0.18
+    },
+    "targeting": "最快",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "冻结·Ⅳ",
+      "description": "命中附带寒霜，叠满后短暂冻结目标",
+      "cooldown": 5.1
+    },
+    "description": "「河面合上眼的那一秒」｜越过额定功率，连代价一起放大：命中附带寒霜，叠满后短暂冻结目标。归属霜蚀系/减速控制/冰，突破功率上限，攻速与特效强度显著提升，核心机制：冻结。"
+  },
+  {
+    "name": "不融化的那声静",
+    "name_hook": "「不融化的那声静」｜机制定型，反过来改写这一路的打法：命中附带寒霜，叠满后短暂冻结目标",
+    "series": "霜蚀",
+    "model": "终焉型",
+    "class": "减速控制",
+    "element": "冰",
+    "mechanic": "冻结",
+    "rarity": "神话",
+    "tier": 5,
+    "cost": 280,
+    "upgrade_cost": 210,
+    "max_level": 5,
+    "stats": {
+      "damage": 79,
+      "range": 7.1,
+      "fire_rate": 1.78,
+      "splash_radius": 1.2,
+      "projectile_speed": 11,
+      "crit_rate": 0.23
+    },
+    "targeting": "最密集群",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "冻结·Ⅴ",
+      "description": "命中附带寒霜，叠满后短暂冻结目标",
+      "cooldown": 3.4
+    },
+    "description": "「不融化的那声静」｜机制定型，反过来改写这一路的打法：命中附带寒霜，叠满后短暂冻结目标。归属霜蚀系/减速控制/冰，终极构型，解锁专属机制，数值全面跃升，核心机制：冻结。"
+  },
+  {
+    "name": "没吹灭的火柴",
+    "name_hook": "「没吹灭的火柴」｜刚上场，只改动一发一格的规矩：落点留下火域，对范围内敌人持续灼烧",
+    "series": "熔核",
+    "model": "哨戒型",
+    "class": "范围灼烧",
+    "element": "火",
+    "mechanic": "持续燃烧",
+    "rarity": "普通",
+    "tier": 1,
+    "cost": 128,
+    "upgrade_cost": 96,
+    "max_level": 5,
+    "stats": {
+      "damage": 22,
+      "range": 3.3,
+      "fire_rate": 1.35,
+      "splash_radius": 0.8,
+      "projectile_speed": 11,
+      "crit_rate": 0.05
+    },
+    "targeting": "最前",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "持续燃烧·Ⅰ",
+      "description": "落点留下火域，对范围内敌人持续灼烧",
+      "cooldown": 11.9
+    },
+    "description": "「没吹灭的火柴」｜刚上场，只改动一发一格的规矩：落点留下火域，对范围内敌人持续灼烧。归属熔核系/范围灼烧/火，基础构型，造价低廉，适合前期铺场，核心机制：持续燃烧。"
+  },
+  {
+    "name": "炉膛翻了个身",
+    "name_hook": "「炉膛翻了个身」｜铺开之后开始影响一整片：落点留下火域，对范围内敌人持续灼烧",
+    "series": "熔核",
+    "model": "齐射型",
+    "class": "范围灼烧",
+    "element": "火",
+    "mechanic": "持续燃烧",
+    "rarity": "稀有",
+    "tier": 2,
+    "cost": 172,
+    "upgrade_cost": 129,
+    "max_level": 5,
+    "stats": {
+      "damage": 29,
+      "range": 3.6,
+      "fire_rate": 1.51,
+      "splash_radius": 0.8,
+      "projectile_speed": 12,
+      "crit_rate": 0.11
+    },
+    "targeting": "血量最高",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "持续燃烧·Ⅱ",
+      "description": "落点留下火域，对范围内敌人持续灼烧",
+      "cooldown": 9.4
+    },
+    "description": "「炉膛翻了个身」｜铺开之后开始影响一整片：落点留下火域，对范围内敌人持续灼烧。归属熔核系/范围灼烧/火，增加弹道数量，覆盖更宽的进攻路线，核心机制：持续燃烧。"
+  },
+  {
+    "name": "在地上按了个手印",
+    "name_hook": "「在地上按了个手印」｜收束到一个点上较劲：落点留下火域，对范围内敌人持续灼烧",
+    "series": "熔核",
+    "model": "聚焦型",
+    "class": "范围灼烧",
+    "element": "火",
+    "mechanic": "持续燃烧",
+    "rarity": "史诗",
+    "tier": 3,
+    "cost": 230,
+    "upgrade_cost": 172,
+    "max_level": 5,
+    "stats": {
+      "damage": 39,
+      "range": 3.8,
+      "fire_rate": 1.67,
+      "splash_radius": 1.2,
+      "projectile_speed": 26,
+      "crit_rate": 0.15
+    },
+    "targeting": "最近",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "持续燃烧·Ⅲ",
+      "description": "落点留下火域，对范围内敌人持续灼烧",
+      "cooldown": 7.6
+    },
+    "description": "「在地上按了个手印」｜收束到一个点上较劲：落点留下火域，对范围内敌人持续灼烧。归属熔核系/范围灼烧/火，收束火力，提升射程与单点爆发，核心机制：持续燃烧。"
+  },
+  {
+    "name": "太阳掉了一小块",
+    "name_hook": "「太阳掉了一小块」｜越过额定功率，连代价一起放大：落点留下火域，对范围内敌人持续灼烧",
+    "series": "熔核",
+    "model": "过载型",
+    "class": "范围灼烧",
+    "element": "火",
+    "mechanic": "持续燃烧",
+    "rarity": "传奇",
+    "tier": 4,
+    "cost": 313,
+    "upgrade_cost": 235,
+    "max_level": 5,
+    "stats": {
+      "damage": 53,
+      "range": 4.1,
+      "fire_rate": 1.84,
+      "splash_radius": 1.9,
+      "projectile_speed": 21,
+      "crit_rate": 0.18
+    },
+    "targeting": "最快",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "持续燃烧·Ⅳ",
+      "description": "落点留下火域，对范围内敌人持续灼烧",
+      "cooldown": 5.6
+    },
+    "description": "「太阳掉了一小块」｜越过额定功率，连代价一起放大：落点留下火域，对范围内敌人持续灼烧。归属熔核系/范围灼烧/火，突破功率上限，攻速与特效强度显著提升，核心机制：持续燃烧。"
+  },
+  {
+    "name": "灰里还坐着一个人",
+    "name_hook": "「灰里还坐着一个人」｜机制定型，反过来改写这一路的打法：落点留下火域，对范围内敌人持续灼烧",
+    "series": "熔核",
+    "model": "终焉型",
+    "class": "范围灼烧",
+    "element": "火",
+    "mechanic": "持续燃烧",
+    "rarity": "神话",
+    "tier": 5,
+    "cost": 422,
+    "upgrade_cost": 316,
+    "max_level": 5,
+    "stats": {
+      "damage": 72,
+      "range": 4.4,
+      "fire_rate": 2.0,
+      "splash_radius": 1.2,
+      "projectile_speed": 22,
+      "crit_rate": 0.22
+    },
+    "targeting": "最密集群",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "持续燃烧·Ⅴ",
+      "description": "落点留下火域，对范围内敌人持续灼烧",
+      "cooldown": 4.9
+    },
+    "description": "「灰里还坐着一个人」｜机制定型，反过来改写这一路的打法：落点留下火域，对范围内敌人持续灼烧。归属熔核系/范围灼烧/火，终极构型，解锁专属机制，数值全面跃升，核心机制：持续燃烧。"
+  },
+  {
+    "name": "两枚硬币之间的缝",
+    "name_hook": "「两枚硬币之间的缝」｜刚上场，只改动一发一格的规矩：电弧在邻近目标之间跳跃，最多弹射数个",
+    "series": "磁暴",
+    "model": "哨戒型",
+    "class": "连锁闪电",
+    "element": "雷",
+    "mechanic": "弹射",
+    "rarity": "普通",
+    "tier": 1,
+    "cost": 96,
+    "upgrade_cost": 72,
+    "max_level": 5,
+    "stats": {
+      "damage": 25,
+      "range": 5.7,
+      "fire_rate": 1.27,
+      "splash_radius": 2.2,
+      "projectile_speed": 25,
+      "crit_rate": 0.06
+    },
+    "targeting": "最前",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "弹射·Ⅰ",
+      "description": "电弧在邻近目标之间跳跃，最多弹射数个",
+      "cooldown": 11.9
+    },
+    "description": "「两枚硬币之间的缝」｜刚上场，只改动一发一格的规矩：电弧在邻近目标之间跳跃，最多弹射数个。归属磁暴系/连锁闪电/雷，基础构型，造价低廉，适合前期铺场，核心机制：弹射。"
+  },
+  {
+    "name": "替邻居签收的雷",
+    "name_hook": "「替邻居签收的雷」｜铺开之后开始影响一整片：电弧在邻近目标之间跳跃，最多弹射数个",
+    "series": "磁暴",
+    "model": "齐射型",
+    "class": "连锁闪电",
+    "element": "雷",
+    "mechanic": "弹射",
+    "rarity": "稀有",
+    "tier": 2,
+    "cost": 129,
+    "upgrade_cost": 97,
+    "max_level": 5,
+    "stats": {
+      "damage": 33,
+      "range": 6.2,
+      "fire_rate": 1.42,
+      "splash_radius": 2.3,
+      "projectile_speed": 21,
+      "crit_rate": 0.09
+    },
+    "targeting": "血量最高",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "弹射·Ⅱ",
+      "description": "电弧在邻近目标之间跳跃，最多弹射数个",
+      "cooldown": 10.1
+    },
+    "description": "「替邻居签收的雷」｜铺开之后开始影响一整片：电弧在邻近目标之间跳跃，最多弹射数个。归属磁暴系/连锁闪电/雷，增加弹道数量，覆盖更宽的进攻路线，核心机制：弹射。"
+  },
+  {
+    "name": "一串不肯散的火花",
+    "name_hook": "「一串不肯散的火花」｜收束到一个点上较劲：电弧在邻近目标之间跳跃，最多弹射数个",
+    "series": "磁暴",
+    "model": "聚焦型",
+    "class": "连锁闪电",
+    "element": "雷",
+    "mechanic": "弹射",
+    "rarity": "史诗",
+    "tier": 3,
+    "cost": 172,
+    "upgrade_cost": 129,
+    "max_level": 5,
+    "stats": {
+      "damage": 45,
+      "range": 6.6,
+      "fire_rate": 1.57,
+      "splash_radius": 2.0,
+      "projectile_speed": 21,
+      "crit_rate": 0.13
+    },
+    "targeting": "最近",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "弹射·Ⅲ",
+      "description": "电弧在邻近目标之间跳跃，最多弹射数个",
+      "cooldown": 8.3
+    },
+    "description": "「一串不肯散的火花」｜收束到一个点上较劲：电弧在邻近目标之间跳跃，最多弹射数个。归属磁暴系/连锁闪电/雷，收束火力，提升射程与单点爆发，核心机制：弹射。"
+  },
+  {
+    "name": "天空把线接错了",
+    "name_hook": "「天空把线接错了」｜越过额定功率，连代价一起放大：电弧在邻近目标之间跳跃，最多弹射数个",
+    "series": "磁暴",
+    "model": "过载型",
+    "class": "连锁闪电",
+    "element": "雷",
+    "mechanic": "弹射",
+    "rarity": "传奇",
+    "tier": 4,
+    "cost": 235,
+    "upgrade_cost": 176,
+    "max_level": 5,
+    "stats": {
+      "damage": 61,
+      "range": 7.1,
+      "fire_rate": 1.73,
+      "splash_radius": 1.7,
+      "projectile_speed": 12,
+      "crit_rate": 0.17
+    },
+    "targeting": "最快",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "弹射·Ⅳ",
+      "description": "电弧在邻近目标之间跳跃，最多弹射数个",
+      "cooldown": 5.7
+    },
+    "description": "「天空把线接错了」｜越过额定功率，连代价一起放大：电弧在邻近目标之间跳跃，最多弹射数个。归属磁暴系/连锁闪电/雷，突破功率上限，攻速与特效强度显著提升，核心机制：弹射。"
+  },
+  {
+    "name": "所有人都被点到名",
+    "name_hook": "「所有人都被点到名」｜机制定型，反过来改写这一路的打法：电弧在邻近目标之间跳跃，最多弹射数个",
+    "series": "磁暴",
+    "model": "终焉型",
+    "class": "连锁闪电",
+    "element": "雷",
+    "mechanic": "弹射",
+    "rarity": "神话",
+    "tier": 5,
+    "cost": 316,
+    "upgrade_cost": 237,
+    "max_level": 5,
+    "stats": {
+      "damage": 82,
+      "range": 7.5,
+      "fire_rate": 1.88,
+      "splash_radius": 2.1,
+      "projectile_speed": 24,
+      "crit_rate": 0.23
+    },
+    "targeting": "最密集群",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "弹射·Ⅴ",
+      "description": "电弧在邻近目标之间跳跃，最多弹射数个",
+      "cooldown": 4.0
+    },
+    "description": "「所有人都被点到名」｜机制定型，反过来改写这一路的打法：电弧在邻近目标之间跳跃，最多弹射数个。归属磁暴系/连锁闪电/雷，终极构型，解锁专属机制，数值全面跃升，核心机制：弹射。"
+  },
+  {
+    "name": "篱笆第一根刺",
+    "name_hook": "「篱笆第一根刺」｜刚上场，只改动一发一格的规矩：被近身攻击时反弹伤害并缠绕敌人",
+    "series": "荆棘",
+    "model": "哨戒型",
+    "class": "近战反伤",
+    "element": "自然",
+    "mechanic": "荆棘反伤",
+    "rarity": "普通",
+    "tier": 1,
+    "cost": 78,
+    "upgrade_cost": 58,
+    "max_level": 5,
+    "stats": {
+      "damage": 23,
+      "range": 5.0,
+      "fire_rate": 1.66,
+      "splash_radius": 1.2,
+      "projectile_speed": 16,
+      "crit_rate": 0.07
+    },
+    "targeting": "最前",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "荆棘反伤·Ⅰ",
+      "description": "被近身攻击时反弹伤害并缠绕敌人",
+      "cooldown": 11.9
+    },
+    "description": "「篱笆第一根刺」｜刚上场，只改动一发一格的规矩：被近身攻击时反弹伤害并缠绕敌人。归属荆棘系/近战反伤/自然，基础构型，造价低廉，适合前期铺场，核心机制：荆棘反伤。"
+  },
+  {
+    "name": "谁碰谁带走一把",
+    "name_hook": "「谁碰谁带走一把」｜铺开之后开始影响一整片：被近身攻击时反弹伤害并缠绕敌人",
+    "series": "荆棘",
+    "model": "齐射型",
+    "class": "近战反伤",
+    "element": "自然",
+    "mechanic": "荆棘反伤",
+    "rarity": "稀有",
+    "tier": 2,
+    "cost": 105,
+    "upgrade_cost": 78,
+    "max_level": 5,
+    "stats": {
+      "damage": 31,
+      "range": 5.4,
+      "fire_rate": 1.86,
+      "splash_radius": 2.2,
+      "projectile_speed": 20,
+      "crit_rate": 0.1
+    },
+    "targeting": "血量最高",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "荆棘反伤·Ⅱ",
+      "description": "被近身攻击时反弹伤害并缠绕敌人",
+      "cooldown": 9.3
+    },
+    "description": "「谁碰谁带走一把」｜铺开之后开始影响一整片：被近身攻击时反弹伤害并缠绕敌人。归属荆棘系/近战反伤/自然，增加弹道数量，覆盖更宽的进攻路线，核心机制：荆棘反伤。"
+  },
+  {
+    "name": "长在伤口上的结",
+    "name_hook": "「长在伤口上的结」｜收束到一个点上较劲：被近身攻击时反弹伤害并缠绕敌人",
+    "series": "荆棘",
+    "model": "聚焦型",
+    "class": "近战反伤",
+    "element": "自然",
+    "mechanic": "荆棘反伤",
+    "rarity": "史诗",
+    "tier": 3,
+    "cost": 140,
+    "upgrade_cost": 105,
+    "max_level": 5,
+    "stats": {
+      "damage": 41,
+      "range": 5.8,
+      "fire_rate": 2.06,
+      "splash_radius": 1.8,
+      "projectile_speed": 14,
+      "crit_rate": 0.15
+    },
+    "targeting": "最近",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "荆棘反伤·Ⅲ",
+      "description": "被近身攻击时反弹伤害并缠绕敌人",
+      "cooldown": 7.2
+    },
+    "description": "「长在伤口上的结」｜收束到一个点上较劲：被近身攻击时反弹伤害并缠绕敌人。归属荆棘系/近战反伤/自然，收束火力，提升射程与单点爆发，核心机制：荆棘反伤。"
+  },
+  {
+    "name": "整面墙开始还手",
+    "name_hook": "「整面墙开始还手」｜越过额定功率，连代价一起放大：被近身攻击时反弹伤害并缠绕敌人",
+    "series": "荆棘",
+    "model": "过载型",
+    "class": "近战反伤",
+    "element": "自然",
+    "mechanic": "荆棘反伤",
+    "rarity": "传奇",
+    "tier": 4,
+    "cost": 191,
+    "upgrade_cost": 143,
+    "max_level": 5,
+    "stats": {
+      "damage": 56,
+      "range": 6.2,
+      "fire_rate": 2.26,
+      "splash_radius": 2.9,
+      "projectile_speed": 17,
+      "crit_rate": 0.19
+    },
+    "targeting": "最快",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "荆棘反伤·Ⅳ",
+      "description": "被近身攻击时反弹伤害并缠绕敌人",
+      "cooldown": 6.5
+    },
+    "description": "「整面墙开始还手」｜越过额定功率，连代价一起放大：被近身攻击时反弹伤害并缠绕敌人。归属荆棘系/近战反伤/自然，突破功率上限，攻速与特效强度显著提升，核心机制：荆棘反伤。"
+  },
+  {
+    "name": "花园不欢迎客人",
+    "name_hook": "「花园不欢迎客人」｜机制定型，反过来改写这一路的打法：被近身攻击时反弹伤害并缠绕敌人",
+    "series": "荆棘",
+    "model": "终焉型",
+    "class": "近战反伤",
+    "element": "自然",
+    "mechanic": "荆棘反伤",
+    "rarity": "神话",
+    "tier": 5,
+    "cost": 257,
+    "upgrade_cost": 193,
+    "max_level": 5,
+    "stats": {
+      "damage": 75,
+      "range": 6.6,
+      "fire_rate": 2.46,
+      "splash_radius": 3.2,
+      "projectile_speed": 10,
+      "crit_rate": 0.23
+    },
+    "targeting": "最密集群",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "荆棘反伤·Ⅴ",
+      "description": "被近身攻击时反弹伤害并缠绕敌人",
+      "cooldown": 4.9
+    },
+    "description": "「花园不欢迎客人」｜机制定型，反过来改写这一路的打法：被近身攻击时反弹伤害并缠绕敌人。归属荆棘系/近战反伤/自然，终极构型，解锁专属机制，数值全面跃升，核心机制：荆棘反伤。"
+  },
+  {
+    "name": "屏风后面没人在",
+    "name_hook": "「屏风后面没人在」｜刚上场，只改动一发一格的规矩：进入潜伏，对首个进入射程的目标造成背刺暴击",
+    "series": "幽影",
+    "model": "哨戒型",
+    "class": "隐身狙击",
+    "element": "暗",
+    "mechanic": "背刺",
+    "rarity": "普通",
+    "tier": 1,
+    "cost": 66,
+    "upgrade_cost": 49,
+    "max_level": 5,
+    "stats": {
+      "damage": 25,
+      "range": 4.0,
+      "fire_rate": 1.04,
+      "splash_radius": 2.1,
+      "projectile_speed": 10,
+      "crit_rate": 0.05
+    },
+    "targeting": "最前",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "背刺·Ⅰ",
+      "description": "进入潜伏，对首个进入射程的目标造成背刺暴击",
+      "cooldown": 12.4
+    },
+    "description": "「屏风后面没人在」｜刚上场，只改动一发一格的规矩：进入潜伏，对首个进入射程的目标造成背刺暴击。归属幽影系/隐身狙击/暗，基础构型，造价低廉，适合前期铺场，核心机制：背刺。"
+  },
+  {
+    "name": "比影子晚半步",
+    "name_hook": "「比影子晚半步」｜铺开之后开始影响一整片：进入潜伏，对首个进入射程的目标造成背刺暴击",
+    "series": "幽影",
+    "model": "齐射型",
+    "class": "隐身狙击",
+    "element": "暗",
+    "mechanic": "背刺",
+    "rarity": "稀有",
+    "tier": 2,
+    "cost": 89,
+    "upgrade_cost": 66,
+    "max_level": 5,
+    "stats": {
+      "damage": 33,
+      "range": 4.3,
+      "fire_rate": 1.16,
+      "splash_radius": 1.4,
+      "projectile_speed": 24,
+      "crit_rate": 0.12
+    },
+    "targeting": "血量最高",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "背刺·Ⅱ",
+      "description": "进入潜伏，对首个进入射程的目标造成背刺暴击",
+      "cooldown": 10.4
+    },
+    "description": "「比影子晚半步」｜铺开之后开始影响一整片：进入潜伏，对首个进入射程的目标造成背刺暴击。归属幽影系/隐身狙击/暗，增加弹道数量，覆盖更宽的进攻路线，核心机制：背刺。"
+  },
+  {
+    "name": "只对准没回头的人",
+    "name_hook": "「只对准没回头的人」｜收束到一个点上较劲：进入潜伏，对首个进入射程的目标造成背刺暴击",
+    "series": "幽影",
+    "model": "聚焦型",
+    "class": "隐身狙击",
+    "element": "暗",
+    "mechanic": "背刺",
+    "rarity": "史诗",
+    "tier": 3,
+    "cost": 118,
+    "upgrade_cost": 89,
+    "max_level": 5,
+    "stats": {
+      "damage": 45,
+      "range": 4.6,
+      "fire_rate": 1.29,
+      "splash_radius": 1.8,
+      "projectile_speed": 19,
+      "crit_rate": 0.13
+    },
+    "targeting": "最近",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "背刺·Ⅲ",
+      "description": "进入潜伏，对首个进入射程的目标造成背刺暴击",
+      "cooldown": 7.7
+    },
+    "description": "「只对准没回头的人」｜收束到一个点上较劲：进入潜伏，对首个进入射程的目标造成背刺暴击。归属幽影系/隐身狙击/暗，收束火力，提升射程与单点爆发，核心机制：背刺。"
+  },
+  {
+    "name": "扣扳机时灯灭了",
+    "name_hook": "「扣扳机时灯灭了」｜越过额定功率，连代价一起放大：进入潜伏，对首个进入射程的目标造成背刺暴击",
+    "series": "幽影",
+    "model": "过载型",
+    "class": "隐身狙击",
+    "element": "暗",
+    "mechanic": "背刺",
+    "rarity": "传奇",
+    "tier": 4,
+    "cost": 161,
+    "upgrade_cost": 121,
+    "max_level": 5,
+    "stats": {
+      "damage": 61,
+      "range": 5.0,
+      "fire_rate": 1.41,
+      "splash_radius": 2.1,
+      "projectile_speed": 25,
+      "crit_rate": 0.18
+    },
+    "targeting": "最快",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "背刺·Ⅳ",
+      "description": "进入潜伏，对首个进入射程的目标造成背刺暴击",
+      "cooldown": 5.8
+    },
+    "description": "「扣扳机时灯灭了」｜越过额定功率，连代价一起放大：进入潜伏，对首个进入射程的目标造成背刺暴击。归属幽影系/隐身狙击/暗，突破功率上限，攻速与特效强度显著提升，核心机制：背刺。"
+  },
+  {
+    "name": "你背后那声不算响",
+    "name_hook": "「你背后那声不算响」｜机制定型，反过来改写这一路的打法：进入潜伏，对首个进入射程的目标造成背刺暴击",
+    "series": "幽影",
+    "model": "终焉型",
+    "class": "隐身狙击",
+    "element": "暗",
+    "mechanic": "背刺",
+    "rarity": "神话",
+    "tier": 5,
+    "cost": 217,
+    "upgrade_cost": 163,
+    "max_level": 5,
+    "stats": {
+      "damage": 82,
+      "range": 5.3,
+      "fire_rate": 1.54,
+      "splash_radius": 2.4,
+      "projectile_speed": 14,
+      "crit_rate": 0.22
+    },
+    "targeting": "最密集群",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "背刺·Ⅴ",
+      "description": "进入潜伏，对首个进入射程的目标造成背刺暴击",
+      "cooldown": 3.8
+    },
+    "description": "「你背后那声不算响」｜机制定型，反过来改写这一路的打法：进入潜伏，对首个进入射程的目标造成背刺暴击。归属幽影系/隐身狙击/暗，终极构型，解锁专属机制，数值全面跃升，核心机制：背刺。"
+  },
+  {
+    "name": "一根拉直的星光",
+    "name_hook": "「一根拉直的星光」｜刚上场，只改动一发一格的规矩：发射贯穿射线，无视部分护甲并穿透整条直线",
+    "series": "星轨",
+    "model": "哨戒型",
+    "class": "穿透射线",
+    "element": "光",
+    "mechanic": "直线贯穿",
+    "rarity": "普通",
+    "tier": 1,
+    "cost": 119,
+    "upgrade_cost": 89,
+    "max_level": 5,
+    "stats": {
+      "damage": 19,
+      "range": 4.4,
+      "fire_rate": 1.06,
+      "splash_radius": 1.1,
+      "projectile_speed": 19,
+      "crit_rate": 0.07
+    },
+    "targeting": "最前",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "直线贯穿·Ⅰ",
+      "description": "发射贯穿射线，无视部分护甲并穿透整条直线",
+      "cooldown": 11.6
+    },
+    "description": "「一根拉直的星光」｜刚上场，只改动一发一格的规矩：发射贯穿射线，无视部分护甲并穿透整条直线。归属星轨系/穿透射线/光，基础构型，造价低廉，适合前期铺场，核心机制：直线贯穿。"
+  },
+  {
+    "name": "把夜穿成串",
+    "name_hook": "「把夜穿成串」｜铺开之后开始影响一整片：发射贯穿射线，无视部分护甲并穿透整条直线",
+    "series": "星轨",
+    "model": "齐射型",
+    "class": "穿透射线",
+    "element": "光",
+    "mechanic": "直线贯穿",
+    "rarity": "稀有",
+    "tier": 2,
+    "cost": 160,
+    "upgrade_cost": 120,
+    "max_level": 5,
+    "stats": {
+      "damage": 25,
+      "range": 4.8,
+      "fire_rate": 1.19,
+      "splash_radius": 1.6,
+      "projectile_speed": 13,
+      "crit_rate": 0.11
+    },
+    "targeting": "血量最高",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "直线贯穿·Ⅱ",
+      "description": "发射贯穿射线，无视部分护甲并穿透整条直线",
+      "cooldown": 9.3
+    },
+    "description": "「把夜穿成串」｜铺开之后开始影响一整片：发射贯穿射线，无视部分护甲并穿透整条直线。归属星轨系/穿透射线/光，增加弹道数量，覆盖更宽的进攻路线，核心机制：直线贯穿。"
+  },
+  {
+    "name": "不拐弯的那道题",
+    "name_hook": "「不拐弯的那道题」｜收束到一个点上较劲：发射贯穿射线，无视部分护甲并穿透整条直线",
+    "series": "星轨",
+    "model": "聚焦型",
+    "class": "穿透射线",
+    "element": "光",
+    "mechanic": "直线贯穿",
+    "rarity": "史诗",
+    "tier": 3,
+    "cost": 214,
+    "upgrade_cost": 160,
+    "max_level": 5,
+    "stats": {
+      "damage": 34,
+      "range": 5.1,
+      "fire_rate": 1.31,
+      "splash_radius": 1.3,
+      "projectile_speed": 20,
+      "crit_rate": 0.14
+    },
+    "targeting": "最近",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "直线贯穿·Ⅲ",
+      "description": "发射贯穿射线，无视部分护甲并穿透整条直线",
+      "cooldown": 7.7
+    },
+    "description": "「不拐弯的那道题」｜收束到一个点上较劲：发射贯穿射线，无视部分护甲并穿透整条直线。归属星轨系/穿透射线/光，收束火力，提升射程与单点爆发，核心机制：直线贯穿。"
+  },
+  {
+    "name": "连墙都排成一行",
+    "name_hook": "「连墙都排成一行」｜越过额定功率，连代价一起放大：发射贯穿射线，无视部分护甲并穿透整条直线",
+    "series": "星轨",
+    "model": "过载型",
+    "class": "穿透射线",
+    "element": "光",
+    "mechanic": "直线贯穿",
+    "rarity": "传奇",
+    "tier": 4,
+    "cost": 291,
+    "upgrade_cost": 218,
+    "max_level": 5,
+    "stats": {
+      "damage": 46,
+      "range": 5.5,
+      "fire_rate": 1.44,
+      "splash_radius": 2.9,
+      "projectile_speed": 20,
+      "crit_rate": 0.18
+    },
+    "targeting": "最快",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "直线贯穿·Ⅳ",
+      "description": "发射贯穿射线，无视部分护甲并穿透整条直线",
+      "cooldown": 5.2
+    },
+    "description": "「连墙都排成一行」｜越过额定功率，连代价一起放大：发射贯穿射线，无视部分护甲并穿透整条直线。归属星轨系/穿透射线/光，突破功率上限，攻速与特效强度显著提升，核心机制：直线贯穿。"
+  },
+  {
+    "name": "尽头还有尽头",
+    "name_hook": "「尽头还有尽头」｜机制定型，反过来改写这一路的打法：发射贯穿射线，无视部分护甲并穿透整条直线",
+    "series": "星轨",
+    "model": "终焉型",
+    "class": "穿透射线",
+    "element": "光",
+    "mechanic": "直线贯穿",
+    "rarity": "神话",
+    "tier": 5,
+    "cost": 392,
+    "upgrade_cost": 294,
+    "max_level": 5,
+    "stats": {
+      "damage": 62,
+      "range": 5.8,
+      "fire_rate": 1.57,
+      "splash_radius": 3.0,
+      "projectile_speed": 19,
+      "crit_rate": 0.23
+    },
+    "targeting": "最密集群",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "直线贯穿·Ⅴ",
+      "description": "发射贯穿射线，无视部分护甲并穿透整条直线",
+      "cooldown": 3.3
+    },
+    "description": "「尽头还有尽头」｜机制定型，反过来改写这一路的打法：发射贯穿射线，无视部分护甲并穿透整条直线。归属星轨系/穿透射线/光，终极构型，解锁专属机制，数值全面跃升，核心机制：直线贯穿。"
+  },
+  {
+    "name": "掷两次的骰子",
+    "name_hook": "「掷两次的骰子」｜刚上场，只改动一发一格的规矩：每次攻击进行两次判定，可触发叠加暴击",
+    "series": "量子",
+    "model": "哨戒型",
+    "class": "概率暴击",
+    "element": "虚空",
+    "mechanic": "双重判定",
+    "rarity": "普通",
+    "tier": 1,
+    "cost": 98,
+    "upgrade_cost": 73,
+    "max_level": 5,
+    "stats": {
+      "damage": 11,
+      "range": 4.5,
+      "fire_rate": 2.26,
+      "splash_radius": 1.0,
+      "projectile_speed": 13,
+      "crit_rate": 0.07
+    },
+    "targeting": "最前",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "双重判定·Ⅰ",
+      "description": "每次攻击进行两次判定，可触发叠加暴击",
+      "cooldown": 11.6
+    },
+    "description": "「掷两次的骰子」｜刚上场，只改动一发一格的规矩：每次攻击进行两次判定，可触发叠加暴击。归属量子系/概率暴击/虚空，基础构型，造价低廉，适合前期铺场，核心机制：双重判定。"
+  },
+  {
+    "name": "另一只手也点了头",
+    "name_hook": "「另一只手也点了头」｜铺开之后开始影响一整片：每次攻击进行两次判定，可触发叠加暴击",
+    "series": "量子",
+    "model": "齐射型",
+    "class": "概率暴击",
+    "element": "虚空",
+    "mechanic": "双重判定",
+    "rarity": "稀有",
+    "tier": 2,
+    "cost": 132,
+    "upgrade_cost": 99,
+    "max_level": 5,
+    "stats": {
+      "damage": 14,
+      "range": 4.9,
+      "fire_rate": 2.53,
+      "splash_radius": 0.8,
+      "projectile_speed": 17,
+      "crit_rate": 0.12
+    },
+    "targeting": "血量最高",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "双重判定·Ⅱ",
+      "description": "每次攻击进行两次判定，可触发叠加暴击",
+      "cooldown": 11.0
+    },
+    "description": "「另一只手也点了头」｜铺开之后开始影响一整片：每次攻击进行两次判定，可触发叠加暴击。归属量子系/概率暴击/虚空，增加弹道数量，覆盖更宽的进攻路线，核心机制：双重判定。"
+  },
+  {
+    "name": "两次都算数",
+    "name_hook": "「两次都算数」｜收束到一个点上较劲：每次攻击进行两次判定，可触发叠加暴击",
+    "series": "量子",
+    "model": "聚焦型",
+    "class": "概率暴击",
+    "element": "虚空",
+    "mechanic": "双重判定",
+    "rarity": "史诗",
+    "tier": 3,
+    "cost": 176,
+    "upgrade_cost": 132,
+    "max_level": 5,
+    "stats": {
+      "damage": 19,
+      "range": 5.2,
+      "fire_rate": 2.8,
+      "splash_radius": 1.9,
+      "projectile_speed": 20,
+      "crit_rate": 0.14
+    },
+    "targeting": "最近",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "双重判定·Ⅲ",
+      "description": "每次攻击进行两次判定，可触发叠加暴击",
+      "cooldown": 7.3
+    },
+    "description": "「两次都算数」｜收束到一个点上较劲：每次攻击进行两次判定，可触发叠加暴击。归属量子系/概率暴击/虚空，收束火力，提升射程与单点爆发，核心机制：双重判定。"
+  },
+  {
+    "name": "可能性挤进门",
+    "name_hook": "「可能性挤进门」｜越过额定功率，连代价一起放大：每次攻击进行两次判定，可触发叠加暴击",
+    "series": "量子",
+    "model": "过载型",
+    "class": "概率暴击",
+    "element": "虚空",
+    "mechanic": "双重判定",
+    "rarity": "传奇",
+    "tier": 4,
+    "cost": 240,
+    "upgrade_cost": 180,
+    "max_level": 5,
+    "stats": {
+      "damage": 26,
+      "range": 5.6,
+      "fire_rate": 3.07,
+      "splash_radius": 2.5,
+      "projectile_speed": 24,
+      "crit_rate": 0.17
+    },
+    "targeting": "最快",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "双重判定·Ⅳ",
+      "description": "每次攻击进行两次判定，可触发叠加暴击",
+      "cooldown": 5.2
+    },
+    "description": "「可能性挤进门」｜越过额定功率，连代价一起放大：每次攻击进行两次判定，可触发叠加暴击。归属量子系/概率暴击/虚空，突破功率上限，攻速与特效强度显著提升，核心机制：双重判定。"
+  },
+  {
+    "name": "所有分支同时命中",
+    "name_hook": "「所有分支同时命中」｜机制定型，反过来改写这一路的打法：每次攻击进行两次判定，可触发叠加暴击",
+    "series": "量子",
+    "model": "终焉型",
+    "class": "概率暴击",
+    "element": "虚空",
+    "mechanic": "双重判定",
+    "rarity": "神话",
+    "tier": 5,
+    "cost": 323,
+    "upgrade_cost": 242,
+    "max_level": 5,
+    "stats": {
+      "damage": 36,
+      "range": 5.9,
+      "fire_rate": 3.34,
+      "splash_radius": 2.2,
+      "projectile_speed": 26,
+      "crit_rate": 0.22
+    },
+    "targeting": "最密集群",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "双重判定·Ⅴ",
+      "description": "每次攻击进行两次判定，可触发叠加暴击",
+      "cooldown": 4.9
+    },
+    "description": "「所有分支同时命中」｜机制定型，反过来改写这一路的打法：每次攻击进行两次判定，可触发叠加暴击。归属量子系/概率暴击/虚空，终极构型，解锁专属机制，数值全面跃升，核心机制：双重判定。"
+  },
+  {
+    "name": "铁器上的一小块云",
+    "name_hook": "「铁器上的一小块云」｜刚上场，只改动一发一格的规矩：喷洒酸雾，永久削减命中目标的护甲",
+    "series": "腐蚀",
+    "model": "哨戒型",
+    "class": "破甲毒雾",
+    "element": "酸",
+    "mechanic": "降低护甲",
+    "rarity": "普通",
+    "tier": 1,
+    "cost": 115,
+    "upgrade_cost": 86,
+    "max_level": 5,
+    "stats": {
+      "damage": 20,
+      "range": 5.1,
+      "fire_rate": 1.5,
+      "splash_radius": 2.3,
+      "projectile_speed": 17,
+      "crit_rate": 0.08
+    },
+    "targeting": "最前",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "降低护甲·Ⅰ",
+      "description": "喷洒酸雾，永久削减命中目标的护甲",
+      "cooldown": 11.6
+    },
+    "description": "「铁器上的一小块云」｜刚上场，只改动一发一格的规矩：喷洒酸雾，永久削减命中目标的护甲。归属腐蚀系/破甲毒雾/酸，基础构型，造价低廉，适合前期铺场，核心机制：降低护甲。"
+  },
+  {
+    "name": "锈会自己走路",
+    "name_hook": "「锈会自己走路」｜铺开之后开始影响一整片：喷洒酸雾，永久削减命中目标的护甲",
+    "series": "腐蚀",
+    "model": "齐射型",
+    "class": "破甲毒雾",
+    "element": "酸",
+    "mechanic": "降低护甲",
+    "rarity": "稀有",
+    "tier": 2,
+    "cost": 155,
+    "upgrade_cost": 116,
+    "max_level": 5,
+    "stats": {
+      "damage": 27,
+      "range": 5.5,
+      "fire_rate": 1.68,
+      "splash_radius": 1.4,
+      "projectile_speed": 22,
+      "crit_rate": 0.11
+    },
+    "targeting": "血量最高",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "降低护甲·Ⅱ",
+      "description": "喷洒酸雾，永久削减命中目标的护甲",
+      "cooldown": 9.3
+    },
+    "description": "「锈会自己走路」｜铺开之后开始影响一整片：喷洒酸雾，永久削减命中目标的护甲。归属腐蚀系/破甲毒雾/酸，增加弹道数量，覆盖更宽的进攻路线，核心机制：降低护甲。"
+  },
+  {
+    "name": "把盔甲读薄一页",
+    "name_hook": "「把盔甲读薄一页」｜收束到一个点上较劲：喷洒酸雾，永久削减命中目标的护甲",
+    "series": "腐蚀",
+    "model": "聚焦型",
+    "class": "破甲毒雾",
+    "element": "酸",
+    "mechanic": "降低护甲",
+    "rarity": "史诗",
+    "tier": 3,
+    "cost": 207,
+    "upgrade_cost": 155,
+    "max_level": 5,
+    "stats": {
+      "damage": 36,
+      "range": 5.9,
+      "fire_rate": 1.86,
+      "splash_radius": 2.0,
+      "projectile_speed": 21,
+      "crit_rate": 0.16
+    },
+    "targeting": "最近",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "降低护甲·Ⅲ",
+      "description": "喷洒酸雾，永久削减命中目标的护甲",
+      "cooldown": 7.3
+    },
+    "description": "「把盔甲读薄一页」｜收束到一个点上较劲：喷洒酸雾，永久削减命中目标的护甲。归属腐蚀系/破甲毒雾/酸，收束火力，提升射程与单点爆发，核心机制：降低护甲。"
+  },
+  {
+    "name": "雨水带走了锁扣",
+    "name_hook": "「雨水带走了锁扣」｜越过额定功率，连代价一起放大：喷洒酸雾，永久削减命中目标的护甲",
+    "series": "腐蚀",
+    "model": "过载型",
+    "class": "破甲毒雾",
+    "element": "酸",
+    "mechanic": "降低护甲",
+    "rarity": "传奇",
+    "tier": 4,
+    "cost": 281,
+    "upgrade_cost": 211,
+    "max_level": 5,
+    "stats": {
+      "damage": 49,
+      "range": 6.3,
+      "fire_rate": 2.04,
+      "splash_radius": 2.5,
+      "projectile_speed": 23,
+      "crit_rate": 0.18
+    },
+    "targeting": "最快",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "降低护甲·Ⅳ",
+      "description": "喷洒酸雾，永久削减命中目标的护甲",
+      "cooldown": 6.1
+    },
+    "description": "「雨水带走了锁扣」｜越过额定功率，连代价一起放大：喷洒酸雾，永久削减命中目标的护甲。归属腐蚀系/破甲毒雾/酸，突破功率上限，攻速与特效强度显著提升，核心机制：降低护甲。"
+  },
+  {
+    "name": "最后连名字也软了",
+    "name_hook": "「最后连名字也软了」｜机制定型，反过来改写这一路的打法：喷洒酸雾，永久削减命中目标的护甲",
+    "series": "腐蚀",
+    "model": "终焉型",
+    "class": "破甲毒雾",
+    "element": "酸",
+    "mechanic": "降低护甲",
+    "rarity": "神话",
+    "tier": 5,
+    "cost": 379,
+    "upgrade_cost": 284,
+    "max_level": 5,
+    "stats": {
+      "damage": 66,
+      "range": 6.7,
+      "fire_rate": 2.22,
+      "splash_radius": 2.4,
+      "projectile_speed": 22,
+      "crit_rate": 0.23
+    },
+    "targeting": "最密集群",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "降低护甲·Ⅴ",
+      "description": "喷洒酸雾，永久削减命中目标的护甲",
+      "cooldown": 4.2
+    },
+    "description": "「最后连名字也软了」｜机制定型，反过来改写这一路的打法：喷洒酸雾，永久削减命中目标的护甲。归属腐蚀系/破甲毒雾/酸，终极构型，解锁专属机制，数值全面跃升，核心机制：降低护甲。"
+  },
+  {
+    "name": "不称重的天平",
+    "name_hook": "「不称重的天平」｜刚上场，只改动一发一格的规矩：对低血量目标直接裁决，造成无视抗性的真实伤害",
+    "series": "圣裁",
+    "model": "哨戒型",
+    "class": "真实伤害",
+    "element": "圣",
+    "mechanic": "斩杀",
+    "rarity": "普通",
+    "tier": 1,
+    "cost": 102,
+    "upgrade_cost": 76,
+    "max_level": 5,
+    "stats": {
+      "damage": 17,
+      "range": 4.5,
+      "fire_rate": 0.87,
+      "splash_radius": 2.0,
+      "projectile_speed": 21,
+      "crit_rate": 0.05
+    },
+    "targeting": "最前",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "斩杀·Ⅰ",
+      "description": "对低血量目标直接裁决，造成无视抗性的真实伤害",
+      "cooldown": 11.9
+    },
+    "description": "「不称重的天平」｜刚上场，只改动一发一格的规矩：对低血量目标直接裁决，造成无视抗性的真实伤害。归属圣裁系/真实伤害/圣，基础构型，造价低廉，适合前期铺场，核心机制：斩杀。"
+  },
+  {
+    "name": "判决书只有一行",
+    "name_hook": "「判决书只有一行」｜铺开之后开始影响一整片：对低血量目标直接裁决，造成无视抗性的真实伤害",
+    "series": "圣裁",
+    "model": "齐射型",
+    "class": "真实伤害",
+    "element": "圣",
+    "mechanic": "斩杀",
+    "rarity": "稀有",
+    "tier": 2,
+    "cost": 137,
+    "upgrade_cost": 103,
+    "max_level": 5,
+    "stats": {
+      "damage": 22,
+      "range": 4.9,
+      "fire_rate": 0.97,
+      "splash_radius": 0.8,
+      "projectile_speed": 19,
+      "crit_rate": 0.11
+    },
+    "targeting": "血量最高",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "斩杀·Ⅱ",
+      "description": "对低血量目标直接裁决，造成无视抗性的真实伤害",
+      "cooldown": 10.6
+    },
+    "description": "「判决书只有一行」｜铺开之后开始影响一整片：对低血量目标直接裁决，造成无视抗性的真实伤害。归属圣裁系/真实伤害/圣，增加弹道数量，覆盖更宽的进攻路线，核心机制：斩杀。"
+  },
+  {
+    "name": "不用解释的那一刀",
+    "name_hook": "「不用解释的那一刀」｜收束到一个点上较劲：对低血量目标直接裁决，造成无视抗性的真实伤害",
+    "series": "圣裁",
+    "model": "聚焦型",
+    "class": "真实伤害",
+    "element": "圣",
+    "mechanic": "斩杀",
+    "rarity": "史诗",
+    "tier": 3,
+    "cost": 183,
+    "upgrade_cost": 137,
+    "max_level": 5,
+    "stats": {
+      "damage": 30,
+      "range": 5.2,
+      "fire_rate": 1.08,
+      "splash_radius": 1.1,
+      "projectile_speed": 16,
+      "crit_rate": 0.15
+    },
+    "targeting": "最近",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "斩杀·Ⅲ",
+      "description": "对低血量目标直接裁决，造成无视抗性的真实伤害",
+      "cooldown": 9.0
+    },
+    "description": "「不用解释的那一刀」｜收束到一个点上较劲：对低血量目标直接裁决，造成无视抗性的真实伤害。归属圣裁系/真实伤害/圣，收束火力，提升射程与单点爆发，核心机制：斩杀。"
+  },
+  {
+    "name": "红线划到这里",
+    "name_hook": "「红线划到这里」｜越过额定功率，连代价一起放大：对低血量目标直接裁决，造成无视抗性的真实伤害",
+    "series": "圣裁",
+    "model": "过载型",
+    "class": "真实伤害",
+    "element": "圣",
+    "mechanic": "斩杀",
+    "rarity": "传奇",
+    "tier": 4,
+    "cost": 249,
+    "upgrade_cost": 187,
+    "max_level": 5,
+    "stats": {
+      "damage": 41,
+      "range": 5.6,
+      "fire_rate": 1.18,
+      "splash_radius": 2.8,
+      "projectile_speed": 22,
+      "crit_rate": 0.17
+    },
+    "targeting": "最快",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "斩杀·Ⅳ",
+      "description": "对低血量目标直接裁决，造成无视抗性的真实伤害",
+      "cooldown": 5.5
+    },
+    "description": "「红线划到这里」｜越过额定功率，连代价一起放大：对低血量目标直接裁决，造成无视抗性的真实伤害。归属圣裁系/真实伤害/圣，突破功率上限，攻速与特效强度显著提升，核心机制：斩杀。"
+  },
+  {
+    "name": "余下的不必再算",
+    "name_hook": "「余下的不必再算」｜机制定型，反过来改写这一路的打法：对低血量目标直接裁决，造成无视抗性的真实伤害",
+    "series": "圣裁",
+    "model": "终焉型",
+    "class": "真实伤害",
+    "element": "圣",
+    "mechanic": "斩杀",
+    "rarity": "神话",
+    "tier": 5,
+    "cost": 336,
+    "upgrade_cost": 252,
+    "max_level": 5,
+    "stats": {
+      "damage": 56,
+      "range": 5.9,
+      "fire_rate": 1.29,
+      "splash_radius": 1.2,
+      "projectile_speed": 21,
+      "crit_rate": 0.21
+    },
+    "targeting": "最密集群",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "斩杀·Ⅴ",
+      "description": "对低血量目标直接裁决，造成无视抗性的真实伤害",
+      "cooldown": 3.2
+    },
+    "description": "「余下的不必再算」｜机制定型，反过来改写这一路的打法：对低血量目标直接裁决，造成无视抗性的真实伤害。归属圣裁系/真实伤害/圣，终极构型，解锁专属机制，数值全面跃升，核心机制：斩杀。"
+  },
+  {
+    "name": "云在攒零钱",
+    "name_hook": "「云在攒零钱」｜刚上场，只改动一发一格的规矩：蓄力后召唤落雷，对区域造成高额爆发伤害",
+    "series": "雷狱",
+    "model": "哨戒型",
+    "class": "蓄力落雷",
+    "element": "雷",
+    "mechanic": "蓄力爆发",
+    "rarity": "普通",
+    "tier": 1,
+    "cost": 118,
+    "upgrade_cost": 88,
+    "max_level": 5,
+    "stats": {
+      "damage": 25,
+      "range": 4.8,
+      "fire_rate": 0.98,
+      "splash_radius": 1.1,
+      "projectile_speed": 21,
+      "crit_rate": 0.07
+    },
+    "targeting": "最前",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "蓄力爆发·Ⅰ",
+      "description": "蓄力后召唤落雷，对区域造成高额爆发伤害",
+      "cooldown": 11.4
+    },
+    "description": "「云在攒零钱」｜刚上场，只改动一发一格的规矩：蓄力后召唤落雷，对区域造成高额爆发伤害。归属雷狱系/蓄力落雷/雷，基础构型，造价低廉，适合前期铺场，核心机制：蓄力爆发。"
+  },
+  {
+    "name": "憋住的那半句",
+    "name_hook": "「憋住的那半句」｜铺开之后开始影响一整片：蓄力后召唤落雷，对区域造成高额爆发伤害",
+    "series": "雷狱",
+    "model": "齐射型",
+    "class": "蓄力落雷",
+    "element": "雷",
+    "mechanic": "蓄力爆发",
+    "rarity": "稀有",
+    "tier": 2,
+    "cost": 159,
+    "upgrade_cost": 119,
+    "max_level": 5,
+    "stats": {
+      "damage": 33,
+      "range": 5.2,
+      "fire_rate": 1.1,
+      "splash_radius": 1.6,
+      "projectile_speed": 13,
+      "crit_rate": 0.09
+    },
+    "targeting": "血量最高",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "蓄力爆发·Ⅱ",
+      "description": "蓄力后召唤落雷，对区域造成高额爆发伤害",
+      "cooldown": 10.0
+    },
+    "description": "「憋住的那半句」｜铺开之后开始影响一整片：蓄力后召唤落雷，对区域造成高额爆发伤害。归属雷狱系/蓄力落雷/雷，增加弹道数量，覆盖更宽的进攻路线，核心机制：蓄力爆发。"
+  },
+  {
+    "name": "先画圈再说话",
+    "name_hook": "「先画圈再说话」｜收束到一个点上较劲：蓄力后召唤落雷，对区域造成高额爆发伤害",
+    "series": "雷狱",
+    "model": "聚焦型",
+    "class": "蓄力落雷",
+    "element": "雷",
+    "mechanic": "蓄力爆发",
+    "rarity": "史诗",
+    "tier": 3,
+    "cost": 212,
+    "upgrade_cost": 159,
+    "max_level": 5,
+    "stats": {
+      "damage": 45,
+      "range": 5.6,
+      "fire_rate": 1.22,
+      "splash_radius": 3.2,
+      "projectile_speed": 11,
+      "crit_rate": 0.16
+    },
+    "targeting": "最近",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "蓄力爆发·Ⅲ",
+      "description": "蓄力后召唤落雷，对区域造成高额爆发伤害",
+      "cooldown": 8.8
+    },
+    "description": "「先画圈再说话」｜收束到一个点上较劲：蓄力后召唤落雷，对区域造成高额爆发伤害。归属雷狱系/蓄力落雷/雷，收束火力，提升射程与单点爆发，核心机制：蓄力爆发。"
+  },
+  {
+    "name": "一口气劈成三份",
+    "name_hook": "「一口气劈成三份」｜越过额定功率，连代价一起放大：蓄力后召唤落雷，对区域造成高额爆发伤害",
+    "series": "雷狱",
+    "model": "过载型",
+    "class": "蓄力落雷",
+    "element": "雷",
+    "mechanic": "蓄力爆发",
+    "rarity": "传奇",
+    "tier": 4,
+    "cost": 289,
+    "upgrade_cost": 216,
+    "max_level": 5,
+    "stats": {
+      "damage": 61,
+      "range": 6.0,
+      "fire_rate": 1.33,
+      "splash_radius": 2.8,
+      "projectile_speed": 18,
+      "crit_rate": 0.17
+    },
+    "targeting": "最快",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "蓄力爆发·Ⅳ",
+      "description": "蓄力后召唤落雷，对区域造成高额爆发伤害",
+      "cooldown": 5.4
+    },
+    "description": "「一口气劈成三份」｜越过额定功率，连代价一起放大：蓄力后召唤落雷，对区域造成高额爆发伤害。归属雷狱系/蓄力落雷/雷，突破功率上限，攻速与特效强度显著提升，核心机制：蓄力爆发。"
+  },
+  {
+    "name": "天把账一次结清",
+    "name_hook": "「天把账一次结清」｜机制定型，反过来改写这一路的打法：蓄力后召唤落雷，对区域造成高额爆发伤害",
+    "series": "雷狱",
+    "model": "终焉型",
+    "class": "蓄力落雷",
+    "element": "雷",
+    "mechanic": "蓄力爆发",
+    "rarity": "神话",
+    "tier": 5,
+    "cost": 389,
+    "upgrade_cost": 292,
+    "max_level": 5,
+    "stats": {
+      "damage": 82,
+      "range": 6.3,
+      "fire_rate": 1.45,
+      "splash_radius": 2.0,
+      "projectile_speed": 18,
+      "crit_rate": 0.22
+    },
+    "targeting": "最密集群",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "蓄力爆发·Ⅴ",
+      "description": "蓄力后召唤落雷，对区域造成高额爆发伤害",
+      "cooldown": 4.8
+    },
+    "description": "「天把账一次结清」｜机制定型，反过来改写这一路的打法：蓄力后召唤落雷，对区域造成高额爆发伤害。归属雷狱系/蓄力落雷/雷，终极构型，解锁专属机制，数值全面跃升，核心机制：蓄力爆发。"
+  },
+  {
+    "name": "地毯下有个洞",
+    "name_hook": "「地毯下有个洞」｜刚上场，只改动一发一格的规矩：开启裂隙将敌人向后拽回并短暂压制",
+    "series": "虚空",
+    "model": "哨戒型",
+    "class": "吞噬拉扯",
+    "element": "虚空",
+    "mechanic": "位移拽回",
+    "rarity": "普通",
+    "tier": 1,
+    "cost": 80,
+    "upgrade_cost": 60,
+    "max_level": 5,
+    "stats": {
+      "damage": 16,
+      "range": 4.2,
+      "fire_rate": 0.81,
+      "splash_radius": 0.9,
+      "projectile_speed": 10,
+      "crit_rate": 0.08
+    },
+    "targeting": "最前",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "位移拽回·Ⅰ",
+      "description": "开启裂隙将敌人向后拽回并短暂压制",
+      "cooldown": 12.3
+    },
+    "description": "「地毯下有个洞」｜刚上场，只改动一发一格的规矩：开启裂隙将敌人向后拽回并短暂压制。归属虚空系/吞噬拉扯/虚空，基础构型，造价低廉，适合前期铺场，核心机制：位移拽回。"
+  },
+  {
+    "name": "退回去的半步",
+    "name_hook": "「退回去的半步」｜铺开之后开始影响一整片：开启裂隙将敌人向后拽回并短暂压制",
+    "series": "虚空",
+    "model": "齐射型",
+    "class": "吞噬拉扯",
+    "element": "虚空",
+    "mechanic": "位移拽回",
+    "rarity": "稀有",
+    "tier": 2,
+    "cost": 108,
+    "upgrade_cost": 81,
+    "max_level": 5,
+    "stats": {
+      "damage": 21,
+      "range": 4.5,
+      "fire_rate": 0.91,
+      "splash_radius": 1.8,
+      "projectile_speed": 22,
+      "crit_rate": 0.1
+    },
+    "targeting": "血量最高",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "位移拽回·Ⅱ",
+      "description": "开启裂隙将敌人向后拽回并短暂压制",
+      "cooldown": 9.9
+    },
+    "description": "「退回去的半步」｜铺开之后开始影响一整片：开启裂隙将敌人向后拽回并短暂压制。归属虚空系/吞噬拉扯/虚空，增加弹道数量，覆盖更宽的进攻路线，核心机制：位移拽回。"
+  },
+  {
+    "name": "门口忘了关",
+    "name_hook": "「门口忘了关」｜收束到一个点上较劲：开启裂隙将敌人向后拽回并短暂压制",
+    "series": "虚空",
+    "model": "聚焦型",
+    "class": "吞噬拉扯",
+    "element": "虚空",
+    "mechanic": "位移拽回",
+    "rarity": "史诗",
+    "tier": 3,
+    "cost": 144,
+    "upgrade_cost": 108,
+    "max_level": 5,
+    "stats": {
+      "damage": 28,
+      "range": 4.9,
+      "fire_rate": 1.0,
+      "splash_radius": 2.0,
+      "projectile_speed": 11,
+      "crit_rate": 0.15
+    },
+    "targeting": "最近",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "位移拽回·Ⅲ",
+      "description": "开启裂隙将敌人向后拽回并短暂压制",
+      "cooldown": 7.8
+    },
+    "description": "「门口忘了关」｜收束到一个点上较劲：开启裂隙将敌人向后拽回并短暂压制。归属虚空系/吞噬拉扯/虚空，收束火力，提升射程与单点爆发，核心机制：位移拽回。"
+  },
+  {
+    "name": "把路折回原点",
+    "name_hook": "「把路折回原点」｜越过额定功率，连代价一起放大：开启裂隙将敌人向后拽回并短暂压制",
+    "series": "虚空",
+    "model": "过载型",
+    "class": "吞噬拉扯",
+    "element": "虚空",
+    "mechanic": "位移拽回",
+    "rarity": "传奇",
+    "tier": 4,
+    "cost": 196,
+    "upgrade_cost": 147,
+    "max_level": 5,
+    "stats": {
+      "damage": 39,
+      "range": 5.2,
+      "fire_rate": 1.1,
+      "splash_radius": 2.8,
+      "projectile_speed": 10,
+      "crit_rate": 0.18
+    },
+    "targeting": "最快",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "位移拽回·Ⅳ",
+      "description": "开启裂隙将敌人向后拽回并短暂压制",
+      "cooldown": 5.4
+    },
+    "description": "「把路折回原点」｜越过额定功率，连代价一起放大：开启裂隙将敌人向后拽回并短暂压制。归属虚空系/吞噬拉扯/虚空，突破功率上限，攻速与特效强度显著提升，核心机制：位移拽回。"
+  },
+  {
+    "name": "谁也别想走出这一格",
+    "name_hook": "「谁也别想走出这一格」｜机制定型，反过来改写这一路的打法：开启裂隙将敌人向后拽回并短暂压制",
+    "series": "虚空",
+    "model": "终焉型",
+    "class": "吞噬拉扯",
+    "element": "虚空",
+    "mechanic": "位移拽回",
+    "rarity": "神话",
+    "tier": 5,
+    "cost": 264,
+    "upgrade_cost": 198,
+    "max_level": 5,
+    "stats": {
+      "damage": 52,
+      "range": 5.5,
+      "fire_rate": 1.2,
+      "splash_radius": 3.2,
+      "projectile_speed": 18,
+      "crit_rate": 0.23
+    },
+    "targeting": "最密集群",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "位移拽回·Ⅴ",
+      "description": "开启裂隙将敌人向后拽回并短暂压制",
+      "cooldown": 4.3
+    },
+    "description": "「谁也别想走出这一格」｜机制定型，反过来改写这一路的打法：开启裂隙将敌人向后拽回并短暂压制。归属虚空系/吞噬拉扯/虚空，终极构型，解锁专属机制，数值全面跃升，核心机制：位移拽回。"
+  },
+  {
+    "name": "只抬头看的人",
+    "name_hook": "「只抬头看的人」｜刚上场，只改动一发一格的规矩：仅锁定空中单位，对飞行目标伤害大幅提升",
+    "series": "苍穹",
+    "model": "哨戒型",
+    "class": "防空导弹",
+    "element": "风",
+    "mechanic": "对空专精",
+    "rarity": "普通",
+    "tier": 1,
+    "cost": 97,
+    "upgrade_cost": 72,
+    "max_level": 5,
+    "stats": {
+      "damage": 16,
+      "range": 3.7,
+      "fire_rate": 2.93,
+      "splash_radius": 2.3,
+      "projectile_speed": 19,
+      "crit_rate": 0.06
+    },
+    "targeting": "最前",
+    "attack_tags": [
+      "对空"
+    ],
+    "skill": {
+      "name": "对空专精·Ⅰ",
+      "description": "仅锁定空中单位，对飞行目标伤害大幅提升",
+      "cooldown": 12.6
+    },
+    "description": "「只抬头看的人」｜刚上场，只改动一发一格的规矩：仅锁定空中单位，对飞行目标伤害大幅提升。归属苍穹系/防空导弹/风，基础构型，造价低廉，适合前期铺场，核心机制：对空专精。"
+  },
+  {
+    "name": "给云层编号",
+    "name_hook": "「给云层编号」｜铺开之后开始影响一整片：仅锁定空中单位，对飞行目标伤害大幅提升",
+    "series": "苍穹",
+    "model": "齐射型",
+    "class": "防空导弹",
+    "element": "风",
+    "mechanic": "对空专精",
+    "rarity": "稀有",
+    "tier": 2,
+    "cost": 130,
+    "upgrade_cost": 98,
+    "max_level": 5,
+    "stats": {
+      "damage": 21,
+      "range": 4.0,
+      "fire_rate": 3.28,
+      "splash_radius": 1.2,
+      "projectile_speed": 20,
+      "crit_rate": 0.1
+    },
+    "targeting": "血量最高",
+    "attack_tags": [
+      "对空"
+    ],
+    "skill": {
+      "name": "对空专精·Ⅱ",
+      "description": "仅锁定空中单位，对飞行目标伤害大幅提升",
+      "cooldown": 9.1
+    },
+    "description": "「给云层编号」｜铺开之后开始影响一整片：仅锁定空中单位，对飞行目标伤害大幅提升。归属苍穹系/防空导弹/风，增加弹道数量，覆盖更宽的进攻路线，核心机制：对空专精。"
+  },
+  {
+    "name": "高处不留空位",
+    "name_hook": "「高处不留空位」｜收束到一个点上较劲：仅锁定空中单位，对飞行目标伤害大幅提升",
+    "series": "苍穹",
+    "model": "聚焦型",
+    "class": "防空导弹",
+    "element": "风",
+    "mechanic": "对空专精",
+    "rarity": "史诗",
+    "tier": 3,
+    "cost": 174,
+    "upgrade_cost": 130,
+    "max_level": 5,
+    "stats": {
+      "damage": 28,
+      "range": 4.3,
+      "fire_rate": 3.63,
+      "splash_radius": 2.8,
+      "projectile_speed": 24,
+      "crit_rate": 0.14
+    },
+    "targeting": "最近",
+    "attack_tags": [
+      "对空"
+    ],
+    "skill": {
+      "name": "对空专精·Ⅲ",
+      "description": "仅锁定空中单位，对飞行目标伤害大幅提升",
+      "cooldown": 8.4
+    },
+    "description": "「高处不留空位」｜收束到一个点上较劲：仅锁定空中单位，对飞行目标伤害大幅提升。归属苍穹系/防空导弹/风，收束火力，提升射程与单点爆发，核心机制：对空专精。"
+  },
+  {
+    "name": "把风也拦下来",
+    "name_hook": "「把风也拦下来」｜越过额定功率，连代价一起放大：仅锁定空中单位，对飞行目标伤害大幅提升",
+    "series": "苍穹",
+    "model": "过载型",
+    "class": "防空导弹",
+    "element": "风",
+    "mechanic": "对空专精",
+    "rarity": "传奇",
+    "tier": 4,
+    "cost": 237,
+    "upgrade_cost": 178,
+    "max_level": 5,
+    "stats": {
+      "damage": 39,
+      "range": 4.6,
+      "fire_rate": 3.98,
+      "splash_radius": 2.2,
+      "projectile_speed": 25,
+      "crit_rate": 0.2
+    },
+    "targeting": "最快",
+    "attack_tags": [
+      "对空"
+    ],
+    "skill": {
+      "name": "对空专精·Ⅳ",
+      "description": "仅锁定空中单位，对飞行目标伤害大幅提升",
+      "cooldown": 6.1
+    },
+    "description": "「把风也拦下来」｜越过额定功率，连代价一起放大：仅锁定空中单位，对飞行目标伤害大幅提升。归属苍穹系/防空导弹/风，突破功率上限，攻速与特效强度显著提升，核心机制：对空专精。"
+  },
+  {
+    "name": "天上归我管",
+    "name_hook": "「天上归我管」｜机制定型，反过来改写这一路的打法：仅锁定空中单位，对飞行目标伤害大幅提升",
+    "series": "苍穹",
+    "model": "终焉型",
+    "class": "防空导弹",
+    "element": "风",
+    "mechanic": "对空专精",
+    "rarity": "神话",
+    "tier": 5,
+    "cost": 320,
+    "upgrade_cost": 240,
+    "max_level": 5,
+    "stats": {
+      "damage": 52,
+      "range": 4.9,
+      "fire_rate": 4.34,
+      "splash_radius": 1.9,
+      "projectile_speed": 24,
+      "crit_rate": 0.21
+    },
+    "targeting": "最密集群",
+    "attack_tags": [
+      "对空"
+    ],
+    "skill": {
+      "name": "对空专精·Ⅴ",
+      "description": "仅锁定空中单位，对飞行目标伤害大幅提升",
+      "cooldown": 4.0
+    },
+    "description": "「天上归我管」｜机制定型，反过来改写这一路的打法：仅锁定空中单位，对飞行目标伤害大幅提升。归属苍穹系/防空导弹/风，终极构型，解锁专属机制，数值全面跃升，核心机制：对空专精。"
+  },
+  {
+    "name": "扇骨烫了一下",
+    "name_hook": "「扇骨烫了一下」｜刚上场，只改动一发一格的规矩：持续喷射锥形火焰，覆盖多条进攻路径",
+    "series": "赤焰",
+    "model": "哨戒型",
+    "class": "扇形喷射",
+    "element": "火",
+    "mechanic": "扇形覆盖",
+    "rarity": "普通",
+    "tier": 1,
+    "cost": 126,
+    "upgrade_cost": 94,
+    "max_level": 5,
+    "stats": {
+      "damage": 18,
+      "range": 3.3,
+      "fire_rate": 1.04,
+      "splash_radius": 1.4,
+      "projectile_speed": 26,
+      "crit_rate": 0.06
+    },
+    "targeting": "最前",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "扇形覆盖·Ⅰ",
+      "description": "持续喷射锥形火焰，覆盖多条进攻路径",
+      "cooldown": 12.9
+    },
+    "description": "「扇骨烫了一下」｜刚上场，只改动一发一格的规矩：持续喷射锥形火焰，覆盖多条进攻路径。归属赤焰系/扇形喷射/火，基础构型，造价低廉，适合前期铺场，核心机制：扇形覆盖。"
+  },
+  {
+    "name": "一口气扫过三行",
+    "name_hook": "「一口气扫过三行」｜铺开之后开始影响一整片：持续喷射锥形火焰，覆盖多条进攻路径",
+    "series": "赤焰",
+    "model": "齐射型",
+    "class": "扇形喷射",
+    "element": "火",
+    "mechanic": "扇形覆盖",
+    "rarity": "稀有",
+    "tier": 2,
+    "cost": 170,
+    "upgrade_cost": 127,
+    "max_level": 5,
+    "stats": {
+      "damage": 24,
+      "range": 3.6,
+      "fire_rate": 1.16,
+      "splash_radius": 1.1,
+      "projectile_speed": 22,
+      "crit_rate": 0.11
+    },
+    "targeting": "血量最高",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "扇形覆盖·Ⅱ",
+      "description": "持续喷射锥形火焰，覆盖多条进攻路径",
+      "cooldown": 9.4
+    },
+    "description": "「一口气扫过三行」｜铺开之后开始影响一整片：持续喷射锥形火焰，覆盖多条进攻路径。归属赤焰系/扇形喷射/火，增加弹道数量，覆盖更宽的进攻路线，核心机制：扇形覆盖。"
+  },
+  {
+    "name": "火摊开成折扇",
+    "name_hook": "「火摊开成折扇」｜收束到一个点上较劲：持续喷射锥形火焰，覆盖多条进攻路径",
+    "series": "赤焰",
+    "model": "聚焦型",
+    "class": "扇形喷射",
+    "element": "火",
+    "mechanic": "扇形覆盖",
+    "rarity": "史诗",
+    "tier": 3,
+    "cost": 226,
+    "upgrade_cost": 170,
+    "max_level": 5,
+    "stats": {
+      "damage": 32,
+      "range": 3.8,
+      "fire_rate": 1.29,
+      "splash_radius": 3.1,
+      "projectile_speed": 25,
+      "crit_rate": 0.13
+    },
+    "targeting": "最近",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "扇形覆盖·Ⅲ",
+      "description": "持续喷射锥形火焰，覆盖多条进攻路径",
+      "cooldown": 7.2
+    },
+    "description": "「火摊开成折扇」｜收束到一个点上较劲：持续喷射锥形火焰，覆盖多条进攻路径。归属赤焰系/扇形喷射/火，收束火力，提升射程与单点爆发，核心机制：扇形覆盖。"
+  },
+  {
+    "name": "整条巷子都亮了",
+    "name_hook": "「整条巷子都亮了」｜越过额定功率，连代价一起放大：持续喷射锥形火焰，覆盖多条进攻路径",
+    "series": "赤焰",
+    "model": "过载型",
+    "class": "扇形喷射",
+    "element": "火",
+    "mechanic": "扇形覆盖",
+    "rarity": "传奇",
+    "tier": 4,
+    "cost": 308,
+    "upgrade_cost": 231,
+    "max_level": 5,
+    "stats": {
+      "damage": 44,
+      "range": 4.1,
+      "fire_rate": 1.41,
+      "splash_radius": 2.3,
+      "projectile_speed": 21,
+      "crit_rate": 0.19
+    },
+    "targeting": "最快",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "扇形覆盖·Ⅳ",
+      "description": "持续喷射锥形火焰，覆盖多条进攻路径",
+      "cooldown": 6.1
+    },
+    "description": "「整条巷子都亮了」｜越过额定功率，连代价一起放大：持续喷射锥形火焰，覆盖多条进攻路径。归属赤焰系/扇形喷射/火，突破功率上限，攻速与特效强度显著提升，核心机制：扇形覆盖。"
+  },
+  {
+    "name": "不挑方向的烧",
+    "name_hook": "「不挑方向的烧」｜机制定型，反过来改写这一路的打法：持续喷射锥形火焰，覆盖多条进攻路径",
+    "series": "赤焰",
+    "model": "终焉型",
+    "class": "扇形喷射",
+    "element": "火",
+    "mechanic": "扇形覆盖",
+    "rarity": "神话",
+    "tier": 5,
+    "cost": 415,
+    "upgrade_cost": 311,
+    "max_level": 5,
+    "stats": {
+      "damage": 59,
+      "range": 4.4,
+      "fire_rate": 1.54,
+      "splash_radius": 2.7,
+      "projectile_speed": 10,
+      "crit_rate": 0.21
+    },
+    "targeting": "最密集群",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "扇形覆盖·Ⅴ",
+      "description": "持续喷射锥形火焰，覆盖多条进攻路径",
+      "cooldown": 3.5
+    },
+    "description": "「不挑方向的烧」｜机制定型，反过来改写这一路的打法：持续喷射锥形火焰，覆盖多条进攻路径。归属赤焰系/扇形喷射/火，终极构型，解锁专属机制，数值全面跃升，核心机制：扇形覆盖。"
+  },
+  {
+    "name": "退潮时推一把",
+    "name_hook": "「退潮时推一把」｜刚上场，只改动一发一格的规矩：高压水炮击退敌人并短暂降低其移动速度",
+    "series": "潮汐",
+    "model": "哨戒型",
+    "class": "击退水炮",
+    "element": "水",
+    "mechanic": "击退",
+    "rarity": "普通",
+    "tier": 1,
+    "cost": 63,
+    "upgrade_cost": 47,
+    "max_level": 5,
+    "stats": {
+      "damage": 19,
+      "range": 4.1,
+      "fire_rate": 2.34,
+      "splash_radius": 2.3,
+      "projectile_speed": 13,
+      "crit_rate": 0.06
+    },
+    "targeting": "最前",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "击退·Ⅰ",
+      "description": "高压水炮击退敌人并短暂降低其移动速度",
+      "cooldown": 12.5
+    },
+    "description": "「退潮时推一把」｜刚上场，只改动一发一格的规矩：高压水炮击退敌人并短暂降低其移动速度。归属潮汐系/击退水炮/水，基础构型，造价低廉，适合前期铺场，核心机制：击退。"
+  },
+  {
+    "name": "浪把脚印收回去",
+    "name_hook": "「浪把脚印收回去」｜铺开之后开始影响一整片：高压水炮击退敌人并短暂降低其移动速度",
+    "series": "潮汐",
+    "model": "齐射型",
+    "class": "击退水炮",
+    "element": "水",
+    "mechanic": "击退",
+    "rarity": "稀有",
+    "tier": 2,
+    "cost": 85,
+    "upgrade_cost": 63,
+    "max_level": 5,
+    "stats": {
+      "damage": 25,
+      "range": 4.4,
+      "fire_rate": 2.62,
+      "splash_radius": 1.5,
+      "projectile_speed": 20,
+      "crit_rate": 0.1
+    },
+    "targeting": "血量最高",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "击退·Ⅱ",
+      "description": "高压水炮击退敌人并短暂降低其移动速度",
+      "cooldown": 9.2
+    },
+    "description": "「浪把脚印收回去」｜铺开之后开始影响一整片：高压水炮击退敌人并短暂降低其移动速度。归属潮汐系/击退水炮/水，增加弹道数量，覆盖更宽的进攻路线，核心机制：击退。"
+  },
+  {
+    "name": "站不稳的那半秒",
+    "name_hook": "「站不稳的那半秒」｜收束到一个点上较劲：高压水炮击退敌人并短暂降低其移动速度",
+    "series": "潮汐",
+    "model": "聚焦型",
+    "class": "击退水炮",
+    "element": "水",
+    "mechanic": "击退",
+    "rarity": "史诗",
+    "tier": 3,
+    "cost": 113,
+    "upgrade_cost": 85,
+    "max_level": 5,
+    "stats": {
+      "damage": 34,
+      "range": 4.8,
+      "fire_rate": 2.9,
+      "splash_radius": 2.8,
+      "projectile_speed": 25,
+      "crit_rate": 0.15
+    },
+    "targeting": "最近",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "击退·Ⅲ",
+      "description": "高压水炮击退敌人并短暂降低其移动速度",
+      "cooldown": 7.0
+    },
+    "description": "「站不稳的那半秒」｜收束到一个点上较劲：高压水炮击退敌人并短暂降低其移动速度。归属潮汐系/击退水炮/水，收束火力，提升射程与单点爆发，核心机制：击退。"
+  },
+  {
+    "name": "整条岸都往后挪",
+    "name_hook": "「整条岸都往后挪」｜越过额定功率，连代价一起放大：高压水炮击退敌人并短暂降低其移动速度",
+    "series": "潮汐",
+    "model": "过载型",
+    "class": "击退水炮",
+    "element": "水",
+    "mechanic": "击退",
+    "rarity": "传奇",
+    "tier": 4,
+    "cost": 154,
+    "upgrade_cost": 115,
+    "max_level": 5,
+    "stats": {
+      "damage": 46,
+      "range": 5.1,
+      "fire_rate": 3.18,
+      "splash_radius": 2.3,
+      "projectile_speed": 22,
+      "crit_rate": 0.19
+    },
+    "targeting": "最快",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "击退·Ⅳ",
+      "description": "高压水炮击退敌人并短暂降低其移动速度",
+      "cooldown": 6.7
+    },
+    "description": "「整条岸都往后挪」｜越过额定功率，连代价一起放大：高压水炮击退敌人并短暂降低其移动速度。归属潮汐系/击退水炮/水，突破功率上限，攻速与特效强度显著提升，核心机制：击退。"
+  },
+  {
+    "name": "海不收留谁",
+    "name_hook": "「海不收留谁」｜机制定型，反过来改写这一路的打法：高压水炮击退敌人并短暂降低其移动速度",
+    "series": "潮汐",
+    "model": "终焉型",
+    "class": "击退水炮",
+    "element": "水",
+    "mechanic": "击退",
+    "rarity": "神话",
+    "tier": 5,
+    "cost": 207,
+    "upgrade_cost": 155,
+    "max_level": 5,
+    "stats": {
+      "damage": 62,
+      "range": 5.4,
+      "fire_rate": 3.46,
+      "splash_radius": 1.4,
+      "projectile_speed": 21,
+      "crit_rate": 0.22
+    },
+    "targeting": "最密集群",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "击退·Ⅴ",
+      "description": "高压水炮击退敌人并短暂降低其移动速度",
+      "cooldown": 3.6
+    },
+    "description": "「海不收留谁」｜机制定型，反过来改写这一路的打法：高压水炮击退敌人并短暂降低其移动速度。归属潮汐系/击退水炮/水，终极构型，解锁专属机制，数值全面跃升，核心机制：击退。"
+  },
+  {
+    "name": "多出来的一颗螺丝",
+    "name_hook": "「多出来的一颗螺丝」｜刚上场，只改动一发一格的规矩：部署可移动哨兵，阻挡并攻击地面敌人",
+    "series": "齿轮",
+    "model": "哨戒型",
+    "class": "机械哨兵",
+    "element": "机械",
+    "mechanic": "召唤单位",
+    "rarity": "普通",
+    "tier": 1,
+    "cost": 122,
+    "upgrade_cost": 91,
+    "max_level": 5,
+    "stats": {
+      "damage": 12,
+      "range": 4.8,
+      "fire_rate": 1.49,
+      "splash_radius": 1.5,
+      "projectile_speed": 14,
+      "crit_rate": 0.05
+    },
+    "targeting": "最前",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "召唤单位·Ⅰ",
+      "description": "部署可移动哨兵，阻挡并攻击地面敌人",
+      "cooldown": 12.8
+    },
+    "description": "「多出来的一颗螺丝」｜刚上场，只改动一发一格的规矩：部署可移动哨兵，阻挡并攻击地面敌人。归属齿轮系/机械哨兵/机械，基础构型，造价低廉，适合前期铺场，核心机制：召唤单位。"
+  },
+  {
+    "name": "替我站岗的兄弟",
+    "name_hook": "「替我站岗的兄弟」｜铺开之后开始影响一整片：部署可移动哨兵，阻挡并攻击地面敌人",
+    "series": "齿轮",
+    "model": "齐射型",
+    "class": "机械哨兵",
+    "element": "机械",
+    "mechanic": "召唤单位",
+    "rarity": "稀有",
+    "tier": 2,
+    "cost": 164,
+    "upgrade_cost": 123,
+    "max_level": 5,
+    "stats": {
+      "damage": 16,
+      "range": 5.2,
+      "fire_rate": 1.67,
+      "splash_radius": 1.6,
+      "projectile_speed": 17,
+      "crit_rate": 0.1
+    },
+    "targeting": "血量最高",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "召唤单位·Ⅱ",
+      "description": "部署可移动哨兵，阻挡并攻击地面敌人",
+      "cooldown": 10.4
+    },
+    "description": "「替我站岗的兄弟」｜铺开之后开始影响一整片：部署可移动哨兵，阻挡并攻击地面敌人。归属齿轮系/机械哨兵/机械，增加弹道数量，覆盖更宽的进攻路线，核心机制：召唤单位。"
+  },
+  {
+    "name": "上完发条就忘了疼",
+    "name_hook": "「上完发条就忘了疼」｜收束到一个点上较劲：部署可移动哨兵，阻挡并攻击地面敌人",
+    "series": "齿轮",
+    "model": "聚焦型",
+    "class": "机械哨兵",
+    "element": "机械",
+    "mechanic": "召唤单位",
+    "rarity": "史诗",
+    "tier": 3,
+    "cost": 219,
+    "upgrade_cost": 164,
+    "max_level": 5,
+    "stats": {
+      "damage": 21,
+      "range": 5.6,
+      "fire_rate": 1.85,
+      "splash_radius": 2.3,
+      "projectile_speed": 12,
+      "crit_rate": 0.15
+    },
+    "targeting": "最近",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "召唤单位·Ⅲ",
+      "description": "部署可移动哨兵，阻挡并攻击地面敌人",
+      "cooldown": 8.2
+    },
+    "description": "「上完发条就忘了疼」｜收束到一个点上较劲：部署可移动哨兵，阻挡并攻击地面敌人。归属齿轮系/机械哨兵/机械，收束火力，提升射程与单点爆发，核心机制：召唤单位。"
+  },
+  {
+    "name": "铁也会排队",
+    "name_hook": "「铁也会排队」｜越过额定功率，连代价一起放大：部署可移动哨兵，阻挡并攻击地面敌人",
+    "series": "齿轮",
+    "model": "过载型",
+    "class": "机械哨兵",
+    "element": "机械",
+    "mechanic": "召唤单位",
+    "rarity": "传奇",
+    "tier": 4,
+    "cost": 298,
+    "upgrade_cost": 224,
+    "max_level": 5,
+    "stats": {
+      "damage": 29,
+      "range": 6.0,
+      "fire_rate": 2.03,
+      "splash_radius": 3.2,
+      "projectile_speed": 16,
+      "crit_rate": 0.19
+    },
+    "targeting": "最快",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "召唤单位·Ⅳ",
+      "description": "部署可移动哨兵，阻挡并攻击地面敌人",
+      "cooldown": 6.8
+    },
+    "description": "「铁也会排队」｜越过额定功率，连代价一起放大：部署可移动哨兵，阻挡并攻击地面敌人。归属齿轮系/机械哨兵/机械，突破功率上限，攻速与特效强度显著提升，核心机制：召唤单位。"
+  },
+  {
+    "name": "工厂自己开门",
+    "name_hook": "「工厂自己开门」｜机制定型，反过来改写这一路的打法：部署可移动哨兵，阻挡并攻击地面敌人",
+    "series": "齿轮",
+    "model": "终焉型",
+    "class": "机械哨兵",
+    "element": "机械",
+    "mechanic": "召唤单位",
+    "rarity": "神话",
+    "tier": 5,
+    "cost": 402,
+    "upgrade_cost": 301,
+    "max_level": 5,
+    "stats": {
+      "damage": 39,
+      "range": 6.3,
+      "fire_rate": 2.21,
+      "splash_radius": 1.4,
+      "projectile_speed": 17,
+      "crit_rate": 0.22
+    },
+    "targeting": "最密集群",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "召唤单位·Ⅴ",
+      "description": "部署可移动哨兵，阻挡并攻击地面敌人",
+      "cooldown": 4.9
+    },
+    "description": "「工厂自己开门」｜机制定型，反过来改写这一路的打法：部署可移动哨兵，阻挡并攻击地面敌人。归属齿轮系/机械哨兵/机械，终极构型，解锁专属机制，数值全面跃升，核心机制：召唤单位。"
+  },
+  {
+    "name": "一只先起飞",
+    "name_hook": "「一只先起飞」｜刚上场，只改动一发一格的规矩：同时锁定多个目标，无人机各自追击",
+    "series": "蜂群",
+    "model": "哨戒型",
+    "class": "多目标无人机",
+    "element": "机械",
+    "mechanic": "分散打击",
+    "rarity": "普通",
+    "tier": 1,
+    "cost": 82,
+    "upgrade_cost": 61,
+    "max_level": 5,
+    "stats": {
+      "damage": 19,
+      "range": 3.8,
+      "fire_rate": 3.08,
+      "splash_radius": 1.9,
+      "projectile_speed": 18,
+      "crit_rate": 0.05
+    },
+    "targeting": "最前",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "分散打击·Ⅰ",
+      "description": "同时锁定多个目标，无人机各自追击",
+      "cooldown": 12.1
+    },
+    "description": "「一只先起飞」｜刚上场，只改动一发一格的规矩：同时锁定多个目标，无人机各自追击。归属蜂群系/多目标无人机/机械，基础构型，造价低廉，适合前期铺场，核心机制：分散打击。"
+  },
+  {
+    "name": "分头去找名字",
+    "name_hook": "「分头去找名字」｜铺开之后开始影响一整片：同时锁定多个目标，无人机各自追击",
+    "series": "蜂群",
+    "model": "齐射型",
+    "class": "多目标无人机",
+    "element": "机械",
+    "mechanic": "分散打击",
+    "rarity": "稀有",
+    "tier": 2,
+    "cost": 110,
+    "upgrade_cost": 83,
+    "max_level": 5,
+    "stats": {
+      "damage": 25,
+      "range": 4.1,
+      "fire_rate": 3.45,
+      "splash_radius": 1.0,
+      "projectile_speed": 13,
+      "crit_rate": 0.1
+    },
+    "targeting": "血量最高",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "分散打击·Ⅱ",
+      "description": "同时锁定多个目标，无人机各自追击",
+      "cooldown": 9.3
+    },
+    "description": "「分头去找名字」｜铺开之后开始影响一整片：同时锁定多个目标，无人机各自追击。归属蜂群系/多目标无人机/机械，增加弹道数量，覆盖更宽的进攻路线，核心机制：分散打击。"
+  },
+  {
+    "name": "谁也别落单",
+    "name_hook": "「谁也别落单」｜收束到一个点上较劲：同时锁定多个目标，无人机各自追击",
+    "series": "蜂群",
+    "model": "聚焦型",
+    "class": "多目标无人机",
+    "element": "机械",
+    "mechanic": "分散打击",
+    "rarity": "史诗",
+    "tier": 3,
+    "cost": 147,
+    "upgrade_cost": 110,
+    "max_level": 5,
+    "stats": {
+      "damage": 34,
+      "range": 4.4,
+      "fire_rate": 3.82,
+      "splash_radius": 3.2,
+      "projectile_speed": 18,
+      "crit_rate": 0.15
+    },
+    "targeting": "最近",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "分散打击·Ⅲ",
+      "description": "同时锁定多个目标，无人机各自追击",
+      "cooldown": 7.9
+    },
+    "description": "「谁也别落单」｜收束到一个点上较劲：同时锁定多个目标，无人机各自追击。归属蜂群系/多目标无人机/机械，收束火力，提升射程与单点爆发，核心机制：分散打击。"
+  },
+  {
+    "name": "满天都是小决定",
+    "name_hook": "「满天都是小决定」｜越过额定功率，连代价一起放大：同时锁定多个目标，无人机各自追击",
+    "series": "蜂群",
+    "model": "过载型",
+    "class": "多目标无人机",
+    "element": "机械",
+    "mechanic": "分散打击",
+    "rarity": "传奇",
+    "tier": 4,
+    "cost": 200,
+    "upgrade_cost": 150,
+    "max_level": 5,
+    "stats": {
+      "damage": 46,
+      "range": 4.7,
+      "fire_rate": 4.19,
+      "splash_radius": 1.9,
+      "projectile_speed": 18,
+      "crit_rate": 0.19
+    },
+    "targeting": "最快",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "分散打击·Ⅳ",
+      "description": "同时锁定多个目标，无人机各自追击",
+      "cooldown": 5.9
+    },
+    "description": "「满天都是小决定」｜越过额定功率，连代价一起放大：同时锁定多个目标，无人机各自追击。归属蜂群系/多目标无人机/机械，突破功率上限，攻速与特效强度显著提升，核心机制：分散打击。"
+  },
+  {
+    "name": "同时敲所有的门",
+    "name_hook": "「同时敲所有的门」｜机制定型，反过来改写这一路的打法：同时锁定多个目标，无人机各自追击",
+    "series": "蜂群",
+    "model": "终焉型",
+    "class": "多目标无人机",
+    "element": "机械",
+    "mechanic": "分散打击",
+    "rarity": "神话",
+    "tier": 5,
+    "cost": 270,
+    "upgrade_cost": 202,
+    "max_level": 5,
+    "stats": {
+      "damage": 62,
+      "range": 5.0,
+      "fire_rate": 4.56,
+      "splash_radius": 1.7,
+      "projectile_speed": 21,
+      "crit_rate": 0.22
+    },
+    "targeting": "最密集群",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "分散打击·Ⅴ",
+      "description": "同时锁定多个目标，无人机各自追击",
+      "cooldown": 4.0
+    },
+    "description": "「同时敲所有的门」｜机制定型，反过来改写这一路的打法：同时锁定多个目标，无人机各自追击。归属蜂群系/多目标无人机/机械，终极构型，解锁专属机制，数值全面跃升，核心机制：分散打击。"
+  },
+  {
+    "name": "白光里藏了七种",
+    "name_hook": "「白光里藏了七种」｜刚上场，只改动一发一格的规矩：主光束命中后分裂为数道子光束",
+    "series": "棱镜",
+    "model": "哨戒型",
+    "class": "分裂光束",
+    "element": "光",
+    "mechanic": "多段分裂",
+    "rarity": "普通",
+    "tier": 1,
+    "cost": 90,
+    "upgrade_cost": 67,
+    "max_level": 5,
+    "stats": {
+      "damage": 16,
+      "range": 3.2,
+      "fire_rate": 1.59,
+      "splash_radius": 2.2,
+      "projectile_speed": 18,
+      "crit_rate": 0.08
+    },
+    "targeting": "最前",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "多段分裂·Ⅰ",
+      "description": "主光束命中后分裂为数道子光束",
+      "cooldown": 11.3
+    },
+    "description": "「白光里藏了七种」｜刚上场，只改动一发一格的规矩：主光束命中后分裂为数道子光束。归属棱镜系/分裂光束/光，基础构型，造价低廉，适合前期铺场，核心机制：多段分裂。"
+  },
+  {
+    "name": "一束拆成一把",
+    "name_hook": "「一束拆成一把」｜铺开之后开始影响一整片：主光束命中后分裂为数道子光束",
+    "series": "棱镜",
+    "model": "齐射型",
+    "class": "分裂光束",
+    "element": "光",
+    "mechanic": "多段分裂",
+    "rarity": "稀有",
+    "tier": 2,
+    "cost": 121,
+    "upgrade_cost": 91,
+    "max_level": 5,
+    "stats": {
+      "damage": 21,
+      "range": 3.5,
+      "fire_rate": 1.78,
+      "splash_radius": 2.3,
+      "projectile_speed": 22,
+      "crit_rate": 0.11
+    },
+    "targeting": "血量最高",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "多段分裂·Ⅱ",
+      "description": "主光束命中后分裂为数道子光束",
+      "cooldown": 10.7
+    },
+    "description": "「一束拆成一把」｜铺开之后开始影响一整片：主光束命中后分裂为数道子光束。归属棱镜系/分裂光束/光，增加弹道数量，覆盖更宽的进攻路线，核心机制：多段分裂。"
+  },
+  {
+    "name": "每片都记得原路",
+    "name_hook": "「每片都记得原路」｜收束到一个点上较劲：主光束命中后分裂为数道子光束",
+    "series": "棱镜",
+    "model": "聚焦型",
+    "class": "分裂光束",
+    "element": "光",
+    "mechanic": "多段分裂",
+    "rarity": "史诗",
+    "tier": 3,
+    "cost": 162,
+    "upgrade_cost": 121,
+    "max_level": 5,
+    "stats": {
+      "damage": 28,
+      "range": 3.7,
+      "fire_rate": 1.97,
+      "splash_radius": 2.6,
+      "projectile_speed": 19,
+      "crit_rate": 0.15
+    },
+    "targeting": "最近",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "多段分裂·Ⅲ",
+      "description": "主光束命中后分裂为数道子光束",
+      "cooldown": 8.7
+    },
+    "description": "「每片都记得原路」｜收束到一个点上较劲：主光束命中后分裂为数道子光束。归属棱镜系/分裂光束/光，收束火力，提升射程与单点爆发，核心机制：多段分裂。"
+  },
+  {
+    "name": "碎了反而更亮",
+    "name_hook": "「碎了反而更亮」｜越过额定功率，连代价一起放大：主光束命中后分裂为数道子光束",
+    "series": "棱镜",
+    "model": "过载型",
+    "class": "分裂光束",
+    "element": "光",
+    "mechanic": "多段分裂",
+    "rarity": "传奇",
+    "tier": 4,
+    "cost": 220,
+    "upgrade_cost": 165,
+    "max_level": 5,
+    "stats": {
+      "damage": 39,
+      "range": 4.0,
+      "fire_rate": 2.16,
+      "splash_radius": 1.5,
+      "projectile_speed": 10,
+      "crit_rate": 0.18
+    },
+    "targeting": "最快",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "多段分裂·Ⅳ",
+      "description": "主光束命中后分裂为数道子光束",
+      "cooldown": 5.5
+    },
+    "description": "「碎了反而更亮」｜越过额定功率，连代价一起放大：主光束命中后分裂为数道子光束。归属棱镜系/分裂光束/光，突破功率上限，攻速与特效强度显著提升，核心机制：多段分裂。"
+  },
+  {
+    "name": "光自己分了家",
+    "name_hook": "「光自己分了家」｜机制定型，反过来改写这一路的打法：主光束命中后分裂为数道子光束",
+    "series": "棱镜",
+    "model": "终焉型",
+    "class": "分裂光束",
+    "element": "光",
+    "mechanic": "多段分裂",
+    "rarity": "神话",
+    "tier": 5,
+    "cost": 297,
+    "upgrade_cost": 222,
+    "max_level": 5,
+    "stats": {
+      "damage": 52,
+      "range": 4.2,
+      "fire_rate": 2.35,
+      "splash_radius": 1.7,
+      "projectile_speed": 23,
+      "crit_rate": 0.23
+    },
+    "targeting": "最密集群",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "多段分裂·Ⅴ",
+      "description": "主光束命中后分裂为数道子光束",
+      "cooldown": 3.4
+    },
+    "description": "「光自己分了家」｜机制定型，反过来改写这一路的打法：主光束命中后分裂为数道子光束。归属棱镜系/分裂光束/光，终极构型，解锁专属机制，数值全面跃升，核心机制：多段分裂。"
+  },
+  {
+    "name": "抬起来要很久",
+    "name_hook": "「抬起来要很久」｜刚上场，只改动一发一格的规矩：攻速极慢但单发极高，命中附带眩晕",
+    "series": "重锤",
+    "model": "哨戒型",
+    "class": "高伤慢速",
+    "element": "物理",
+    "mechanic": "击晕",
+    "rarity": "普通",
+    "tier": 1,
+    "cost": 73,
+    "upgrade_cost": 54,
+    "max_level": 5,
+    "stats": {
+      "damage": 10,
+      "range": 5.2,
+      "fire_rate": 3.01,
+      "splash_radius": 2.4,
+      "projectile_speed": 13,
+      "crit_rate": 0.06
+    },
+    "targeting": "最前",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "击晕·Ⅰ",
+      "description": "攻速极慢但单发极高，命中附带眩晕",
+      "cooldown": 11.4
+    },
+    "description": "「抬起来要很久」｜刚上场，只改动一发一格的规矩：攻速极慢但单发极高，命中附带眩晕。归属重锤系/高伤慢速/物理，基础构型，造价低廉，适合前期铺场，核心机制：击晕。"
+  },
+  {
+    "name": "落下去不商量",
+    "name_hook": "「落下去不商量」｜铺开之后开始影响一整片：攻速极慢但单发极高，命中附带眩晕",
+    "series": "重锤",
+    "model": "齐射型",
+    "class": "高伤慢速",
+    "element": "物理",
+    "mechanic": "击晕",
+    "rarity": "稀有",
+    "tier": 2,
+    "cost": 98,
+    "upgrade_cost": 73,
+    "max_level": 5,
+    "stats": {
+      "damage": 13,
+      "range": 5.6,
+      "fire_rate": 3.37,
+      "splash_radius": 2.0,
+      "projectile_speed": 10,
+      "crit_rate": 0.1
+    },
+    "targeting": "血量最高",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "击晕·Ⅱ",
+      "description": "攻速极慢但单发极高，命中附带眩晕",
+      "cooldown": 9.4
+    },
+    "description": "「落下去不商量」｜铺开之后开始影响一整片：攻速极慢但单发极高，命中附带眩晕。归属重锤系/高伤慢速/物理，增加弹道数量，覆盖更宽的进攻路线，核心机制：击晕。"
+  },
+  {
+    "name": "地面记了一笔",
+    "name_hook": "「地面记了一笔」｜收束到一个点上较劲：攻速极慢但单发极高，命中附带眩晕",
+    "series": "重锤",
+    "model": "聚焦型",
+    "class": "高伤慢速",
+    "element": "物理",
+    "mechanic": "击晕",
+    "rarity": "史诗",
+    "tier": 3,
+    "cost": 131,
+    "upgrade_cost": 98,
+    "max_level": 5,
+    "stats": {
+      "damage": 18,
+      "range": 6.0,
+      "fire_rate": 3.73,
+      "splash_radius": 1.5,
+      "projectile_speed": 22,
+      "crit_rate": 0.13
+    },
+    "targeting": "最近",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "击晕·Ⅲ",
+      "description": "攻速极慢但单发极高，命中附带眩晕",
+      "cooldown": 7.7
+    },
+    "description": "「地面记了一笔」｜收束到一个点上较劲：攻速极慢但单发极高，命中附带眩晕。归属重锤系/高伤慢速/物理，收束火力，提升射程与单点爆发，核心机制：击晕。"
+  },
+  {
+    "name": "敲完才听见响",
+    "name_hook": "「敲完才听见响」｜越过额定功率，连代价一起放大：攻速极慢但单发极高，命中附带眩晕",
+    "series": "重锤",
+    "model": "过载型",
+    "class": "高伤慢速",
+    "element": "物理",
+    "mechanic": "击晕",
+    "rarity": "传奇",
+    "tier": 4,
+    "cost": 178,
+    "upgrade_cost": 134,
+    "max_level": 5,
+    "stats": {
+      "damage": 24,
+      "range": 6.4,
+      "fire_rate": 4.09,
+      "splash_radius": 1.2,
+      "projectile_speed": 17,
+      "crit_rate": 0.18
+    },
+    "targeting": "最快",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "击晕·Ⅳ",
+      "description": "攻速极慢但单发极高，命中附带眩晕",
+      "cooldown": 6.8
+    },
+    "description": "「敲完才听见响」｜越过额定功率，连代价一起放大：攻速极慢但单发极高，命中附带眩晕。归属重锤系/高伤慢速/物理，突破功率上限，攻速与特效强度显著提升，核心机制：击晕。"
+  },
+  {
+    "name": "那一记没有回声",
+    "name_hook": "「那一记没有回声」｜机制定型，反过来改写这一路的打法：攻速极慢但单发极高，命中附带眩晕",
+    "series": "重锤",
+    "model": "终焉型",
+    "class": "高伤慢速",
+    "element": "物理",
+    "mechanic": "击晕",
+    "rarity": "神话",
+    "tier": 5,
+    "cost": 240,
+    "upgrade_cost": 180,
+    "max_level": 5,
+    "stats": {
+      "damage": 33,
+      "range": 6.9,
+      "fire_rate": 4.45,
+      "splash_radius": 3.3,
+      "projectile_speed": 20,
+      "crit_rate": 0.22
+    },
+    "targeting": "最密集群",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "击晕·Ⅴ",
+      "description": "攻速极慢但单发极高，命中附带眩晕",
+      "cooldown": 4.4
+    },
+    "description": "「那一记没有回声」｜机制定型，反过来改写这一路的打法：攻速极慢但单发极高，命中附带眩晕。归属重锤系/高伤慢速/物理，终极构型，解锁专属机制，数值全面跃升，核心机制：击晕。"
+  },
+  {
+    "name": "咳嗽传给了隔壁",
+    "name_hook": "「咳嗽传给了隔壁」｜刚上场，只改动一发一格的规矩：中毒目标死亡时将瘟疫传染给周围同伴",
+    "series": "瘟疫",
+    "model": "哨戒型",
+    "class": "传染DOT",
+    "element": "毒",
+    "mechanic": "扩散传染",
+    "rarity": "普通",
+    "tier": 1,
+    "cost": 63,
+    "upgrade_cost": 47,
+    "max_level": 5,
+    "stats": {
+      "damage": 11,
+      "range": 3.6,
+      "fire_rate": 3.08,
+      "splash_radius": 2.1,
+      "projectile_speed": 12,
+      "crit_rate": 0.06
+    },
+    "targeting": "最前",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "扩散传染·Ⅰ",
+      "description": "中毒目标死亡时将瘟疫传染给周围同伴",
+      "cooldown": 12.4
+    },
+    "description": "「咳嗽传给了隔壁」｜刚上场，只改动一发一格的规矩：中毒目标死亡时将瘟疫传染给周围同伴。归属瘟疫系/传染DOT/毒，基础构型，造价低廉，适合前期铺场，核心机制：扩散传染。"
+  },
+  {
+    "name": "名单自己变长",
+    "name_hook": "「名单自己变长」｜铺开之后开始影响一整片：中毒目标死亡时将瘟疫传染给周围同伴",
+    "series": "瘟疫",
+    "model": "齐射型",
+    "class": "传染DOT",
+    "element": "毒",
+    "mechanic": "扩散传染",
+    "rarity": "稀有",
+    "tier": 2,
+    "cost": 85,
+    "upgrade_cost": 63,
+    "max_level": 5,
+    "stats": {
+      "damage": 14,
+      "range": 3.9,
+      "fire_rate": 3.45,
+      "splash_radius": 1.5,
+      "projectile_speed": 11,
+      "crit_rate": 0.12
+    },
+    "targeting": "血量最高",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "扩散传染·Ⅱ",
+      "description": "中毒目标死亡时将瘟疫传染给周围同伴",
+      "cooldown": 10.6
+    },
+    "description": "「名单自己变长」｜铺开之后开始影响一整片：中毒目标死亡时将瘟疫传染给周围同伴。归属瘟疫系/传染DOT/毒，增加弹道数量，覆盖更宽的进攻路线，核心机制：扩散传染。"
+  },
+  {
+    "name": "谁接谁续上",
+    "name_hook": "「谁接谁续上」｜收束到一个点上较劲：中毒目标死亡时将瘟疫传染给周围同伴",
+    "series": "瘟疫",
+    "model": "聚焦型",
+    "class": "传染DOT",
+    "element": "毒",
+    "mechanic": "扩散传染",
+    "rarity": "史诗",
+    "tier": 3,
+    "cost": 113,
+    "upgrade_cost": 85,
+    "max_level": 5,
+    "stats": {
+      "damage": 19,
+      "range": 4.2,
+      "fire_rate": 3.82,
+      "splash_radius": 2.4,
+      "projectile_speed": 12,
+      "crit_rate": 0.15
+    },
+    "targeting": "最近",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "扩散传染·Ⅲ",
+      "description": "中毒目标死亡时将瘟疫传染给周围同伴",
+      "cooldown": 7.2
+    },
+    "description": "「谁接谁续上」｜收束到一个点上较劲：中毒目标死亡时将瘟疫传染给周围同伴。归属瘟疫系/传染DOT/毒，收束火力，提升射程与单点爆发，核心机制：扩散传染。"
+  },
+  {
+    "name": "空位也算是人",
+    "name_hook": "「空位也算是人」｜越过额定功率，连代价一起放大：中毒目标死亡时将瘟疫传染给周围同伴",
+    "series": "瘟疫",
+    "model": "过载型",
+    "class": "传染DOT",
+    "element": "毒",
+    "mechanic": "扩散传染",
+    "rarity": "传奇",
+    "tier": 4,
+    "cost": 154,
+    "upgrade_cost": 115,
+    "max_level": 5,
+    "stats": {
+      "damage": 26,
+      "range": 4.5,
+      "fire_rate": 4.19,
+      "splash_radius": 1.3,
+      "projectile_speed": 24,
+      "crit_rate": 0.17
+    },
+    "targeting": "最快",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "扩散传染·Ⅳ",
+      "description": "中毒目标死亡时将瘟疫传染给周围同伴",
+      "cooldown": 5.3
+    },
+    "description": "「空位也算是人」｜越过额定功率，连代价一起放大：中毒目标死亡时将瘟疫传染给周围同伴。归属瘟疫系/传染DOT/毒，突破功率上限，攻速与特效强度显著提升，核心机制：扩散传染。"
+  },
+  {
+    "name": "最后一排也点了头",
+    "name_hook": "「最后一排也点了头」｜机制定型，反过来改写这一路的打法：中毒目标死亡时将瘟疫传染给周围同伴",
+    "series": "瘟疫",
+    "model": "终焉型",
+    "class": "传染DOT",
+    "element": "毒",
+    "mechanic": "扩散传染",
+    "rarity": "神话",
+    "tier": 5,
+    "cost": 207,
+    "upgrade_cost": 155,
+    "max_level": 5,
+    "stats": {
+      "damage": 36,
+      "range": 4.8,
+      "fire_rate": 4.56,
+      "splash_radius": 3.2,
+      "projectile_speed": 15,
+      "crit_rate": 0.23
+    },
+    "targeting": "最密集群",
+    "attack_tags": [
+      "对地"
+    ],
+    "skill": {
+      "name": "扩散传染·Ⅴ",
+      "description": "中毒目标死亡时将瘟疫传染给周围同伴",
+      "cooldown": 3.5
+    },
+    "description": "「最后一排也点了头」｜机制定型，反过来改写这一路的打法：中毒目标死亡时将瘟疫传染给周围同伴。归属瘟疫系/传染DOT/毒，终极构型，解锁专属机制，数值全面跃升，核心机制：扩散传染。"
+  }
+]
