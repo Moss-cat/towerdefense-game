@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>🏭 塔防工厂 · 关卡选择</title>
+<link rel="stylesheet" href="css/style.css" />
+<style>
+  /* ===== 页面级样式覆盖 ===== */
+  html, body {
+    height: 100%;
+    overflow: auto;
+    background:
+      radial-gradient(ellipse at top, rgba(108,168,255,0.12), transparent 55%),
+      radial-gradient(ellipse at bottom, rgba(255,226,122,0.06), transparent 60%),
+      #070b16;
+  }
+
+  /* 顶栏 */
+  .top-bar {
+    position: sticky; top: 0; z-index: 50;
+    display: flex; align-items: center; gap: 16px;
+    padding: 14px 28px;
+    background: linear-gradient(180deg, rgba(10,14,26,0.96) 0%, rgba(10,14,26,0.85) 100%);
+    border-bottom: 1px solid #2a3450;
+    backdrop-filter: blur(10px);
+  }
+  .top-title {
+    font-size: 22px; font-weight: 700; letter-spacing: 1px;
+    background: linear-gradient(90deg, #ffe27a, #6ca8ff);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .highest-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 6px 14px; border-radius: 20px;
+    background: linear-gradient(180deg, #2a3d12, #1a280a);
+    border: 1px solid #6b8a2a; color: #c8e87a; font-size: 13px; font-weight: 600;
+  }
+  .top-bar .spacer { flex: 1; }
+  .nav-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 8px 18px; font-size: 13px; font-weight: 600;
+    border-radius: 8px; border: 1px solid #3a4a70;
+    background: linear-gradient(180deg, #1a2240, #10162a);
+    color: #e4e6eb; cursor: pointer; transition: all .18s;
+  }
+  .nav-btn:hover { border-color: #6ca8ff; box-shadow: 0 0 12px rgba(108,168,255,0.25); transform: translateY(-1px); }
+  .nav-btn-gold { border-color: #a88e2c; color: #ffe27a; background: linear-gradient(180deg, #4a3d0a, #2f2808); }
+  .nav-btn-gold:hover { border-color: #ffe27a; box-shadow: 0 0 14px rgba(255,226,122,0.3); }
+
+  /* 容器 */
+  .page-container {
+    max-width: 1400px; margin: 0 auto; padding: 24px 28px 60px;
+  }
+  .page-header { margin-bottom: 24px; }
+  .page-header h1 {
+    font-size: 28px; font-weight: 800; color: #ffe27a; letter-spacing: 2px;
+    text-shadow: 0 0 24px rgba(255,226,122,0.25);
+  }
+  .page-header p { color: #9aa4bd; margin-top: 6px; font-size: 13px; }
+
+  /* 主题分区 */
+  .theme-section {
+    margin-bottom: 32px;
+    padding: 18px 20px 22px;
+    background: linear-gradient(135deg, rgba(26,34,64,0.5) 0%, rgba(16,22,42,0.4) 100%);
+    border: 1px solid #2a3450; border-radius: 14px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+  }
+  .theme-header {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 14px; padding-bottom: 10px;
+    border-bottom: 1px dashed #2a3450;
+  }
+  .theme-header::before {
+    content: ""; width: 5px; height: 22px; border-radius: 3px;
+    background: var(--theme-color, #6ca8ff);
+    box-shadow: 0 0 12px var(--theme-glow, rgba(108,168,255,0.3));
+  }
+  .theme-emoji { font-size: 22px; }
+  .theme-name { font-size: 18px; font-weight: 700; color: var(--theme-color, #fff); letter-spacing: 1px; }
+  .theme-range { font-size: 13px; color: #7a86a0; font-weight: 400; }
+
+  /* 卡片网格 */
+  .level-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 8px;
+  }
+
+  /* 关卡卡片 */
+  .lv-card {
+    position: relative;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 8px 4px; min-height: 72px;
+    border-radius: 10px; border: 2px solid var(--card-border, #3a4a70);
+    background: linear-gradient(145deg, rgba(26,34,64,0.7), rgba(16,22,42,0.8));
+    color: #e4e6eb; cursor: pointer;
+    transition: transform .15s, box-shadow .15s, border-color .15s;
+    font-family: inherit;
+  }
+  .lv-card:hover:not(.locked) {
+    transform: translateY(-3px) scale(1.06);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5), 0 0 16px var(--card-border, rgba(108,168,255,0.4));
+    z-index: 2;
+  }
+  .lv-num {
+    font-size: 20px; font-weight: 800; letter-spacing: 1px;
+    color: var(--card-border, #fff);
+    text-shadow: 0 0 8px var(--card-border, rgba(255,255,255,0.3));
+  }
+  .lv-wave { font-size: 10px; color: #9aa4bd; margin-top: 2px; }
+  .lv-tower { font-size: 10px; color: #7a86a0; }
+
+  /* 锁定 */
+  .lv-card.locked {
+    filter: grayscale(0.85); opacity: 0.5; cursor: not-allowed;
+    border-color: #2a2a3a;
+  }
+  .lv-card.locked .lv-num { color: #555; text-shadow: none; }
+
+  /* 已通关 */
+  .lv-card.cleared {
+    border-color: #ffe27a;
+    background: linear-gradient(145deg, rgba(74,61,10,0.6), rgba(47,40,8,0.7));
+    box-shadow: 0 0 12px rgba(255,226,122,0.15);
+  }
+  .lv-card.cleared .lv-num { color: #ffe27a; }
+
+  /* 当前关卡（未通关的最高解锁关） */
+  .lv-card.current {
+    animation: currentPulse 1.8s ease-in-out infinite;
+    border-color: #ffe27a;
+  }
+  @keyframes currentPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(255,226,122,0.6), 0 0 20px rgba(255,226,122,0.25); }
+    50%      { box-shadow: 0 0 0 6px rgba(255,226,122,0), 0 0 30px rgba(255,226,122,0.5); }
+  }
+
+  /* 角标 */
+  .lv-badge {
+    position: absolute; top: 2px; right: 4px;
+    font-size: 12px; font-weight: 700; line-height: 1;
+  }
+  .lv-badge-cleared { color: #ffe27a; text-shadow: 0 0 4px rgba(255,226,122,0.8); }
+  .lv-badge-locked { color: #555; }
+
+  /* 响应式 */
+  @media (max-width: 900px) {
+    .level-grid { grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)); gap: 6px; }
+    .lv-card { min-height: 60px; padding: 6px 2px; }
+    .lv-num { font-size: 16px; }
+  }
+
+  /* 底部装饰 */
+  .page-footer {
+    text-align: center; padding: 30px;
+    color: #555; font-size: 12px;
+  }
+</style>
+</head>
+<body>
+
+<!-- 顶栏 -->
+<div class="top-bar">
+  <span class="top-title">🗺 关卡选择</span>
+  <span class="highest-badge" id="highestBadge">🗝 已解锁至 1</span>
+  <div class="spacer"></div>
+  <button class="nav-btn-gold nav-btn" onclick="location.href='map.html'">🌍 世界地图</button>
+  <button class="nav-btn" onclick="location.href='index.html'">← 返回主页</button>
+</div>
+
+<div class="page-container">
+  <div class="page-header">
+    <h1>500 关 · 15 主题征程</h1>
+    <p>选择一个关卡开始战斗。通关后自动解锁下一关。点击可玩关卡直接进入战场！</p>
+  </div>
+
+  <!-- 主题分区容器 -->
+  <div id="themeSections"></div>
+</div>
+
+<div class="page-footer">塔防工厂 · Level Select &nbsp;|&nbsp; Powered by TDF Engine</div>
+
+<!-- 依赖脚本（顺序不能乱） -->
+<script src="js/data_levels.js"></script>
+<script src="js/save.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/level_page.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.LevelPage && typeof LevelPage.renderLevelsPage === 'function') {
+      LevelPage.renderLevelsPage();
+    }
+  });
+</script>
+</body>
+</html>

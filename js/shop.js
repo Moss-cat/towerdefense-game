@@ -4,15 +4,20 @@ window.Shop = {
   refreshCost: 50,
   slotList: [],                 // [{towerData, key}] (12)
   chipSlotList: [],             // [{chip, key}] (12)
-  rarityWeights: { '普通':40, '稀有':25, '史诗':18, '传奇':12, '神话':5 },
+  // ⚡ 稀有度权重 — 神话仅 3%，概率曲线陡峭
+  rarityWeights: { '普通':55, '稀有':25, '史诗':13, '传奇':5, '神话':2 },
   rarityFilter: null,           // null | '史诗+' | '传奇+'
   _TIER_ORDER: ['普通','稀有','史诗','传奇','神话'],
 
   /* ============ 初始化 ============ */
   init(containerEl){
     this.containerEl = containerEl;
-    this.loadFromSave();
-    if(this._isJsonReady()){ this.rollSlots(true); this.rollChipSlots(true); }
+    // 🔧 修复: 优先用新 JSON 数据 roll，存档 shopSlots 仅在 JSON 未 ready 时用
+    if(this._isJsonReady()){
+      this.rollSlots(true); this.rollChipSlots(true);
+    } else {
+      this.loadFromSave();
+    }
     this.render();
   },
   _isJsonReady(){ return !!((window.TOWER_DATA||[])[0] && (window.TOWER_DATA[0]._jsonLoaded)); },
@@ -70,8 +75,25 @@ window.Shop = {
   },
   _chipCost(c){
     const rarity = c.rarityName || c.rarity || '普通';
-    const mult = ({'普通':12,'稀有':22,'史诗':38,'传奇':60,'神话':100})[rarity] || 12;
-    return Math.round( (c.value || 10) * mult );
+    // 📈 指数价格: 每升一级 ×5 — 普通极便宜，神话天价
+    // 普通×1  稀有×5  史诗×25  传奇×125  神话×625
+    const tierMult = ({'普通':1,'稀有':5,'史诗':25,'传奇':125,'神话':625})[rarity] || 1;
+    const base = Math.max(1, c.value || 5);
+    return Math.round(base * tierMult);
+  },
+  // 炮塔指数定价 — 稀有度每级 ×5
+  _towerPrice(t){
+    const rarity = t.rarity || '普通';
+    const tierMult = ({'普通':1,'稀有':5,'史诗':25,'传奇':125,'神话':625})[rarity] || 1;
+    const base = Math.max(1, t.damage || 8);
+    // JSON 自带 cost 只作 sanity 参考，我们的 rarity 指数权重大
+    if(t.cost && t.cost > 0){
+      // 如果 JSON cost 离谱（同稀有度差距大），用我们的公式盖
+      if(t.cost > base * tierMult * 3 || t.cost < base * tierMult * 0.3){
+        return Math.round(base * tierMult);
+      }
+    }
+    return Math.round(base * tierMult);
   },
 
   /* ============ 随机生成 ============ */
@@ -166,7 +188,8 @@ window.Shop = {
   },
 
   _towerCard(t, gold){
-    const canBuy = gold >= t.cost;
+    const price = this._towerPrice(t);
+    const canBuy = gold >= price;
     const ownedCount = (window.saveData.ownedTowers||[]).filter(o=>o.towerTypeId===t.id).length;
     return `<div class="shop-card tower-slot" style="border-color:${t.color}40;border-left:4px solid ${t.color};${!canBuy?'opacity:0.6':''}">
       <div class="card-header" style="background:linear-gradient(135deg, ${t.color}30, transparent);">
@@ -177,7 +200,7 @@ window.Shop = {
       <div class="card-sub">${t.class||''} · ${t.element||''}</div>
       <div class="card-stats"><span>⚔${t.damage}</span><span>◎${t.range}</span><span>⏱${t.fireRate}s</span></div>
       <div class="card-bottom">
-        <span class="card-cost" style="color:${canBuy?'#ffe27a':'#ff5a2a'}">💰${t.cost}</span>
+        <span class="card-cost" style="color:${canBuy?'#ffe27a':'#ff5a2a'}">💰${price}</span>
         ${ownedCount>0?`<span class="card-owned">×${ownedCount}</span>`:''}
         <button class="buy-btn btn gold" ${!canBuy?'disabled':''} onclick="Shop._doBuyTower(${t.id})">${canBuy?'购买':'金币不足'}</button>
       </div>
@@ -209,13 +232,14 @@ window.Shop = {
   _doBuyTower(towerId){
     const t = (window.TOWER_DATA||[])[towerId];
     if(!t) return;
+    const price = this._towerPrice(t);
     const gold = window.saveData.gold ?? 0;
-    if(gold < t.cost){
+    if(gold < price){
       if(window.Core) Core.spawnFloat(window.innerWidth/2, 200, '金币不足!','#ff5a2a');
       if(window.AudioFX) AudioFX.play('hurt');
       return;
     }
-    window.saveData.gold -= t.cost;
+    window.saveData.gold -= price;
     const instance = {
       instanceId: 'ot_' + Date.now() + '_' + Math.random().toString(36).slice(2,6),
       towerTypeId: towerId, level: 1, chips: [null,null,null], buyTime: Date.now()

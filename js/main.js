@@ -376,12 +376,28 @@
     if (!td) return false;
     const TS = Core.TS || 40;
     const x = gx * TS + TS / 2, y = gy * TS + TS / 2;
-    if (!Core.canPlaceAt(gx, gy)) return false;
+
+    // 🔧 重叠检测 — 不能放已有炮塔的格子
+    if (!Core.canPlaceAt(gx, gy)) {
+      Core.spawnFloat && Core.spawnFloat(x, y, '❌ 无法放置', '#ff5a2a');
+      if (window.AudioFX) AudioFX.play('hurt');
+      return false;
+    }
+
+    // 🔧 扣局内造价 — 用 JSON cost 字段（data_from_json 已注入）
+    const cost = td.cost || 100;
+    if (GS.gold < cost) {
+      Core.spawnFloat && Core.spawnFloat(x, y, '💰 金币不足 (' + cost + ')', '#ff5a2a');
+      if (window.AudioFX) AudioFX.play('hurt');
+      return false;
+    }
+    GS.gold -= cost;
 
     const instanceId = 'bt_' + Date.now() + '_' + Math.random().toString(36).slice(2, 5);
     const tower = {
       instanceId, type: owned.towerTypeId, gx: x, gy: y, x, y,
-      angle: 0, level: owned.level, cooldown: 0, chips: (owned.chips || []).slice(), kills: 0
+      angle: 0, level: owned.level, cooldown: 0, chips: (owned.chips || []).slice(), kills: 0,
+      costAtPlace: cost   // 记录局内造价，出售时按 50% 退
     };
     GS.towers.push(tower);
     GS.towerChips[instanceId] = (owned.chips || []).slice();
@@ -448,9 +464,8 @@
   }
 
   function sellTowerInBattle(tower) {
-    const TOWERS = window.TOWER_DATA || [];
-    const td = TOWERS[tower.type];
-    const refund = Math.round((td?.cost || 50) * 0.5 * tower.level);
+    // 按实际局内造价的 50% 退
+    const refund = Math.round((tower.costAtPlace || 100) * 0.5);
     GS.gold += refund;
     Core.spawnFloat && Core.spawnFloat(tower.gx, tower.gy - 10, '+' + refund, '#ffe27a');
     Core.spawnParticles && Core.spawnParticles(tower.gx, tower.gy, '#ffe27a', 25, 150, 0.7);
@@ -670,6 +685,20 @@
 
     // 隐藏初始 overlay
     $('overlay')?.classList.add('hidden');
+
+    // === 外部跳转：关卡选择页/世界地图页传来的 pending level ===
+    const pending = sessionStorage.getItem('tdf_pendingLevel');
+    if (pending) {
+      sessionStorage.removeItem('tdf_pendingLevel');
+      const pendingN = parseInt(pending);
+      const UL = saveData.unlockedLevel || 1;
+      if (!isNaN(pendingN) && pendingN >= 1 && pendingN <= (window.LEVEL_COUNT || 500) && pendingN <= UL) {
+        console.log('🚀 自动进入关卡 %d （来自外部页面跳转）', pendingN);
+        // 延迟一帧，让 DOM 先完全就绪
+        setTimeout(() => enterBattle(pendingN), 50);
+        return; // 直接切战斗，不再打印下方菜单初始化日志
+      }
+    }
 
     console.log('✅ Main.js · 双屏幕状态机 ready');
     console.log('📊 存档: gold=%d owned=%d loadout=%d unlockedLv=%d',

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>🗺 塔防工厂 · 世界地图</title>
+<link rel="stylesheet" href="css/style.css" />
+<style>
+  /* ===== 页面级样式 ===== */
+  html, body {
+    height: 100%;
+    overflow: hidden;
+    background: #070b16;
+  }
+
+  /* 顶栏 */
+  .top-bar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+    display: flex; align-items: center; gap: 16px;
+    padding: 12px 24px; height: 56px;
+    background: linear-gradient(180deg, rgba(10,14,26,0.98), rgba(10,14,26,0.88));
+    border-bottom: 1px solid #2a3450;
+    backdrop-filter: blur(12px);
+  }
+  .top-title {
+    font-size: 20px; font-weight: 700; letter-spacing: 1px;
+    background: linear-gradient(90deg, #6ca8ff, #ffe27a);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .legend {
+    display: flex; align-items: center; gap: 14px;
+    margin-left: 16px; padding-left: 16px;
+    border-left: 1px solid #2a3450;
+  }
+  .legend-item {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 12px; color: #9aa4bd;
+  }
+  .legend-dot {
+    width: 12px; height: 12px; border-radius: 50%;
+  }
+  .legend-dot.locked { background: #3a3a4a; border: 1px dashed #666; }
+  .legend-dot.cleared { background: #ffe27a; border: 2px solid #ffe27a; }
+  .legend-dot.current {
+    background: #ffe27a; border: 2px solid #ffe27a;
+    box-shadow: 0 0 10px rgba(255,226,122,0.7);
+    animation: legPulse 1.5s ease-in-out infinite;
+  }
+  @keyframes legPulse {
+    0%,100% { box-shadow: 0 0 8px rgba(255,226,122,0.6); }
+    50%     { box-shadow: 0 0 18px rgba(255,226,122,1); }
+  }
+  .legend-dot.available { background: #6ca8ff; border: 1px solid #fff; }
+
+  .top-bar .spacer { flex: 1; }
+  .nav-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 8px 16px; font-size: 13px; font-weight: 600;
+    border-radius: 8px; border: 1px solid #3a4a70;
+    background: linear-gradient(180deg, #1a2240, #10162a);
+    color: #e4e6eb; cursor: pointer; transition: all .18s;
+  }
+  .nav-btn:hover { border-color: #6ca8ff; box-shadow: 0 0 12px rgba(108,168,255,0.25); transform: translateY(-1px); }
+  .nav-btn-gold { border-color: #a88e2c; color: #ffe27a; background: linear-gradient(180deg, #4a3d0a, #2f2808); }
+  .nav-btn-gold:hover { border-color: #ffe27a; box-shadow: 0 0 14px rgba(255,226,122,0.3); }
+
+  /* 主区域 */
+  .main-area {
+    position: fixed; top: 56px; left: 0; right: 0; bottom: 0;
+    display: flex;
+  }
+  .map-wrap {
+    flex: 1; overflow: auto;
+    padding: 16px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  #mapCanvas {
+    max-width: 100%; max-height: 100%;
+    border-radius: 12px;
+    border: 1px solid #2a3450;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.03);
+    cursor: default;
+  }
+
+  /* 右侧边栏 */
+  .sidebar {
+    width: 240px; flex-shrink: 0;
+    background: linear-gradient(180deg, rgba(13,18,32,0.98), rgba(10,14,26,0.95));
+    border-left: 1px solid #2a3450;
+    padding: 20px 16px;
+    overflow-y: auto;
+  }
+  .sidebar h3 {
+    font-size: 13px; font-weight: 700; color: #e4e6eb;
+    margin-bottom: 10px; padding-bottom: 8px;
+    border-bottom: 1px solid #2a3450;
+    letter-spacing: 1px;
+  }
+  .stat-block {
+    margin-bottom: 16px;
+  }
+  .stat-label {
+    font-size: 12px; color: #9aa4bd; margin-bottom: 6px;
+  }
+  .progress-bar {
+    height: 8px; background: #1a2240; border-radius: 4px; overflow: hidden;
+    border: 1px solid #2a3450;
+  }
+  .progress-fill {
+    height: 100%; border-radius: 4px; width: 0%;
+    transition: width 0.5s ease;
+  }
+  #barUnlock { background: linear-gradient(90deg, #6ca8ff, #88ccff); box-shadow: 0 0 8px rgba(108,168,255,0.4); }
+  #barClear  { background: linear-gradient(90deg, #ffe27a, #ffcc44); box-shadow: 0 0 8px rgba(255,226,122,0.4); }
+
+  /* 主题图例 */
+  .theme-legend {
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .theme-item {
+    display: flex; align-items: center; gap: 8px;
+    padding: 6px 8px; border-radius: 6px;
+    border: 1px solid transparent;
+    transition: background .15s;
+    cursor: default;
+  }
+  .theme-item:hover { background: rgba(255,255,255,0.03); border-color: #2a3450; }
+  .theme-color {
+    width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+  }
+  .theme-emoji { font-size: 14px; }
+  .theme-name { font-size: 12px; color: #e4e6eb; flex: 1; }
+  .theme-count { font-size: 11px; color: #7a86a0; }
+
+  /* 底部按钮 */
+  .sidebar-footer {
+    margin-top: 20px; padding-top: 14px;
+    border-top: 1px solid #2a3450;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .sidebar-footer .nav-btn { width: 100%; justify-content: center; }
+
+  /* Tooltip */
+  .map-tooltip {
+    position: fixed; z-index: 100;
+    display: none;
+    padding: 8px 12px;
+    background: rgba(10,14,26,0.96);
+    border: 1px solid #3a4a70;
+    border-radius: 8px;
+    font-size: 12px; color: #e4e6eb;
+    line-height: 1.5;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.5);
+    pointer-events: none;
+    max-width: 220px;
+  }
+  .map-tooltip b { color: #ffe27a; font-weight: 700; }
+
+  /* 响应式 */
+  @media (max-width: 1100px) {
+    .sidebar { width: 200px; padding: 16px 12px; }
+    .legend { display: none; }
+  }
+  @media (max-width: 780px) {
+    .main-area { flex-direction: column; }
+    .sidebar {
+      width: 100%; max-height: 200px;
+      border-left: none; border-top: 1px solid #2a3450;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- 顶栏 -->
+<div class="top-bar">
+  <span class="top-title">🌍 世界地图</span>
+  <div class="legend">
+    <div class="legend-item"><span class="legend-dot current"></span>当前</div>
+    <div class="legend-item"><span class="legend-dot available"></span>可玩</div>
+    <div class="legend-item"><span class="legend-dot cleared"></span>已通关</div>
+    <div class="legend-item"><span class="legend-dot locked"></span>未解锁</div>
+  </div>
+  <div class="spacer"></div>
+  <button class="nav-btn-gold nav-btn" onclick="location.href='levels.html'">📋 列表视图</button>
+  <button class="nav-btn" onclick="location.href='index.html'">← 返回主页</button>
+</div>
+
+<!-- 主区域 -->
+<div class="main-area">
+  <div class="map-wrap">
+    <canvas id="mapCanvas" width="1200" height="760"></canvas>
+  </div>
+
+  <!-- 右侧边栏 -->
+  <aside class="sidebar">
+    <h3>📊 进度</h3>
+
+    <div class="stat-block">
+      <div class="stat-label" id="statUnlock">已解锁: 0/500</div>
+      <div class="progress-bar"><div class="progress-fill" id="barUnlock"></div></div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-label" id="statClear">已通关: 0/500</div>
+      <div class="progress-bar"><div class="progress-fill" id="barClear"></div></div>
+    </div>
+
+    <h3 style="margin-top: 18px;">🎨 主题图例</h3>
+    <div class="theme-legend" id="themeLegend"></div>
+
+    <div class="sidebar-footer">
+      <button class="nav-btn" onclick="location.href='index.html'">🏭 返回主页</button>
+    </div>
+  </aside>
+</div>
+
+<!-- 依赖脚本 -->
+<script src="js/data_levels.js"></script>
+<script src="js/save.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/level_page.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 构建侧边栏主题图例
+    const legend = document.getElementById('themeLegend');
+    if (legend && window.LevelPage) {
+      const groups = LevelPage.groupByTheme(window.LEVELS || []);
+      let h = '';
+      for (const g of groups) {
+        const t = g.theme;
+        h += `<div class="theme-item">
+          <span class="theme-color" style="background:${t.color}"></span>
+          <span class="theme-emoji">${t.emoji}</span>
+          <span class="theme-name">${t.name}</span>
+          <span class="theme-count">${g.levels.length}</span>
+        </div>`;
+      }
+      legend.innerHTML = h;
+    }
+    // 渲染地图
+    if (window.LevelPage && typeof LevelPage.renderMapPage === 'function') {
+      LevelPage.renderMapPage();
+    }
+  });
+</script>
+</body>
+</html>
