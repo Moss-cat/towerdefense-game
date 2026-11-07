@@ -268,278 +268,78 @@ window.Core.ScreenShake = {
     // ============================================================
     // 增强版 drawTower — 底座/炮管/元素特效/动效/光环
     // ============================================================
-    C.drawTower = function (ctx, t) {
-        var data = window.TOWER_DATA[t.type] || {};
+    C.drawTower = function (ctx, tw) {
+        var data = window.TOWER_DATA[tw.type] || {};
         var col = data.color || '#888899';
         var glow = data.glow || '#aaa';
-        var element = data.element || '';
         var proto = data.proto || 'archer';
         var rarity = data.rarity || '普通';
-        var lvl = t.level || 1;
-        var t = Date.now() * 0.001;
-        var cx = t.x, cy = t.y;
-        if (t._notOnGrid) { /* nop but keep var */ }
+        var lvl = tw.level || 1;
+        var time = Date.now() * 0.001;
+        var cx = tw.x, cy = tw.y;
 
-        // === 底座阴影 ===
-        ctx.fillStyle = 'rgba(0,0,0,0.35)';
-        ctx.beginPath(); ctx.ellipse(cx, cy + 14, 18, 6, 0, 0, Math.PI*2); ctx.fill();
-
-        // === 底座 (渐变色 + 外描边 + 螺栓) ===
-        var baseGrad = ctx.createRadialGradient(cx-4, cy-4, 2, cx, cy, 18);
-        baseGrad.addColorStop(0, '#3a4058');
-        baseGrad.addColorStop(0.6, '#242838');
-        baseGrad.addColorStop(1, '#12152a');
-        ctx.fillStyle = baseGrad;
-        ctx.beginPath(); ctx.arc(cx, cy, 18, 0, Math.PI*2); ctx.fill();
-        ctx.lineWidth = 2; ctx.strokeStyle = '#0a0d1a';
-        ctx.stroke();
-
-        // 内圈颜色（按稀有度+元素渐变）
-        var innerGrad = ctx.createRadialGradient(cx-3, cy-3, 1, cx, cy, 14);
-        innerGrad.addColorStop(0, C._lighten(col, 0.25));
-        innerGrad.addColorStop(1, col);
-        ctx.fillStyle = innerGrad; ctx.globalAlpha = 0.6;
-        ctx.beginPath(); ctx.arc(cx, cy, 14, 0, Math.PI*2); ctx.fill();
-        ctx.globalAlpha = 1;
-
-        // 稀有度外圈脉动（金/紫/蓝发光）
+        // === 稀有度脉动光环 ===
         var rareGlow = { '普通':'#9aa4bd','稀有':'#6bff6b','史诗':'#c060ff','传奇':'#ffd93d','神话':'#ff5a2a' };
         var rg = rareGlow[rarity] || '#9aa4bd';
-        ctx.strokeStyle = rg; ctx.lineWidth = 1.5;
-        ctx.globalAlpha = 0.4 + Math.sin(t*2 + t._spawnOffset||0)*0.2;
-        ctx.beginPath(); ctx.arc(cx, cy, 16, 0, Math.PI*2); ctx.stroke();
+        var pulse = 0.18 + Math.sin(time*2 + (tw._spawnOffset||0))*0.1;
+        ctx.globalAlpha = pulse;
+        ctx.fillStyle = rg;
+        ctx.beginPath(); ctx.arc(cx, cy, 20 + Math.sin(time*3)*2, 0, Math.PI*2); ctx.fill();
         ctx.globalAlpha = 1;
 
-        // 螺栓 (底座上 3 颗)
-        ctx.fillStyle = '#555566'; ctx.strokeStyle = '#222233'; ctx.lineWidth = 1;
-        for(var b=0;b<3;b++){
-            var ba = b*Math.PI*2/3 - Math.PI/2;
-            var bx = cx + Math.cos(ba)*15, by = cy + Math.sin(ba)*15;
-            ctx.beginPath(); ctx.arc(bx, by, 1.8, 0, Math.PI*2); ctx.fill(); ctx.stroke();
+        // === 锻造塔额外光环 ===
+        var useProto = proto;
+        if(tw.isForged){
+            ctx.strokeStyle = '#ffd93d'; ctx.lineWidth = 1;
+            ctx.globalAlpha = 0.5 + Math.sin(time*3)*0.3;
+            ctx.beginPath(); ctx.arc(cx, cy, 22 + Math.sin(time*2), 0, Math.PI*2); ctx.stroke();
+            ctx.globalAlpha = 1;
+            useProto = 'forge'; // 锻造塔用特殊模板
         }
 
-        // === 炮管 (旋转) ===
-        var ang = t.angle || 0;
-        ctx.save(); ctx.translate(cx, cy); ctx.rotate(ang);
+        // === 16x16 像素炮塔身体 ===
+        ctx.imageSmoothingEnabled = false;
+        C.drawPixelTower(ctx, cx, cy, useProto, col, glow, 2.2);
+        ctx.imageSmoothingEnabled = true;
 
-        // 炮管按 proto 不同造型
-        ctx.lineWidth = 2;
-        switch(proto){
-            case 'archer':
-                // 弓手 — 长管 + 尖头箭
-                ctx.fillStyle = col; ctx.strokeStyle = C._darken(col, 0.3);
-                ctx.fillRect(4, -2, 14, 4); ctx.strokeRect(4, -2, 14, 4);
-                ctx.fillStyle = C._lighten(col, 0.3);
-                ctx.beginPath();
-                ctx.moveTo(18, -3); ctx.lineTo(24, 0); ctx.lineTo(18, 3);
-                ctx.closePath(); ctx.fill(); ctx.stroke();
-                // 尾翼
-                ctx.fillStyle = C._darken(col, 0.2);
-                ctx.beginPath();
-                ctx.moveTo(4, -4); ctx.lineTo(6, -2); ctx.lineTo(4, 0);
-                ctx.closePath(); ctx.fill(); ctx.stroke();
-                break;
-            case 'cannon':
-                // 火炮 — 粗管 + 炮口 + 前管环
-                ctx.fillStyle = col; ctx.strokeStyle = C._darken(col, 0.3);
-                ctx.fillRect(-2, -6, 22, 12); ctx.strokeRect(-2, -6, 22, 12);
-                ctx.fillStyle = C._darken(col, 0.2);
-                ctx.fillRect(14, -7, 6, 14); ctx.strokeRect(14, -7, 6, 14);
-                // 炮口圆
-                ctx.fillStyle = '#000';
-                ctx.beginPath(); ctx.arc(20, 0, 2.5, 0, Math.PI*2); ctx.fill();
-                // 散热管
-                ctx.fillStyle = C._lighten(col, 0.15);
-                ctx.fillRect(0, -9, 8, 3); ctx.strokeRect(0, -9, 8, 3);
-                break;
-            case 'laser':
-                // 激光 — 细管 + 透镜 + 内部能量脉动
-                ctx.fillStyle = '#44445a'; ctx.strokeStyle = '#222233';
-                ctx.fillRect(2, -3, 20, 6); ctx.strokeRect(2, -3, 20, 6);
-                // 能量核心脉动
-                ctx.fillStyle = col; ctx.globalAlpha = 0.6 + Math.sin(t*8)*0.3;
-                ctx.fillRect(4, -1.5, 16, 3);
-                ctx.globalAlpha = 1;
-                // 透镜
-                ctx.fillStyle = C._lighten(col, 0.4);
-                ctx.beginPath(); ctx.arc(22, 0, 3, 0, Math.PI*2); ctx.fill(); ctx.stroke();
-                // 透镜光晕
-                ctx.fillStyle = col; ctx.globalAlpha = 0.3 + Math.sin(t*4)*0.2;
-                ctx.beginPath(); ctx.arc(22, 0, 5 + Math.sin(t*6), 0, Math.PI*2); ctx.fill();
-                ctx.globalAlpha = 1;
-                break;
-            case 'storm':
-                // 风暴 — 双管 + 旋转
-                ctx.fillStyle = col; ctx.strokeStyle = C._darken(col, 0.3);
-                var spin = t * 8; // 双管自转
-                for(var sb=-1; sb<=1; sb+=2){
-                    ctx.save(); ctx.rotate(spin);
-                    ctx.fillRect(-2, sb*5 - 2, 14, 4);
-                    ctx.strokeRect(-2, sb*5 - 2, 14, 4);
-                    ctx.beginPath(); ctx.arc(12, sb*5, 2, 0, Math.PI*2); ctx.fill(); ctx.stroke();
-                    ctx.restore();
-                }
-                // 中央球
-                ctx.fillStyle = col;
-                ctx.beginPath(); ctx.arc(0, 0, 4, 0, Math.PI*2); ctx.fill(); ctx.stroke();
-                ctx.fillStyle = '#fff'; ctx.globalAlpha = 0.5 + Math.sin(t*5)*0.3;
-                ctx.beginPath(); ctx.arc(-1.5, -1.5, 1.5, 0, Math.PI*2); ctx.fill();
-                ctx.globalAlpha = 1;
-                break;
-            default:
-                ctx.fillStyle = col; ctx.strokeStyle = glow;
-                ctx.beginPath(); ctx.arc(0, 0, 8, 0, Math.PI*2); ctx.fill(); ctx.stroke();
-        }
-        ctx.restore();
-
-        // === 元素装饰特效 ===
-        C._towerDecor(ctx, t, data, cx, cy, t);
-
-        // === 等级星星 (按稀有度金色/紫色) ===
+        // === 等级 ===
         if(lvl > 1){
-            ctx.font = 'bold 10px sans-serif';
+            ctx.font = 'bold 10px monospace';
             ctx.textAlign = 'center';
+            ctx.fontVariantNumeric = 'tabular-nums';
             var starColor = rarity === '神话' || rarity === '传奇' ? '#ffe27a' : (rarity === '史诗' ? '#c060ff' : '#ffffff');
             ctx.fillStyle = starColor;
-            var starText = 'Lv.' + lvl;
-            ctx.fillText(starText, cx, cy - 24);
+            ctx.fillText('Lv.' + lvl, cx, cy - 22);
         }
 
-        // === 芯片槽 (底座下方) ===
-        var chips = t.chips || [];
-        var chipSize = 5, chipGap = 2;
-        var chipRowW = chips.length * chipSize + Math.max(0, chips.length - 1) * chipGap;
-        if(chipRowW > 0){
-            for(var ci=0; ci<chips.length; ci++){
-                var cix = cx - chipRowW/2 + ci*(chipSize+chipGap) + chipSize/2;
-                var chipCol = chips[ci].color || '#888';
-                ctx.fillStyle = chipCol;
-                ctx.fillRect(cix - chipSize/2, cy + 16, chipSize, chipSize);
-                // 芯片描边 + 微光
-                ctx.strokeStyle = C._lighten(chipCol, 0.4); ctx.lineWidth = 0.5;
-                ctx.strokeRect(cix - chipSize/2, cy + 16, chipSize, chipSize);
-            }
-        }
-
-        // === 锻造塔 (forgeName) 加光环 ===
-        if(t.isForged){
-            ctx.strokeStyle = '#ffd93d'; ctx.lineWidth = 1;
-            ctx.globalAlpha = 0.5 + Math.sin(t*3)*0.3;
-            ctx.beginPath(); ctx.arc(cx, cy, 22 + Math.sin(t*2), 0, Math.PI*2); ctx.stroke();
-            ctx.globalAlpha = 1;
-            // forgeName 悬浮
-            if(t.forgeName){
-                ctx.font = '10px sans-serif'; ctx.fillStyle = '#ffe27a'; ctx.textAlign = 'center';
-                ctx.fillText(t.forgeName, cx, cy - 30);
-            }
+        // === forgeName 悬浮 ===
+        if(tw.forgeName){
+            ctx.font = '10px monospace';
+            ctx.fillStyle = '#ffe27a'; ctx.textAlign = 'center';
+            ctx.fillText(tw.forgeName, cx, cy - 30);
         }
 
         // === 选中圈 + 范围 ===
-        if (window.GameState && window.GameState.selectedTower === t) {
-            var stats = C.computeTowerStats(t);
-            // 范围圈
+        if (window.GameState && window.GameState.selectedTower === tw) {
+            var stats = C.computeTowerStats(tw);
             ctx.strokeStyle = 'rgba(255, 226, 122, 0.5)'; ctx.lineWidth = 1; ctx.setLineDash([6, 4]);
             ctx.beginPath(); ctx.arc(cx, cy, stats.range, 0, Math.PI * 2); ctx.stroke(); ctx.setLineDash([]);
-            // 选中环
             ctx.strokeStyle = '#ffe27a'; ctx.lineWidth = 2;
-            ctx.beginPath(); ctx.arc(cx, cy, 20, 0, Math.PI*2); ctx.stroke();
-            // 四角标识
-            ctx.fillStyle = '#ffe27a';
-            for(var cci=0;cci<4;cci++){
-                var cca = cci*Math.PI/2;
-                var ccx = cx + Math.cos(cca)*20, ccy = cy + Math.sin(cca)*20;
-                ctx.beginPath(); ctx.arc(ccx, ccy, 2, 0, Math.PI*2); ctx.fill();
-            }
+            ctx.strokeRect(cx-18, cy-18, 36, 36);
         }
     };
 
-    // --- 炮塔元素装饰 ---
-    C._towerDecor = function(ctx, t, data, cx, cy, time){
-        var element = data.element || '';
-        switch(element){
-            case '火': case '火2':
-                // 炮口冒火星
-                ctx.fillStyle = '#ffaa44';
-                for(var f=0;f<2;f++){
-                    var fx = cx + Math.cos(t.angle||0)*18 + (Math.random()-0.5)*3;
-                    var fy = cy + Math.sin(t.angle||0)*18 + (Math.random()-0.5)*3;
-                    ctx.globalAlpha = 0.5 - Math.random()*0.3;
-                    ctx.beginPath(); ctx.arc(fx, fy, 1.5, 0, Math.PI*2); ctx.fill();
-                }
-                ctx.globalAlpha = 1;
-                break;
-            case '冰':
-                // 底座冰霜结晶
-                ctx.fillStyle = '#ccefff';
-                ctx.globalAlpha = 0.5;
-                for(var ic=0;ic<3;ic++){
-                    var ica = ic*Math.PI*2/3 + time;
-                    var icx = cx + Math.cos(ica)*19, icy = cy + Math.sin(ica)*19;
-                    ctx.beginPath();
-                    ctx.moveTo(icx, icy-3); ctx.lineTo(icx+1, icy); ctx.lineTo(icx, icy+3);
-                    ctx.lineTo(icx-1, icy); ctx.closePath(); ctx.fill();
-                }
-                ctx.globalAlpha = 1;
-                break;
-            case '雷':
-                // 底座电弧
-                ctx.strokeStyle = '#ffd93d'; ctx.lineWidth = 1;
-                ctx.globalAlpha = 0.6 + Math.sin(time*8)*0.3;
-                for(var ls=0;ls<2;ls++){
-                    var lx = cx + 16 + ls*4, ly = cy - 16 + ls*4;
-                    ctx.beginPath(); ctx.moveTo(cx, cy);
-                    for(var li=0;li<3;li++){
-                        lx += (Math.random()-0.5)*6; ly += (Math.random()-0.5)*6;
-                        ctx.lineTo(lx, ly);
-                    }
-                    ctx.stroke();
-                }
-                ctx.globalAlpha = 1;
-                break;
-            case '毒': case '酸':
-                // 底座冒泡
-                ctx.fillStyle = '#6bff6b';
-                ctx.globalAlpha = 0.4;
-                for(var pb=0;pb<2;pb++){
-                    var pbx = cx + Math.sin(time*2+pb*3)*18;
-                    var pby = cy + Math.cos(time*1.5+pb*2)*18;
-                    ctx.beginPath(); ctx.arc(pbx, pby, 1.5, 0, Math.PI*2); ctx.fill();
-                }
-                ctx.globalAlpha = 1;
-                break;
-            case '虚空': case '暗':
-                // 扭曲粒子环绕
-                ctx.fillStyle = '#c060ff';
-                for(var vp=0;vp<3;vp++){
-                    var vpa = time*1.5 + vp*Math.PI*2/3;
-                    ctx.globalAlpha = 0.4 + Math.sin(vpa*2)*0.3;
-                    ctx.beginPath();
-                    ctx.arc(cx + Math.cos(vpa)*20, cy + Math.sin(vpa)*20, 1.8, 0, Math.PI*2);
-                    ctx.fill();
-                }
-                ctx.globalAlpha = 1;
-                break;
-            case '光': case '圣':
-                // 光芒十字
-                ctx.strokeStyle = '#ffe27a'; ctx.lineWidth = 1;
-                ctx.globalAlpha = 0.5 + Math.sin(time*3)*0.3;
-                ctx.beginPath();
-                ctx.moveTo(cx-22, cy); ctx.lineTo(cx+22, cy);
-                ctx.moveTo(cx, cy-22); ctx.lineTo(cx, cy+22);
-                ctx.stroke();
-                ctx.globalAlpha = 1;
-                break;
-        }
-    };
+    // _towerDecor 现在空壳（像素模板自带视觉，旧装饰逻辑不再需要）
+    C._towerDecor = function(){};
 
     // ============================================================
     // drawChip — 精致芯片图标绘制（八边形 + 稀有度脉动光环 + 中心图标 + 底部数值）
     // ============================================================
+    // drawChip — 像素版芯片图标（16x16 模板 + 稀有度光环 + 数值）
+    // ============================================================
     C.drawChip = function(ctx, chip, cx, cy, size){
         size = size || 40;
         var t = Date.now() * 0.001;
-        var color = chip.color || '#9aa4bd';
-        // 稀有度发光映射
         var rarityMap = {
             '普通': '#9aa4bd', 'N': '#9aa4bd',
             '稀有': '#6bff6b', 'R': '#6bff6b',
@@ -548,82 +348,45 @@ window.Core.ScreenShake = {
             '神话': '#ff5a2a', 'MY': '#ff5a2a'
         };
         var rarity = chip.rarityName || chip.rarity || '普通';
-        var glowColor = rarityMap[rarity] || color;
-        var half = size / 2;
+        var glowColor = rarityMap[rarity] || chip.color || '#9aa4bd';
 
-        ctx.save();
-        ctx.translate(cx, cy);
+        // 像素缩放：根据传入 size 自适应
+        var scale = Math.max(1.5, Math.floor(size / 18));
+        var pixSize = 16 * scale;
+        var pixCx = cx - (size - pixSize) / 2; // 居中偏移
+        var pixCy = cy - (size - pixSize) / 2;
 
-        // --- 稀有度脉动光环 ---
-        var pulse = 0.3 + Math.sin(t * 2.5) * 0.15;
+        // === 稀有度脉动光环 ===
+        var pulse = 0.18 + Math.sin(t * 2.5) * 0.1;
         ctx.globalAlpha = pulse;
         ctx.fillStyle = glowColor;
-        ctx.beginPath();
-        ctx.arc(0, 0, half * 1.2, 0, Math.PI * 2);
-        ctx.fill();
+        ctx.beginPath(); ctx.arc(cx, cy, size*0.6, 0, Math.PI*2); ctx.fill();
         ctx.globalAlpha = 1;
 
-        // --- 外轮廓：八边形 ---
-        ctx.strokeStyle = glowColor;
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        for(var i = 0; i < 8; i++){
-            var a = i * Math.PI / 4 - Math.PI / 8;
-            var r = half * 0.95;
-            if(i === 0) ctx.moveTo(Math.cos(a)*r, Math.sin(a)*r);
-            else ctx.lineTo(Math.cos(a)*r, Math.sin(a)*r);
-        }
-        ctx.closePath();
-        ctx.fillStyle = '#1a2234';
-        ctx.fill();
-        ctx.stroke();
+        // === 16x16 像素芯片主体 ===
+        ctx.imageSmoothingEnabled = false;
+        C.drawPixelChip(ctx, pixCx + pixSize/2, pixCy + pixSize/2, glowColor, rarity, scale);
+        ctx.imageSmoothingEnabled = true;
 
-        // --- 内部 chip 细节轮廓：圆角方形 ---
-        var innerR = half * 0.55;
-        var innerPad = half * 0.2;
-        ctx.strokeStyle = color;
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        ctx.roundRect(-innerR, -innerR + innerPad * 0.3, innerR * 2, innerR * 1.3, 2);
-        ctx.stroke();
-
-        // 底部引脚（金属质感）
-        ctx.fillStyle = color;
-        ctx.globalAlpha = 0.5;
-        for(var p = 0; p < 3; p++){
-            var px = -innerR * 0.7 + p * innerR * 0.7;
-            ctx.fillRect(px, innerR * 0.5, 2, 3);
-        }
-        ctx.globalAlpha = 1;
-
-        // --- 中心图标 / statName ---
-        var iconText = chip.icon || chip.statName || chip.statCn || '◆';
-        ctx.fillStyle = '#e8ecf4';
-        ctx.font = 'bold ' + Math.floor(size * 0.28) + 'px system-ui, sans-serif';
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-        ctx.fillText(iconText, 0, -size * 0.02);
-
-        // --- 底部数值 ---
-        var valText = (chip.value !== undefined && chip.value !== null) 
-            ? chip.value + (chip.unit || '') 
+        // === bottom value ===
+        var valText = (chip.value !== undefined && chip.value !== null)
+            ? chip.value + (chip.unit || '')
             : '';
         if(valText){
+            ctx.font = 'bold 10px monospace';
+            ctx.textAlign = 'center';
             ctx.fillStyle = glowColor;
-            ctx.font = 'bold ' + Math.floor(size * 0.22) + 'px system-ui, sans-serif';
-            ctx.fillText(valText, 0, size * 0.22);
+            ctx.fillText(valText, cx, cy + size*0.42);
         }
 
-        // --- nestedSlots 小树图标 ---
+        // === nestedSlots 小树 ===
         if(chip.nestedSlots && chip.nestedSlots > 0){
+            ctx.font = '9px monospace';
             ctx.fillStyle = '#6bff6b';
-            ctx.font = Math.floor(size * 0.18) + 'px system-ui, sans-serif';
             ctx.textAlign = 'left';
             ctx.textBaseline = 'top';
-            ctx.fillText('🌲×' + chip.nestedSlots, -half + 2, -half + 2);
+            ctx.fillText('🌲×' + chip.nestedSlots, cx - size/2 + 2, cy - size/2 + 2);
         }
-
-        ctx.restore();
     };
 
     // ============================================================
@@ -669,448 +432,577 @@ window.Core.ScreenShake = {
     };
 
     // ============================================================
-    // 增强版 drawEnemy — 眼睛/高光/主题特效/动效
+    // 像素画敌人 — 16x16 科幻像素模板
+    // ============================================================
+
+    // ---- 像素模板 (16行 × 16字符, ' '=透明) ----
+    // 字符映射: .=主色 o=高光 #=暗 e=白眼 E=红瞳 w=金属 W=能量 x=装甲 g=发光核心
+    var PX = {
+      humanoid: [ // 普通杂兵
+        '................',
+        '....hhhhhh......',
+        '...hheeee.h.....',
+        '...hheEee.h.....',
+        '....hhhhhh......',
+        '....oooooo......',
+        '...o######o.....',
+        '...ol####ro.....',
+        '...olwwWWro.....',
+        '...ol###wwro....',
+        '...o######o.....',
+        '....oooooo......',
+        '....ff...ff.....',
+        '....ff...ff.....',
+        '................',
+        '................'
+      ],
+      winged: [ // 飞行无人机
+        '................',
+        '....oooooo......',
+        '...o######o.....',
+        '...o#eE#E#o.....',
+        '...o######o.....',
+        '..ooooooWooooo..',
+        '.oo#########ooo.',
+        'o############o..',
+        '.oo#########ooo.',
+        '..ooooooWooooo..',
+        '...o######o.....',
+        '...o######o.....',
+        '....oooooo......',
+        '................',
+        '................',
+        '................'
+      ],
+      mecha: [ // 机械/重甲
+        '................',
+        '....xxxxx.......',
+        '...xeeeeox......',
+        '...xEExxxox.....',
+        '....xxxxx.......',
+        '...xxxxxxxx.....',
+        '..x#########x...',
+        '..x#xg###gx#x...',
+        '..x#########x...',
+        '..xx##WWW##xx...',
+        '...xxxxxxxx.....',
+        '....xxxxx.......',
+        '...xx...xx......',
+        '...xx...xx......',
+        '................',
+        '................'
+      ],
+      splitter: [ // 分裂 (圆球形)
+        '................',
+        '.....oooo.......',
+        '...o######o.....',
+        '..o#e####e#o....',
+        '..o##g##g##o....',
+        '..o#######g#o...',
+        '..o#g######o....',
+        '..o#######e#o...',
+        '...o######o.....',
+        '....oooooo......',
+        '................',
+        '................',
+        '................',
+        '................',
+        '................',
+        '................'
+      ],
+      bomber: [ // 自爆
+        '................',
+        '.....oooo.......',
+        '....oTTTTTo.....',
+        '....oTNT#o......',
+        '.....oooo.......',
+        '...eE#####E.....',
+        '..o#########o...',
+        '..o#WWWWWg#o....',
+        '..o#########o...',
+        '...o######o.....',
+        '....oooooo......',
+        '....ff...ff.....',
+        '....ff...ff.....',
+        '................',
+        '................',
+        '................'
+      ],
+      elite: [ // 精英 (人形+冠+肩甲)
+        '................',
+        '....gggggg......',
+        '...gghhhhgg.....',
+        '....hhhhhh......',
+        '...hheeee.h.....',
+        '...hheEee.h.....',
+        '....hhhhhh......',
+        '...xoooooox.....',
+        '..x##wwWW##x....',
+        '..x##wwWW##x....',
+        '...xoooooox.....',
+        '....oooooo......',
+        '....ff...ff.....',
+        '....ff...ff.....',
+        '................',
+        '................'
+      ],
+      boss: [ // Boss (大+冠+核心+武器)
+        '...g...g...g....',
+        '..ggggggggg.....',
+        '.ggghhhhhhgg....',
+        '...hhhhhhhh.....',
+        '..hheeeeeehh....',
+        '..hheEeeEehh....',
+        '...hhhhhhhh.....',
+        '..xooooooooox....',
+        '.x##ww###ww##x...',
+        '.x#WWggggWW##x...',
+        '.x##ww###ww##x...',
+        '..xooooooooox....',
+        '...ooooooooo.....',
+        '....ff..ff......',
+        '....ff..ff......',
+        '................'
+      ]
+    };
+
+    // ---- 字符→颜色映射 ----
+    var PX_COLOR = {
+      '.': function(c){ return c; },                    // 主色
+      'o': function(c){ return C._lighten(c, 0.35); },  // 高光
+      '#': function(c){ return C._darken(c, 0.35); },   // 暗部
+      'e': function(c){ return '#ffffff'; },           // 白眼
+      'E': function(c){ return '#ff2a40'; },            // 红瞳
+      'w': function(c){ return '#8899aa'; },            // 武器金属
+      'W': function(c){ return '#ffdd44'; },            // 武器发光/能量
+      'x': function(c){ return C._darken(c, 0.15); },   // 装甲
+      'g': function(c){ return '#00ffe0'; },            // 发光核心
+      'h': function(c){ return C._lighten(c, 0.15); }, // 头盔/头
+      'f': function(c){ return C._darken(c, 0.25); },   // 腿
+      'T': function(c){ return '#ff5a2a'; }             // TNT
+    };
+
+    // 根据敌人选模板
+    function _pickEnemyTemplate(e){
+      if(e.isBoss) return PX.boss;
+      if(e.isElite) return PX.elite;
+      var t = (e.trait||'') + ' ' + (e.shape||'');
+      if(e.flying || e.trait==='飞行') return PX.winged;
+      if(e.trait==='机械') return PX.mecha;
+      if(e.trait==='重甲' || e.trait==='护甲') return PX.mecha;
+      if(e.trait==='自爆') return PX.bomber;
+      if(e.trait==='分裂') return PX.splitter;
+      return PX.humanoid;
+    }
+
+    // 绘制 16x16 像素模板（缩放 scale 倍）
+    C.drawPixelSprite = function(ctx, cx, cy, template, mainColor, scale, flipX){
+      var pad = scale; // 周围留 1px 阴影空间
+      var w = 16 * scale;
+      var h = 16 * scale;
+      var x0 = cx - w/2;
+      var y0 = cy - h/2;
+
+      // 整体阴影（像素化）
+      ctx.fillStyle = 'rgba(0,0,0,0.35)';
+      for(var sx=0; sx<4; sx++){
+        ctx.fillRect(x0 + 2*scale + sx*scale, y0 + h - scale, 4*scale - sx*scale, scale);
+      }
+
+      for(var r=0; r<16; r++){
+        var row = template[r];
+        for(var c=0; c<16; c++){
+          var ch = row[c] || ' ';
+          if(ch === ' ') continue;
+          var colFn = PX_COLOR[ch];
+          if(!colFn) continue;
+          var px = x0 + (flipX ? (15 - c) : c) * scale;
+          var py = y0 + r * scale;
+          ctx.fillStyle = colFn(mainColor);
+          ctx.fillRect(px, py, scale, scale);
+        }
+      }
+    };
+
+    // ============================================================
+    // 像素炮塔 & 芯片 — 16x16 模板
+    // ============================================================
+
+    var PX_TOWER = {
+      archer: [ // 弓手塔: 长管 + 箭
+        '................',
+        '................',
+        '.....ggggg......',
+        '....ggggggg.....',
+        '....xxxxxwwww..',
+        '....xxxxxxwwww.',
+        '....xxxxxwwwwww',
+        '....gggggWWWWW.',
+        '....ggggggggg...',
+        '...dd####dbbbd..',
+        '..dd####dddbbbd.',
+        '..d###########d.',
+        '..d###########d.',
+        '...dd####dddbd..',
+        '....dddddddddd..',
+        '................'
+      ],
+      cannon: [ // 火炮: 粗管 + 炮口
+        '................',
+        '................',
+        '.......xxx......',
+        '......xxxxx.....',
+        '.....xxxxxWW...',
+        '....xxxxxWWWW..',
+        '....xxxxxWWWWW.',
+        '....xxxxxWWWWW.',
+        '....ggggggg.....',
+        '...dd####dbbbd..',
+        '..dd####dddbbbd.',
+        '..d###########d.',
+        '..d###########d.',
+        '...dd####dddbd..',
+        '....dddddddddd..',
+        '................'
+      ],
+      laser: [ // 激光塔: 细管 + 能量水晶
+        '................',
+        '.......ggg......',
+        '......ggggg.....',
+        '.......ggg......',
+        '......xxxgggx...',
+        '.....xxxxxxx....',
+        '......xxxgggx...',
+        '.....xxxxxxx....',
+        '.....xxgggxxx....',
+        '...dd####dbbbd..',
+        '..dd####dddbbbd.',
+        '..d###########d.',
+        '..d###########d.',
+        '...dd####dddbd..',
+        '....dddddddddd..',
+        '................'
+      ],
+      storm: [ // 风暴塔: 双管 + 旋转
+        '................',
+        '................',
+        '....gg...gg.....',
+        '....xxx.xxx.....',
+        '....xxxggxxx....',
+        '....xxxggxxx....',
+        '.....xxgggxx....',
+        '......ggggg.....',
+        '.....gggggg.....',
+        '...dd####dbbbd..',
+        '..dd####dddbbbd.',
+        '..d###########d.',
+        '..d###########d.',
+        '...dd####dddbd..',
+        '....dddddddddd..',
+        '................'
+      ],
+      forge: [ // 锻造/合成塔: 额外光环
+        '................',
+        '....o..g..o.....',
+        '....ooooooo.....',
+        '....ogggggg.....',
+        '....ggggggg.....',
+        '....gggWWggg....',
+        '....ggggggg.....',
+        '....ggggggg.....',
+        '....ggggggg.....',
+        '...dd####dbbbd..',
+        '..dd####dddbbbd.',
+        '..d###########d.',
+        '..d###########d.',
+        '...dd####dddbd..',
+        '....dddddddddd..',
+        '................'
+      ]
+    };
+
+    var PX_TOWER_COLOR = {
+      'g': function(c){ return C._lighten(c, 0.25); },   // 炮塔中色
+      'G': function(c){ return c; },                     // 炮塔主色
+      'x': function(c){ return C._darken(c, 0.15); },  // 装甲
+      'd': function(c){ return '#1a1e30'; },            // 底座暗
+      'b': function(c){ return '#2a3050'; },            // 底座亮
+      'w': function(c){ return '#aaaaaa'; },            // 武器金属
+      'W': function(c){ return '#ffdd44'; },            // 武器发光
+      '.': function(c){ return null; }                  // 透明
+    };
+
+    var PX_CHIP = {
+      common: [   // 普通: 简单方形
+        '................',
+        '................',
+        '....########....',
+        '...#........#...',
+        '..#..........#..',
+        '..#..oooooooo..#',
+        '..#..ooxxxooo..#',
+        '..#..oxgggxoo..#',
+        '..#..ooxxxooo..#',
+        '..#..oooooooo..#',
+        '..#..........#..',
+        '...#........#...',
+        '....########....',
+        '................',
+        '................',
+        '................'
+      ],
+      rare: [   // 稀有: 六边形
+        '................',
+        '.....gggggg.....',
+        '....gggggggg....',
+        '...gggggggggg...',
+        '..gggggggggggg..',
+        '..ggooooooooogg.',
+        '..ggoxxxxggoggg.',
+        '..ggoxggxggoggg.',
+        '..ggoxxxxggoggg.',
+        '..ggooooooooogg.',
+        '..gggggggggggg..',
+        '...gggggggggg...',
+        '....gggggggg....',
+        '.....gggggg.....',
+        '................',
+        '................'
+      ],
+      epic: [   // 史诗: 八边形 + 光环
+        '................',
+        '....#..####..#..',
+        '...####....####.',
+        '..###........###',
+        '..#............#',
+        '..#...oooooo...#',
+        '..#...oxxxxxx..#',
+        '..#...oxggggx..#',
+        '..#...oxxxxxx..#',
+        '..#...oooooo...#',
+        '..#............#',
+        '..###........###',
+        '...####....####.',
+        '....#..####..#..',
+        '................',
+        '................'
+      ],
+      legendary: [   // 传奇: 多光环 + 星
+        '................',
+        '....#........#..',
+        '...####....####.',
+        '..###..#########',
+        '..#..##########.',
+        '..#..##########.',
+        '..#..##ooooo##..',
+        '..#..##oxxxx##..',
+        '..#..##oxggx##..',
+        '..#..##oxxxx##..',
+        '..#..##########.',
+        '..#..##########.',
+        '..###..#########',
+        '...####....####.',
+        '....#........#..',
+        '................'
+      ],
+      mythic: [   // 神话: 十字 + 皇冠
+        '.......ggg......',
+        '......ggggg.....',
+        '...gggggggggggg.',
+        '...gggggggggggg.',
+        'gggggggggggggggg',
+        'gggggg########gg',
+        'gggg#oooooooo#gg',
+        'ggg#oxxxxxxx#ggg',
+        'ggg#oxgggggx#ggg',
+        'ggg#oxxxxxxx#ggg',
+        'gggg#oooooooo#gg',
+        'gggggg########gg',
+        'gggggggggggggggg',
+        '...gggggggggggg.',
+        '...gggggggggggg.',
+        '................'
+      ]
+    };
+
+    // 绘制 16x16 像素模板（炮塔专用，按 proto 选模板）
+    function _pickTowerTemplate(proto){
+      return PX_TOWER[proto] || PX_TOWER.archer;
+    }
+    function _pickChipTemplate(rarity){
+      return PX_CHIP[rarity] || PX_CHIP.common;
+    }
+
+    C.drawPixelTower = function(ctx, cx, cy, proto, mainColor, glow, scale){
+      scale = scale || 2;
+      var tmpl = _pickTowerTemplate(proto);
+      var w = 16 * scale, h = 16 * scale;
+      var x0 = cx - w/2, y0 = cy - h/2;
+      // 像素化阴影
+      ctx.fillStyle = 'rgba(0,0,0,0.4)';
+      for(var sx=0; sx<4; sx++){
+        ctx.fillRect(x0 + 2*scale + sx*scale, y0 + h - scale, 4*scale - sx*scale, scale);
+      }
+      for(var r=0; r<16; r++){
+        var row = tmpl[r];
+        for(var c=0; c<16; c++){
+          var ch = row[c] || '.';
+          var colFn = PX_TOWER_COLOR[ch];
+          if(!colFn) continue;
+          var col = colFn(mainColor);
+          if(!col) continue;
+          ctx.fillStyle = col;
+          ctx.fillRect(x0 + c*scale, y0 + r*scale, scale, scale);
+        }
+      }
+    };
+
+    C.drawPixelChip = function(ctx, cx, cy, chipMainColor, rarity, scale){
+      scale = scale || 2;
+      var tmpl = _pickChipTemplate(rarity);
+      var w = 16 * scale, h = 16 * scale;
+      var x0 = cx - w/2, y0 = cy - h/2;
+      // 稀有度光环
+      var glowR = rarity === '神话' ? 18 : rarity === '传奇' ? 15 : rarity === '史诗' ? 12 : 8;
+      ctx.globalAlpha = 0.15;
+      ctx.fillStyle = chipMainColor;
+      ctx.beginPath(); ctx.arc(cx, cy, glowR + scale, 0, Math.PI*2); ctx.fill();
+      ctx.globalAlpha = 1;
+
+      for(var r=0; r<16; r++){
+        var row = tmpl[r];
+        for(var c=0; c<16; c++){
+          var ch = row[c] || '.';
+          var col = null;
+          switch(ch){
+            case '#': col = chipMainColor; break;
+            case 'G': col = C._darken(chipMainColor, 0.2); break;
+            case 'g': col = C._lighten(chipMainColor, 0.25); break;
+            case 'o': col = C._lighten(chipMainColor, 0.5); break;
+            case 'x': col = C._darken(chipMainColor, 0.1); break;
+            default: col = null;
+          }
+          if(!col) continue;
+          ctx.fillStyle = col;
+          ctx.fillRect(x0 + c*scale, y0 + r*scale, scale, scale);
+        }
+      }
+    };
+
+    // ============================================================
+    // 像素版 drawEnemy — 16x16 模板 + 光环 + 状态圈 + HP bar
     // ============================================================
     C.drawEnemy = function (ctx, e) {
         var t = Date.now() * 0.001;
         var size = e.size || 14;
         var cx = e.x, cy = e.y;
+        var col = e.color || '#aabbcc';
 
-        // === Aura / 光环 ===
+        // 像素缩放：根据敌人大小自适应
+        var scale = 2; // 16*2=32px 默认
+        if(e.isBoss) scale = 3;    // 16*3=48px
+        else if(e.isElite) scale = 2.5; // 40px
+        else if(size < 10) scale = 1.5;  // 24px
+        var flipX = e._flip ? true : false;
+
+        // === Boss/精英 光环 ===
         if (e.isBoss) {
-            // Boss — 双层脉动光环
             ctx.globalAlpha = 0.25 + Math.sin(t*4)*0.08;
-            ctx.fillStyle = e.color;
-            ctx.beginPath(); ctx.arc(cx, cy, size+18+Math.sin(t*2)*3, 0, Math.PI*2); ctx.fill();
-            ctx.globalAlpha = 0.12;
+            ctx.fillStyle = col;
+            ctx.beginPath(); ctx.arc(cx, cy, 28 + Math.sin(t*2)*3, 0, Math.PI*2); ctx.fill();
+            ctx.globalAlpha = 0.15;
             ctx.fillStyle = '#ffd93d';
-            ctx.beginPath(); ctx.arc(cx, cy, size+28+Math.sin(t*3)*4, 0, Math.PI*2); ctx.fill();
+            ctx.beginPath(); ctx.arc(cx, cy, 38 + Math.sin(t*3)*4, 0, Math.PI*2); ctx.fill();
             ctx.globalAlpha = 1;
         } else if (e.isElite) {
-            // 精英 — 单环 + 角光
             ctx.globalAlpha = 0.22;
-            ctx.fillStyle = e.color;
-            ctx.beginPath(); ctx.arc(cx, cy, size+12+Math.sin(t*3)*2, 0, Math.PI*2); ctx.fill();
+            ctx.fillStyle = col;
+            ctx.beginPath(); ctx.arc(cx, cy, 22 + Math.sin(t*3)*2, 0, Math.PI*2); ctx.fill();
             ctx.globalAlpha = 1;
         }
 
-        // === 身体 (带高光阴影) ===
-        C._enemyBody(ctx, e, cx, cy, size, t);
+        // === 状态圈（像素版简化：几个像素方块） ===
+        var pixW = 16 * scale;
+        var pixH = 16 * scale;
+        var px0 = cx - pixW/2;
+        var py0 = cy - pixH/2;
 
-        // === 装饰主题特效 ===
-        C._enemyDecor(ctx, e, cx, cy, size, t);
+        if(e.stunned){
+            // 眩晕：头顶三颗旋转星星（像素化）
+            for(var si=0; si<3; si++){
+                var ang = t*2 + si*Math.PI*2/3;
+                var sx = cx + Math.cos(ang)*10;
+                var sy = cy - pixH/2 - 6 + Math.sin(ang)*4;
+                ctx.fillStyle = '#ffdd44';
+                ctx.fillRect(sx-2, sy-2, 4, 4);
+            }
+        }
+        if(e.suppressed){
+            ctx.strokeStyle = '#aa44ff'; ctx.lineWidth = 1.5;
+            ctx.globalAlpha = 0.5 + Math.sin(t*8)*0.3;
+            ctx.beginPath(); ctx.arc(cx, cy, pixW*0.7, 0, Math.PI*2); ctx.stroke();
+            ctx.globalAlpha = 1;
+        }
+        if(e.freezeDur > 0){
+            // 冰冻：周围飘雪花（像素点）
+            ctx.fillStyle = '#88ddff';
+            for(var fi=0; fi<4; fi++){
+                var fx = px0 + Math.sin(t*3+fi)*pixW*0.4 + pixW/2;
+                var fy = py0 + Math.cos(t*2+fi*1.5)*pixH*0.4 + pixH/2;
+                ctx.fillRect(fx-1, fy-1, 2, 2);
+            }
+        }
+        if(e.dotTimer > 0){
+            // 燃烧/中毒：泡泡
+            var dc = (e.trait==='亡灵') ? '#44ff88' : '#ff8844';
+            ctx.fillStyle = dc;
+            for(var di=0; di<3; di++){
+                var bx = cx + Math.sin(t*5+di)*8;
+                var by = cy - pixH/2 - 2 - ((t*20 + di*8)%10);
+                ctx.globalAlpha = 0.5;
+                ctx.fillRect(bx-1, by-1, 2, 2);
+            }
+            ctx.globalAlpha = 1;
+        }
+        if(e.shield > 0){
+            ctx.strokeStyle = '#88ccff'; ctx.lineWidth = 2;
+            ctx.globalAlpha = 0.5 + Math.sin(t*6)*0.2;
+            ctx.beginPath(); ctx.arc(cx, cy, pixW*0.75, 0, Math.PI*2); ctx.stroke();
+            ctx.globalAlpha = 1;
+        }
 
-        // === 眼睛 ===
-        C._enemyEyes(ctx, e, cx, cy, size, t);
-
-        // === 状态圈 (冰冻/燃烧/中毒/眩晕/护盾) ===
-        C._enemyStatus(ctx, e, cx, cy, size, t);
+        // === 16x16 像素身体 ===
+        var bob = Math.sin(t*6 + (e._spawnOffset||0)) * 1.5;
+        var tmpl = _pickEnemyTemplate(e);
+        ctx.imageSmoothingEnabled = false; // 硬边像素
+        C.drawPixelSprite(ctx, cx, cy + bob, tmpl, col, scale, flipX);
+        ctx.imageSmoothingEnabled = true;
 
         // === HP bar ===
-        var hpRatio = e.hp / e.maxHp, barW = size * 2, barY = cy - size - 10;
-        // 背景条
-        ctx.fillStyle = 'rgba(0,0,0,0.7)';
+        var hpRatio = e.hp / e.maxHp;
+        var barW = Math.max(24, pixW * 0.9);
+        var barY = cy - pixH/2 - 8;
+        ctx.fillStyle = 'rgba(0,0,0,0.8)';
         ctx.fillRect(cx - barW/2 - 1, barY - 1, barW + 2, 5);
         ctx.fillStyle = '#2a2a30';
         ctx.fillRect(cx - barW/2, barY, barW, 3);
-        // HP 填充
         var hpColor = hpRatio > 0.5 ? '#6bff6b' : (hpRatio > 0.25 ? '#ffd93d' : '#ff5a2a');
         ctx.fillStyle = hpColor;
         ctx.fillRect(cx - barW/2, barY, barW * hpRatio, 3);
-        // Boss/精英 HP 条加光
         if(e.isBoss || e.isElite){
             ctx.globalAlpha = 0.5 + Math.sin(t*6)*0.3;
             ctx.fillStyle = hpColor;
-            ctx.fillRect(cx - barW/2, barY, barW * hpRatio, 1);
+            ctx.fillRect(cx - barW/2, barY - 1, barW * hpRatio, 1);
             ctx.globalAlpha = 1;
         }
     };
 
-    // --- 身体 ---
-    C._enemyBody = function(ctx, e, cx, cy, sz, t){
-        var col = e.color || '#aabbcc';
-        var size = sz;
-        var bob = Math.sin(t*6 + (e._spawnOffset||0)) * 1.5; // 呼吸动效
-        cy += bob;
-
-        ctx.lineWidth = 1.5;
-        ctx.strokeStyle = 'rgba(0,0,0,0.6)';
-
-        // 外描边 (阴影)
-        ctx.fillStyle = 'rgba(0,0,0,0.25)';
-        ctx.beginPath();
-        C._enemyShapePath(ctx, e, cx, cy+2, size);
-        ctx.fill();
-
-        // 主体（渐变）
-        var grad = ctx.createRadialGradient(cx - size*0.3, cy - size*0.3, 2, cx, cy, size);
-        grad.addColorStop(0, C._lighten(col, 0.35));
-        grad.addColorStop(0.6, col);
-        grad.addColorStop(1, C._darken(col, 0.25));
-        ctx.fillStyle = grad;
-        ctx.beginPath();
-        C._enemyShapePath(ctx, e, cx, cy, size);
-        ctx.fill(); ctx.stroke();
-
-        // 飞行敌人画翅膀
-        if(e.flying || e.trait === '飞行'){
-            ctx.fillStyle = C._lighten(col, 0.5);
-            ctx.globalAlpha = 0.6;
-            var wingY = cy - size*0.3;
-            var wingSpread = size * (0.6 + Math.sin(t*12)*0.2);
-            // 左翅
-            ctx.beginPath();
-            ctx.moveTo(cx - size*0.8, wingY);
-            ctx.quadraticCurveTo(cx - size*1.8, wingY - size*0.4, cx - size*1.2, wingY + size*0.1);
-            ctx.quadraticCurveTo(cx - size*1.5, wingY, cx - size*0.8, wingY);
-            ctx.fill();
-            // 右翅
-            ctx.beginPath();
-            ctx.moveTo(cx + size*0.8, wingY);
-            ctx.quadraticCurveTo(cx + size*1.8, wingY - size*0.4, cx + size*1.2, wingY + size*0.1);
-            ctx.quadraticCurveTo(cx + size*1.5, wingY, cx + size*0.8, wingY);
-            ctx.fill();
-            ctx.globalAlpha = 1;
-        }
-
-        // Boss/精英角/王冠
-        if(e.isBoss){
-            ctx.fillStyle = '#ffd93d';
-            ctx.strokeStyle = '#aa8820';
-            ctx.lineWidth = 1;
-            // 三颗王冠
-            for(var k=-1;k<=1;k++){
-                ctx.beginPath();
-                ctx.moveTo(cx + k*size*0.5, cy - size*0.5);
-                ctx.lineTo(cx + k*size*0.6, cy - size*1.1);
-                ctx.lineTo(cx + k*size*0.4, cy - size*0.5);
-                ctx.closePath(); ctx.fill(); ctx.stroke();
-            }
-        } else if(e.isElite){
-            // 精英角
-            ctx.fillStyle = C._darken(col, 0.3);
-            ctx.beginPath();
-            ctx.moveTo(cx - size*0.5, cy - size*0.6);
-            ctx.lineTo(cx - size*0.7, cy - size*1.0);
-            ctx.lineTo(cx - size*0.3, cy - size*0.6);
-            ctx.fill();
-            ctx.beginPath();
-            ctx.moveTo(cx + size*0.5, cy - size*0.6);
-            ctx.lineTo(cx + size*0.7, cy - size*1.0);
-            ctx.lineTo(cx + size*0.3, cy - size*0.6);
-            ctx.fill();
-        }
-    };
-
-    // --- 形状路径 ---
-    C._enemyShapePath = function(ctx, e, cx, cy, size){
-        var s = e.shape;
-        // 精英/Boss 形状升级
-        if(e.isBoss){
-            s = 'diamond'; // Boss 统一菱形
-            size *= 1.2;
-        } else if(e.isElite && s === 'circle'){
-            s = 'hexagon'; // 精英圆形→六边形
-        } else if(e.isElite && s === 'triangle'){
-            s = 'star';
-        }
-        switch(s){
-            case 'triangle':
-                ctx.moveTo(cx, cy - size);
-                ctx.lineTo(cx - size*0.95, cy + size*0.75);
-                ctx.lineTo(cx + size*0.95, cy + size*0.75);
-                ctx.closePath(); break;
-            case 'star':
-                for(var i=0;i<10;i++){
-                    var a = i*Math.PI/5 - Math.PI/2;
-                    var r = i%2===0 ? size : size*0.5;
-                    var px = cx + Math.cos(a)*r, py = cy + Math.sin(a)*r;
-                    if(i===0) ctx.moveTo(px,py); else ctx.lineTo(px,py);
-                }
-                ctx.closePath(); break;
-            case 'diamond':
-                ctx.moveTo(cx, cy - size);
-                ctx.lineTo(cx + size*0.9, cy);
-                ctx.lineTo(cx, cy + size);
-                ctx.lineTo(cx - size*0.9, cy);
-                ctx.closePath(); break;
-            case 'hexagon':
-                for(var h=0;h<6;h++){
-                    var ha = h*Math.PI/3 - Math.PI/2;
-                    var hx = cx + Math.cos(ha)*size, hy = cy + Math.sin(ha)*size;
-                    if(h===0) ctx.moveTo(hx,hy); else ctx.lineTo(hx,hy);
-                }
-                ctx.closePath(); break;
-            case 'square':
-                ctx.rect(cx - size*0.9, cy - size*0.9, size*1.8, size*1.8); break;
-            case 'robot':
-                ctx.rect(cx - size, cy - size*0.7, size*2, size*1.6); break;
-            default: // circle
-                ctx.arc(cx, cy, size, 0, Math.PI*2); break;
-        }
-    };
-
-    // --- 眼睛 ---
-    C._enemyEyes = function(ctx, e, cx, cy, sz, t){
-        var size = sz * (e.isBoss ? 0.25 : 0.22);
-        var yOff = -sz*0.1;
-        var xOff = sz*0.35;
-        // 追踪 —— 朝路径方向看（朝移动方向）
-        var lookX = 0, lookY = 0;
-        if(e._dir){ lookX = Math.cos(e._dir)*size*0.3; lookY = Math.sin(e._dir)*size*0.3; }
-        // Boss/精英 多眼
-        var eyes = e.isBoss ? 3 : 2;
-        var eyeCol = e._eyeColor || '#ffffff';
-        var pupilCol = e._pupilColor || '#000000';
-
-        if(eyes === 3){
-            // 三眼 Boss
-            var offsets = [ [-sz*0.55, yOff+sz*0.15], [0, yOff], [sz*0.55, yOff+sz*0.15] ];
-            offsets.forEach(function(o){
-                ctx.fillStyle = eyeCol;
-                ctx.beginPath(); ctx.arc(cx+o[0], cy+o[1], size, 0, Math.PI*2); ctx.fill();
-                ctx.fillStyle = pupilCol;
-                ctx.beginPath(); ctx.arc(cx+o[0]+lookX*0.5, cy+o[1]+lookY*0.5, size*0.55, 0, Math.PI*2); ctx.fill();
-            });
-        } else {
-            // 普通两眼
-            ctx.fillStyle = eyeCol;
-            ctx.beginPath(); ctx.arc(cx-xOff, cy+yOff, size, 0, Math.PI*2); ctx.fill();
-            ctx.beginPath(); ctx.arc(cx+xOff, cy+yOff, size, 0, Math.PI*2); ctx.fill();
-            ctx.fillStyle = pupilCol;
-            ctx.beginPath(); ctx.arc(cx-xOff+lookX*0.5, cy+yOff+lookY*0.5, size*0.55, 0, Math.PI*2); ctx.fill();
-            ctx.beginPath(); ctx.arc(cx+xOff+lookX*0.5, cy+yOff+lookY*0.5, size*0.55, 0, Math.PI*2); ctx.fill();
-        }
-
-        // 机械敌人画红光扫描线
-        if(e.trait === '机械'){
-            ctx.strokeStyle = '#ff5a2a'; ctx.lineWidth = 1;
-            ctx.globalAlpha = 0.6 + Math.sin(t*10)*0.3;
-            ctx.beginPath();
-            ctx.moveTo(cx-xOff-size, cy+yOff); ctx.lineTo(cx+xOff+size, cy+yOff);
-            ctx.stroke();
-            ctx.globalAlpha = 1;
-        }
-    };
-
-    // --- 主题装饰特效 ---
-    C._enemyDecor = function(ctx, e, cx, cy, sz, t){
-        var size = sz;
-        var element = e.element || '';
-        var trait = e.trait || '';
-
-        switch(element){
-            case '火': case '火2':
-                // 冒火星
-                ctx.fillStyle = '#ffaa44';
-                for(var f=0;f<3;f++){
-                    var fx = cx + Math.sin(t*4+f*2)*size*0.6;
-                    var fy = cy - size + (t*30+f*20)%size*1.5;
-                    ctx.globalAlpha = 0.5 - (t*0.3+f*0.2)%0.5;
-                    ctx.beginPath(); ctx.arc(fx, fy, 1.5, 0, Math.PI*2); ctx.fill();
-                }
-                ctx.globalAlpha = 1;
-                // 底部火焰
-                ctx.fillStyle = 'rgba(255,90,42,0.35)';
-                ctx.beginPath();
-                ctx.moveTo(cx - size*0.6, cy + size*0.7);
-                ctx.quadraticCurveTo(cx - size*0.3, cy + size*1.5, cx, cy + size*0.8 + Math.sin(t*8)*3);
-                ctx.quadraticCurveTo(cx + size*0.3, cy + size*1.5, cx + size*0.6, cy + size*0.7);
-                ctx.fill();
-                break;
-            case '冰':
-                // 雪花
-                ctx.fillStyle = '#ccefff';
-                for(var i=0;i<3;i++){
-                    var sx = cx + Math.sin(t*1.5 + i*2.1)*size*1.2;
-                    var sy = cy + Math.cos(t*1.2 + i*1.7)*size*1.2;
-                    ctx.globalAlpha = 0.6;
-                    ctx.beginPath(); ctx.arc(sx, sy, 1.8, 0, Math.PI*2); ctx.fill();
-                }
-                ctx.globalAlpha = 1;
-                break;
-            case '雷':
-                // 电弧
-                ctx.strokeStyle = '#ffd93d'; ctx.lineWidth = 1;
-                ctx.globalAlpha = 0.7;
-                var sx = cx + size*Math.sin(t*6); var sy = cy - size*1.2;
-                ctx.beginPath(); ctx.moveTo(sx, sy);
-                for(var j=0;j<4;j++){
-                    sx += (Math.random()-0.5)*size*0.5;
-                    sy += size*0.4;
-                    ctx.lineTo(sx, sy);
-                }
-                ctx.stroke();
-                ctx.globalAlpha = 1;
-                break;
-            case '毒': case '酸':
-                // 气泡
-                ctx.fillStyle = '#6bff6b';
-                for(var b=0;b<2;b++){
-                    var bx = cx + Math.sin(t*2+b*3)*size*0.8;
-                    var by = cy - size*0.5 + ((t*40+b*25)%(size*1.5));
-                    ctx.globalAlpha = 0.5;
-                    ctx.beginPath(); ctx.arc(bx, by, 2, 0, Math.PI*2); ctx.fill();
-                }
-                ctx.globalAlpha = 1;
-                break;
-            case '虚空':
-            case '暗':
-                // 虚空粒子环绕
-                ctx.fillStyle = '#c060ff';
-                for(var v=0;v<4;v++){
-                    var va = t*1.5 + v*Math.PI/2;
-                    var vr = size*1.3;
-                    ctx.globalAlpha = 0.4 + Math.sin(va*2)*0.3;
-                    ctx.beginPath(); ctx.arc(cx + Math.cos(va)*vr, cy + Math.sin(va)*vr, 2, 0, Math.PI*2); ctx.fill();
-                }
-                ctx.globalAlpha = 1;
-                break;
-        }
-
-        // trait 专属装饰
-        switch(trait){
-            case '自爆':
-                // 头顶 TNT 警告
-                ctx.fillStyle = '#ff3300';
-                ctx.beginPath();
-                ctx.rect(cx - 6, cy - size*1.6, 12, 8);
-                ctx.fill();
-                ctx.strokeStyle = '#ffffff'; ctx.lineWidth = 1;
-                ctx.strokeRect(cx - 6, cy - size*1.6, 12, 8);
-                // 闪爆
-                ctx.globalAlpha = 0.5 + Math.sin(t*12)*0.5;
-                ctx.fillStyle = '#ff9900';
-                ctx.beginPath(); ctx.arc(cx, cy - size*1.2, 2, 0, Math.PI*2); ctx.fill();
-                ctx.globalAlpha = 1;
-                break;
-            case '分裂':
-                // 分裂裂纹
-                ctx.strokeStyle = 'rgba(255,255,255,0.5)'; ctx.lineWidth = 1;
-                ctx.beginPath();
-                ctx.moveTo(cx - size*0.5, cy - size*0.3);
-                ctx.lineTo(cx - size*0.1, cy);
-                ctx.lineTo(cx + size*0.3, cy - size*0.2);
-                ctx.stroke();
-                break;
-            case '召唤':
-                // 上方小召唤环
-                ctx.strokeStyle = '#aa44ff'; ctx.lineWidth = 1.5;
-                ctx.globalAlpha = 0.5 + Math.sin(t*3)*0.3;
-                ctx.beginPath(); ctx.arc(cx, cy - size*1.5, size*0.5, 0, Math.PI*2); ctx.stroke();
-                ctx.globalAlpha = 1;
-                break;
-            case '护盾':
-                // 环绕护盾六边形
-                ctx.strokeStyle = '#4ab8ff'; ctx.lineWidth = 2;
-                ctx.globalAlpha = 0.6;
-                ctx.beginPath();
-                for(var k=0;k<6;k++){
-                    var ka = k*Math.PI/3 + t*0.5;
-                    var kx = cx + Math.cos(ka)*(size+6);
-                    var ky = cy + Math.sin(ka)*(size+6);
-                    if(k===0) ctx.moveTo(kx,ky); else ctx.lineTo(kx,ky);
-                }
-                ctx.stroke();
-                ctx.globalAlpha = 1;
-                break;
-            case '逆行':
-                // 反向箭头
-                ctx.fillStyle = '#ffd93d';
-                ctx.beginPath();
-                ctx.moveTo(cx + size*1.2, cy);
-                ctx.lineTo(cx + size*0.4, cy - size*0.4);
-                ctx.lineTo(cx + size*0.4, cy + size*0.4);
-                ctx.closePath(); ctx.fill();
-                break;
-            case '治疗':
-                // 绿十字
-                ctx.fillStyle = '#6bff6b';
-                var cw = 4;
-                ctx.fillRect(cx - cw/2 - 1, cy - size*1.3, cw + 2, cw + 6);
-                ctx.fillRect(cx - cw/2 - 4, cy - size*1.3 + cw/2, cw + 8, cw);
-                break;
-            case '首领':
-                // 王冠 (简化)
-                ctx.fillStyle = '#ffe27a';
-                ctx.beginPath();
-                ctx.moveTo(cx - size*0.5, cy - size*0.6);
-                ctx.lineTo(cx, cy - size*1.2);
-                ctx.lineTo(cx + size*0.5, cy - size*0.6);
-                ctx.closePath(); ctx.fill();
-                ctx.strokeStyle = '#aa8820'; ctx.stroke();
-                break;
-        }
-
-        // Boss 专属 —— 地面阴影 + 基座
-        if(e.isBoss){
-            ctx.fillStyle = 'rgba(0,0,0,0.35)';
-            ctx.beginPath(); ctx.ellipse(cx, cy + size*1.2, size*1.2, size*0.4, 0, 0, Math.PI*2); ctx.fill();
-        }
-    };
-
-    // --- 状态圈 ---
-    C._enemyStatus = function(ctx, e, cx, cy, sz, t){
-        var size = sz;
-        // 冰冻
-        if(e.slowed && e.slowTime > 0){
-            ctx.strokeStyle = '#4ab8ff'; ctx.lineWidth = 2;
-            ctx.globalAlpha = 0.5 + Math.sin(t*8)*0.2;
-            ctx.beginPath(); ctx.arc(cx, cy, size+5, 0, Math.PI*2); ctx.stroke();
-            ctx.globalAlpha = 1;
-            // 冻结霜花
-            ctx.fillStyle = '#ccefff';
-            for(var s=0;s<4;s++){
-                var sa = s*Math.PI/2 + t*0.5;
-                ctx.beginPath();
-                ctx.arc(cx + Math.cos(sa)*(size+5), cy + Math.sin(sa)*(size+5), 1.5, 0, Math.PI*2); ctx.fill();
-            }
-        }
-        // 燃烧
-        if(e.dot && e.dot > 0){
-            ctx.fillStyle = '#ff5a2a';
-            for(var d=0;d<4;d++){
-                var dx = cx + (Math.random()-0.5)*size*1.8;
-                var dy = cy + (Math.random()-0.5)*size*1.8 - size*0.3;
-                ctx.globalAlpha = 0.6;
-                ctx.beginPath(); ctx.arc(dx, dy, 1.8, 0, Math.PI*2); ctx.fill();
-            }
-            ctx.globalAlpha = 1;
-        }
-        // 中毒
-        if(e.poison && e.poison > 0){
-            ctx.fillStyle = '#6bff6b';
-            ctx.globalAlpha = 0.5;
-            ctx.beginPath(); ctx.arc(cx - size*0.3 + Math.sin(t*6)*2, cy - size*0.3, 1.5, 0, Math.PI*2); ctx.fill();
-            ctx.beginPath(); ctx.arc(cx + size*0.3 + Math.cos(t*5)*2, cy - size*0.4, 1.5, 0, Math.PI*2); ctx.fill();
-            ctx.globalAlpha = 1;
-        }
-        // 眩晕 (星星)
-        if(e.stunned && e.stunTime > 0){
-            ctx.fillStyle = '#ffd93d';
-            for(var st=0;st<3;st++){
-                var sta = t*3 + st*Math.PI*2/3;
-                var stx = cx + Math.cos(sta)*size*0.8;
-                var sty = cy - size - 4 + Math.sin(sta*2)*2;
-                ctx.save(); ctx.translate(stx, sty); ctx.rotate(sta*2);
-                ctx.beginPath();
-                for(var sn=0;sn<10;sn++){
-                    var r2 = sn%2===0 ? 3 : 1.5;
-                    var a2 = sn*Math.PI/5;
-                    var p2x = Math.cos(a2)*r2, p2y = Math.sin(a2)*r2;
-                    if(sn===0) ctx.moveTo(p2x,p2y); else ctx.lineTo(p2x,p2y);
-                }
-                ctx.closePath(); ctx.fill(); ctx.restore();
-            }
-        }
-        // 护盾条
-        if(e.shield && e.shield > 0){
-            ctx.strokeStyle = '#4ab8ff'; ctx.lineWidth = 2;
-            ctx.globalAlpha = 0.7;
-            ctx.beginPath(); ctx.arc(cx, cy, size+4, 0, Math.PI*2); ctx.stroke();
-            ctx.globalAlpha = 1;
-        }
-    };
+    // --- 老矢量函数保留空壳（避免旧引用报错）---
+    C._enemyBody = function(){};
+    C._enemyShapePath = function(){};
+    C._enemyEyes = function(){};
+    C._enemyDecor = function(){};
+    C._enemyStatus = function(){};
 
     // --- 颜色辅助 ---
     C._lighten = function(hex, amt){

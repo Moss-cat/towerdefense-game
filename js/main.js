@@ -1,8 +1,9 @@
 /* ================================================================
-   main.js — 主协调器 · 双屏幕状态机
+   main.js v2 — 双屏幕状态机 · 解锁模型
    MENU (主菜单) ↔ BATTLE (战斗画面)
-   依赖: save.js, core.js, game.js, shop.js, chip_nesting.js
-   所有子模块 API 保持不变，main.js 只做编排
+   战斗塔栏 = ownedTowers (基础, 无限建造) + craftedTowers (合成)
+   升级/出售使用 GS.gold (战斗临时金币)
+   通关弹 modal 显示 rewardChips + rewardCredits
    ================================================================ */
 (function () {
   'use strict';
@@ -16,7 +17,7 @@
    * 0. 扩展 GameState
    * ========================================================= */
   GS.screen = 'menu';
-  GS.availableLoadout = [];     // 从 saveData.loadout 构建的战斗可用列表
+  GS.availableLoadout = [];     // 所有可建造塔 = owned + crafted (战斗里复制)
   GS.currentLevel = 0;
   GS.totalWavesInLevel = 0;
   GS.waveIndex = 0;
@@ -36,13 +37,13 @@
    * ========================================================= */
   let currentMenuTab = 'shop';
 
-  function bindMenuTabs() {
+  function bindMenuTabs(){
     document.querySelectorAll('.tab-btn').forEach(btn => {
       btn.addEventListener('click', () => switchMenuTab(btn.dataset.tab));
     });
   }
 
-  function switchMenuTab(tab) {
+  function switchMenuTab(tab){
     currentMenuTab = tab;
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
     const shopContainer = $('shopContainer');
@@ -52,42 +53,46 @@
     const loSec = $('loadoutSection');
     const tdSec = $('towerDetailSection');
     const stSec = document.querySelector('.stats-section');
+    const bsSec = document.getElementById('blacksmithSection');
 
     if (levelPanel) levelPanel.style.display = (tab === 'level') ? '' : 'none';
     if (shopContainer) shopContainer.style.display = (tab === 'shop') ? '' : 'none';
     if (centerPanel) centerPanel.style.display = (tab === 'level') ? 'none' : '';
+    if (bsSec) bsSec.style.display = (tab === 'blacksmith') ? '' : 'none';
 
-    if (tab === 'shop') {
+    if (tab === 'shop'){
       if (tdSec) tdSec.style.display = '';
       if (chSec) chSec.style.display = 'none';
       if (loSec) loSec.style.display = 'none';
       if (stSec) stSec.style.display = '';
-    } else if (tab === 'chip') {
+    } else if (tab === 'blacksmith'){
+      // 直接进入铁匠铺
+    } else if (tab === 'chip'){
       if (tdSec) tdSec.style.display = 'none';
       if (chSec) chSec.style.display = '';
       if (loSec) loSec.style.display = '';
       if (stSec) stSec.style.display = '';
       ChipSystem.initMenu();
-    } else if (tab === 'achievement') {
+    } else if (tab === 'achievement'){
       if (tdSec) tdSec.style.display = 'none';
       if (chSec) chSec.style.display = 'none';
       if (loSec) loSec.style.display = 'none';
-      if (stSec) { stSec.style.display = ''; renderAchievements(stSec); }
-    } else if (tab === 'level') {
+      if (stSec){ stSec.style.display = ''; renderAchievements(stSec); }
+    } else if (tab === 'level'){
       initLevelSelector();
     }
     if (window.AudioFX) AudioFX.play('click');
   }
 
   /* =========================================================
-   * 3. 选关 —— 右栏内置网格
+   * 3. 选关
    * ========================================================= */
   let levelPage = 0;
   const LEVEL_PAGE_SIZE = 25;
 
-  function initLevelSelector() {
+  function initLevelSelector(){
     renderLevelGrid();
-    if (!$('prevLevelPageBtn').dataset.bound) {
+    if (!$('prevLevelPageBtn').dataset.bound){
       $('prevLevelPageBtn').addEventListener('click', () => { levelPage = Math.max(0, levelPage - 1); renderLevelGrid(); });
       $('nextLevelPageBtn').addEventListener('click', () => { levelPage = Math.min(Math.ceil((window.LEVEL_COUNT || 500) / LEVEL_PAGE_SIZE) - 1, levelPage + 1); renderLevelGrid(); });
       $('btnStartLevelSelect').addEventListener('click', () => {
@@ -100,7 +105,7 @@
     }
   }
 
-  function renderLevelGrid() {
+  function renderLevelGrid(){
     const grid = $('levelGrid');
     if (!grid) return;
     const LEVEL_COUNT = window.LEVEL_COUNT || 500;
@@ -112,16 +117,16 @@
     const algoIcons = { zigzag: '⇄', snake: '🐍', sCurve: '∿', spiral: '🌀', wave: '〰', stair: '⫘', figure8: '∞', labyrinth: '🧩', canyon: '⛰', cross: '✚' };
 
     let html = '';
-    for (let n = start + 1; n <= end; n++) {
+    for (let n = start + 1; n <= end; n++){
       const level = window.LEVELS[n - 1];
       if (!level) continue;
       const locked = n > ul;
       const cleared = cl.includes(n);
       const t = level.theme || {};
-      html += `<div class="level-card" data-level="${n}" style="cursor:${locked?'not-allowed':'pointer'};border-left:4px solid ${t.pathCenter||'#ffe27a'};background:linear-gradient(135deg,${t.bgTop||'#1a1a2e'},${t.bgBot||'#16213e'});opacity:${locked?0.45:1}">
-        <div style="display:flex;justify-content:space-between;font-weight:bold;color:${t.pathCenter||'#ffe27a'};"><span>#${n}</span><span>${algoIcons[level.algoKey]||'·'} ${cleared?'✓':locked?'🔒':''}</span></div>
-        <div style="font-size:11px;color:#c8d0e0;margin-top:2px;">${t.name||''}</div>
-        <div style="font-size:10px;color:#7a86a0;margin-top:1px;">${level.waveCount}波 · 难度${level.difficulty}</div>
+      html += `<div class="level-card" data-level="${n}" style="cursor:${locked ? 'not-allowed' : 'pointer'};border-left:4px solid ${t.pathCenter || '#ffe27a'};background:linear-gradient(135deg,${t.bgTop || '#1a1a2e'},${t.bgBot || '#16213e'});opacity:${locked ? 0.45 : 1}">
+        <div style="display:flex;justify-content:space-between;font-weight:bold;color:${t.pathCenter || '#ffe27a'};"><span>#${n}</span><span>${algoIcons[level.algoKey] || '·'} ${cleared ? '✓' : locked ? '🔒' : ''}</span></div>
+        <div style="font-size:11px;color:#c8d0e0;margin-top:2px;">${t.name || ''}</div>
+        <div style="font-size:10px;color:#7a86a0;margin-top:1px;">${level.waveCount}波 · 难度${level.difficulty} · 奖励${level.rewardChips || 1}芯片</div>
       </div>`;
     }
     grid.innerHTML = html;
@@ -139,24 +144,24 @@
   /* =========================================================
    * 4. 成就 Tab
    * ========================================================= */
-  function renderAchievements(container) {
+  function renderAchievements(container){
     const achs = window.ACHIEVEMENTS || [];
     const unlocked = saveData.achievementsUnlocked || [];
     let html = `<div style="margin-top:12px;"><h3 style="color:#ffe27a;">🏆 成就 (${unlocked.length}/${achs.length})</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:400px;overflow-y:auto;">`;
-    for (const a of achs) {
+    for (const a of achs){
       const done = unlocked.includes(a.id);
-      html += `<div style="padding:6px;border-radius:4px;border-left:3px solid ${done?'#ffe27a':'#555'};background:${done?'#2a2a14':'#1a1a2e'};opacity:${done?1:0.6};">
-        <div style="font-size:12px;color:${done?'#ffe27a':'#7a86a0'};">${a.icon||'🏆'} ${a.name} ${done?'✓':''}</div>
-        <div style="font-size:10px;color:#9aa4bd;">${a.desc||''} · 奖励 ${a.rewardAmount||1} ${a.rewardType||''}</div></div>`;
+      html += `<div style="padding:6px;border-radius:4px;border-left:3px solid ${done ? '#ffe27a' : '#555'};background:${done ? '#2a2a14' : '#1a1a2e'};opacity:${done ? 1 : 0.6};">
+        <div style="font-size:12px;color:${done ? '#ffe27a' : '#7a86a0'};">${a.icon || '🏆'} ${a.name} ${done ? '✓' : ''}</div>
+        <div style="font-size:10px;color:#9aa4bd;">${a.desc || ''} · 奖励 ${a.rewardAmount || 1} ${a.rewardType || ''}</div></div>`;
     }
     html += '</div></div>';
     container.innerHTML = html;
   }
 
   /* =========================================================
-   * 5. buildWave —— 关卡特定敌人池构建
+   * 5. buildWave
    * ========================================================= */
-  function buildWave(level, waveIdx) {
+  function buildWave(level, waveIdx){
     if (!level) return [];
     const ENEMIES = window.ENEMY_DATA || [];
     if (ENEMIES.length === 0) return [];
@@ -167,19 +172,18 @@
     const hpMult = 1 + waveIdx * (0.1 + level.difficulty * 0.02);
     const count = 4 + Math.floor(level.difficulty * 1.2) + waveIdx * 2;
     const wave = [];
-    for (let i = 0; i < count; i++) {
+    for (let i = 0; i < count; i++){
       const pick = pool[Math.floor(Math.random() * pool.length)];
       wave.push({ enemy: pick, time: i * 0.7, delay: i * 0.7, waveHpMult: hpMult });
     }
-    // 最后一波 Boss
-    if (waveIdx === (level.bossWave || level.waveCount) - 1) {
+    if (waveIdx === (level.bossWave || level.waveCount) - 1){
       const ELITE = window.ELITE_DATA || [];
-      if (ELITE.length > 0) {
+      if (ELITE.length > 0){
         const elite = ELITE[Math.floor(Math.random() * ELITE.length)];
         const scaled = Object.assign({}, elite, { baseHp: Math.round((elite.hp || 500) * hpScale * hpMult * 1.5), isBoss: true });
         wave.push({ enemy: scaled, time: count * 0.7 + 1, delay: count * 0.7 + 1, waveHpMult: 1 });
       }
-    } else if (waveIdx >= 1 && waveIdx % 2 === 1 && (window.ELITE_DATA || []).length > 0) {
+    } else if (waveIdx >= 1 && waveIdx % 2 === 1 && (window.ELITE_DATA || []).length > 0){
       const elite = window.ELITE_DATA[Math.floor(Math.random() * window.ELITE_DATA.length)];
       const scaled = Object.assign({}, elite, { baseHp: Math.round((elite.hp || 300) * hpScale * hpMult * 1.2), isElite: true });
       wave.push({ enemy: scaled, time: count * 0.7 + 0.5, delay: count * 0.7 + 0.5, waveHpMult: 1 });
@@ -188,26 +192,25 @@
   }
 
   /* =========================================================
-   * 6. enterBattle(n) —— 核心入口
+   * 6. enterBattle(n)
    * ========================================================= */
-  function enterBattle(n) {
+  function enterBattle(n){
     const LEVEL_COUNT = window.LEVEL_COUNT || 500;
     if (n < 1 || n > LEVEL_COUNT) return;
-    if ((saveData.loadout || []).length < 1) {
-      alert('先在主页面编队炮塔！去 [商店] 购买 → [芯片/出战] Tab 加入配置');
+    const level = window.LEVELS[n - 1];
+
+    // 没解锁任何塔
+    if (!saveData.ownedTowers || saveData.ownedTowers.length === 0){
+      alert('先在商店解锁至少一座炮塔!');
       return;
     }
 
-    const level = window.LEVELS[n - 1];
-
-    // 设置关卡
     Core.setLevel(level);
     GS.path = level.path;
 
-    // 清空战斗状态
     GS.towers = []; GS.enemies = []; GS.bullets = [];
     GS.particles = []; GS.floats = []; GS.spawnQueue = [];
-    GS.towerChips = {}; GS.availableLoadout = [];
+    GS.towerChips = {};
     GS.currentLevel = n;
     GS.totalWavesInLevel = level.waveCount;
     GS.waveIndex = 0; GS.wave = 0; GS.maxWave = level.waveCount;
@@ -222,31 +225,41 @@
     GS.gameOver = false; GS.gameWon = false;
     GS.combo = { count: 0, lastKillTime: 0, timer: 0, best: 0 };
 
-    // 构建出战列表
+    // === 构建战斗塔栏：ownedTowers (基础, 无限建造) + craftedTowers ===
+    GS.availableLoadout = [];
     const TOWERS = window.TOWER_DATA || [];
-    for (const runtimeId of (saveData.loadout || [])) {
-      const owned = (saveData.ownedTowers || []).find(t => t.runtimeId === runtimeId);
-      if (!owned) continue;
-      const td = TOWERS[owned.towerTypeId];
+    for (const towerId of (saveData.ownedTowers || [])){
+      const td = TOWERS[towerId];
       if (!td) continue;
       GS.availableLoadout.push({
-        runtimeId: owned.runtimeId,
-        towerTypeId: owned.towerTypeId,
-        level: owned.level,
-        chips: owned.chips || [],
-        name: td.name, symbol: td.symbol || '🔫', color: td.color
+        kind: 'base',
+        id: towerId,
+        label: 'base_' + towerId,
+        name: td.name, symbol: td.symbol || '🔫', color: td.color,
+        cost: td.cost || 100,
+        damage: td.damage, range: td.range, fireRate: td.fireRate,
+        _td: td
+      });
+    }
+    for (const ct of (saveData.craftedTowers || [])){
+      const td = TOWERS[ct.baseType];
+      GS.availableLoadout.push({
+        kind: 'crafted',
+        id: ct.uid,
+        label: 'crafted_' + ct.uid,
+        name: ct.name, symbol: td?.symbol || '🔨', color: td?.color || '#ffd93d',
+        cost: td?.cost || 100,
+        damage: ct.stats.damage, range: ct.stats.range, fireRate: ct.stats.fireRate,
+        _ct: ct, _baseTd: td
       });
     }
 
-    // 切屏幕
     GS.screen = 'battle';
     $('menuScreen')?.classList.add('hidden');
     $('battleScreen')?.classList.remove('hidden');
 
-    // 刷新左栏
     buildBattleLoadoutSlots();
 
-    // 启动 GameLogic 重置
     if (window.GameLogic && typeof window.GameLogic.reset === 'function') window.GameLogic.reset();
 
     GS._battleActive = true;
@@ -258,165 +271,239 @@
   }
 
   /* =========================================================
-   * 7. exitBattle(won) —— 退出战斗回主菜单
+   * 7. exitBattle(won) — 回主菜单，结算积分+芯片
    * ========================================================= */
-  function exitBattle(won) {
+  function exitBattle(won){
     GS._battleActive = false;
     GS.running = false;
 
-    // 金币结算
-    const earned = Math.max(0, GS.gold || 0);
-    if (won) saveData.gold = (saveData.gold || 0) + Math.round(earned);
-    else saveData.gold = (saveData.gold || 0) + Math.round(earned * 0.3);
+    // 统计
+    saveData.totalKills = (saveData.totalKills || 0) + (GS.kills || 0);
+    if (GS.combo) saveData.bestCombo = Math.max(saveData.bestCombo || 0, GS.combo.best || 0);
+    saveData.bestScore = Math.max(saveData.bestScore || 0, GS.score || 0);
 
-    // 芯片掉落保存（GameLogic.killEnemy 可能已直接写 saveData）
-    if (GS.chips && GS.chips.length > 0) {
-      saveData.chipInventory = saveData.chipInventory || [];
-      for (const c of GS.chips) saveData.chipInventory.push(c);
-    }
+    let rewardSummary = null;
 
-    // 通关进度
-    if (won) {
+    if (won){
       const n = GS.currentLevel;
+      const levelObj = window.LEVELS[n - 1];
+
+      // 通关奖励积分
+      const rewardCredits = levelObj.rewardCredits || (levelObj.difficulty || 1) * 50;
+      saveData.credits = (saveData.credits || 0) + rewardCredits;
+
+      // 通关奖励芯片
+      const rewardChipsCount = levelObj.rewardChips || 1;
+      const lib = window.CHIP_LIBRARY || [];
+      const pickedChips = [];
+      for (let i = 0; i < rewardChipsCount; i++){
+        const pick = lib[Math.floor(Math.random() * lib.length)];
+        if (pick){
+          window.addChipToInventory(pick.libraryId, 1);
+          pickedChips.push(pick);
+        }
+      }
+
+      // 关卡进度
       saveData.unlockedLevel = Math.max(saveData.unlockedLevel || 1, n + 1);
       saveData.clearedLevels = saveData.clearedLevels || [];
-      if (!saveData.clearedLevels.includes(n)) {
+      if (!saveData.clearedLevels.includes(n)){
         saveData.clearedLevels.push(n);
         saveData.clearedCount = (saveData.clearedCount || 0) + 1;
       }
       if (window.AchievementSystem) window.AchievementSystem.checkAll();
+
+      rewardSummary = { levelObj, rewardCredits, pickedChips };
     }
 
-    // 统计
-    saveData.totalKills = (saveData.totalKills || 0) + (GS.kills || 0);
-    if (GS.combo) {
-      saveData.bestCombo = Math.max(saveData.bestCombo || 0, GS.combo.best || 0);
-    }
-    saveData.bestScore = Math.max(saveData.bestScore || 0, GS.score || 0);
     SaveSystem.save(saveData);
 
     // 清理
     GS.towers = []; GS.enemies = []; GS.bullets = [];
     GS.particles = []; GS.floats = []; GS.spawnQueue = [];
-    GS.availableLoadout = []; GS.chips = [];
+    GS.availableLoadout = [];
 
-    // 切回菜单
     GS.screen = 'menu';
     $('battleScreen')?.classList.add('hidden');
     $('menuScreen')?.classList.remove('hidden');
 
     refreshMenu();
+
+    // 如果赢了，最后弹奖励 modal
+    if (rewardSummary) showVictoryModal(rewardSummary);
+  }
+
+  function showVictoryModal({ levelObj, rewardCredits, pickedChips }){
+    const overlay = document.createElement('div');
+    overlay.style.cssText = 'position:fixed;inset:0;background:rgba(10,14,22,0.92);z-index:99999;display:flex;align-items:center;justify-content:center;';
+    let chipHtml = pickedChips.map(c => {
+      const rc = c.color || '#9aa4bd';
+      return `<div style="padding:8px;background:rgba(10,14,26,.6);border-left:3px solid ${rc};border-radius:0 4px 4px 0;font-size:12px;margin-bottom:6px;">
+        <span style="color:${rc}">${c.icon || '⚙'} ${c.name}</span>
+        <span style="color:#9aa4bd;margin-left:4px;">· ${c.rarityName || '普通'}</span>
+        <span style="color:var(--text3);font-size:10px;margin-left:4px;">+1 进库存</span>
+      </div>`;
+    }).join('');
+    overlay.innerHTML = `
+      <div style="background:#1a2234;border:2px solid #ffe27a;border-radius:12px;padding:20px;max-width:420px;width:90%;max-height:85vh;overflow:auto;">
+        <h2 style="margin:0 0 6px;color:#ffe27a;text-align:center;font-size:20px;">✨ 通关成功!</h2>
+        <div style="text-align:center;color:#c8d0e0;font-size:13px;margin-bottom:14px;">第 ${levelObj.level} 关 · ${levelObj.name}</div>
+        <div style="background:#2a3248;border-radius:8px;padding:10px;margin-bottom:12px;">
+          <div style="color:#6bff6b;font-size:14px;margin-bottom:8px;">💎 +${rewardCredits} 积分</div>
+          <div style="color:#ffe27a;font-size:13px;margin-bottom:6px;">⚙ +${pickedChips.length} 芯片 (已进库存)</div>
+          ${chipHtml}
+        </div>
+        <div style="font-size:11px;color:#9aa4bd;margin-bottom:14px;text-align:center;">
+          击杀 ${GS.kills} · 得分 ${GS.score} · 解锁第 ${saveData.unlockedLevel} 关
+        </div>
+        <button class="btn gold" style="width:100%;padding:10px;font-size:14px;" onclick="this.parentElement.parentElement.remove()">太棒了!</button>
+      </div>`;
+    document.body.appendChild(overlay);
+    if (window.AudioFX) AudioFX.play('levelup');
   }
 
   /* =========================================================
-   * 8. 战斗主循环 —— battleFrame
+   * 8. 战斗主循环
    * ========================================================= */
-  let pendingPlaceRuntime = null;
+  let pendingPlace = null;  // { kind:'base'|'crafted', id, _td, _ct }
 
-  function battleFrame(ts) {
+  function battleFrame(ts){
     if (!GS._battleActive) return;
     let dt = Math.min(0.05, (ts - GS._battleLastTime) / 1000);
     GS._battleLastTime = ts;
     if (GS.paused) dt = 0; else dt *= GS.speed;
 
-    if (GS.running && !GS.paused) {
+    if (GS.running && !GS.paused){
       GS.path = Core.getCurrentPath();
-      // GameLogic.tick 已提供完整敌人/炮塔/子弹/波次逻辑
-      if (window.GameLogic && typeof window.GameLogic.tick === 'function') {
-        try { window.GameLogic.tick(dt); } catch (e) { console.warn('GameLogic tick:', e); }
+      if (window.GameLogic && typeof window.GameLogic.tick === 'function'){
+        try { window.GameLogic.tick(dt); } catch (e){ console.warn('GameLogic tick:', e); }
       }
-      // 降级粒子（如果 Core.updateParticles 存在）
-      try { Core.updateParticles && Core.updateParticles(dt); } catch (e) {}
-      try { Core.updateFloats && Core.updateFloats(dt); } catch (e) {}
+      try { Core.updateParticles && Core.updateParticles(dt); } catch (e){}
+      try { Core.updateFloats && Core.updateFloats(dt); } catch (e){}
     }
 
-    // 胜负检测
-    if (GS.gameOver) {
+    if (GS.gameOver){
       GS.running = false; GS._battleActive = false;
-      setTimeout(() => { alert(`💀 第 ${GS.currentLevel} 关 · 失败\n\n击杀:${GS.kills} 得分:${GS.score}`); exitBattle(false); }, 200);
-    } else if (GS.gameWon) {
+      setTimeout(() => { alert('💀 第 ' + GS.currentLevel + ' 关 · 失败\n\n击杀:' + GS.kills + ' 得分:' + GS.score); exitBattle(false); }, 200);
+    } else if (GS.gameWon){
       GS.running = false; GS._battleActive = false;
-      const levelObj = window.LEVELS[GS.currentLevel - 1];
-      setTimeout(() => { alert(`✨ 第 ${GS.currentLevel} 关 · 通关!\n${levelObj?.name || ''}\n\n击杀:${GS.kills} 得分:${GS.score}\n战斗金币:${GS.gold} → 全额结算`); exitBattle(true); }, 200);
+      setTimeout(() => exitBattle(true), 200);
     }
 
-    // 渲染
-    if (ctx && typeof Core.render === 'function') {
-      try { Core.render(ctx); } catch (e) {}
+    if (ctx && typeof Core.render === 'function'){
+      try { Core.render(ctx); } catch (e){}
     }
     updateBattleUI();
     requestAnimationFrame(battleFrame);
   }
 
   /* =========================================================
-   * 9. 出战配置左栏 + 放置塔
+   * 9. 战斗塔栏 —— 滚动显示所有 owned + crafted (无限建造)
    * ========================================================= */
-  function buildBattleLoadoutSlots() {
+  function buildBattleLoadoutSlots(){
+    const container = $('battleLoadoutSlots');
+    if (!container) return;
+    container.innerHTML = '';
+
     const TOWERS = window.TOWER_DATA || [];
-    document.querySelectorAll('#battleLoadoutSlots .battle-slot').forEach((slotEl, idx) => {
-      slotEl.innerHTML = '';
-      const item = GS.availableLoadout[idx];
-      if (!item) { slotEl.innerHTML = '<span class="slot-empty">—</span>'; return; }
-      const td = TOWERS[item.towerTypeId];
-      slotEl.innerHTML = `<div class="battle-tower-chip" style="border-color:${td.color};"><span style="color:${td.color};">${td.symbol||'🔫'}</span><span>${td.name}</span><span class="lv-badge">L${item.level}</span></div>`;
-      slotEl.dataset.runtime = item.runtimeId;
-      slotEl.onclick = () => {
-        pendingPlaceRuntime = item.runtimeId;
-        GS.selectedTowerType = item.towerTypeId;
-        GS.sellMode = false;
+
+    // 合并成一个大列表
+    const entries = [];
+    for (const towerId of (saveData.ownedTowers || [])){
+      const td = TOWERS[towerId];
+      if (!td) continue;
+      entries.push({ kind: 'base', id: towerId, name: td.name, symbol: td.symbol || '🔫', color: td.color, cost: td.cost || 100, _td: td });
+    }
+    for (const ct of (saveData.craftedTowers || [])){
+      const td = TOWERS[ct.baseType];
+      entries.push({ kind: 'crafted', id: ct.uid, name: ct.name + ' ✨', symbol: td?.symbol || '🔨', color: td?.color || '#ffd93d', cost: td?.cost || 100, _ct: ct, _baseTd: td });
+    }
+
+    if (entries.length === 0){
+      container.innerHTML = '<div style="padding:10px;color:#ff5a2a;font-size:11px;text-align:center;">先去商店解锁炮塔!</div>';
+      return;
+    }
+
+    // 为每个条目创建 slot（横向滚动）
+    for (let i = 0; i < entries.length; i++){
+      const e = entries[i];
+      const div = document.createElement('div');
+      div.className = 'battle-slot';
+      div.style.cssText = `border-left:3px solid ${e.color};`;
+      div.innerHTML = `<div class="battle-tower-chip" style="border-color:${e.color};"><span style="color:${e.color};">${e.symbol}</span><span>${e.name}</span><span class="lv-badge">无限</span></div>`;
+      div.onclick = () => {
+        pendingPlace = e;
         if (window.AudioFX) AudioFX.play('click');
       };
-    });
+      container.appendChild(div);
+    }
   }
 
-  function placeTowerFromLoadout(runtimeId, gx, gy) {
-    const owned = (saveData.ownedTowers || []).find(t => t.runtimeId === runtimeId);
-    if (!owned) return false;
-    const td = window.TOWER_DATA[owned.towerTypeId];
-    if (!td) return false;
+  function placeTowerAt(gx, gy){
+    if (!pendingPlace) return false;
+    const entry = pendingPlace;
     const TS = Core.TS || 40;
     const x = gx * TS + TS / 2, y = gy * TS + TS / 2;
 
-    // 🔧 重叠检测 — 不能放已有炮塔的格子
-    if (!Core.canPlaceAt(gx, gy)) {
+    // 重叠检测
+    if (!Core.canPlaceAt(gx, gy)){
       Core.spawnFloat && Core.spawnFloat(x, y, '❌ 无法放置', '#ff5a2a');
       if (window.AudioFX) AudioFX.play('hurt');
       return false;
     }
 
-    // 🔧 扣局内造价 — 用 JSON cost 字段（data_from_json 已注入）
-    const cost = td.cost || 100;
-    if (GS.gold < cost) {
+    // 局内造价
+    const cost = entry.cost || 100;
+    if (GS.gold < cost){
       Core.spawnFloat && Core.spawnFloat(x, y, '💰 金币不足 (' + cost + ')', '#ff5a2a');
       if (window.AudioFX) AudioFX.play('hurt');
       return false;
     }
     GS.gold -= cost;
 
+    // 创建临时 tower instance
     const instanceId = 'bt_' + Date.now() + '_' + Math.random().toString(36).slice(2, 5);
+    let towerData;
+    if (entry.kind === 'base'){
+      towerData = entry._td;
+    } else {
+      // crafted —— 用合成的 stats
+      towerData = Object.assign({}, entry._baseTd, entry._ct.stats, { color: entry.color, symbol: entry.symbol, craftedName: entry.name });
+    }
+
     const tower = {
-      instanceId, type: owned.towerTypeId, gx: x, gy: y, x, y,
-      angle: 0, level: owned.level, cooldown: 0, chips: (owned.chips || []).slice(), kills: 0,
-      costAtPlace: cost   // 记录局内造价，出售时按 50% 退
+      instanceId,
+      type: entry.kind === 'base' ? entry.id : entry._ct.baseType,
+      _baseKind: entry.kind,
+      _craftedStats: entry._ct ? entry._ct.stats : null,
+      gx: x, gy: y, x, y,
+      angle: 0, level: 1, cooldown: 0,
+      chips: [], kills: 0,
+      costAtPlace: cost,
+      damage: towerData.damage,
+      range: towerData.range,
+      fireRate: towerData.fireRate,
+      color: towerData.color,
+      bulletSpeed: towerData.bulletSpeed,
+      pierce: towerData.pierce || 1,
+      chain: towerData.chain || 0,
+      critChance: towerData.critChance || 0,
+      symbol: towerData.symbol,
+      element: towerData.element,
+      class: towerData.class,
+      proto: towerData.proto
     };
     GS.towers.push(tower);
-    GS.towerChips[instanceId] = (owned.chips || []).slice();
-    Core.spawnParticles && Core.spawnParticles(x, y, td.color, 20, 120, 0.6);
-    Core.spawnFloat && Core.spawnFloat(x, y, '+' + td.name.slice(0, 4), '#ffe27a');
+    Core.spawnParticles && Core.spawnParticles(x, y, entry.color, 20, 120, 0.6);
+    Core.spawnFloat && Core.spawnFloat(x, y, '+' + entry.name.slice(0, 6), '#ffe27a');
     if (window.AudioFX) AudioFX.play('place');
-
-    // 消耗一个 availableLoadout 条目（已放置）
-    GS.availableLoadout = GS.availableLoadout.filter(i => i.runtimeId !== runtimeId);
-    buildBattleLoadoutSlots();
-    pendingPlaceRuntime = null;
-    GS.selectedTowerType = null;
     return true;
   }
 
   /* =========================================================
    * 10. Canvas 事件
    * ========================================================= */
-  function bindBattleCanvas() {
+  function bindBattleCanvas(){
     if (!canvas) return;
     canvas.addEventListener('mousemove', e => {
       const r = canvas.getBoundingClientRect();
@@ -429,57 +516,121 @@
       const TS = Core.TS || 40;
 
       // 出售模式
-      if (GS.sellMode) {
-        for (let i = GS.towers.length - 1; i >= 0; i--) {
+      if (GS.sellMode){
+        for (let i = GS.towers.length - 1; i >= 0; i--){
           const t = GS.towers[i];
-          if (Math.hypot(t.gx - mx, t.gy - my) < 22) { sellTowerInBattle(t); GS.sellMode = false; return; }
+          if (Math.hypot(t.gx - mx, t.gy - my) < 22){ sellTowerInBattle(t); GS.sellMode = false; return; }
         }
         return;
       }
 
-      // 点击已放塔 → 选中
-      for (const t of GS.towers) {
-        if (Math.hypot(t.gx - mx, t.gy - my) < 22) {
-          GS.selectedTower = t; GS.selectedTowerType = null;
-          $('chipPanel')?.classList.add('show');
-          if (ChipSystem && typeof ChipSystem.renderPanel === 'function') ChipSystem.renderPanel(t, $('chipPanelBody'));
+      // 点击已放塔 → 选中（弹出升级面板）
+      for (const t of GS.towers){
+        if (Math.hypot(t.gx - mx, t.gy - my) < 22){
+          GS.selectedTower = t;
+          GS.sellMode = false;
+          showTowerPanel(t);
           return;
         }
       }
 
-      // 从 loadout 放置
-      if (pendingPlaceRuntime) {
-        placeTowerFromLoadout(pendingPlaceRuntime, Math.floor(mx / TS), Math.floor(my / TS));
+      // 从塔栏放置
+      if (pendingPlace){
+        const gx = Math.floor(mx / TS), gy = Math.floor(my / TS);
+        if (placeTowerAt(gx, gy)){
+          // 成功放置后保留 pendingPlace（可以继续建造同类型！无限建造）
+          // 如果想让用户手动取消，可以右键取消
+        }
         return;
       }
 
-      GS.selectedTower = null; GS.selectedTowerType = null;
-      $('chipPanel')?.classList.remove('show');
+      GS.selectedTower = null;
+      hideTowerPanel();
     });
     canvas.addEventListener('contextmenu', e => {
       e.preventDefault();
-      pendingPlaceRuntime = null; GS.selectedTowerType = null; GS.selectedTower = null; GS.sellMode = false;
-      $('chipPanel')?.classList.remove('show');
+      pendingPlace = null; GS.selectedTower = null; GS.sellMode = false;
+      hideTowerPanel();
     });
   }
 
-  function sellTowerInBattle(tower) {
-    // 按实际局内造价的 50% 退
-    const refund = Math.round((tower.costAtPlace || 100) * 0.5);
+  /* =========================================================
+   * 11. 战斗内 tower panel — 升级 / 出售
+   * ========================================================= */
+  function showTowerPanel(tower){
+    // 用 chipPanel 重新展示
+    const panel = $('chipPanel');
+    if (!panel) return;
+    panel.classList.add('show');
+    const body = $('chipPanelBody');
+    if (!body) return;
+
+    const cost = tower.costAtPlace || 100;
+    const upgradeCost = Math.round(cost * 0.8 * tower.level);
+    const sellRefund = Math.round(cost * tower.level * 0.6);
+
+    body.innerHTML = `
+      <div style="padding:10px;background:#2a3248;border-radius:6px;margin-bottom:8px;">
+        <div style="font-size:14px;font-weight:bold;color:${tower.color || '#ffe27a'};margin-bottom:4px;">
+          ${tower.symbol || '🔫'} ${tower._baseKind === 'crafted' ? (tower.craftedName || '合成塔') : '炮塔'} · Lv.${tower.level}
+        </div>
+        <div style="font-size:11px;color:#9aa4bd;">⚔${Math.round(tower.damage * Math.pow(1.15, tower.level - 1))} ◎${Math.round(tower.range)} ⏱${tower.fireRate}s</div>
+      </div>
+      <div style="display:flex;gap:6px;margin-bottom:8px;">
+        <button id="panelUpgradeBtn" class="btn gold" style="flex:1;" ${GS.gold < upgradeCost ? 'disabled' : ''}>⬆ 升级 (${upgradeCost}💰)</button>
+        <button id="panelSellBtn" class="btn danger" style="flex:1;">💰 出售 (+${sellRefund}💰)</button>
+      </div>
+      <div style="font-size:10px;color:#9aa4bd;text-align:center;">升级 → 数值 +15%</div>
+    `;
+
+    const upBtn = $('panelUpgradeBtn');
+    const sellBtn = $('panelSellBtn');
+    if (upBtn) upBtn.onclick = () => upgradeTowerInBattle(tower);
+    if (sellBtn) sellBtn.onclick = () => { sellTowerInBattle(tower); hideTowerPanel(); };
+  }
+
+  function hideTowerPanel(){
+    const panel = $('chipPanel');
+    if (panel) panel.classList.remove('show');
+  }
+
+  function upgradeTowerInBattle(tower){
+    const cost = tower.costAtPlace || 100;
+    const upgradeCost = Math.round(cost * 0.8 * tower.level);
+    if (GS.gold < upgradeCost){
+      Core.spawnFloat && Core.spawnFloat(tower.gx, tower.gy - 10, '💰 金币不足', '#ff5a2a');
+      if (window.AudioFX) AudioFX.play('hurt');
+      return;
+    }
+    GS.gold -= upgradeCost;
+    tower.level++;
+    // 数值提升 15% (简单模型：updateTowers 里 Core.computeTowerStats 会根据 level 加成)
+    // 我们同时在 tower 上直接加 damage，让视觉立即体现
+    tower.damage = Math.round(tower.damage * 1.15);
+    tower.range = Math.round(tower.range * 1.05);
+
+    Core.spawnParticles && Core.spawnParticles(tower.gx, tower.gy, '#ffe27a', 25, 150, 0.7);
+    Core.spawnFloat && Core.spawnFloat(tower.gx, tower.gy - 10, '⬆ Lv.' + tower.level, '#ffe27a');
+    if (window.AudioFX) AudioFX.play('levelup');
+
+    SaveSystem.save(saveData);
+    showTowerPanel(tower);
+  }
+
+  function sellTowerInBattle(tower){
+    const refund = Math.round((tower.costAtPlace || 100) * tower.level * 0.6);
     GS.gold += refund;
     Core.spawnFloat && Core.spawnFloat(tower.gx, tower.gy - 10, '+' + refund, '#ffe27a');
     Core.spawnParticles && Core.spawnParticles(tower.gx, tower.gy, '#ffe27a', 25, 150, 0.7);
     GS.towers = GS.towers.filter(x => x !== tower);
-    delete GS.towerChips[tower.instanceId];
     if (window.AudioFX) AudioFX.play('coin');
     GS.selectedTower = null;
-    $('chipPanel')?.classList.remove('show');
   }
 
   /* =========================================================
-   * 11. 战斗 HUD
+   * 12. HUD
    * ========================================================= */
-  function updateBattleUI() {
+  function updateBattleUI(){
     const set = (id, v) => { const el = $(id); if (el) el.textContent = String(v); };
     set('uiLevel', GS.currentLevel || '—');
     set('uiLevelName', GS.currentLevel ? (window.LEVELS[GS.currentLevel - 1]?.name || '') : '');
@@ -494,7 +645,7 @@
     renderMinimap();
   }
 
-  function renderMinimap() {
+  function renderMinimap(){
     const mm = $('minimap');
     if (!mm || GS.screen !== 'battle') return;
     const mctx = mm.getContext('2d');
@@ -503,7 +654,7 @@
     mctx.fillStyle = '#080c16'; mctx.fillRect(0, 0, 200, 130);
     const theme = GS.levelTheme || { pathColor: '#2a3450', pathBorder: '#1a2030' };
     const path = GS.path || Core.getCurrentPath();
-    if (path) {
+    if (path){
       mctx.strokeStyle = theme.pathBorder; mctx.lineWidth = 4;
       mctx.beginPath(); mctx.moveTo(path[0].x * sx, path[0].y * sy);
       for (let i = 1; i < path.length; i++) mctx.lineTo(path[i].x * sx, path[i].y * sy); mctx.stroke();
@@ -513,7 +664,7 @@
     }
     mctx.fillStyle = '#6ca8ff';
     for (const t of GS.towers) mctx.fillRect(t.gx * sx - 1, t.gy * sy - 1, 3, 3);
-    for (const e of GS.enemies) {
+    for (const e of GS.enemies){
       mctx.fillStyle = e.isBoss ? '#ff5a2a' : e.isElite ? '#c060ff' : (e.color || '#fff');
       mctx.fillRect(e.x * sx - 1, e.y * sy - 1, 2, 2);
     }
@@ -522,10 +673,9 @@
   }
 
   /* =========================================================
-   * 12. 战斗按钮绑定
+   * 13. 战斗按钮绑定
    * ========================================================= */
-  function bindBattleControls() {
-    // 开始下一波 —— 用我们的 buildWave（关卡特定），兼容 GameLogic.spawnEnemy
+  function bindBattleControls(){
     $('btnStartWave')?.addEventListener('click', () => {
       if (GS.waveInProgress || !GS.running || GS.waveIndex >= GS.totalWavesInLevel) return;
       GS.waveIndex++; GS.wave = GS.waveIndex;
@@ -537,181 +687,172 @@
       updateBattleUI();
     });
     $('btnSpeed')?.addEventListener('click', () => { GS.speed = GS.speed === 1 ? 2 : GS.speed === 2 ? 3 : 1; });
-    $('btnSell')?.addEventListener('click', () => { GS.sellMode = !GS.sellMode; pendingPlaceRuntime = null; });
+    $('btnSell')?.addEventListener('click', () => { GS.sellMode = !GS.sellMode; pendingPlace = null; });
     $('btnRestartLevel')?.addEventListener('click', () => { const n = GS.currentLevel; exitBattle(false); setTimeout(() => enterBattle(n), 50); });
-    $('returnHomeBtn')?.addEventListener('click', () => { if (confirm('放弃战斗返回主页？金币按 30% 结算')) { GS.gold = Math.round(GS.gold * 0.3); exitBattle(false); } });
+    $('returnHomeBtn')?.addEventListener('click', () => { if (confirm('放弃战斗返回主页？')) { exitBattle(false); } });
 
-    // ChipPanel
-    $('chipBtnClose')?.addEventListener('click', () => { GS.selectedTower = null; $('chipPanel')?.classList.remove('show'); });
-    $('chipBtnInv')?.addEventListener('click', () => { if (ChipSystem && ChipSystem.openInventoryModal) ChipSystem.openInventoryModal(); });
+    // panel buttons
+    $('chipBtnClose')?.addEventListener('click', () => { GS.selectedTower = null; hideTowerPanel(); });
+    $('chipBtnInv')?.addEventListener('click', () => { showInventoryModal(); });
     $('chipBtnUpgrade')?.addEventListener('click', () => {
-      if (!GS.selectedTower) return;
-      if (Shop && Shop.upgradeTower) Shop.upgradeTower(GS.selectedTower);
-      if (ChipSystem && ChipSystem.renderPanel) ChipSystem.renderPanel(GS.selectedTower, $('chipPanelBody'));
+      if (GS.selectedTower) upgradeTowerInBattle(GS.selectedTower);
     });
-    $('chipBtnSell')?.addEventListener('click', () => { if (GS.selectedTower) sellTowerInBattle(GS.selectedTower); });
+    $('chipBtnSell')?.addEventListener('click', () => {
+      if (GS.selectedTower){ sellTowerInBattle(GS.selectedTower); hideTowerPanel(); }
+    });
 
     // 键盘
     document.addEventListener('keydown', e => {
       if (GS.screen !== 'battle') return;
-      if (e.key === 'Escape') GS.paused = !GS.paused;
-      if (e.key === ' ') {
+      if (e.key === 'Escape'){ GS.paused = !GS.paused; pendingPlace = null; hideTowerPanel(); }
+      if (e.key === ' '){
         e.preventDefault();
         if (GS.running && !GS.waveInProgress && GS.waveIndex < GS.totalWavesInLevel) $('btnStartWave')?.click();
       }
-      // 1~5 快捷选择出战槽
-      const num = parseInt(e.key);
-      if (num >= 1 && num <= 5) {
-        const item = GS.availableLoadout[num - 1];
-        if (item) { pendingPlaceRuntime = item.runtimeId; GS.selectedTowerType = item.towerTypeId; }
-      }
     });
-
-    // GameLogic 没有提供 wave 完成时发奖励/结束关卡的逻辑 —— 需要自己检查
-    // 通过 setInterval 每帧在 battleFrame 里已处理 gameWon/gameOver
-    // 但 GameLogic.waveInProgress 是 GameLogic.startWave 里设的，我们自己管理 GS.waveInProgress
   }
 
   /* =========================================================
-   * 13. 商店购买
+   * 14. 库存 modal（战斗中也能看 chip 库存）
    * ========================================================= */
-  function bindShopBuy() {
+  function showInventoryModal(){
+    const lib = window.CHIP_LIBRARY || [];
+    const invChips = (window.saveData.inventory && window.saveData.inventory.chips) || {};
+    const entries = [];
+    for (const id in invChips){
+      const count = invChips[id];
+      const libId = parseInt(id);
+      const chip = lib.find(x => x.libraryId === libId);
+      if (chip) entries.push({ chip, count });
+    }
+    if (entries.length === 0){
+      alert('芯片库存为空');
+      return;
+    }
+    let overlay = document.getElementById('invModal');
+    if (!overlay){
+      overlay = document.createElement('div');
+      overlay.id = 'invModal';
+      overlay.style.cssText = 'position:fixed;inset:0;background:rgba(10,14,22,.95);z-index:9999;display:flex;align-items:center;justify-content:center;';
+      overlay.innerHTML = `<div style="width:600px;max-width:95vw;max-height:80vh;background:#1a2234;border:2px solid #2a3248;border-radius:10px;padding:14px;display:flex;flex-direction:column;">
+        <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+          <h3 style="color:#ffe27a;margin:0;">⚙ 芯片库存 (${entries.length})</h3>
+          <button class="btn" onclick="document.getElementById('invModal').remove()">✕</button>
+        </div>
+        <div id="invModalBody" style="flex:1;overflow-y:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:6px;"></div>
+      </div>`;
+      document.body.appendChild(overlay);
+    }
+    const body = document.getElementById('invModalBody');
+    let html = '';
+    for (const { chip, count } of entries){
+      const rc = chip.color || '#9aa4bd';
+      html += `<div style="padding:6px;background:#2a3248;border-left:3px solid ${rc};border-radius:0 4px 4px 0;font-size:11px;">
+        <span style="color:${rc}">${chip.icon || '⚙'}</span>
+        <b style="color:${rc};margin-left:4px;">${chip.name}</b>
+        <span style="color:#ffe27a;font-weight:bold;margin-left:6px;">×${count}</span>
+      </div>`;
+    }
+    body.innerHTML = html;
+  }
+
+  /* =========================================================
+   * 15. 刷新菜单 & 菜单购买
+   * ========================================================= */
+  function bindShopBuy(){
     const buyBtn = $('buySelectedTowerBtn');
-    if (buyBtn) {
+    if (buyBtn){
       buyBtn.addEventListener('click', () => {
         const TOWERS = window.TOWER_DATA || [];
         const td = TOWERS[Shop?.selectedId];
         if (!td) return;
-        if ((saveData.gold || 0) < td.cost) { alert('金币不足！'); if (window.AudioFX) AudioFX.play('hurt'); return; }
-        saveData.gold -= td.cost;
-        ChipSystem.addOwnedTower(td.id);
-        if (!saveData.unlockedTowers.includes(td.id)) saveData.unlockedTowers.push(td.id);
-        saveData.totalTowersBuilt = (saveData.totalTowersBuilt || 0) + 1;
+        const price = Shop._towerPrice(td);
+        if ((saveData.credits || 0) < price){ alert('积分不足!'); if (window.AudioFX) AudioFX.play('hurt'); return; }
+        saveData.credits -= price;
+        if (!saveData.ownedTowers) saveData.ownedTowers = [];
+        if (!saveData.ownedTowers.includes(td.id)) saveData.ownedTowers.push(td.id);
         SaveSystem.save(saveData);
-        Core.spawnFloat && Core.spawnFloat(Core.W / 2, 40, `购买 ${td.name}!`, '#ffe27a');
         if (window.AudioFX) AudioFX.play('coin');
         refreshMenu();
       });
     }
   }
 
-  function bindShopDetail() {
-    const orig = Shop?.onSelectTower;
-    if (Shop && orig) {
-      Shop.onSelectTower = function (towerId) { orig.call(this, towerId); showTowerDetail(towerId); };
-    }
-  }
-
-  function showTowerDetail(towerId) {
-    const TOWERS = window.TOWER_DATA || [];
-    const td = TOWERS[towerId];
-    const detail = $('towerDetail');
-    const buyBtn = $('buySelectedTowerBtn');
-    if (!td || !detail) return;
-    const owned = (saveData.ownedTowers || []).filter(t => t.towerTypeId === towerId).length;
-    detail.innerHTML = `
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
-        <span style="font-size:28px;color:${td.color};">${td.symbol || '🔫'}</span>
-        <div><div style="color:${td.color};font-weight:bold;font-size:15px;">${td.name}</div>
-        <div style="font-size:11px;color:#9aa4bd;">${td.desc || ''}</div></div></div>
-      <div class="kv"><span>伤害</span><span>${td.damage}</span></div>
-      <div class="kv"><span>射程</span><span>${td.range}</span></div>
-      <div class="kv"><span>攻速</span><span>${td.fireRate}s</span></div>
-      <div class="kv"><span>溅射</span><span>${td.splash || 0}</span></div>
-      <div class="kv"><span>穿透</span><span>${td.pierce || 1}</span></div>
-      <div class="kv"><span>元素</span><span>${td.element}</span></div>
-      <div style="margin-top:8px;font-size:11px;color:#9aa4bd;">已拥有 ${owned} 座 · 商店价 ${td.cost}</div>`;
-    if (buyBtn) {
-      buyBtn.classList.remove('hidden');
-      buyBtn.textContent = `💸 买此塔 (${td.cost})`;
-      buyBtn.disabled = (saveData.gold || 0) < td.cost;
-    }
-  }
-
-  /* =========================================================
-   * 14. 刷新菜单
-   * ========================================================= */
-  function refreshMenu() {
+  function refreshMenu(){
     updateMenuCurrency();
-    if (Shop && typeof Shop.renderFeatured === 'function') Shop.renderFeatured();
+    if (Shop && typeof Shop.render === 'function') Shop.render();
     if (ChipSystem && typeof ChipSystem.initMenu === 'function') ChipSystem.initMenu();
     if (currentMenuTab === 'level') renderLevelGrid();
+    if (currentMenuTab === 'blacksmith' && window.Blacksmith && typeof Blacksmith.render === 'function') Blacksmith.render();
   }
 
-  function updateMenuCurrency() {
+  function updateMenuCurrency(){
     const set = (id, v) => { const el = $(id); if (el) el.textContent = String(v); };
-    set('statGold', saveData.gold || 0);
-    set('statTotalOwned', (saveData.ownedTowers || []).length);
-    set('statChips', (saveData.chipInventory || []).length);
+    set('statGold', saveData.credits || 0);
+    set('statTotalOwned', (saveData.ownedTowers || []).length + (saveData.craftedTowers || []).length);
+    // 统计芯片总数
+    let chipCount = 0;
+    if (saveData.inventory && saveData.inventory.chips){
+      for (const k in saveData.inventory.chips) chipCount += saveData.inventory.chips[k];
+    }
+    set('statChips', chipCount);
     set('statHighestLevel', saveData.unlockedLevel || 1);
   }
 
   /* =========================================================
-   * 15. DOM Ready
+   * 16. DOM Ready
    * ========================================================= */
   document.addEventListener('DOMContentLoaded', () => {
-    if (canvas) { canvas.width = Core.W || 1100; canvas.height = Core.H || 720; }
-    // 关卡主题初始
+    if (canvas){ canvas.width = Core.W || 1100; canvas.height = Core.H || 720; }
     const firstLevel = (window.LEVELS || [])[0];
-    if (firstLevel) { Core.setLevel(firstLevel); GS.path = firstLevel.path; }
+    if (firstLevel){ Core.setLevel(firstLevel); GS.path = firstLevel.path; }
 
-    // 屏幕初始：菜单可见
     GS.screen = 'menu';
     $('menuScreen')?.classList.remove('hidden');
     $('battleScreen')?.classList.add('hidden');
 
-    // 初始化 Shop + ChipSystem
+    // Shop init
     if (Shop && typeof Shop.init === 'function') Shop.init($('shopContainer'));
     if (ChipSystem && typeof ChipSystem.initMenu === 'function') ChipSystem.initMenu();
+    // Blacksmith init
+    if (window.Blacksmith && typeof Blacksmith.init === 'function') window.Blacksmith.init(document.getElementById('blacksmithSection'));
 
-    // 绑定事件
     bindMenuTabs();
     bindShopBuy();
-    bindShopDetail();
     bindBattleCanvas();
     bindBattleControls();
     switchMenuTab('shop');
 
-    // 监听货币变化
     document.addEventListener('tdf:currency-changed', updateMenuCurrency);
-
-    // 自动保存 & 成就检查
     setInterval(() => { if (GS.screen === 'battle' && GS.running) SaveSystem.save(saveData); }, 5000);
     setInterval(() => { if (window.AchievementSystem) AchievementSystem.checkAll(); }, 10000);
 
-    // 初始 Shop 选中
-    if (Shop?.selectedId != null) showTowerDetail(Shop.selectedId);
     updateMenuCurrency();
-
-    // 隐藏初始 overlay
     $('overlay')?.classList.add('hidden');
 
-    // === 外部跳转：关卡选择页/世界地图页传来的 pending level ===
+    // 外部页面跳转 pending level
     const pending = sessionStorage.getItem('tdf_pendingLevel');
-    if (pending) {
+    if (pending){
       sessionStorage.removeItem('tdf_pendingLevel');
       const pendingN = parseInt(pending);
       const UL = saveData.unlockedLevel || 1;
-      if (!isNaN(pendingN) && pendingN >= 1 && pendingN <= (window.LEVEL_COUNT || 500) && pendingN <= UL) {
-        console.log('🚀 自动进入关卡 %d （来自外部页面跳转）', pendingN);
-        // 延迟一帧，让 DOM 先完全就绪
+      if (!isNaN(pendingN) && pendingN >= 1 && pendingN <= (window.LEVEL_COUNT || 500) && pendingN <= UL){
         setTimeout(() => enterBattle(pendingN), 50);
-        return; // 直接切战斗，不再打印下方菜单初始化日志
+        return;
       }
     }
 
-    console.log('✅ Main.js · 双屏幕状态机 ready');
-    console.log('📊 存档: gold=%d owned=%d loadout=%d unlockedLv=%d',
-      saveData.gold || 0, (saveData.ownedTowers || []).length,
-      (saveData.loadout || []).length, saveData.unlockedLevel || 1);
+    console.log('✅ Main.js v2 ready');
+    console.log('📊 存档: credits=%d owned=%d crafted=%d chipTypes=%d',
+      saveData.credits || 0,
+      (saveData.ownedTowers || []).length,
+      (saveData.craftedTowers || []).length,
+      Object.keys((saveData.inventory && saveData.inventory.chips) || {}).length);
   });
 
-  /* =========================================================
-   * 16. 全局暴露
-   * ========================================================= */
   window.enterBattle = enterBattle;
   window.exitBattle = exitBattle;
-  window.isOnPath = function (px, py) { return Core.isOnPath(px, py); };
+  window.isOnPath = function (px, py){ return Core.isOnPath(px, py); };
   window.buildWave = buildWave;
 
 })();

@@ -293,19 +293,43 @@ window.GameLogic = (function () {
         if (window.Core && typeof window.Core.spawnParticles === 'function')
             window.Core.spawnParticles(enemy.x, enemy.y, enemy.color, enemy.isBoss ? 30 : 15);
 
-        // 芯片掉落
-        var chipChance;
-        if (enemy.isElite) chipChance = 1.0;
-        else if (enemy.isBoss) chipChance = 0.85;
-        else if (enemy.tier === 'xl') chipChance = 0.25;
-        else chipChance = 0.08;
+        // === 芯片掉落（新规则：BOSS 100%，精英 8%，普通 2.5%） ===
+        var chipDropChance;
+        if (enemy.isBoss) chipDropChance = 1.0;        // Boss 100%
+        else if (enemy.isElite) chipDropChance = 0.08; // 精英 8%
+        else chipDropChance = 0.025;                   // 普通 2.5%
 
-        if (Math.random() < chipChance && typeof window.rollChip === 'function') {
-            var chip = window.rollChip();
-            g.chips = g.chips || [];
-            g.chips.push(chip);
-            if (window.Core && typeof window.Core.onChipDropped === 'function')
-                window.Core.onChipDropped(chip);
+        if (Math.random() < chipDropChance) {
+            var CHIP_LIB = window.CHIP_LIBRARY || [];
+            if (CHIP_LIB.length > 0) {
+                // 加权选一个（稀有度权重）
+                var weights = { '普通': 55, '稀有': 25, '史诗': 13, '传奇': 5, '神话': 2 };
+                var cList = [];
+                for (var ci = 0; ci < CHIP_LIB.length; ci++) {
+                    var c = CHIP_LIB[ci];
+                    cList.push({ chip: c, w: weights[c.rarityName || c.rarity || '普通'] || 1 });
+                }
+                var totalW = 0;
+                for (var wi = 0; wi < cList.length; wi++) totalW += cList[wi].w;
+                var rw = Math.random() * totalW;
+                var pickedChip = null;
+                for (var wi2 = 0; wi2 < cList.length; wi2++) {
+                    rw -= cList[wi2].w;
+                    if (rw <= 0) { pickedChip = cList[wi2].chip; break; }
+                }
+                if (!pickedChip) pickedChip = CHIP_LIB[0];
+
+                // 直接加库存
+                if (typeof window.addChipToInventory === 'function') {
+                    window.addChipToInventory(pickedChip.libraryId, 1);
+                }
+
+                // 飘金色文字提示
+                if (window.Core && typeof window.Core.spawnFloat === 'function') {
+                    window.Core.spawnFloat(enemy.x, enemy.y - 16, '⚙ ' + pickedChip.name, pickedChip.color || '#ffe27a');
+                }
+                if (window.AudioFX) AudioFX.play('chip');
+            }
         }
 
         // 解锁图鉴

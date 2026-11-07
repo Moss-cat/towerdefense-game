@@ -224,13 +224,18 @@ function buildLevel(n){
   }
   // 路径宽度（某些关卡更窄更难）
   const pathWidth = n%7===0 ? 28 : n%5===0 ? 48 : 40;
+  // 通关奖励芯片数：前几关少，越后越多
+  const rewardChips = 1 + Math.floor((n - 1) / 15);
+  // 通关奖励积分 = 难度 × 50
+  const rewardCredits = (diffTier + 1) * 50;
   // 总预算 = 起始金币 + 每波奖励×波数
   return {
     level: n, seed, theme, algoKey, path,
     waveCount, bossWave, hpScale, goldPerWave, pathWidth,
     decorations,
-    difficulty: diffTier+1,
-    maxCarryTowers: 3 + Math.min(5, Math.floor((n-1)/100)),
+    difficulty: diffTier + 1,
+    rewardChips, rewardCredits,
+    maxCarryTowers: 3 + Math.min(5, Math.floor((n - 1) / 100)),
     name: theme.name + ' · ' + ['入门','初级','进阶','中级','高级','精英','大师','传奇','神话','无尽'][diffTier] + ' #' + n
   };
 }
